@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            this.button1 = new System.Windows.Forms.Button();
+            this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exit_button = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aanmeldenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.loggen_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.login_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.aanmeld_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.about_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.info_button = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchBox = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -59,24 +59,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // search_button
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(1038, 552);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Browse Movies";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.search_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.search_button.Location = new System.Drawing.Point(1038, 552);
+            this.search_button.Name = "search_button";
+            this.search_button.Size = new System.Drawing.Size(124, 23);
+            this.search_button.TabIndex = 2;
+            this.search_button.Text = "Browse Movies";
+            this.search_button.UseVisualStyleBackColor = true;
+            this.search_button.Click += new System.EventHandler(this.search_button_Click);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.aboutToolStripMenuItem,
-            this.loginToolStripMenuItem,
-            this.aboutToolStripMenuItem1});
+            this.loggen_menu,
+            this.about_menu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1174, 24);
@@ -86,58 +86,60 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
+            this.exit_button});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // exitToolStripMenuItem
+            // exit_button
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exit_button.Name = "exit_button";
+            this.exit_button.Size = new System.Drawing.Size(180, 22);
+            this.exit_button.Text = "Exit";
+            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
             // 
-            // loginToolStripMenuItem
+            // loggen_menu
             // 
-            this.loginToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loginToolStripMenuItem1,
-            this.aanmeldenToolStripMenuItem});
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.loginToolStripMenuItem.Text = "Login";
+            this.loggen_menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.login_button,
+            this.aanmeld_button});
+            this.loggen_menu.Name = "loggen_menu";
+            this.loggen_menu.Size = new System.Drawing.Size(49, 20);
+            this.loggen_menu.Text = "Login";
             // 
-            // loginToolStripMenuItem1
+            // login_button
             // 
-            this.loginToolStripMenuItem1.Name = "loginToolStripMenuItem1";
-            this.loginToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
-            this.loginToolStripMenuItem1.Text = "Login";
+            this.login_button.Name = "login_button";
+            this.login_button.Size = new System.Drawing.Size(180, 22);
+            this.login_button.Text = "Login";
+            this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
-            // aanmeldenToolStripMenuItem
+            // aanmeld_button
             // 
-            this.aanmeldenToolStripMenuItem.Name = "aanmeldenToolStripMenuItem";
-            this.aanmeldenToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.aanmeldenToolStripMenuItem.Text = "Aanmelden";
+            this.aanmeld_button.Name = "aanmeld_button";
+            this.aanmeld_button.Size = new System.Drawing.Size(180, 22);
+            this.aanmeld_button.Text = "Aanmelden";
+            this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
             // 
-            // aboutToolStripMenuItem1
+            // about_menu
             // 
-            this.aboutToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.infoToolStripMenuItem1});
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem1.Text = "About";
+            this.about_menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.info_button});
+            this.about_menu.Name = "about_menu";
+            this.about_menu.Size = new System.Drawing.Size(52, 20);
+            this.about_menu.Text = "About";
             // 
-            // infoToolStripMenuItem1
+            // info_button
             // 
-            this.infoToolStripMenuItem1.Name = "infoToolStripMenuItem1";
-            this.infoToolStripMenuItem1.Size = new System.Drawing.Size(95, 22);
-            this.infoToolStripMenuItem1.Text = "Info";
-            this.infoToolStripMenuItem1.Click += new System.EventHandler(this.info_button_click);
+            this.info_button.Name = "info_button";
+            this.info_button.Size = new System.Drawing.Size(180, 22);
+            this.info_button.Text = "Info";
+            this.info_button.Click += new System.EventHandler(this.info_button_click);
             // 
             // infoToolStripMenuItem
             // 
@@ -148,6 +150,8 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(74, 103);
             this.pictureBox2.Name = "pictureBox2";
@@ -157,6 +161,8 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(279, 103);
             this.pictureBox3.Name = "pictureBox3";
@@ -166,6 +172,8 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(500, 101);
             this.pictureBox4.Name = "pictureBox4";
@@ -175,6 +183,9 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(726, 102);
             this.pictureBox5.Name = "pictureBox5";
@@ -184,6 +195,8 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(945, 102);
             this.pictureBox6.Name = "pictureBox6";
@@ -191,12 +204,13 @@
             this.pictureBox6.TabIndex = 9;
             this.pictureBox6.TabStop = false;
             // 
-            // textBox1
+            // SearchBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(716, 554);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 20);
-            this.textBox1.TabIndex = 10;
+            this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchBox.Location = new System.Drawing.Point(806, 554);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(226, 20);
+            this.SearchBox.TabIndex = 10;
             // 
             // textBox2
             // 
@@ -237,7 +251,6 @@
             this.textBox5.TabIndex = 14;
             this.textBox5.Text = "The Boy Brahms Curse";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -260,13 +273,13 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.search_button);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -286,23 +299,23 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button search_button;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exit_button;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem aanmeldenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loggen_menu;
+        private System.Windows.Forms.ToolStripMenuItem about_menu;
+        private System.Windows.Forms.ToolStripMenuItem info_button;
+        private System.Windows.Forms.ToolStripMenuItem login_button;
+        private System.Windows.Forms.ToolStripMenuItem aanmeld_button;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;

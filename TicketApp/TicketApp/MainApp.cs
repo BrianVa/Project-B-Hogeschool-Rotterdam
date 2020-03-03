@@ -17,12 +17,13 @@ namespace TicketApp
             InitializeComponent();
             
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void search_button_Click(object sender, EventArgs e)
         {
-            //richTextBox1.AppendText("Aan het zoeken");
+            string value = SearchBox.Text;
+            System.Windows.Forms.MessageBox.Show(value);
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exit_button_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
@@ -37,21 +38,14 @@ namespace TicketApp
                 "Sam Birahij.");
         }
 
-        private void infoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {   
-            //popup 
-            //var formPopup = new Form();
-            //formPopup.Show(this);
+        private void login_button_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("Hier komt het login form!");
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void aanmeld_button_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
+            System.Windows.Forms.MessageBox.Show("Hier komt het aanmeld form!");
         }
     }
 }
