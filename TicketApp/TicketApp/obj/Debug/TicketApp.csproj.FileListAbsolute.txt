@@ -7,3 +7,15 @@ C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketA
 C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.exe
 C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.pdb
 C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.MainApp.resources
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\EntityFramework.dll
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.dll
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\EntityFramework.xml
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.xml
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.csproj.CopyComplete
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.login.resources
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.signup.resources

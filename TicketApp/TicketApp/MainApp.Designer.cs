@@ -40,23 +40,22 @@
             this.about_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.info_button = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.SearchBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // search_button
@@ -94,7 +93,7 @@
             // exit_button
             // 
             this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(180, 22);
+            this.exit_button.Size = new System.Drawing.Size(93, 22);
             this.exit_button.Text = "Exit";
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
@@ -115,14 +114,14 @@
             // login_button
             // 
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(180, 22);
+            this.login_button.Size = new System.Drawing.Size(135, 22);
             this.login_button.Text = "Login";
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // aanmeld_button
             // 
             this.aanmeld_button.Name = "aanmeld_button";
-            this.aanmeld_button.Size = new System.Drawing.Size(180, 22);
+            this.aanmeld_button.Size = new System.Drawing.Size(135, 22);
             this.aanmeld_button.Text = "Aanmelden";
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
             // 
@@ -137,7 +136,7 @@
             // info_button
             // 
             this.info_button.Name = "info_button";
-            this.info_button.Size = new System.Drawing.Size(180, 22);
+            this.info_button.Size = new System.Drawing.Size(95, 22);
             this.info_button.Text = "Info";
             this.info_button.Click += new System.EventHandler(this.info_button_click);
             // 
@@ -148,38 +147,29 @@
             this.infoToolStripMenuItem.Text = "Info";
             this.infoToolStripMenuItem.Click += new System.EventHandler(this.info_button_click);
             // 
-            // pictureBox2
+            // SearchBox
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchBox.Location = new System.Drawing.Point(806, 554);
+            this.SearchBox.Name = "SearchBox";
+            this.SearchBox.Size = new System.Drawing.Size(226, 20);
+            this.SearchBox.TabIndex = 10;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(74, 103);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(177, 256);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(279, 103);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(181, 255);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(500, 101);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(181, 256);
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(945, 102);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(182, 256);
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -193,74 +183,60 @@
             this.pictureBox5.TabIndex = 8;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox6
+            // pictureBox4
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(945, 102);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(182, 256);
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(500, 101);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(181, 256);
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
             // 
-            // SearchBox
+            // pictureBox3
             // 
-            this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchBox.Location = new System.Drawing.Point(806, 554);
-            this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(226, 20);
-            this.SearchBox.TabIndex = 10;
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(279, 103);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(181, 255);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
             // 
-            // textBox2
+            // pictureBox2
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(74, 365);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 20);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.Text = "No Time To Die";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(74, 103);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(177, 256);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
-            // textBox3
+            // label1
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(279, 365);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 20);
-            this.textBox3.TabIndex = 12;
-            this.textBox3.Text = "Bad Boys For Life";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(88, 362);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 26);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "No time to die";
             // 
-            // textBox4
+            // label2
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(500, 365);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(181, 20);
-            this.textBox4.TabIndex = 13;
-            this.textBox4.Text = "Sonic";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(726, 365);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(176, 20);
-            this.textBox5.TabIndex = 14;
-            this.textBox5.Text = "The Boy Brahms Curse";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(945, 365);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(182, 20);
-            this.textBox6.TabIndex = 15;
-            this.textBox6.Text = "Birds Of Prey ...";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(284, 364);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(171, 26);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Bad Boys for life";
             // 
             // MainApp
             // 
@@ -268,11 +244,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(1174, 591);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -288,11 +261,12 @@
             this.Text = "TicketApp";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,17 +284,15 @@
         private System.Windows.Forms.ToolStripMenuItem info_button;
         private System.Windows.Forms.ToolStripMenuItem login_button;
         private System.Windows.Forms.ToolStripMenuItem aanmeld_button;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.TextBox SearchBox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
