@@ -29,51 +29,53 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.voornaam_field = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.email_field = new System.Windows.Forms.TextBox();
+            this.achternaam_field = new System.Windows.Forms.TextBox();
+            this.password_field = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.password_r_field = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.aanmeld_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // voornaam_field
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 20);
-            this.textBox1.TabIndex = 0;
+            this.voornaam_field.Location = new System.Drawing.Point(116, 46);
+            this.voornaam_field.Name = "voornaam_field";
+            this.voornaam_field.Size = new System.Drawing.Size(193, 20);
+            this.voornaam_field.TabIndex = 0;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // textBox2
+            // email_field
             // 
-            this.textBox2.Location = new System.Drawing.Point(116, 154);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 20);
-            this.textBox2.TabIndex = 2;
+            this.email_field.Location = new System.Drawing.Point(116, 154);
+            this.email_field.Name = "email_field";
+            this.email_field.Size = new System.Drawing.Size(193, 20);
+            this.email_field.TabIndex = 2;
             // 
-            // textBox3
+            // achternaam_field
             // 
-            this.textBox3.Location = new System.Drawing.Point(116, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(193, 20);
-            this.textBox3.TabIndex = 3;
+            this.achternaam_field.Location = new System.Drawing.Point(116, 98);
+            this.achternaam_field.Name = "achternaam_field";
+            this.achternaam_field.Size = new System.Drawing.Size(193, 20);
+            this.achternaam_field.TabIndex = 3;
             // 
-            // textBox4
+            // password_field
             // 
-            this.textBox4.Location = new System.Drawing.Point(116, 213);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(193, 20);
-            this.textBox4.TabIndex = 4;
+            this.password_field.Location = new System.Drawing.Point(116, 213);
+            this.password_field.Name = "password_field";
+            this.password_field.PasswordChar = '*';
+            this.password_field.Size = new System.Drawing.Size(193, 20);
+            this.password_field.TabIndex = 4;
             // 
             // label1
             // 
@@ -83,7 +85,6 @@
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Voornaam";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -108,41 +109,53 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(113, 197);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Password";
+            this.label4.Text = "Wachtwoord";
             // 
-            // textBox5
+            // password_r_field
             // 
-            this.textBox5.Location = new System.Drawing.Point(116, 273);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(193, 20);
-            this.textBox5.TabIndex = 9;
+            this.password_r_field.Location = new System.Drawing.Point(116, 273);
+            this.password_r_field.Name = "password_r_field";
+            this.password_r_field.PasswordChar = '*';
+            this.password_r_field.Size = new System.Drawing.Size(193, 20);
+            this.password_r_field.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(113, 257);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.Size = new System.Drawing.Size(105, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Repeat Password";
+            this.label5.Text = "Herhaal wachtwoord";
+            // 
+            // aanmeld_button
+            // 
+            this.aanmeld_button.Location = new System.Drawing.Point(369, 311);
+            this.aanmeld_button.Name = "aanmeld_button";
+            this.aanmeld_button.Size = new System.Drawing.Size(75, 23);
+            this.aanmeld_button.TabIndex = 11;
+            this.aanmeld_button.Text = "aanmelden";
+            this.aanmeld_button.UseVisualStyleBackColor = true;
+            this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_Click);
             // 
             // signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 305);
+            this.ClientSize = new System.Drawing.Size(456, 346);
+            this.Controls.Add(this.aanmeld_button);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.password_r_field);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.password_field);
+            this.Controls.Add(this.achternaam_field);
+            this.Controls.Add(this.email_field);
+            this.Controls.Add(this.voornaam_field);
             this.Name = "signup";
             this.Text = "signup";
             this.ResumeLayout(false);
@@ -152,16 +165,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox voornaam_field;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox email_field;
+        private System.Windows.Forms.TextBox achternaam_field;
+        private System.Windows.Forms.TextBox password_field;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox password_r_field;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button aanmeld_button;
     }
 }

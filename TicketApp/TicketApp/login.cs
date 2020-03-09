@@ -18,7 +18,6 @@ namespace TicketApp
         public login()
         {
             InitializeComponent();
-            var Function = new Functions();
 
         }
         private void username_TextChanged(object sender, EventArgs e)
@@ -74,6 +73,9 @@ namespace TicketApp
                 System.Windows.Forms.MessageBox.Show(Email.Text.Trim() + " is geen gelding emailadres!");
             }
 
+            //MainApp main = new MainApp();
+
+            //main.login_button.Text = "Logout";
         }
     }
 }

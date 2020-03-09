@@ -29,12 +29,11 @@ namespace TicketApp
             }
         }
 
-        public SQLiteDataAdapter SetupDatabase(string query)
+        /*public SQLiteDataAdapter SetupDatabase(string query,)
         {
 
             string database = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database/Database.db");
             SQLiteConnection conn = new SQLiteConnection("data source=" + database + ";Version=3");
-            string query = "SELECT * FROM gebruikers WHERE Email = @email AND password = @password";
             conn.Open();
             SQLiteCommand cmd = new SQLiteCommand(query, conn);
             cmd.Parameters.AddWithValue("@email", Email.Text.Trim());
@@ -44,6 +43,6 @@ namespace TicketApp
             conn.Close();
             return da.Fill(dt);
 
-        }
+        }*/
     }
 }
