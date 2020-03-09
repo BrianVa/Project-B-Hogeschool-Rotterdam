@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Security.Cryptography;
+using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
+using static TicketApp.Functions;
+using System.Security.Cryptography;
 
 namespace TicketApp
 {
@@ -29,20 +34,39 @@ namespace TicketApp
             }
         }
 
-        /*public SQLiteDataAdapter SetupDatabase(string query,)
+        public void Message(string message) 
         {
+            System.Windows.Forms.MessageBox.Show(message);
+        }
 
+        public SQLiteConnection conn;
+        public SQLiteCommand cmd;
+        public SQLiteDataAdapter da;
+        public DataSet ds = new DataSet();
+        public DataTable dt = new DataTable();
+
+        public void DataBaseConnection()
+        {
             string database = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database/Database.db");
-            SQLiteConnection conn = new SQLiteConnection("data source=" + database + ";Version=3");
+            conn = new SQLiteConnection("data source=" + database + ";Version=3");
+        }
+        public void ExcQuery(string Query)
+        {
+            DataBaseConnection();
             conn.Open();
-            SQLiteCommand cmd = new SQLiteCommand(query, conn);
-            cmd.Parameters.AddWithValue("@email", Email.Text.Trim());
-            cmd.Parameters.AddWithValue("@password", hash);
-            SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
-            DataTable dt = new DataTable();
+            cmd = conn.CreateCommand();
+            cmd.CommandText = Query;
+            cmd.ExecuteNonQuery();
             conn.Close();
+        }
+        public int SelectData(string query) 
+        {
+            DataBaseConnection();
+            conn.Open();
+            cmd = conn.CreateCommand();
+            da = new SQLiteDataAdapter(query, conn);
             return da.Fill(dt);
 
-        }*/
+        }
     }
 }

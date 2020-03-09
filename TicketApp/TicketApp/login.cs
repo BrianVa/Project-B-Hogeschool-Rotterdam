@@ -32,22 +32,20 @@ namespace TicketApp
 
         private void login_button_Click(object sender, EventArgs e)
         {
-
+            var Function = new Functions();
             if (Email.Text.Trim() == "" && Password.Text.Trim() == "")
             {
-                System.Windows.Forms.MessageBox.Show("error empty fields!");
+                Function.Message("error empty fields!");
             }
             else if (Email.Text.Trim().Contains("@") && Email.Text.Trim().Contains("."))
             {
-                var Function = new Functions();
+
                 string hash = Function.ComputeSha256Hash(Password.Text.Trim());
                 string database = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database/Database.db");
                 SQLiteConnection conn = new SQLiteConnection("data source=" + database + ";Version=3");
-                string query = "SELECT * FROM gebruikers WHERE Email = @email AND password = @password";
+                string query = "SELECT * FROM gebruikers WHERE Email = '"+Email.Text.Trim()+"' AND password = '"+hash+"'";
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@email", Email.Text.Trim());
-                cmd.Parameters.AddWithValue("@password", hash);
                 SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -58,19 +56,19 @@ namespace TicketApp
                     {
                         string voornaam = row["voornaam"].ToString();
                         string achternaam = row["achternaam"].ToString();
-                        System.Windows.Forms.MessageBox.Show("Welcome " + voornaam + " " + achternaam + "\n" + "U bent ingelogd!");
+                        Function.Message("Welcome " + voornaam + " " + achternaam + "\n" + "U bent ingelogd!");
                         this.Close();
                     }
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("Verkeerd Email of Wachtwoord!");
+                    Function.Message("Verkeerd Email of Wachtwoord!");
                 }
                 
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show(Email.Text.Trim() + " is geen gelding emailadres!");
+                Function.Message(Email.Text.Trim() + " is geen gelding emailadres!");
             }
 
             //MainApp main = new MainApp();
