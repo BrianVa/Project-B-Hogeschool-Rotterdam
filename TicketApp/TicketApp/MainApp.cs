@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
 using static TicketApp.Functions;
+using static TicketApp.Session;
 
 namespace TicketApp
 {
     public partial class MainApp : Form
     {
+        private static Session session;
         public MainApp()
         {
             InitializeComponent();
@@ -27,21 +29,16 @@ namespace TicketApp
             SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
             da.Fill(dt);
             conn.Close();
+            //inlog_naam.Hide();
 
-            foreach (DataRow item in dt.Rows)
+            /*foreach (DataRow item in dt.Rows)
             {
-                //System.Windows.Forms.MessageBox.Show(item["naam"].ToString());
-            }
-
-            //pictureBox1.Hide();
-
+               
+            }*/
         }
         private void search_button_Click(object sender, EventArgs e)
         {
             string value = SearchBox.Text;
-            //pictureBox1.Show();
-            //System.Windows.Forms.MessageBox.Show(value);
-
         }
 
         private void exit_button_Click(object sender, EventArgs e)
@@ -61,19 +58,44 @@ namespace TicketApp
 
         private void login_button_Click(object sender, EventArgs e)
         {
-            login popUpForm = new login();
-            popUpForm.Show();
 
+            if (session != null)
+            {
+                System.Windows.Forms.MessageBox.Show("U bent uitgelogd!!");
+                session = null;
+            }
+            else {
+                login login = new login();
+                login.Show();
+            }
         }
 
         private void aanmeld_button_Click(object sender, EventArgs e)
         {
-            signup popUpForm = new signup();
-            popUpForm.Show();
+            signup signup = new signup();
+            signup.Show();
         }
         private void movie_select(object sender, EventArgs e)
         {
             System.Windows.Forms.MessageBox.Show("Form Pop-up");
+        }
+        private void change_label()
+        {
+            login_button.Text = "Logout";
+        }
+        public void Loggedin(DataRow data) 
+        {
+            session = new Session();
+            session.voornaam = data["voornaam"].ToString();
+            session.achternaam = data["achternaam"].ToString();
+            session.email = data["email"].ToString();
+            session.role = data["role_id"].ToString();
+
+            System.Windows.Forms.MessageBox.Show("Welcome " + data["voornaam"].ToString() + " " + data["achternaam"].ToString() + "\n" 
+                + "U bent ingelogd!" + " \n" + " \n" + " Uw Role is: " + data["name"]);
+
+            change_label();
+
         }
     }
 }

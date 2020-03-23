@@ -41,6 +41,8 @@
             this.password_r_field = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.aanmeld_button = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // voornaam_field
@@ -71,7 +73,7 @@
             // 
             // password_field
             // 
-            this.password_field.Location = new System.Drawing.Point(116, 213);
+            this.password_field.Location = new System.Drawing.Point(116, 265);
             this.password_field.Name = "password_field";
             this.password_field.PasswordChar = '*';
             this.password_field.Size = new System.Drawing.Size(193, 20);
@@ -107,7 +109,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(113, 197);
+            this.label4.Location = new System.Drawing.Point(113, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 8;
@@ -115,7 +117,7 @@
             // 
             // password_r_field
             // 
-            this.password_r_field.Location = new System.Drawing.Point(116, 273);
+            this.password_r_field.Location = new System.Drawing.Point(116, 320);
             this.password_r_field.Name = "password_r_field";
             this.password_r_field.PasswordChar = '*';
             this.password_r_field.Size = new System.Drawing.Size(193, 20);
@@ -124,7 +126,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(113, 257);
+            this.label5.Location = new System.Drawing.Point(113, 304);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 13);
             this.label5.TabIndex = 10;
@@ -132,7 +134,7 @@
             // 
             // aanmeld_button
             // 
-            this.aanmeld_button.Location = new System.Drawing.Point(369, 311);
+            this.aanmeld_button.Location = new System.Drawing.Point(369, 385);
             this.aanmeld_button.Name = "aanmeld_button";
             this.aanmeld_button.Size = new System.Drawing.Size(75, 23);
             this.aanmeld_button.TabIndex = 11;
@@ -140,11 +142,30 @@
             this.aanmeld_button.UseVisualStyleBackColor = true;
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(116, 212);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(113, 196);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Geboorte Datum";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 346);
+            this.ClientSize = new System.Drawing.Size(456, 420);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.aanmeld_button);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.password_r_field);
@@ -177,5 +198,7 @@
         private System.Windows.Forms.TextBox password_r_field;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button aanmeld_button;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label6;
     }
 }

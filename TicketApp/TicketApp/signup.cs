@@ -45,7 +45,13 @@ namespace TicketApp
                 string hash = Function.ComputeSha256Hash(password_field.Text.Trim());
                 string query = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id) values ('"+voornaam_field.Text.Trim()+ "', '"+achternaam_field.Text.Trim()+"','"+email_field.Text.Trim()+"','"+hash+"','"+ 2 +"')";
                 Function.ExcQuery(query);
+                this.Close();
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TicketApp
                 string hash = Function.ComputeSha256Hash(Password.Text.Trim());
                 string database = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database/Database.db");
                 SQLiteConnection conn = new SQLiteConnection("data source=" + database + ";Version=3");
-                string query = "SELECT * FROM gebruikers WHERE Email = '"+Email.Text.Trim()+"' AND password = '"+hash+"'";
+                string query = "SELECT * FROM gebruikers g LEFT JOIN Roles r ON g.Role_id = r.ID  WHERE g.Email = '"+Email.Text.Trim()+"' AND g.password = '"+hash+"'";
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
@@ -52,13 +52,11 @@ namespace TicketApp
                 conn.Close();
                 if (dt.Rows.Count > 0)
                 {
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        string voornaam = row["voornaam"].ToString();
-                        string achternaam = row["achternaam"].ToString();
-                        Function.Message("Welcome " + voornaam + " " + achternaam + "\n" + "U bent ingelogd!");
-                        this.Close();
-                    }
+                    this.Close();
+                    MainApp main = new MainApp();
+                    dt.Rows[0]["password"] = "";
+                    main.Loggedin(dt.Rows[0]);
+
                 }
                 else
                 {
@@ -70,10 +68,6 @@ namespace TicketApp
             {
                 Function.Message(Email.Text.Trim() + " is geen gelding emailadres!");
             }
-
-            //MainApp main = new MainApp();
-
-            //main.login_button.Text = "Logout";
         }
     }
 }
