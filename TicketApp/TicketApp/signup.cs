@@ -22,6 +22,7 @@ namespace TicketApp
 
         private void aanmeld_Click(object sender, EventArgs e)
         {
+            //deze functie valideerd het ingevoerde gegevens van een gebruiker
             var Function = new Functions();
             if (email_field.Text.Trim() == "" || password_field.Text.Trim() == "" || password_r_field.Text.Trim() == "" || voornaam_field.Text.Trim() == "" || achternaam_field.Text.Trim() == "")
             {
@@ -39,11 +40,16 @@ namespace TicketApp
             {
                 Function.Message("Wachtwoord en herhaal wachtwoord moeten hetzelfde zijn.");
             }
-            else {
-
+            else if (password_field.Text.Length < 6 || password_field.Text.Length > 24)
+            {
+                Function.Message("Wachtwoord moet minimaal 6 characters lang zijn en maximaal 24.");
+            }
+            else
+            {
+                //hier worden de gegevens in de database opgeslagen en word het formulier gesloten
                 Function.Message("validatie gelukt!");
                 string hash = Function.ComputeSha256Hash(password_field.Text.Trim());
-                string query = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id) values ('"+voornaam_field.Text.Trim()+ "', '"+achternaam_field.Text.Trim()+"','"+email_field.Text.Trim()+"','"+hash+"','"+ 2 +"')";
+                string query = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id) values ('" + voornaam_field.Text.Trim() + "', '" + achternaam_field.Text.Trim() + "','" + email_field.Text.Trim() + "','" + hash + "','" + 2 + "')";
                 Function.ExcQuery(query);
                 this.Close();
             }

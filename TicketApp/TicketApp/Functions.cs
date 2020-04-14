@@ -16,8 +16,17 @@ namespace TicketApp
 {
     class Functions
     {
+        //database variable worden aangemaakt
+        public SQLiteConnection conn;
+        public SQLiteCommand cmd;
+        public SQLiteDataAdapter da;
+        public DataSet ds = new DataSet();
+        public DataTable dt = new DataTable();
+
+
         public string ComputeSha256Hash(string rawData)
-        { 
+        {
+            //in deze functie worden wachtworden geencrypt
             using (SHA256 sha256Hash = SHA256.Create())
             { 
                 byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
@@ -30,22 +39,21 @@ namespace TicketApp
             }
         }
 
+        //deze functie displayed messages
         public void Message(string message) 
         {
             System.Windows.Forms.MessageBox.Show(message);
         }
 
-        public SQLiteConnection conn;
-        public SQLiteCommand cmd;
-        public SQLiteDataAdapter da;
-        public DataSet ds = new DataSet();
-        public DataTable dt = new DataTable();
 
+        //database connectie word aangemaakt
         public void DataBaseConnection()
         {
             string database = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database/Database.db");
             conn = new SQLiteConnection("data source=" + database + ";Version=3");
         }
+
+        //query naar de database word uitgevoerd
         public void ExcQuery(string Query)
         {
             DataBaseConnection();
@@ -55,6 +63,8 @@ namespace TicketApp
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
+        //test functie word select uit database
         public int SelectData(string query) 
         {
             DataBaseConnection();

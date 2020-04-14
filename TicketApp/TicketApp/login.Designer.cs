@@ -30,7 +30,7 @@
         {
             this.Email = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.TextBox();
-            this.login_button = new System.Windows.Forms.Button();
+            this.Submit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -52,15 +52,15 @@
             this.Password.TabIndex = 1;
             this.Password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
-            // login_button
+            // Submit
             // 
-            this.login_button.Location = new System.Drawing.Point(374, 161);
-            this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(75, 23);
-            this.login_button.TabIndex = 2;
-            this.login_button.Text = "Login";
-            this.login_button.UseVisualStyleBackColor = true;
-            this.login_button.Click += new System.EventHandler(this.login_button_Click);
+            this.Submit.Location = new System.Drawing.Point(374, 161);
+            this.Submit.Name = "Submit";
+            this.Submit.Size = new System.Drawing.Size(75, 23);
+            this.Submit.TabIndex = 2;
+            this.Submit.Text = "Login";
+            this.Submit.UseVisualStyleBackColor = true;
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // label1
             // 
@@ -84,10 +84,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 196);
+            this.ClientSize = new System.Drawing.Size(461, 195);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.login_button);
+            this.Controls.Add(this.Submit);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Email);
             this.Name = "login";
@@ -101,7 +101,7 @@
 
         private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.TextBox Password;
-        private System.Windows.Forms.Button login_button;
+        private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

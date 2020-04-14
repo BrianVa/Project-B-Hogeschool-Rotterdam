@@ -8,6 +8,7 @@ namespace TicketApp
 {
     class Session
     {
+        //session variable worden aangemaakt voor later
         public string voornaam;
         public string achternaam;
         public string email;

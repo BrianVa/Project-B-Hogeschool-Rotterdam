@@ -19,3 +19,4 @@ C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\System.
 C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.csproj.CopyComplete
 C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.login.resources
 C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.signup.resources
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.BitFilm.resources

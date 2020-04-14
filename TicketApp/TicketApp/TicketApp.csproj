@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BitFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BitFilm.Designer.cs">
+      <DependentUpon>BitFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -87,6 +93,9 @@
     <Compile Include="signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BitFilm.resx">
+      <DependentUpon>BitFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>

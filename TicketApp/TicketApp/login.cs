@@ -30,8 +30,9 @@ namespace TicketApp
             string temp = Password.Text;
         }
 
-        private void login_button_Click(object sender, EventArgs e)
+        private void Submit_Click(object sender, EventArgs e)
         {
+            // hier worden de gegevens gevalideert
             var Function = new Functions();
             if (Email.Text.Trim() == "" && Password.Text.Trim() == "")
             {
@@ -39,7 +40,7 @@ namespace TicketApp
             }
             else if (Email.Text.Trim().Contains("@") && Email.Text.Trim().Contains("."))
             {
-
+                //hier word gekeken of het email en wachtwoord overeen komen
                 string hash = Function.ComputeSha256Hash(Password.Text.Trim());
                 string database = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database/Database.db");
                 SQLiteConnection conn = new SQLiteConnection("data source=" + database + ";Version=3");
@@ -52,8 +53,9 @@ namespace TicketApp
                 conn.Close();
                 if (dt.Rows.Count > 0)
                 {
+                    //als het email adress en wachtword overeen komen word de gebuiker ingelogd
                     this.Close();
-                    MainApp main = new MainApp();
+                    BitFilm main = new BitFilm();
                     dt.Rows[0]["password"] = "";
                     main.Loggedin(dt.Rows[0]);
 
@@ -62,7 +64,7 @@ namespace TicketApp
                 {
                     Function.Message("Verkeerd Email of Wachtwoord!");
                 }
-                
+
             }
             else
             {

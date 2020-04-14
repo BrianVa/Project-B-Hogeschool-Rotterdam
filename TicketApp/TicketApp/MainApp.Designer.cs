@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -52,6 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -64,9 +66,9 @@
             // search_button
             // 
             this.search_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.search_button.Location = new System.Drawing.Point(1038, 552);
+            this.search_button.Location = new System.Drawing.Point(1032, 46);
             this.search_button.Name = "search_button";
-            this.search_button.Size = new System.Drawing.Size(124, 23);
+            this.search_button.Size = new System.Drawing.Size(130, 20);
             this.search_button.TabIndex = 2;
             this.search_button.Text = "Browse Movies";
             this.search_button.UseVisualStyleBackColor = true;
@@ -84,6 +86,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1174, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -111,8 +114,8 @@
             this.login_button,
             this.aanmeld_button});
             this.loggen_menu.Name = "loggen_menu";
-            this.loggen_menu.Size = new System.Drawing.Size(49, 20);
-            this.loggen_menu.Text = "Login";
+            this.loggen_menu.Size = new System.Drawing.Size(64, 20);
+            this.loggen_menu.Text = "Account";
             // 
             // login_button
             // 
@@ -153,7 +156,7 @@
             // SearchBox
             // 
             this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchBox.Location = new System.Drawing.Point(806, 554);
+            this.SearchBox.Location = new System.Drawing.Point(800, 46);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(226, 20);
             this.SearchBox.TabIndex = 10;
@@ -168,7 +171,7 @@
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(945, 102);
+            this.pictureBox6.Location = new System.Drawing.Point(951, 116);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(182, 256);
             this.pictureBox6.TabIndex = 9;
@@ -180,7 +183,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(726, 102);
+            this.pictureBox5.Location = new System.Drawing.Point(730, 117);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(176, 255);
             this.pictureBox5.TabIndex = 8;
@@ -191,7 +194,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(500, 101);
+            this.pictureBox4.Location = new System.Drawing.Point(502, 116);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(181, 256);
             this.pictureBox4.TabIndex = 7;
@@ -202,7 +205,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(279, 103);
+            this.pictureBox3.Location = new System.Drawing.Point(279, 116);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(181, 255);
             this.pictureBox3.TabIndex = 6;
@@ -213,7 +216,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(74, 103);
+            this.pictureBox2.Location = new System.Drawing.Point(77, 115);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(177, 256);
             this.pictureBox2.TabIndex = 5;
@@ -224,55 +227,65 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(88, 362);
+            this.label1.Location = new System.Drawing.Point(89, 396);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 26);
             this.label1.TabIndex = 11;
             this.label1.Text = "No time to die";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(284, 364);
+            this.label2.Location = new System.Drawing.Point(274, 396);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 26);
             this.label2.TabIndex = 12;
             this.label2.Text = "Bad Boys for life";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(550, 364);
+            this.label3.Location = new System.Drawing.Point(556, 396);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 26);
             this.label3.TabIndex = 13;
             this.label3.Text = "Sonic";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(700, 364);
+            this.label4.Location = new System.Drawing.Point(698, 396);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(231, 26);
             this.label4.TabIndex = 14;
             this.label4.Text = "The boy brahm\'s curse";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(971, 364);
+            this.label5.Location = new System.Drawing.Point(980, 396);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 26);
             this.label5.TabIndex = 15;
             this.label5.Text = "Birds of prey";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // MainApp
             // 
@@ -330,11 +343,15 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+
+
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
