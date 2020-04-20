@@ -23,6 +23,19 @@ namespace TicketApp
         public DataSet ds = new DataSet();
         public DataTable dt = new DataTable();
 
+        //globale select function die een query krijgt deze uitvoert en resulaat terug stuurt
+        static public DataRowCollection Select(string query) 
+        {
+            string database = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database/Database.db");
+            SQLiteConnection conn = new SQLiteConnection("data source=" + database + ";Version=3");
+            conn.Open();
+            SQLiteCommand cmd = new SQLiteCommand(query, conn);
+            DataTable dt = new DataTable();
+            SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
+            da.Fill(dt);
+            conn.Close();
+            return dt.Rows;
+        }
 
         public string ComputeSha256Hash(string rawData)
         {

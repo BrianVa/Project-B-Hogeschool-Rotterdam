@@ -22,21 +22,14 @@ namespace TicketApp
         {
             //deze functie haalt 5 films uit de database en laad deze in het form zien
             InitializeComponent();
-            string database = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database/Database.db");
-            SQLiteConnection conn = new SQLiteConnection("data source=" + database + ";Version=3");
-            conn.Open();
-            string query = "SELECT * FROM Films LIMIT 5";
-            SQLiteCommand cmd = new SQLiteCommand(query, conn);
-            DataTable dt = new DataTable();
-            SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
-            da.Fill(dt);
-            conn.Close();
+            var Function = new Functions();
+            DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
             //film naam word bij de labels gezet
-            label1.Text = dt.Rows[0]["naam"].ToString();
-            label2.Text = dt.Rows[1]["naam"].ToString();
-            label3.Text = dt.Rows[2]["naam"].ToString();
-            label4.Text = dt.Rows[3]["naam"].ToString();
-            label5.Text = dt.Rows[4]["naam"].ToString();
+            label1.Text = data[0]["naam"].ToString();
+            label2.Text = data[1]["naam"].ToString();
+            label3.Text = data[2]["naam"].ToString();
+            label4.Text = data[3]["naam"].ToString();
+            label5.Text = data[4]["naam"].ToString();
         }
         private void search_button_Click(object sender, EventArgs e)
         {
@@ -45,22 +38,16 @@ namespace TicketApp
             string value = SearchBox.Text.Trim();
 
             //hier word er in de database gezocht of de gezochte film bestaat zo ja word deze getoont 
-            string database = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database/Database.db");
-            SQLiteConnection conn = new SQLiteConnection("data source=" + database + ";Version=3");
-            conn.Open();
-            string query = "SELECT * FROM films WHERE naam = '" + value.ToLower() + "'";
-            SQLiteCommand cmd = new SQLiteCommand(query, conn);
-            DataTable dt = new DataTable();
-            SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
-            da.Fill(dt);
-            conn.Close();
-            if (dt.Rows.Count > 0)
+            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE naam = '" + value.ToLower() + "'");
+
+            if (data.Count > 0)
             {
+                Function.Message("Bingo bongo!");
                 //als er een film is gevonden word er een melding getoond met film info
-                System.Windows.Forms.MessageBox.Show("Film Naam: " + dt.Rows[0]["naam"].ToString() + " " + "\n" +
-                     "Film Beschrijving: " + dt.Rows[0]["beschrijving"].ToString() + "\n" + 
-                    "Film Leeftijd: " + dt.Rows[0]["leeftijd"].ToString() + " \n" +
-                    "Speel duur: " + dt.Rows[0]["speel_duur"].ToString()
+                System.Windows.Forms.MessageBox.Show("Film Naam: " + data[0]["naam"].ToString() + " " + "\n" +
+                     "Film Beschrijving: " + data[0]["beschrijving"].ToString() + "\n" +
+                    "Film Leeftijd: " + data[0]["leeftijd"].ToString() + " \n" +
+                    "Speel duur: " + data[0]["speel_duur"].ToString()
 
                     );
             }
@@ -87,7 +74,7 @@ namespace TicketApp
 
         private void login_button_Click(object sender, EventArgs e)
         {
-            //deze functie roept het login formulier aan  of logt een gebruikers uit als deze al is ingelogd
+            //deze functie roept het login formulier aan of logt een gebruikers uit als deze al is ingelogd
             if (session != null)
             {
                 System.Windows.Forms.MessageBox.Show("U bent uitgelogd!!");
