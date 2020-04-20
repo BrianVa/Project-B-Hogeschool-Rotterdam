@@ -18,12 +18,21 @@ namespace TicketApp
     {
         //de session variable word gedeclareed voor later bij de login
         private static Session session;
+        private List<string> featured = new List<string>();
         public MainApp()
         {
             //deze functie haalt 5 films uit de database en laad deze in het form zien
             InitializeComponent();
+            Main_panel.BringToFront();
             var Function = new Functions();
             DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
+            //id's van films in list geplaatst
+            featured.Add(data[0]["id"].ToString());
+            featured.Add(data[1]["id"].ToString());
+            featured.Add(data[2]["id"].ToString());
+            featured.Add(data[3]["id"].ToString());
+            featured.Add(data[4]["id"].ToString());
+
             //film naam word bij de labels gezet
             label1.Text = data[0]["naam"].ToString();
             label2.Text = data[1]["naam"].ToString();
@@ -42,14 +51,9 @@ namespace TicketApp
 
             if (data.Count > 0)
             {
-                Function.Message("Bingo bongo!");
-                //als er een film is gevonden word er een melding getoond met film info
-                System.Windows.Forms.MessageBox.Show("Film Naam: " + data[0]["naam"].ToString() + " " + "\n" +
-                     "Film Beschrijving: " + data[0]["beschrijving"].ToString() + "\n" +
-                    "Film Leeftijd: " + data[0]["leeftijd"].ToString() + " \n" +
-                    "Speel duur: " + data[0]["speel_duur"].ToString()
+                //film pagina word opgezet
+                setMoviePage(data);
 
-                    );
             }
             else {
                 Function.Message("Kan film niet vinden!");
@@ -100,10 +104,6 @@ namespace TicketApp
                 signup.Show();
             }
         }
-        private void movie_select(object sender, EventArgs e)
-        {
-            System.Windows.Forms.MessageBox.Show("Form Pop-up");
-        }
 
         public void Loggedin(DataRow data) 
         {
@@ -119,9 +119,59 @@ namespace TicketApp
 
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void setMoviePage(DataRowCollection data)
         {
+            film_name.Text = data[0]["naam"].ToString();
+            film_age.Text = "Film Leeftijd: " + data[0]["leeftijd"].ToString();
+            film_disc.Text = "Film Beschrijving: " + data[0]["beschrijving"].ToString();
+            film_speelduur.Text = "Film Speelduur: " + data[0]["speel_duur"].ToString();
+            film_genre.Text = "Film Genre: " + data[0]["genre"].ToString();
 
+            string picture_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/" + data[0]["img_url"] + ".jpg");
+            //searched_movie.Image = Image.FromFile(picture_path);
+
+            show_film_panel.BringToFront();
+        }
+
+        private void Back_button_Click(object sender, EventArgs e)
+        {
+            Main_panel.BringToFront();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var Function = new Functions();
+            Function.Message("Select ticket function call!!!");
+        }
+
+        private void featured_1_Click(object sender, EventArgs e)
+        {
+            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[0]) + "'");
+            setMoviePage(data);
+        }
+
+        private void featured_2_Click(object sender, EventArgs e)
+        {
+            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[1]) + "'");
+            setMoviePage(data);
+        }
+
+        private void featured_3_Click(object sender, EventArgs e)
+        {
+            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[2]) + "'");
+            setMoviePage(data);
+        }
+
+        private void featured_4_Click(object sender, EventArgs e)
+        {
+            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[3]) + "'");
+            setMoviePage(data);
+        }
+
+        private void featured_5_Click(object sender, EventArgs e)
+        {
+            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[4]) + "'");
+            setMoviePage(data);
         }
     }
 }

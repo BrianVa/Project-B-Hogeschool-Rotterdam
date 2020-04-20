@@ -26,6 +26,7 @@ namespace TicketApp
         //globale select function die een query krijgt deze uitvoert en resulaat terug stuurt
         static public DataRowCollection Select(string query) 
         {
+            //deze functie haalt data op uit de database en returnd het resultaat
             string database = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database/Database.db");
             SQLiteConnection conn = new SQLiteConnection("data source=" + database + ";Version=3");
             conn.Open();
