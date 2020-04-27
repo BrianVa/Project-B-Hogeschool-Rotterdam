@@ -27,12 +27,17 @@ namespace TicketApp
             var Function = new Functions();
             DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
             //id's van films in list geplaatst
+
+            //id worden niet goed op volgorde gezet !
             featured.Add(data[0]["id"].ToString());
             featured.Add(data[1]["id"].ToString());
             featured.Add(data[2]["id"].ToString());
             featured.Add(data[3]["id"].ToString());
             featured.Add(data[4]["id"].ToString());
 
+
+
+            //id worden niet goed op volgorde gezet !
             //film naam word bij de labels gezet
             label1.Text = data[0]["naam"].ToString();
             label2.Text = data[1]["naam"].ToString();
@@ -66,8 +71,9 @@ namespace TicketApp
         }
         private void info_button_click(object sender, EventArgs e)  
         {
+            var Function = new Functions();
             //deze functie geeft een melding met wat info
-            System.Windows.Forms.MessageBox.Show("Made by:\n" +
+            Function.Message("Made by:\n" +
                 "\n"+
                 "Brian Vaartjes.\n" +
                 "Glenn Visser.\n" +
@@ -78,35 +84,38 @@ namespace TicketApp
 
         private void login_button_Click(object sender, EventArgs e)
         {
+            var Function = new Functions();
             //deze functie roept het login formulier aan of logt een gebruikers uit als deze al is ingelogd
             if (session != null)
             {
-                System.Windows.Forms.MessageBox.Show("U bent uitgelogd!!");
+                Function.Message("U bent uitgelogd!!");
                 session = null;
             }
             else {
-                login login = new login();
-                login.Show();
+                login loginForm = new login();
+                loginForm.Show();
             }
         }
 
         private void aanmeld_button_Click(object sender, EventArgs e)
         {
+            var Function = new Functions();
             //deze functie roept het aanmeld formulier aan of geeft een melding als een gebruiker is ingelogd
             if (session != null)
             {
-                System.Windows.Forms.MessageBox.Show("U Bent al ingelogd!!");
+                Function.Message("U Bent al ingelogd!!");
             }
             else
             {
                 //aanmeld form word geladen 
-                signup signup = new signup();
-                signup.Show();
+                signup SingupForm = new signup();
+                SingupForm.Show();
             }
         }
 
         public void Loggedin(DataRow data) 
         {
+            var Function = new Functions();
             //deze functie laad de login gegevens in een session hier kunnen we later in  app gegevens van een ingelogde gebruiker terug vinden
             session = new Session();
             session.voornaam = data["voornaam"].ToString();
@@ -114,7 +123,7 @@ namespace TicketApp
             session.email = data["email"].ToString();
             session.role = data["role_id"].ToString();
 
-            System.Windows.Forms.MessageBox.Show("Welcome " + data["voornaam"].ToString() + " " + data["achternaam"].ToString() + "\n" 
+            Function.Message("Welcome " + data["voornaam"].ToString() + " " + data["achternaam"].ToString() + "\n" 
                 + "U bent ingelogd!" + " \n" + " \n" + " Uw Role is: " + data["name"]);
 
         }
@@ -122,13 +131,13 @@ namespace TicketApp
         private void setMoviePage(DataRowCollection data)
         {
             film_name.Text = data[0]["naam"].ToString();
-            film_age.Text = "Film Leeftijd: " + data[0]["leeftijd"].ToString();
-            film_disc.Text = "Film Beschrijving: " + data[0]["beschrijving"].ToString();
-            film_speelduur.Text = "Film Speelduur: " + data[0]["speel_duur"].ToString();
-            film_genre.Text = "Film Genre: " + data[0]["genre"].ToString();
+            film_age.Text = data[0]["leeftijd"].ToString();
+            film_desc.Text = "Film Beschrijving: " + data[0]["beschrijving"].ToString();
+            film_speelduur.Text = data[0]["speel_duur"].ToString() + " Minuten";
+            film_genre.Text = data[0]["genre"].ToString();
 
-            string picture_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/" + data[0]["img_url"] + ".jpg");
-            //searched_movie.Image = Image.FromFile(picture_path);
+            string picture_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[0]["img_url"] + ".jpg");
+            searched_movie.Image = Image.FromFile(picture_path);
 
             show_film_panel.BringToFront();
         }

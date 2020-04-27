@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -53,14 +54,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Main_panel = new System.Windows.Forms.Panel();
             this.show_film_panel = new System.Windows.Forms.Panel();
+            this.film_desc = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Back_button = new System.Windows.Forms.Button();
             this.searched_movie = new System.Windows.Forms.PictureBox();
-            this.film_disc = new System.Windows.Forms.Label();
             this.film_age = new System.Windows.Forms.Label();
-            this.film_speelduur = new System.Windows.Forms.Label();
-            this.film_genre = new System.Windows.Forms.Label();
+            this.film_speelduur_title = new System.Windows.Forms.Label();
+            this.film_genre_title = new System.Windows.Forms.Label();
             this.film_name = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.film_genre = new System.Windows.Forms.Label();
+            this.film_speelduur = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -128,14 +132,14 @@
             // login_button
             // 
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(135, 22);
+            this.login_button.Size = new System.Drawing.Size(180, 22);
             this.login_button.Text = "Login";
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // aanmeld_button
             // 
             this.aanmeld_button.Name = "aanmeld_button";
-            this.aanmeld_button.Size = new System.Drawing.Size(135, 22);
+            this.aanmeld_button.Size = new System.Drawing.Size(180, 22);
             this.aanmeld_button.Text = "Aanmelden";
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
             // 
@@ -314,18 +318,30 @@
             // 
             // show_film_panel
             // 
+            this.show_film_panel.Controls.Add(this.film_speelduur);
+            this.show_film_panel.Controls.Add(this.film_genre);
+            this.show_film_panel.Controls.Add(this.film_desc);
             this.show_film_panel.Controls.Add(this.button1);
             this.show_film_panel.Controls.Add(this.Back_button);
             this.show_film_panel.Controls.Add(this.searched_movie);
-            this.show_film_panel.Controls.Add(this.film_disc);
             this.show_film_panel.Controls.Add(this.film_age);
-            this.show_film_panel.Controls.Add(this.film_speelduur);
-            this.show_film_panel.Controls.Add(this.film_genre);
+            this.show_film_panel.Controls.Add(this.film_speelduur_title);
+            this.show_film_panel.Controls.Add(this.film_genre_title);
             this.show_film_panel.Controls.Add(this.film_name);
             this.show_film_panel.Location = new System.Drawing.Point(0, 27);
             this.show_film_panel.Name = "show_film_panel";
-            this.show_film_panel.Size = new System.Drawing.Size(1174, 566);
+            this.show_film_panel.Size = new System.Drawing.Size(1174, 564);
             this.show_film_panel.TabIndex = 16;
+            // 
+            // film_desc
+            // 
+            this.film_desc.BackColor = System.Drawing.Color.Maroon;
+            this.film_desc.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.film_desc.Location = new System.Drawing.Point(318, 104);
+            this.film_desc.Name = "film_desc";
+            this.film_desc.Size = new System.Drawing.Size(297, 216);
+            this.film_desc.TabIndex = 9;
+            this.film_desc.Text = "";
             // 
             // button1
             // 
@@ -352,66 +368,82 @@
             this.searched_movie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.searched_movie.Image = ((System.Drawing.Image)(resources.GetObject("searched_movie.Image")));
-            this.searched_movie.Location = new System.Drawing.Point(885, 122);
+            this.searched_movie.Location = new System.Drawing.Point(15, 55);
             this.searched_movie.Name = "searched_movie";
             this.searched_movie.Size = new System.Drawing.Size(180, 256);
             this.searched_movie.TabIndex = 6;
             this.searched_movie.TabStop = false;
             // 
-            // film_disc
-            // 
-            this.film_disc.AutoSize = true;
-            this.film_disc.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.film_disc.ForeColor = System.Drawing.Color.White;
-            this.film_disc.Location = new System.Drawing.Point(63, 330);
-            this.film_disc.Name = "film_disc";
-            this.film_disc.Size = new System.Drawing.Size(344, 46);
-            this.film_disc.TabIndex = 4;
-            this.film_disc.Text = "Film Beschrijving: ";
-            // 
             // film_age
             // 
             this.film_age.AutoSize = true;
-            this.film_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.film_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.film_age.ForeColor = System.Drawing.Color.White;
-            this.film_age.Location = new System.Drawing.Point(63, 265);
+            this.film_age.Location = new System.Drawing.Point(313, 471);
             this.film_age.Name = "film_age";
-            this.film_age.Size = new System.Drawing.Size(257, 46);
+            this.film_age.Size = new System.Drawing.Size(85, 25);
             this.film_age.TabIndex = 3;
-            this.film_age.Text = "Film Leeftijd: ";
+            this.film_age.Text = "Leeftijd: ";
             // 
-            // film_speelduur
+            // film_speelduur_title
             // 
-            this.film_speelduur.AutoSize = true;
-            this.film_speelduur.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.film_speelduur.ForeColor = System.Drawing.Color.White;
-            this.film_speelduur.Location = new System.Drawing.Point(63, 200);
-            this.film_speelduur.Name = "film_speelduur";
-            this.film_speelduur.Size = new System.Drawing.Size(309, 46);
-            this.film_speelduur.TabIndex = 2;
-            this.film_speelduur.Text = "Film Speelduur: ";
+            this.film_speelduur_title.AutoSize = true;
+            this.film_speelduur_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.film_speelduur_title.ForeColor = System.Drawing.Color.White;
+            this.film_speelduur_title.Location = new System.Drawing.Point(313, 403);
+            this.film_speelduur_title.Name = "film_speelduur_title";
+            this.film_speelduur_title.Size = new System.Drawing.Size(65, 25);
+            this.film_speelduur_title.TabIndex = 2;
+            this.film_speelduur_title.Text = "Duur: ";
             // 
-            // film_genre
+            // film_genre_title
             // 
-            this.film_genre.AutoSize = true;
-            this.film_genre.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.film_genre.ForeColor = System.Drawing.Color.White;
-            this.film_genre.Location = new System.Drawing.Point(63, 136);
-            this.film_genre.Name = "film_genre";
-            this.film_genre.Size = new System.Drawing.Size(238, 46);
-            this.film_genre.TabIndex = 1;
-            this.film_genre.Text = "Film Genre: ";
+            this.film_genre_title.AutoSize = true;
+            this.film_genre_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.film_genre_title.ForeColor = System.Drawing.Color.White;
+            this.film_genre_title.Location = new System.Drawing.Point(313, 341);
+            this.film_genre_title.Name = "film_genre_title";
+            this.film_genre_title.Size = new System.Drawing.Size(77, 25);
+            this.film_genre_title.TabIndex = 1;
+            this.film_genre_title.Text = "Genre: ";
             // 
             // film_name
             // 
             this.film_name.AutoSize = true;
             this.film_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.film_name.ForeColor = System.Drawing.Color.White;
-            this.film_name.Location = new System.Drawing.Point(461, 56);
+            this.film_name.Location = new System.Drawing.Point(310, 55);
             this.film_name.Name = "film_name";
             this.film_name.Size = new System.Drawing.Size(205, 46);
             this.film_name.TabIndex = 0;
             this.film_name.Text = "Film name";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // film_genre
+            // 
+            this.film_genre.AutoSize = true;
+            this.film_genre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.film_genre.ForeColor = System.Drawing.Color.White;
+            this.film_genre.Location = new System.Drawing.Point(313, 374);
+            this.film_genre.Name = "film_genre";
+            this.film_genre.Size = new System.Drawing.Size(77, 25);
+            this.film_genre.TabIndex = 10;
+            this.film_genre.Text = "Genre: ";
+            // 
+            // film_speelduur
+            // 
+            this.film_speelduur.AutoSize = true;
+            this.film_speelduur.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.film_speelduur.ForeColor = System.Drawing.Color.White;
+            this.film_speelduur.Location = new System.Drawing.Point(313, 437);
+            this.film_speelduur.Name = "film_speelduur";
+            this.film_speelduur.Size = new System.Drawing.Size(65, 25);
+            this.film_speelduur.TabIndex = 11;
+            this.film_speelduur.Text = "Duur: ";
             // 
             // MainApp
             // 
@@ -473,12 +505,15 @@
         private System.Windows.Forms.Panel show_film_panel;
         private System.Windows.Forms.Label film_name;
         private System.Windows.Forms.Label film_age;
-        private System.Windows.Forms.Label film_speelduur;
-        private System.Windows.Forms.Label film_genre;
-        private System.Windows.Forms.Label film_disc;
+        private System.Windows.Forms.Label film_speelduur_title;
+        private System.Windows.Forms.Label film_genre_title;
         private System.Windows.Forms.PictureBox searched_movie;
         private System.Windows.Forms.Button Back_button;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox film_desc;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label film_speelduur;
+        private System.Windows.Forms.Label film_genre;
     }
 }
 
