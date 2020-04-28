@@ -66,6 +66,7 @@
             this.film_genre_title = new System.Windows.Forms.Label();
             this.film_name = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.BitfilmTekst = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -177,11 +178,13 @@
             // 
             // featured_5
             // 
+            this.featured_5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.featured_5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_5.Image = ((System.Drawing.Image)(resources.GetObject("featured_5.Image")));
-            this.featured_5.Location = new System.Drawing.Point(974, 113);
+            this.featured_5.Location = new System.Drawing.Point(1020, 100);
             this.featured_5.Name = "featured_5";
-            this.featured_5.Size = new System.Drawing.Size(210, 291);
+            this.featured_5.Size = new System.Drawing.Size(180, 254);
             this.featured_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_5.TabIndex = 9;
             this.featured_5.TabStop = false;
@@ -189,11 +192,13 @@
             // 
             // featured_4
             // 
+            this.featured_4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.featured_4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_4.Image = ((System.Drawing.Image)(resources.GetObject("featured_4.Image")));
-            this.featured_4.Location = new System.Drawing.Point(756, 112);
+            this.featured_4.Location = new System.Drawing.Point(780, 100);
             this.featured_4.Name = "featured_4";
-            this.featured_4.Size = new System.Drawing.Size(192, 292);
+            this.featured_4.Size = new System.Drawing.Size(180, 254);
             this.featured_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_4.TabIndex = 8;
             this.featured_4.TabStop = false;
@@ -201,11 +206,13 @@
             // 
             // featured_1
             // 
+            this.featured_1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.featured_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_1.Image = ((System.Drawing.Image)(resources.GetObject("featured_1.Image")));
-            this.featured_1.Location = new System.Drawing.Point(61, 111);
+            this.featured_1.Location = new System.Drawing.Point(60, 100);
             this.featured_1.Name = "featured_1";
-            this.featured_1.Size = new System.Drawing.Size(205, 293);
+            this.featured_1.Size = new System.Drawing.Size(180, 254);
             this.featured_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_1.TabIndex = 7;
             this.featured_1.TabStop = false;
@@ -213,11 +220,13 @@
             // 
             // featured_2
             // 
+            this.featured_2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.featured_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_2.Image = ((System.Drawing.Image)(resources.GetObject("featured_2.Image")));
-            this.featured_2.Location = new System.Drawing.Point(291, 113);
+            this.featured_2.Location = new System.Drawing.Point(300, 100);
             this.featured_2.Name = "featured_2";
-            this.featured_2.Size = new System.Drawing.Size(212, 291);
+            this.featured_2.Size = new System.Drawing.Size(180, 254);
             this.featured_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_2.TabIndex = 6;
             this.featured_2.TabStop = false;
@@ -225,11 +234,13 @@
             // 
             // featured_3
             // 
+            this.featured_3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.featured_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_3.Image = ((System.Drawing.Image)(resources.GetObject("featured_3.Image")));
-            this.featured_3.Location = new System.Drawing.Point(522, 111);
+            this.featured_3.Location = new System.Drawing.Point(540, 100);
             this.featured_3.Name = "featured_3";
-            this.featured_3.Size = new System.Drawing.Size(214, 293);
+            this.featured_3.Size = new System.Drawing.Size(180, 254);
             this.featured_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_3.TabIndex = 5;
             this.featured_3.TabStop = false;
@@ -237,60 +248,71 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(785, 407);
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Couture", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(750, 370);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 26);
+            this.label4.Size = new System.Drawing.Size(240, 30);
             this.label4.TabIndex = 11;
             this.label4.Text = "No time to die";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(66, 407);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Couture", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(30, 370);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 26);
+            this.label1.Size = new System.Drawing.Size(240, 30);
             this.label1.TabIndex = 12;
             this.label1.Text = "Bad Boys for life";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1051, 407);
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Font = new System.Drawing.Font("Couture", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(990, 370);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 26);
+            this.label5.Size = new System.Drawing.Size(240, 30);
             this.label5.TabIndex = 13;
             this.label5.Text = "Sonic";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(286, 407);
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Couture", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(270, 370);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(231, 26);
+            this.label2.Size = new System.Drawing.Size(240, 30);
             this.label2.TabIndex = 14;
-            this.label2.Text = "The boy brahm\'s curse";
+            this.label2.Text = "SONIC";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(590, 407);
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Couture", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(510, 370);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 26);
+            this.label3.Size = new System.Drawing.Size(240, 30);
             this.label3.TabIndex = 15;
             this.label3.Text = "Birds of prey";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -303,6 +325,7 @@
             this.Main_panel.BackColor = System.Drawing.Color.Transparent;
             this.Main_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Main_panel.BackgroundImage")));
             this.Main_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Main_panel.Controls.Add(this.BitfilmTekst);
             this.Main_panel.Controls.Add(this.featured_3);
             this.Main_panel.Controls.Add(this.featured_2);
             this.Main_panel.Controls.Add(this.search_button);
@@ -344,9 +367,11 @@
             this.show_film_panel.Name = "show_film_panel";
             this.show_film_panel.Size = new System.Drawing.Size(1280, 720);
             this.show_film_panel.TabIndex = 16;
+            this.show_film_panel.Visible = false;
             // 
             // Kijkwijzer
             // 
+            this.Kijkwijzer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Kijkwijzer.Image = ((System.Drawing.Image)(resources.GetObject("Kijkwijzer.Image")));
             this.Kijkwijzer.Location = new System.Drawing.Point(447, 561);
             this.Kijkwijzer.Name = "Kijkwijzer";
@@ -391,11 +416,16 @@
             // 
             // film_desc
             // 
-            this.film_desc.BackColor = System.Drawing.Color.DimGray;
+            this.film_desc.BackColor = System.Drawing.Color.DarkGray;
+            this.film_desc.Cursor = System.Windows.Forms.Cursors.Default;
+            this.film_desc.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_desc.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.film_desc.Location = new System.Drawing.Point(224, 64);
+            this.film_desc.MaxLength = 380;
             this.film_desc.Name = "film_desc";
-            this.film_desc.Size = new System.Drawing.Size(297, 216);
+            this.film_desc.ReadOnly = true;
+            this.film_desc.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.film_desc.Size = new System.Drawing.Size(570, 216);
             this.film_desc.TabIndex = 9;
             this.film_desc.Text = "";
             // 
@@ -423,6 +453,7 @@
             // 
             // searched_movie
             // 
+            this.searched_movie.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.searched_movie.Image = ((System.Drawing.Image)(resources.GetObject("searched_movie.Image")));
             this.searched_movie.Location = new System.Drawing.Point(15, 15);
             this.searched_movie.Name = "searched_movie";
@@ -471,12 +502,24 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // BitfilmTekst
+            // 
+            this.BitfilmTekst.BackColor = System.Drawing.Color.White;
+            this.BitfilmTekst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BitfilmTekst.Font = new System.Drawing.Font("Couture", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BitfilmTekst.Location = new System.Drawing.Point(510, 20);
+            this.BitfilmTekst.Name = "BitfilmTekst";
+            this.BitfilmTekst.Size = new System.Drawing.Size(240, 60);
+            this.BitfilmTekst.TabIndex = 16;
+            this.BitfilmTekst.Text = "BITFILM";
+            this.BitfilmTekst.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.Maroon;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.show_film_panel);
@@ -484,6 +527,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainApp";
             this.Text = "TicketApp";
             this.menuStrip1.ResumeLayout(false);
@@ -543,6 +587,7 @@
         private System.Windows.Forms.Label film_genre;
         public System.Windows.Forms.WebBrowser TrailerVideo;
         private System.Windows.Forms.PictureBox Kijkwijzer;
+        private System.Windows.Forms.Label BitfilmTekst;
     }
 }
 

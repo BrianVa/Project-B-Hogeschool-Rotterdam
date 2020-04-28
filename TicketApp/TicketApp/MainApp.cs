@@ -25,6 +25,7 @@ namespace TicketApp
         {
             //deze functie haalt 5 films uit de database en laad deze in het form zien
             InitializeComponent();
+
             Main_panel.BringToFront();
             var Function = new Functions();
             DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
@@ -156,11 +157,17 @@ namespace TicketApp
             string link = "https://www.youtube.com/watch?v=" + data[0]["youtube_code"].ToString();
             this.TrailerVideo.DocumentText = string.Format(html, link.Split('=')[1]); //stopt de HTML Link in de WebBrowser box
             show_film_panel.BringToFront();
+            Main_panel.Visible = false;
+            show_film_panel.Visible = true;
         }
 
         private void Back_button_Click(object sender, EventArgs e)
         {
+            this.TrailerVideo.DocumentText = "";
             Main_panel.BringToFront();
+            show_film_panel.Visible = false;
+            Main_panel.Visible = true;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
