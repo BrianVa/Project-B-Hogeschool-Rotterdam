@@ -133,11 +133,15 @@ namespace TicketApp
 
         private void setMoviePage(DataRowCollection data)
         {
+            var totalMinutes = Int32.Parse(data[0]["speel_duur"].ToString());
+            int hours = totalMinutes / 60;
+            int minutes = totalMinutes % 60;
+
             var Function = new Functions();
             film_name.Text = data[0]["naam"].ToString();
             film_age.Text = data[0]["leeftijd"].ToString();
             film_desc.Text = "Film Beschrijving: " + data[0]["beschrijving"].ToString();
-            film_speelduur.Text = data[0]["speel_duur"].ToString() + " Minuten";
+            film_speelduur.Text = hours.ToString() + " uur " + " en " + minutes + " minuten";
             film_genre.Text = data[0]["genre"].ToString();
 
             string picture_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[0]["img_url"] + ".jpg");
