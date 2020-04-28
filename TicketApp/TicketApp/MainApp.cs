@@ -135,10 +135,12 @@ namespace TicketApp
         {
             var Function = new Functions();
             film_name.Text = data[0]["naam"].ToString();
-            film_age.Text = data[0]["leeftijd"].ToString();
             film_desc.Text = "Film Beschrijving: " + data[0]["beschrijving"].ToString();
             film_speelduur.Text = data[0]["speel_duur"].ToString() + " Minuten";
             film_genre.Text = data[0]["genre"].ToString();
+
+            string KijkwijzerFotoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/pictogram/" + data[0]["leeftijd"].ToString() + ".png");
+            Kijkwijzer.Image = Image.FromFile(KijkwijzerFotoPath);
 
             string picture_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[0]["img_url"] + ".jpg");
             string BG_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/BG/" + data[0]["back_url"] + ".png");

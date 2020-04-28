@@ -54,14 +54,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Main_panel = new System.Windows.Forms.Panel();
             this.show_film_panel = new System.Windows.Forms.Panel();
+            this.Kijkwijzer = new System.Windows.Forms.PictureBox();
+            this.film_genre = new System.Windows.Forms.Label();
             this.TrailerVideo = new System.Windows.Forms.WebBrowser();
             this.film_speelduur = new System.Windows.Forms.Label();
-            this.film_genre = new System.Windows.Forms.Label();
             this.film_desc = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Back_button = new System.Windows.Forms.Button();
             this.searched_movie = new System.Windows.Forms.PictureBox();
-            this.film_age = new System.Windows.Forms.Label();
             this.film_speelduur_title = new System.Windows.Forms.Label();
             this.film_genre_title = new System.Windows.Forms.Label();
             this.film_name = new System.Windows.Forms.Label();
@@ -74,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).BeginInit();
             this.Main_panel.SuspendLayout();
             this.show_film_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searched_movie)).BeginInit();
             this.SuspendLayout();
             // 
@@ -328,6 +329,7 @@
             this.show_film_panel.BackColor = System.Drawing.Color.Transparent;
             this.show_film_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("show_film_panel.BackgroundImage")));
             this.show_film_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.show_film_panel.Controls.Add(this.Kijkwijzer);
             this.show_film_panel.Controls.Add(this.film_genre);
             this.show_film_panel.Controls.Add(this.TrailerVideo);
             this.show_film_panel.Controls.Add(this.film_speelduur);
@@ -335,7 +337,6 @@
             this.show_film_panel.Controls.Add(this.button1);
             this.show_film_panel.Controls.Add(this.Back_button);
             this.show_film_panel.Controls.Add(this.searched_movie);
-            this.show_film_panel.Controls.Add(this.film_age);
             this.show_film_panel.Controls.Add(this.film_speelduur_title);
             this.show_film_panel.Controls.Add(this.film_genre_title);
             this.show_film_panel.Controls.Add(this.film_name);
@@ -343,6 +344,28 @@
             this.show_film_panel.Name = "show_film_panel";
             this.show_film_panel.Size = new System.Drawing.Size(1280, 720);
             this.show_film_panel.TabIndex = 16;
+            // 
+            // Kijkwijzer
+            // 
+            this.Kijkwijzer.Image = ((System.Drawing.Image)(resources.GetObject("Kijkwijzer.Image")));
+            this.Kijkwijzer.Location = new System.Drawing.Point(447, 561);
+            this.Kijkwijzer.Name = "Kijkwijzer";
+            this.Kijkwijzer.Size = new System.Drawing.Size(100, 100);
+            this.Kijkwijzer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Kijkwijzer.TabIndex = 13;
+            this.Kijkwijzer.TabStop = false;
+            // 
+            // film_genre
+            // 
+            this.film_genre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.film_genre.AutoSize = true;
+            this.film_genre.Font = new System.Drawing.Font("Couture", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.film_genre.ForeColor = System.Drawing.Color.White;
+            this.film_genre.Location = new System.Drawing.Point(615, 465);
+            this.film_genre.Name = "film_genre";
+            this.film_genre.Size = new System.Drawing.Size(179, 40);
+            this.film_genre.TabIndex = 10;
+            this.film_genre.Text = "Genre: ";
             // 
             // TrailerVideo
             // 
@@ -360,23 +383,11 @@
             this.film_speelduur.AutoSize = true;
             this.film_speelduur.Font = new System.Drawing.Font("Couture", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_speelduur.ForeColor = System.Drawing.Color.White;
-            this.film_speelduur.Location = new System.Drawing.Point(579, 530);
+            this.film_speelduur.Location = new System.Drawing.Point(588, 505);
             this.film_speelduur.Name = "film_speelduur";
             this.film_speelduur.Size = new System.Drawing.Size(157, 40);
             this.film_speelduur.TabIndex = 11;
             this.film_speelduur.Text = "Duur: ";
-            // 
-            // film_genre
-            // 
-            this.film_genre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.film_genre.AutoSize = true;
-            this.film_genre.Font = new System.Drawing.Font("Couture", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.film_genre.ForeColor = System.Drawing.Color.White;
-            this.film_genre.Location = new System.Drawing.Point(615, 465);
-            this.film_genre.Name = "film_genre";
-            this.film_genre.Size = new System.Drawing.Size(179, 40);
-            this.film_genre.TabIndex = 10;
-            this.film_genre.Text = "Genre: ";
             // 
             // film_desc
             // 
@@ -420,25 +431,13 @@
             this.searched_movie.TabIndex = 6;
             this.searched_movie.TabStop = false;
             // 
-            // film_age
-            // 
-            this.film_age.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.film_age.AutoSize = true;
-            this.film_age.Font = new System.Drawing.Font("Couture", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.film_age.ForeColor = System.Drawing.Color.White;
-            this.film_age.Location = new System.Drawing.Point(447, 608);
-            this.film_age.Name = "film_age";
-            this.film_age.Size = new System.Drawing.Size(229, 40);
-            this.film_age.TabIndex = 3;
-            this.film_age.Text = "Leeftijd: ";
-            // 
             // film_speelduur_title
             // 
             this.film_speelduur_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_speelduur_title.AutoSize = true;
             this.film_speelduur_title.Font = new System.Drawing.Font("Couture", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_speelduur_title.ForeColor = System.Drawing.Color.White;
-            this.film_speelduur_title.Location = new System.Drawing.Point(440, 530);
+            this.film_speelduur_title.Location = new System.Drawing.Point(447, 505);
             this.film_speelduur_title.Name = "film_speelduur_title";
             this.film_speelduur_title.Size = new System.Drawing.Size(157, 40);
             this.film_speelduur_title.TabIndex = 2;
@@ -479,9 +478,9 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(1279, 743);
-            this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.show_film_panel);
+            this.Controls.Add(this.Main_panel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -498,6 +497,7 @@
             this.Main_panel.PerformLayout();
             this.show_film_panel.ResumeLayout(false);
             this.show_film_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searched_movie)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -532,7 +532,6 @@
         private System.Windows.Forms.Panel Main_panel;
         private System.Windows.Forms.Panel show_film_panel;
         private System.Windows.Forms.Label film_name;
-        private System.Windows.Forms.Label film_age;
         private System.Windows.Forms.Label film_speelduur_title;
         private System.Windows.Forms.Label film_genre_title;
         private System.Windows.Forms.PictureBox searched_movie;
@@ -543,6 +542,7 @@
         private System.Windows.Forms.Label film_speelduur;
         private System.Windows.Forms.Label film_genre;
         public System.Windows.Forms.WebBrowser TrailerVideo;
+        private System.Windows.Forms.PictureBox Kijkwijzer;
     }
 }
 
