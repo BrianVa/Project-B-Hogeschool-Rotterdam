@@ -148,7 +148,7 @@
         #endregion
 
 
-        private System.Windows.Forms.MenuStrip Menu;
+        private new System.Windows.Forms.MenuStrip Menu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Exit_button;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;

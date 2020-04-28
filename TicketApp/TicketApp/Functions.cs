@@ -22,6 +22,7 @@ namespace TicketApp
         public SQLiteDataAdapter da;
         public DataSet ds = new DataSet();
         public DataTable dt = new DataTable();
+        
 
         //globale select function die een query krijgt deze uitvoert en resulaat terug stuurt
         static public DataRowCollection Select(string query) 
@@ -87,6 +88,16 @@ namespace TicketApp
             da = new SQLiteDataAdapter(query, conn);
             return da.Fill(dt);
 
+        }
+
+        public string SetHtmlLink(string VideoCode)
+        {
+            //maakt de HTML code om in te laden in de browser:
+            string html = "<html><head>";
+            html += "<meta content='IE=Edge' http-equiv='X-UA-Compatible'/>";
+            html += "<iframe id='video' height = 100% width = 100% src='https://www.youtube.com/embed/" + VideoCode + "' style='position: fixed; top: 0; left: 0; bottom: 0; right: 0; width: 100 %; height: 100 %; border: none; margin: 0; padding: 0; overflow: hidden; z - index:999999;'></iframe>";
+            html += "</body></html>"; //einde HTML code
+            return html;
         }
     }
 }

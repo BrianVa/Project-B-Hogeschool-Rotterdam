@@ -11,6 +11,7 @@ using System.Data.SQLite;
 using System.IO;
 using static TicketApp.Functions;
 using static TicketApp.Session;
+using static TicketApp.MainApp;
 
 namespace TicketApp
 {
@@ -19,6 +20,7 @@ namespace TicketApp
         //de session variable word gedeclareed voor later bij de login
         private static Session session;
         private List<string> featured = new List<string>();
+        
         public MainApp()
         {
             //deze functie haalt 5 films uit de database en laad deze in het form zien
@@ -44,6 +46,7 @@ namespace TicketApp
             label3.Text = data[2]["naam"].ToString();
             label4.Text = data[3]["naam"].ToString();
             label5.Text = data[4]["naam"].ToString();
+
         }
         private void search_button_Click(object sender, EventArgs e)
         {
@@ -130,6 +133,7 @@ namespace TicketApp
 
         private void setMoviePage(DataRowCollection data)
         {
+            var Function = new Functions();
             film_name.Text = data[0]["naam"].ToString();
             film_age.Text = data[0]["leeftijd"].ToString();
             film_desc.Text = "Film Beschrijving: " + data[0]["beschrijving"].ToString();
@@ -137,8 +141,14 @@ namespace TicketApp
             film_genre.Text = data[0]["genre"].ToString();
 
             string picture_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[0]["img_url"] + ".jpg");
+            string BG_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/BG/" + data[0]["back_url"] + ".png");
             searched_movie.Image = Image.FromFile(picture_path);
-
+            show_film_panel.BackgroundImage = Image.FromFile(BG_path);
+            //inladen yt trailer:
+            
+            string html = Function.SetHtmlLink(data[0]["youtube_code"].ToString());
+            string link = "https://www.youtube.com/watch?v=" + data[0]["youtube_code"].ToString();
+            this.TrailerVideo.DocumentText = string.Format(html, link.Split('=')[1]); //stopt de HTML Link in de WebBrowser box
             show_film_panel.BringToFront();
         }
 

@@ -47,13 +47,16 @@
             this.featured_1 = new System.Windows.Forms.PictureBox();
             this.featured_2 = new System.Windows.Forms.PictureBox();
             this.featured_3 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.Main_panel = new System.Windows.Forms.Panel();
             this.show_film_panel = new System.Windows.Forms.Panel();
+            this.TrailerVideo = new System.Windows.Forms.WebBrowser();
+            this.film_speelduur = new System.Windows.Forms.Label();
+            this.film_genre = new System.Windows.Forms.Label();
             this.film_desc = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Back_button = new System.Windows.Forms.Button();
@@ -63,8 +66,6 @@
             this.film_genre_title = new System.Windows.Forms.Label();
             this.film_name = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.film_genre = new System.Windows.Forms.Label();
-            this.film_speelduur = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -78,8 +79,8 @@
             // 
             // search_button
             // 
-            this.search_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.search_button.Location = new System.Drawing.Point(1015, 18);
+            this.search_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.search_button.Location = new System.Drawing.Point(1142, 13);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(130, 20);
             this.search_button.TabIndex = 2;
@@ -96,7 +97,7 @@
             this.about_menu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1174, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1279, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -132,14 +133,14 @@
             // login_button
             // 
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(180, 22);
+            this.login_button.Size = new System.Drawing.Size(135, 22);
             this.login_button.Text = "Login";
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // aanmeld_button
             // 
             this.aanmeld_button.Name = "aanmeld_button";
-            this.aanmeld_button.Size = new System.Drawing.Size(180, 22);
+            this.aanmeld_button.Size = new System.Drawing.Size(135, 22);
             this.aanmeld_button.Text = "Aanmelden";
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
             // 
@@ -167,95 +168,118 @@
             // 
             // SearchBox
             // 
-            this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchBox.Location = new System.Drawing.Point(779, 18);
+            this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchBox.Location = new System.Drawing.Point(906, 13);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(230, 20);
             this.SearchBox.TabIndex = 10;
             // 
             // featured_5
             // 
-            this.featured_5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.featured_5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_5.Image = ((System.Drawing.Image)(resources.GetObject("featured_5.Image")));
-            this.featured_5.Location = new System.Drawing.Point(954, 113);
+            this.featured_5.Location = new System.Drawing.Point(974, 113);
             this.featured_5.Name = "featured_5";
-            this.featured_5.Size = new System.Drawing.Size(182, 256);
+            this.featured_5.Size = new System.Drawing.Size(210, 291);
+            this.featured_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_5.TabIndex = 9;
             this.featured_5.TabStop = false;
             this.featured_5.Click += new System.EventHandler(this.featured_5_Click);
             // 
             // featured_4
             // 
-            this.featured_4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.featured_4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_4.Image = ((System.Drawing.Image)(resources.GetObject("featured_4.Image")));
-            this.featured_4.Location = new System.Drawing.Point(730, 112);
+            this.featured_4.Location = new System.Drawing.Point(756, 112);
             this.featured_4.Name = "featured_4";
-            this.featured_4.Size = new System.Drawing.Size(176, 255);
+            this.featured_4.Size = new System.Drawing.Size(192, 292);
+            this.featured_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_4.TabIndex = 8;
             this.featured_4.TabStop = false;
             this.featured_4.Click += new System.EventHandler(this.featured_4_Click);
             // 
             // featured_1
             // 
-            this.featured_1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.featured_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_1.Image = ((System.Drawing.Image)(resources.GetObject("featured_1.Image")));
             this.featured_1.Location = new System.Drawing.Point(61, 111);
             this.featured_1.Name = "featured_1";
-            this.featured_1.Size = new System.Drawing.Size(181, 256);
+            this.featured_1.Size = new System.Drawing.Size(205, 293);
+            this.featured_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_1.TabIndex = 7;
             this.featured_1.TabStop = false;
             this.featured_1.Click += new System.EventHandler(this.featured_1_Click);
             // 
             // featured_2
             // 
-            this.featured_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.featured_2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_2.Image = ((System.Drawing.Image)(resources.GetObject("featured_2.Image")));
-            this.featured_2.Location = new System.Drawing.Point(294, 113);
+            this.featured_2.Location = new System.Drawing.Point(291, 113);
             this.featured_2.Name = "featured_2";
-            this.featured_2.Size = new System.Drawing.Size(181, 255);
+            this.featured_2.Size = new System.Drawing.Size(212, 291);
+            this.featured_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_2.TabIndex = 6;
             this.featured_2.TabStop = false;
             this.featured_2.Click += new System.EventHandler(this.featured_2_Click);
             // 
             // featured_3
             // 
-            this.featured_3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.featured_3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_3.Image = ((System.Drawing.Image)(resources.GetObject("featured_3.Image")));
             this.featured_3.Location = new System.Drawing.Point(522, 111);
             this.featured_3.Name = "featured_3";
-            this.featured_3.Size = new System.Drawing.Size(177, 256);
+            this.featured_3.Size = new System.Drawing.Size(214, 293);
+            this.featured_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_3.TabIndex = 5;
             this.featured_3.TabStop = false;
             this.featured_3.Click += new System.EventHandler(this.featured_3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(785, 407);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 26);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "No time to die";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(735, 390);
+            this.label1.Location = new System.Drawing.Point(66, 407);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 26);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "No time to die";
+            this.label1.Size = new System.Drawing.Size(171, 26);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Bad Boys for life";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(1051, 407);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 26);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Sonic";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(56, 390);
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(286, 407);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 26);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Bad Boys for life";
+            this.label2.Size = new System.Drawing.Size(231, 26);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "The boy brahm\'s curse";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -263,63 +287,50 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1015, 390);
+            this.label3.Location = new System.Drawing.Point(590, 407);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 26);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Sonic";
+            this.label3.Size = new System.Drawing.Size(134, 26);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Birds of prey";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(272, 390);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(231, 26);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "The boy brahm\'s curse";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(533, 390);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 26);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Birds of prey";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Main_panel
             // 
             this.Main_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Main_panel.BackColor = System.Drawing.Color.Transparent;
+            this.Main_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Main_panel.BackgroundImage")));
+            this.Main_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Main_panel.Controls.Add(this.featured_3);
             this.Main_panel.Controls.Add(this.featured_2);
             this.Main_panel.Controls.Add(this.search_button);
             this.Main_panel.Controls.Add(this.SearchBox);
-            this.Main_panel.Controls.Add(this.label5);
-            this.Main_panel.Controls.Add(this.featured_1);
-            this.Main_panel.Controls.Add(this.label4);
-            this.Main_panel.Controls.Add(this.featured_4);
             this.Main_panel.Controls.Add(this.label3);
-            this.Main_panel.Controls.Add(this.featured_5);
+            this.Main_panel.Controls.Add(this.featured_1);
             this.Main_panel.Controls.Add(this.label2);
+            this.Main_panel.Controls.Add(this.featured_4);
+            this.Main_panel.Controls.Add(this.label5);
+            this.Main_panel.Controls.Add(this.featured_5);
             this.Main_panel.Controls.Add(this.label1);
-            this.Main_panel.Location = new System.Drawing.Point(12, 36);
+            this.Main_panel.Controls.Add(this.label4);
+            this.Main_panel.Location = new System.Drawing.Point(0, 24);
             this.Main_panel.Name = "Main_panel";
-            this.Main_panel.Size = new System.Drawing.Size(1155, 543);
+            this.Main_panel.Size = new System.Drawing.Size(1280, 720);
             this.Main_panel.TabIndex = 16;
             // 
             // show_film_panel
             // 
-            this.show_film_panel.Controls.Add(this.film_speelduur);
+            this.show_film_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.show_film_panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.show_film_panel.BackColor = System.Drawing.Color.Transparent;
+            this.show_film_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("show_film_panel.BackgroundImage")));
+            this.show_film_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.show_film_panel.Controls.Add(this.film_genre);
+            this.show_film_panel.Controls.Add(this.TrailerVideo);
+            this.show_film_panel.Controls.Add(this.film_speelduur);
             this.show_film_panel.Controls.Add(this.film_desc);
             this.show_film_panel.Controls.Add(this.button1);
             this.show_film_panel.Controls.Add(this.Back_button);
@@ -328,16 +339,50 @@
             this.show_film_panel.Controls.Add(this.film_speelduur_title);
             this.show_film_panel.Controls.Add(this.film_genre_title);
             this.show_film_panel.Controls.Add(this.film_name);
-            this.show_film_panel.Location = new System.Drawing.Point(0, 27);
+            this.show_film_panel.Location = new System.Drawing.Point(0, 24);
             this.show_film_panel.Name = "show_film_panel";
-            this.show_film_panel.Size = new System.Drawing.Size(1174, 564);
+            this.show_film_panel.Size = new System.Drawing.Size(1280, 720);
             this.show_film_panel.TabIndex = 16;
+            // 
+            // TrailerVideo
+            // 
+            this.TrailerVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.TrailerVideo.Location = new System.Drawing.Point(15, 465);
+            this.TrailerVideo.MinimumSize = new System.Drawing.Size(20, 20);
+            this.TrailerVideo.Name = "TrailerVideo";
+            this.TrailerVideo.ScrollBarsEnabled = false;
+            this.TrailerVideo.Size = new System.Drawing.Size(426, 240);
+            this.TrailerVideo.TabIndex = 12;
+            // 
+            // film_speelduur
+            // 
+            this.film_speelduur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.film_speelduur.AutoSize = true;
+            this.film_speelduur.Font = new System.Drawing.Font("Couture", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.film_speelduur.ForeColor = System.Drawing.Color.White;
+            this.film_speelduur.Location = new System.Drawing.Point(579, 530);
+            this.film_speelduur.Name = "film_speelduur";
+            this.film_speelduur.Size = new System.Drawing.Size(157, 40);
+            this.film_speelduur.TabIndex = 11;
+            this.film_speelduur.Text = "Duur: ";
+            // 
+            // film_genre
+            // 
+            this.film_genre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.film_genre.AutoSize = true;
+            this.film_genre.Font = new System.Drawing.Font("Couture", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.film_genre.ForeColor = System.Drawing.Color.White;
+            this.film_genre.Location = new System.Drawing.Point(615, 465);
+            this.film_genre.Name = "film_genre";
+            this.film_genre.Size = new System.Drawing.Size(179, 40);
+            this.film_genre.TabIndex = 10;
+            this.film_genre.Text = "Genre: ";
             // 
             // film_desc
             // 
-            this.film_desc.BackColor = System.Drawing.Color.Maroon;
+            this.film_desc.BackColor = System.Drawing.Color.DimGray;
             this.film_desc.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.film_desc.Location = new System.Drawing.Point(318, 104);
+            this.film_desc.Location = new System.Drawing.Point(224, 64);
             this.film_desc.Name = "film_desc";
             this.film_desc.Size = new System.Drawing.Size(297, 216);
             this.film_desc.TabIndex = 9;
@@ -345,9 +390,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1027, 499);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(907, 667);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 38);
+            this.button1.Size = new System.Drawing.Size(356, 38);
             this.button1.TabIndex = 8;
             this.button1.Text = "Bekijk Tickets";
             this.button1.UseVisualStyleBackColor = true;
@@ -355,9 +401,10 @@
             // 
             // Back_button
             // 
-            this.Back_button.Location = new System.Drawing.Point(41, 507);
+            this.Back_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Back_button.Location = new System.Drawing.Point(447, 667);
             this.Back_button.Name = "Back_button";
-            this.Back_button.Size = new System.Drawing.Size(94, 30);
+            this.Back_button.Size = new System.Drawing.Size(185, 38);
             this.Back_button.TabIndex = 7;
             this.Back_button.Text = "Back";
             this.Back_button.UseVisualStyleBackColor = true;
@@ -365,56 +412,58 @@
             // 
             // searched_movie
             // 
-            this.searched_movie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.searched_movie.Image = ((System.Drawing.Image)(resources.GetObject("searched_movie.Image")));
-            this.searched_movie.Location = new System.Drawing.Point(15, 55);
+            this.searched_movie.Location = new System.Drawing.Point(15, 15);
             this.searched_movie.Name = "searched_movie";
-            this.searched_movie.Size = new System.Drawing.Size(180, 256);
+            this.searched_movie.Size = new System.Drawing.Size(195, 265);
+            this.searched_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.searched_movie.TabIndex = 6;
             this.searched_movie.TabStop = false;
             // 
             // film_age
             // 
+            this.film_age.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_age.AutoSize = true;
-            this.film_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.film_age.Font = new System.Drawing.Font("Couture", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_age.ForeColor = System.Drawing.Color.White;
-            this.film_age.Location = new System.Drawing.Point(313, 471);
+            this.film_age.Location = new System.Drawing.Point(447, 608);
             this.film_age.Name = "film_age";
-            this.film_age.Size = new System.Drawing.Size(85, 25);
+            this.film_age.Size = new System.Drawing.Size(229, 40);
             this.film_age.TabIndex = 3;
             this.film_age.Text = "Leeftijd: ";
             // 
             // film_speelduur_title
             // 
+            this.film_speelduur_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_speelduur_title.AutoSize = true;
-            this.film_speelduur_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.film_speelduur_title.Font = new System.Drawing.Font("Couture", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_speelduur_title.ForeColor = System.Drawing.Color.White;
-            this.film_speelduur_title.Location = new System.Drawing.Point(313, 403);
+            this.film_speelduur_title.Location = new System.Drawing.Point(440, 530);
             this.film_speelduur_title.Name = "film_speelduur_title";
-            this.film_speelduur_title.Size = new System.Drawing.Size(65, 25);
+            this.film_speelduur_title.Size = new System.Drawing.Size(157, 40);
             this.film_speelduur_title.TabIndex = 2;
             this.film_speelduur_title.Text = "Duur: ";
             // 
             // film_genre_title
             // 
+            this.film_genre_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_genre_title.AutoSize = true;
-            this.film_genre_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.film_genre_title.Font = new System.Drawing.Font("Couture", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_genre_title.ForeColor = System.Drawing.Color.White;
-            this.film_genre_title.Location = new System.Drawing.Point(313, 341);
+            this.film_genre_title.Location = new System.Drawing.Point(447, 465);
             this.film_genre_title.Name = "film_genre_title";
-            this.film_genre_title.Size = new System.Drawing.Size(77, 25);
+            this.film_genre_title.Size = new System.Drawing.Size(179, 40);
             this.film_genre_title.TabIndex = 1;
             this.film_genre_title.Text = "Genre: ";
             // 
             // film_name
             // 
             this.film_name.AutoSize = true;
-            this.film_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.film_name.Font = new System.Drawing.Font("Couture", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_name.ForeColor = System.Drawing.Color.White;
-            this.film_name.Location = new System.Drawing.Point(310, 55);
+            this.film_name.Location = new System.Drawing.Point(216, 15);
             this.film_name.Name = "film_name";
-            this.film_name.Size = new System.Drawing.Size(205, 46);
+            this.film_name.Size = new System.Drawing.Size(250, 40);
             this.film_name.TabIndex = 0;
             this.film_name.Text = "Film name";
             // 
@@ -423,37 +472,16 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // film_genre
-            // 
-            this.film_genre.AutoSize = true;
-            this.film_genre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.film_genre.ForeColor = System.Drawing.Color.White;
-            this.film_genre.Location = new System.Drawing.Point(313, 374);
-            this.film_genre.Name = "film_genre";
-            this.film_genre.Size = new System.Drawing.Size(77, 25);
-            this.film_genre.TabIndex = 10;
-            this.film_genre.Text = "Genre: ";
-            // 
-            // film_speelduur
-            // 
-            this.film_speelduur.AutoSize = true;
-            this.film_speelduur.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.film_speelduur.ForeColor = System.Drawing.Color.White;
-            this.film_speelduur.Location = new System.Drawing.Point(313, 437);
-            this.film_speelduur.Name = "film_speelduur";
-            this.film_speelduur.Size = new System.Drawing.Size(65, 25);
-            this.film_speelduur.TabIndex = 11;
-            this.film_speelduur.Text = "Duur: ";
-            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(1174, 591);
-            this.Controls.Add(this.show_film_panel);
+            this.ClientSize = new System.Drawing.Size(1279, 743);
             this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.show_film_panel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -495,11 +523,11 @@
         private System.Windows.Forms.PictureBox featured_2;
         private System.Windows.Forms.PictureBox featured_3;
 
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
 
         private System.Windows.Forms.Panel Main_panel;
         private System.Windows.Forms.Panel show_film_panel;
@@ -514,6 +542,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label film_speelduur;
         private System.Windows.Forms.Label film_genre;
+        public System.Windows.Forms.WebBrowser TrailerVideo;
     }
 }
 
