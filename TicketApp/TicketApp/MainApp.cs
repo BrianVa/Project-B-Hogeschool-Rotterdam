@@ -20,13 +20,12 @@ namespace TicketApp
         //de session variable word gedeclareed voor later bij de login
         private static Session session;
         private List<string> featured = new List<string>();
+        private string selectedFilm;
         
         public MainApp()
         {
             //deze functie haalt 5 films uit de database en laad deze in het form zien
             InitializeComponent();
-
-            Main_panel.BringToFront();
             var Function = new Functions();
             DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
             //id's van films in list geplaatst
@@ -47,6 +46,8 @@ namespace TicketApp
             label3.Text = data[2]["naam"].ToString();
             label4.Text = data[3]["naam"].ToString();
             label5.Text = data[4]["naam"].ToString();
+
+            set_activepanel("main");
 
         }
         private void search_button_Click(object sender, EventArgs e)
@@ -154,28 +155,65 @@ namespace TicketApp
             //inladen yt trailer:
             
             string html = Function.SetHtmlLink(data[0]["youtube_code"].ToString());
-            string link = "https://www.youtube.com/watch?v=" + data[0]["youtube_code"].ToString();
-            this.TrailerVideo.DocumentText = string.Format(html, link.Split('=')[1]); //stopt de HTML Link in de WebBrowser box
-            show_film_panel.BringToFront();
-            Main_panel.Visible = false;
-            show_film_panel.Visible = true;
+            this.TrailerVideo.DocumentText = string.Format(html, data[0]["youtube_code"].ToString()); //stopt de HTML Link in de WebBrowser box
+
+            selectedFilm = data[0]["id"].ToString();
+            set_activepanel("film");
         }
 
         private void Back_button_Click(object sender, EventArgs e)
         {
             this.TrailerVideo.DocumentText = "";
-            Main_panel.BringToFront();
-            show_film_panel.Visible = false;
-            Main_panel.Visible = true;
-            
+            set_activepanel("main");
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TicketBack_Click(object sender, EventArgs e)
+        {
+            set_activepanel("ticket");
+        }
+
+        private void OrderTicketButton_Click(object sender, EventArgs e)
         {
             var Function = new Functions();
-            Function.Message("Select ticket function call!!!");
-        }
 
+            DataRowCollection data = Functions.Select("SELECT * FROM tickets");
+
+            foreach (DataRow row in data)
+            {
+                int n = TicketTypes.Rows.Add();
+                TicketTypes.Rows[n].Cells[0].Value = row["naam"];
+                TicketTypes.Rows[n].Cells[1].Value = "€" + row["price"] + ".00";
+                TicketTypes.Rows[n].Cells[2].Value = 0;
+            }
+
+            set_activepanel("ticket");
+        }
+        private void set_activepanel(string panel)
+        {
+            TicketPanel.Visible = false;
+            Main_panel.Visible = false;
+            show_film_panel.Visible = false;
+
+            switch (panel)
+            {
+                case "main":
+                    Main_panel.Visible = true;
+                    break;
+                case "ticket":
+                    TicketPanel.Visible = true;
+                    TicketPanel.BringToFront();
+                    break;
+                case "film":
+                    show_film_panel.Visible = true;
+                    break;
+                default:
+                    Main_panel.Visible = true;
+                    break;
+
+                    
+            }
+        }
         private void featured_1_Click(object sender, EventArgs e)
         {
             DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[0]) + "'");
@@ -204,6 +242,12 @@ namespace TicketApp
         {
             DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[4]) + "'");
             setMoviePage(data);
+        }
+
+        private void StoelSelectButton_Click(object sender, EventArgs e)
+        {
+            var Function = new Functions();
+            Function.Message("Stoel select function!!");
         }
     }
 }
