@@ -19,8 +19,10 @@ namespace TicketApp
     {
         //de session variable word gedeclareed voor later bij de login
         private static Session session;
+        private List<Label> featuredFilmsTitle = new List<Label>();
+        private List<Label> featuredFilmsPic = new List<Label>();
         private List<string> featured = new List<string>();
-        private string selectedFilm;
+        private int selectedFilm;
         
         public MainApp()
         {
@@ -28,6 +30,10 @@ namespace TicketApp
             InitializeComponent();
             var Function = new Functions();
             DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
+
+            //nieuwe functie voor feature films
+            //setfeaturedFilms(5);
+
             //id's van films in list geplaatst
 
             //id worden niet goed op volgorde gezet !
@@ -38,8 +44,6 @@ namespace TicketApp
             featured.Add(data[4]["id"].ToString());
 
 
-
-            //id worden niet goed op volgorde gezet !
             //film naam word bij de labels gezet
             label1.Text = data[0]["naam"].ToString();
             label2.Text = data[1]["naam"].ToString();
@@ -153,41 +157,67 @@ namespace TicketApp
             searched_movie.Image = Image.FromFile(picture_path);
             show_film_panel.BackgroundImage = Image.FromFile(BG_path);
             //inladen yt trailer:
-            
+
             string html = Function.SetHtmlLink(data[0]["youtube_code"].ToString());
             this.TrailerVideo.DocumentText = string.Format(html, data[0]["youtube_code"].ToString()); //stopt de HTML Link in de WebBrowser box
 
-            selectedFilm = data[0]["id"].ToString();
+            selectedFilm = Int32.Parse(data[0]["id"].ToString());
             set_activepanel("film");
         }
 
         private void Back_button_Click(object sender, EventArgs e)
         {
-            this.TrailerVideo.DocumentText = "";
+            TrailerVideo.DocumentText = "";
             set_activepanel("main");
-
         }
 
         private void TicketBack_Click(object sender, EventArgs e)
         {
-            set_activepanel("ticket");
+            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + selectedFilm + "'");
+            setMoviePage(data);
         }
 
         private void OrderTicketButton_Click(object sender, EventArgs e)
         {
             var Function = new Functions();
+            DataRowCollection age = Functions.Select("SELECT leeftijd FROM films WHERE id= '" + selectedFilm + "'");
 
-            DataRowCollection data = Functions.Select("SELECT * FROM tickets");
 
-            foreach (DataRow row in data)
+            if (Int32.Parse(age[0]["leeftijd"].ToString()) >= 16)
             {
-                int n = TicketTypes.Rows.Add();
-                TicketTypes.Rows[n].Cells[0].Value = row["naam"];
-                TicketTypes.Rows[n].Cells[1].Value = "€" + row["price"] + ".00";
-                TicketTypes.Rows[n].Cells[2].Value = 0;
+                if (Function.CheckAge(session, age))
+                {
+                    DataRowCollection data = Functions.Select("SELECT * FROM tickets");
+
+                    TicketTypes.Rows.Clear();
+                    foreach (DataRow row in data)
+                    {
+                        int n = TicketTypes.Rows.Add();
+                        TicketTypes.Rows[n].Cells[0].Value = row["naam"];
+                        TicketTypes.Rows[n].Cells[1].Value = "€" + row["price"] + ".00";
+                        TicketTypes.Rows[n].Cells[2].Value = 0;
+                    }
+
+                    set_activepanel("ticket");
+                }
+            }
+            else
+            {
+                DataRowCollection data = Functions.Select("SELECT * FROM tickets");
+
+                TicketTypes.Rows.Clear();
+                foreach (DataRow row in data)
+                {
+                    int n = TicketTypes.Rows.Add();
+                    TicketTypes.Rows[n].Cells[0].Value = row["naam"];
+                    TicketTypes.Rows[n].Cells[1].Value = "€" + row["price"] + ".00";
+                    TicketTypes.Rows[n].Cells[2].Value = 0;
+                }
+
+                set_activepanel("ticket");
+
             }
 
-            set_activepanel("ticket");
         }
         private void set_activepanel(string panel)
         {
@@ -202,16 +232,13 @@ namespace TicketApp
                     break;
                 case "ticket":
                     TicketPanel.Visible = true;
-                    TicketPanel.BringToFront();
                     break;
                 case "film":
                     show_film_panel.Visible = true;
                     break;
                 default:
                     Main_panel.Visible = true;
-                    break;
-
-                    
+                    break;   
             }
         }
         private void featured_1_Click(object sender, EventArgs e)
@@ -248,6 +275,45 @@ namespace TicketApp
         {
             var Function = new Functions();
             Function.Message("Stoel select function!!");
+        }
+        private void setfeaturedFilms(int amount)
+        {
+            int count = 0;
+            var Function = new Functions();
+
+            DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT '" + amount + "'");
+            //id's van films in list geplaatst
+
+            featured.Add(data[0]["id"].ToString());
+            featured.Add(data[1]["id"].ToString());
+            featured.Add(data[2]["id"].ToString());
+            featured.Add(data[3]["id"].ToString());
+            featured.Add(data[4]["id"].ToString());
+
+
+            for (int i = 0; i < amount + 1; i++)
+            {
+                var label =
+                    this.Controls.OfType<Label>().Where(lb => lb.Name == "label" + i).FirstOrDefault();
+                if (label != null)
+                    featuredFilmsTitle.Add(label);
+            }
+
+            featuredFilmsTitle.ForEach(delegate (Label name)
+            {
+                name.Text = data[count]["naam"].ToString();
+                count++;
+            });
+
+            count = 0;
+
+            featuredFilmsPic.ForEach(delegate (Label name)
+            {
+                string picture_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[count]["img_url"] + ".jpg");
+                name.Image = Image.FromFile(picture_path);
+                count++;
+            });
+
         }
     }
 }

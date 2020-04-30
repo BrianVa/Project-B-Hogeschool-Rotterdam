@@ -68,12 +68,12 @@
             this.film_name = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TicketPanel = new System.Windows.Forms.Panel();
+            this.StoelSelectButton = new System.Windows.Forms.Button();
+            this.TicketBack = new System.Windows.Forms.Button();
             this.TicketTypes = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TicketBack = new System.Windows.Forms.Button();
-            this.StoelSelectButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -532,9 +532,29 @@
             this.TicketPanel.Controls.Add(this.TicketTypes);
             this.TicketPanel.Location = new System.Drawing.Point(0, 24);
             this.TicketPanel.Name = "TicketPanel";
-            this.TicketPanel.Size = new System.Drawing.Size(1280, 717);
+            this.TicketPanel.Size = new System.Drawing.Size(1280, 720);
             this.TicketPanel.TabIndex = 16;
             this.TicketPanel.Visible = false;
+            // 
+            // StoelSelectButton
+            // 
+            this.StoelSelectButton.Location = new System.Drawing.Point(1188, 667);
+            this.StoelSelectButton.Name = "StoelSelectButton";
+            this.StoelSelectButton.Size = new System.Drawing.Size(75, 23);
+            this.StoelSelectButton.TabIndex = 2;
+            this.StoelSelectButton.Text = "Stoel Kiezen";
+            this.StoelSelectButton.UseVisualStyleBackColor = true;
+            this.StoelSelectButton.Click += new System.EventHandler(this.StoelSelectButton_Click);
+            // 
+            // TicketBack
+            // 
+            this.TicketBack.Location = new System.Drawing.Point(30, 667);
+            this.TicketBack.Name = "TicketBack";
+            this.TicketBack.Size = new System.Drawing.Size(75, 23);
+            this.TicketBack.TabIndex = 1;
+            this.TicketBack.Text = "Back";
+            this.TicketBack.UseVisualStyleBackColor = true;
+            this.TicketBack.Click += new System.EventHandler(this.TicketBack_Click);
             // 
             // TicketTypes
             // 
@@ -567,26 +587,6 @@
             // 
             this.Column3.HeaderText = "Aantal";
             this.Column3.Name = "Column3";
-            // 
-            // TicketBack
-            // 
-            this.TicketBack.Location = new System.Drawing.Point(30, 667);
-            this.TicketBack.Name = "TicketBack";
-            this.TicketBack.Size = new System.Drawing.Size(75, 23);
-            this.TicketBack.TabIndex = 1;
-            this.TicketBack.Text = "Back";
-            this.TicketBack.UseVisualStyleBackColor = true;
-            this.TicketBack.Click += new System.EventHandler(this.TicketBack_Click);
-            // 
-            // StoelSelectButton
-            // 
-            this.StoelSelectButton.Location = new System.Drawing.Point(1188, 667);
-            this.StoelSelectButton.Name = "StoelSelectButton";
-            this.StoelSelectButton.Size = new System.Drawing.Size(75, 23);
-            this.StoelSelectButton.TabIndex = 2;
-            this.StoelSelectButton.Text = "Stoel Kiezen";
-            this.StoelSelectButton.UseVisualStyleBackColor = true;
-            this.StoelSelectButton.Click += new System.EventHandler(this.StoelSelectButton_Click);
             // 
             // MainApp
             // 

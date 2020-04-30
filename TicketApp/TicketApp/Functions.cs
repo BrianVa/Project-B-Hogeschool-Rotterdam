@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
+using static TicketApp.Session;
 using static TicketApp.Functions;
 using System.Security.Cryptography;
 
@@ -60,6 +61,41 @@ namespace TicketApp
             System.Windows.Forms.MessageBox.Show(message);
         }
 
+        public bool CheckAge(Session session, DataRowCollection age) 
+        {
+
+            if (MessageBox.Show("Bent u 16 jaar of ouder?", "Leeftijds check", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+            /*if (session != null)
+            {
+                if (session.age < age)
+                {
+                    MessageBox.Show("U bent te jong voor deze film");
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            else
+            {
+                if (MessageBox.Show("Bent u 16 jaar of ouder?", "Leeftijds check", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }*/
+        }
 
         //database connectie word aangemaakt
         public void DataBaseConnection()
