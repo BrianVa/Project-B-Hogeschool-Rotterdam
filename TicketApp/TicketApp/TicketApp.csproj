@@ -131,6 +131,7 @@
   <ItemGroup>
     <CommonFiles Include="Common Files\**" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PrepareForRunDependsOn>$(PrepareForRunDependsOn);CopyCommonFiles</PrepareForRunDependsOn>

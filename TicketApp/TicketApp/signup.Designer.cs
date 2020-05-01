@@ -41,7 +41,7 @@
             this.password_r_field = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.aanmeld_button = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Agefield = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -142,12 +142,17 @@
             this.aanmeld_button.UseVisualStyleBackColor = true;
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_Click);
             // 
-            // dateTimePicker1
+            // Agefield
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(116, 212);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
+            this.Agefield.ContextMenuStrip = this.contextMenuStrip1;
+            this.Agefield.CustomFormat = "dd-MM-yyyy";
+            this.Agefield.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Agefield.Location = new System.Drawing.Point(116, 212);
+            this.Agefield.MaxDate = new System.DateTime(2020, 5, 1, 0, 0, 0, 0);
+            this.Agefield.Name = "Agefield";
+            this.Agefield.Size = new System.Drawing.Size(200, 20);
+            this.Agefield.TabIndex = 12;
+            this.Agefield.Value = new System.DateTime(2020, 5, 1, 0, 0, 0, 0);
             // 
             // label6
             // 
@@ -165,7 +170,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 420);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Agefield);
             this.Controls.Add(this.aanmeld_button);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.password_r_field);
@@ -198,7 +203,7 @@
         private System.Windows.Forms.TextBox password_r_field;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button aanmeld_button;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Agefield;
         private System.Windows.Forms.Label label6;
     }
 }

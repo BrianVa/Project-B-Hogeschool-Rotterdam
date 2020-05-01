@@ -63,19 +63,9 @@ namespace TicketApp
 
         public bool CheckAge(Session session, DataRowCollection age) 
         {
-
-            if (MessageBox.Show("Bent u 16 jaar of ouder?", "Leeftijds check", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (session != null)
             {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
-            /*if (session != null)
-            {
-                if (session.age < age)
+                if (session.age < Int32.Parse(age[0]["leeftijd"].ToString()))
                 {
                     MessageBox.Show("U bent te jong voor deze film");
                     return true;
@@ -94,7 +84,7 @@ namespace TicketApp
                 {
                     return false;
                 }
-            }*/
+            }
         }
 
         //database connectie word aangemaakt
