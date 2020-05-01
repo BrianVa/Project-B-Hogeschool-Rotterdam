@@ -145,8 +145,8 @@
             // Agefield
             // 
             this.Agefield.ContextMenuStrip = this.contextMenuStrip1;
-            this.Agefield.CustomFormat = "dd-MM-yyyy";
-            this.Agefield.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Agefield.CustomFormat = "dd/MM/yyyy";
+            this.Agefield.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Agefield.Location = new System.Drawing.Point(116, 212);
             this.Agefield.MaxDate = new System.DateTime(2020, 5, 1, 0, 0, 0, 0);
             this.Agefield.Name = "Agefield";

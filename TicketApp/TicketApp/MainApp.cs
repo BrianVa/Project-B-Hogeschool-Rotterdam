@@ -18,7 +18,7 @@ namespace TicketApp
     public partial class MainApp : Form
     {
         //de session variable word gedeclareed voor later bij de login
-        private static Session session;
+        public Session session;
         private List<Label> featuredFilmsTitle = new List<Label>();
         private List<Label> featuredFilmsPic = new List<Label>();
         private List<string> featured = new List<string>();
@@ -133,9 +133,13 @@ namespace TicketApp
             session.achternaam = data["achternaam"].ToString();
             session.email = data["email"].ToString();
             session.role = data["role_id"].ToString();
+            session.DateOfBirth = data["geboorteDatum"].ToString();
 
             Function.Message("Welcome " + data["voornaam"].ToString() + " " + data["achternaam"].ToString() + "\n" 
                 + "U bent ingelogd!" + " \n" + " \n" + " Uw Role is: " + data["name"]);
+
+
+            login_button.Text = "Logout";
 
         }
 

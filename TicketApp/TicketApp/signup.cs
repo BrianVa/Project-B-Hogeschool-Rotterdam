@@ -18,18 +18,18 @@ namespace TicketApp
         public signup()
         {
             InitializeComponent();
-            Agefield.CustomFormat = "dd MMMM yyyy";
             Agefield.Format = DateTimePickerFormat.Custom;
+            Agefield.CustomFormat = "dd/MM/yyyy";
         }
 
         private void aanmeld_Click(object sender, EventArgs e)
         {
             //deze functie valideerd het ingevoerde gegevens van een gebruiker
             var Function = new Functions();
-            string age = Agefield.Value.ToString();
 
-            var ageFiltered = age.Split(' ');
-            Function.Message(ageFiltered[0].ToString());
+            string date = Agefield.Value.ToString("dd/MM/yyyy");
+
+            Function.Message(date);
 
             if (email_field.Text.Trim() == "" || password_field.Text.Trim() == "" || password_r_field.Text.Trim() == "" || voornaam_field.Text.Trim() == "" || achternaam_field.Text.Trim() == "")
             {
@@ -61,13 +61,13 @@ namespace TicketApp
 
                 }
                 else 
-                {
+                {   
                     //hier worden de gegevens in de database opgeslagen en word het formulier gesloten
                     Function.Message("validatie gelukt!");
                     string hash = Function.ComputeSha256Hash(password_field.Text.Trim());
-                    //string query = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id) values ('" + voornaam_field.Text.Trim() + "', '" + achternaam_field.Text.Trim() + "','" + email_field.Text.Trim() + "','" + hash + "','" + 2 + "')";
-                    //Function.ExcQuery(query);
-                    //this.Close();
+                    string query = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id, geboorteDatum) values ('" + voornaam_field.Text.Trim() + "', '" + achternaam_field.Text.Trim() + "','" + email_field.Text.Trim() + "','" + hash + "','" + 2 + "','" + date + "')";
+                    Function.ExcQuery(query);
+                    this.Close();
                 }
             }
         }

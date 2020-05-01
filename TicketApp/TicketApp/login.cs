@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
+using static TicketApp.MainApp;
 using static TicketApp.Functions;
 
 namespace TicketApp
@@ -48,10 +49,10 @@ namespace TicketApp
                 if (data.Count > 0)
                 {
                     //als het email adress en wachtword overeen komen word de gebuiker ingelogd
-                    this.Close();
-                    BitFilm main = new BitFilm();
+                    MainApp main = new MainApp();
                     data[0]["password"] = "";
                     main.Loggedin(data[0]);
+                    this.Close();
 
                 }
                 else

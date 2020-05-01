@@ -65,17 +65,27 @@ namespace TicketApp
         {
             if (session != null)
             {
-                if (session.age < Int32.Parse(age[0]["leeftijd"].ToString()))
+                
+                int leeftijd = 0;
+                DateTime today = DateTime.Today;
+                DateTime Birth = Convert.ToDateTime(session.DateOfBirth);
+
+                leeftijd = today.Year - Birth.Year;
+
+
+                if (leeftijd < Int32.Parse(age[0]["leeftijd"].ToString()))
                 {
                     MessageBox.Show("U bent te jong voor deze film");
                     return true;
                 }
                 else {
+                    Message("well session!!!");
                     return false;
                 }
             }
             else
             {
+                Message("geen session!!!");
                 if (MessageBox.Show("Bent u 16 jaar of ouder?", "Leeftijds check", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     return true;

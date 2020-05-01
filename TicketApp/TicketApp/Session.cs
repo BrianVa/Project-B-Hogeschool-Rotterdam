@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace TicketApp
 {
-    class Session
+    public class Session
     {
         //session variable worden aangemaakt voor later
         public string voornaam;
         public string achternaam;
         public string email;
         public string role;
-        public int age;
+        public string DateOfBirth;
 
 
         public void set_satus()
