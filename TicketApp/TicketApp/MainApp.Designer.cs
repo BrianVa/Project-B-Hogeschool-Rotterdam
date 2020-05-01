@@ -683,7 +683,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label film_speelduur;
         private System.Windows.Forms.Label film_genre;
-        public System.Windows.Forms.WebBrowser TrailerVideo;
+        private System.Windows.Forms.WebBrowser TrailerVideo;
         private System.Windows.Forms.PictureBox Kijkwijzer;
         private System.Windows.Forms.Label BitfilmTekst;
         private System.Windows.Forms.Panel TicketPanel;

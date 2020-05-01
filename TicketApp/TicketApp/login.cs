@@ -12,10 +12,12 @@ using System.IO;
 using static TicketApp.MainApp;
 using static TicketApp.Functions;
 
+
 namespace TicketApp
 {
     public partial class login : Form
     {
+        public Session session;
         public login()
         {
             InitializeComponent();
@@ -49,11 +51,18 @@ namespace TicketApp
                 if (data.Count > 0)
                 {
                     //als het email adress en wachtword overeen komen word de gebuiker ingelogd
-                    MainApp main = new MainApp();
                     data[0]["password"] = "";
-                    main.Loggedin(data[0]);
+                    Session session = new Session();
+                    session.voornaam = data[0]["voornaam"].ToString();
+                    session.achternaam = data[0]["achternaam"].ToString();
+                    session.email = data[0]["email"].ToString();
+                    session.role = data[0]["role_id"].ToString();
+
                     this.Close();
 
+                    Function.Message("Welcome " + data[0]["voornaam"].ToString() + " " + data[0]["achternaam"].ToString() + "\n"
+                        + "U bent ingelogd!" + " \n" + " \n" + " Uw Role is: " + data[0]["name"]);
+                    MainApp.session = session;
                 }
                 else
                 {

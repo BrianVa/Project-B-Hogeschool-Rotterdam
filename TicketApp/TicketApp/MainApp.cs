@@ -18,7 +18,7 @@ namespace TicketApp
     public partial class MainApp : Form
     {
         //de session variable word gedeclareed voor later bij de login
-        public Session session;
+        public static Session session;
         private List<Label> featuredFilmsTitle = new List<Label>();
         private List<Label> featuredFilmsPic = new List<Label>();
         private List<string> featured = new List<string>();
@@ -28,6 +28,7 @@ namespace TicketApp
         {
             //deze functie haalt 5 films uit de database en laad deze in het form zien
             InitializeComponent();
+            
             var Function = new Functions();
             DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
 
@@ -111,6 +112,7 @@ namespace TicketApp
         private void aanmeld_button_Click(object sender, EventArgs e)
         {
             var Function = new Functions();
+            
             //deze functie roept het aanmeld formulier aan of geeft een melding als een gebruiker is ingelogd
             if (session != null)
             {
@@ -122,25 +124,6 @@ namespace TicketApp
                 signup SingupForm = new signup();
                 SingupForm.Show();
             }
-        }
-
-        public void Loggedin(DataRow data) 
-        {
-            var Function = new Functions();
-            //deze functie laad de login gegevens in een session hier kunnen we later in  app gegevens van een ingelogde gebruiker terug vinden
-            session = new Session();
-            session.voornaam = data["voornaam"].ToString();
-            session.achternaam = data["achternaam"].ToString();
-            session.email = data["email"].ToString();
-            session.role = data["role_id"].ToString();
-            session.DateOfBirth = data["geboorteDatum"].ToString();
-
-            Function.Message("Welcome " + data["voornaam"].ToString() + " " + data["achternaam"].ToString() + "\n" 
-                + "U bent ingelogd!" + " \n" + " \n" + " Uw Role is: " + data["name"]);
-
-
-            login_button.Text = "Logout";
-
         }
 
         private void setMoviePage(DataRowCollection data)

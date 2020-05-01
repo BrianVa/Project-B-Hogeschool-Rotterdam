@@ -76,11 +76,11 @@ namespace TicketApp
                 if (leeftijd < Int32.Parse(age[0]["leeftijd"].ToString()))
                 {
                     MessageBox.Show("U bent te jong voor deze film");
-                    return true;
+                    return false;
                 }
                 else {
                     Message("well session!!!");
-                    return false;
+                    return true;
                 }
             }
             else

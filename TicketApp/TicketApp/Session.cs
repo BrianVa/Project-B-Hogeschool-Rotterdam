@@ -15,7 +15,14 @@ namespace TicketApp
         public string role;
         public string DateOfBirth;
 
-
+        public Session()
+        {
+            voornaam = "";
+            achternaam = "";
+            email = "";
+            role = "";
+            DateOfBirth = "";
+        }
         public void set_satus()
         { 
         
