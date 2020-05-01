@@ -51,6 +51,8 @@ namespace TicketApp
             label4.Text = data[3]["naam"].ToString();
             label5.Text = data[4]["naam"].ToString();
 
+            Function.UseCustomFont("CoutureBold", 36, BitfilmTekst);
+
             set_activepanel("main");
 
         }
@@ -156,6 +158,7 @@ namespace TicketApp
             string BG_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/BG/" + data[0]["back_url"] + ".png");
             searched_movie.Image = Image.FromFile(picture_path);
             show_film_panel.BackgroundImage = Image.FromFile(BG_path);
+            TicketPanel.BackgroundImage = Image.FromFile(BG_path);
             //inladen yt trailer:
 
             string html = Function.SetHtmlLink(data[0]["youtube_code"].ToString());
@@ -314,6 +317,21 @@ namespace TicketApp
                 count++;
             });
 
+        }
+
+        private void SecondeTimer_Tick(object sender, EventArgs e)
+        {
+            int xAxis = BackLoop.Location.X;
+            if (xAxis <= -1280)
+            {
+                xAxis = 0;
+            }
+            else
+            {
+                xAxis -= 1;
+            }
+
+            BackLoop.Location = new Point(xAxis, 0);
         }
     }
 }

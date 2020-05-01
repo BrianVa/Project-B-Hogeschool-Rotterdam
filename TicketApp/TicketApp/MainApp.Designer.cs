@@ -54,6 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Main_panel = new System.Windows.Forms.Panel();
             this.BitfilmTekst = new System.Windows.Forms.Label();
+            this.BackLoop = new System.Windows.Forms.PictureBox();
             this.show_film_panel = new System.Windows.Forms.Panel();
             this.Kijkwijzer = new System.Windows.Forms.PictureBox();
             this.film_genre = new System.Windows.Forms.Label();
@@ -74,6 +75,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -81,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).BeginInit();
             this.Main_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BackLoop)).BeginInit();
             this.show_film_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searched_movie)).BeginInit();
@@ -260,7 +263,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(750, 370);
             this.label4.Name = "label4";
@@ -274,7 +277,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Location = new System.Drawing.Point(30, 370);
@@ -289,7 +292,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(990, 370);
             this.label5.Name = "label5";
@@ -303,7 +306,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(270, 370);
             this.label2.Name = "label2";
@@ -317,7 +320,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(510, 370);
             this.label3.Name = "label3";
@@ -332,7 +335,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Main_panel.BackColor = System.Drawing.Color.Transparent;
-            this.Main_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Main_panel.BackgroundImage")));
             this.Main_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Main_panel.Controls.Add(this.BitfilmTekst);
             this.Main_panel.Controls.Add(this.featured_3);
@@ -347,6 +349,7 @@
             this.Main_panel.Controls.Add(this.featured_5);
             this.Main_panel.Controls.Add(this.label1);
             this.Main_panel.Controls.Add(this.label4);
+            this.Main_panel.Controls.Add(this.BackLoop);
             this.Main_panel.Location = new System.Drawing.Point(0, 24);
             this.Main_panel.Name = "Main_panel";
             this.Main_panel.Size = new System.Drawing.Size(1280, 720);
@@ -357,13 +360,22 @@
             // 
             this.BitfilmTekst.BackColor = System.Drawing.Color.White;
             this.BitfilmTekst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BitfilmTekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BitfilmTekst.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BitfilmTekst.Location = new System.Drawing.Point(510, 20);
             this.BitfilmTekst.Name = "BitfilmTekst";
             this.BitfilmTekst.Size = new System.Drawing.Size(240, 60);
             this.BitfilmTekst.TabIndex = 16;
             this.BitfilmTekst.Text = "BITFILM";
             this.BitfilmTekst.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BackLoop
+            // 
+            this.BackLoop.Image = ((System.Drawing.Image)(resources.GetObject("BackLoop.Image")));
+            this.BackLoop.Location = new System.Drawing.Point(-1280, 0);
+            this.BackLoop.Name = "BackLoop";
+            this.BackLoop.Size = new System.Drawing.Size(2560, 720);
+            this.BackLoop.TabIndex = 17;
+            this.BackLoop.TabStop = false;
             // 
             // show_film_panel
             // 
@@ -406,11 +418,11 @@
             // 
             this.film_genre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_genre.AutoSize = true;
-            this.film_genre.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.film_genre.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_genre.ForeColor = System.Drawing.Color.White;
             this.film_genre.Location = new System.Drawing.Point(615, 465);
             this.film_genre.Name = "film_genre";
-            this.film_genre.Size = new System.Drawing.Size(159, 46);
+            this.film_genre.Size = new System.Drawing.Size(150, 47);
             this.film_genre.TabIndex = 10;
             this.film_genre.Text = "Genre: ";
             // 
@@ -428,11 +440,11 @@
             // 
             this.film_speelduur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_speelduur.AutoSize = true;
-            this.film_speelduur.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.film_speelduur.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_speelduur.ForeColor = System.Drawing.Color.White;
             this.film_speelduur.Location = new System.Drawing.Point(588, 505);
             this.film_speelduur.Name = "film_speelduur";
-            this.film_speelduur.Size = new System.Drawing.Size(134, 46);
+            this.film_speelduur.Size = new System.Drawing.Size(128, 47);
             this.film_speelduur.TabIndex = 11;
             this.film_speelduur.Text = "Duur: ";
             // 
@@ -488,11 +500,11 @@
             // 
             this.film_speelduur_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_speelduur_title.AutoSize = true;
-            this.film_speelduur_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.film_speelduur_title.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_speelduur_title.ForeColor = System.Drawing.Color.White;
             this.film_speelduur_title.Location = new System.Drawing.Point(447, 505);
             this.film_speelduur_title.Name = "film_speelduur_title";
-            this.film_speelduur_title.Size = new System.Drawing.Size(134, 46);
+            this.film_speelduur_title.Size = new System.Drawing.Size(128, 47);
             this.film_speelduur_title.TabIndex = 2;
             this.film_speelduur_title.Text = "Duur: ";
             // 
@@ -500,22 +512,22 @@
             // 
             this.film_genre_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_genre_title.AutoSize = true;
-            this.film_genre_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.film_genre_title.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_genre_title.ForeColor = System.Drawing.Color.White;
             this.film_genre_title.Location = new System.Drawing.Point(447, 465);
             this.film_genre_title.Name = "film_genre_title";
-            this.film_genre_title.Size = new System.Drawing.Size(159, 46);
+            this.film_genre_title.Size = new System.Drawing.Size(150, 47);
             this.film_genre_title.TabIndex = 1;
             this.film_genre_title.Text = "Genre: ";
             // 
             // film_name
             // 
             this.film_name.AutoSize = true;
-            this.film_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.film_name.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_name.ForeColor = System.Drawing.Color.White;
             this.film_name.Location = new System.Drawing.Point(216, 15);
             this.film_name.Name = "film_name";
-            this.film_name.Size = new System.Drawing.Size(214, 46);
+            this.film_name.Size = new System.Drawing.Size(210, 47);
             this.film_name.TabIndex = 0;
             this.film_name.Text = "Film name";
             // 
@@ -560,11 +572,13 @@
             // 
             this.TicketTypes.AllowUserToAddRows = false;
             this.TicketTypes.AllowUserToDeleteRows = false;
+            this.TicketTypes.BackgroundColor = System.Drawing.Color.GhostWhite;
             this.TicketTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TicketTypes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
+            this.TicketTypes.GridColor = System.Drawing.Color.Black;
             this.TicketTypes.Location = new System.Drawing.Point(30, 20);
             this.TicketTypes.Name = "TicketTypes";
             this.TicketTypes.Size = new System.Drawing.Size(744, 184);
@@ -588,6 +602,12 @@
             this.Column3.HeaderText = "Aantal";
             this.Column3.Name = "Column3";
             // 
+            // SecondeTimer
+            // 
+            this.SecondeTimer.Enabled = true;
+            this.SecondeTimer.Interval = 25;
+            this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -595,10 +615,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
-            this.Controls.Add(this.TicketPanel);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.Main_panel);
+            this.Controls.Add(this.TicketPanel);
+            this.Controls.Add(this.show_film_panel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -614,6 +634,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).EndInit();
             this.Main_panel.ResumeLayout(false);
             this.Main_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BackLoop)).EndInit();
             this.show_film_panel.ResumeLayout(false);
             this.show_film_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).EndInit();
@@ -672,6 +693,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Timer SecondeTimer;
+        private System.Windows.Forms.PictureBox BackLoop;
     }
 }
 
