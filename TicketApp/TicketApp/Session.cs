@@ -13,6 +13,7 @@ namespace TicketApp
         public string achternaam;
         public string email;
         public string role;
+        public int age;
 
 
         public void set_satus()
