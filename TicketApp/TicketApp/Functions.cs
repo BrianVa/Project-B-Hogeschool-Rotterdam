@@ -135,5 +135,16 @@ namespace TicketApp
             html += "</body></html>"; //einde HTML code
             return html;
         }
+
+        //zorgt ervoor dat we custom fonts kunnen inladen en gebruiken.
+        public void UseCustomFont(string name, int size, Label label)
+        {
+            string FontPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Fonts/" + name + ".otf");
+            System.Drawing.Text.PrivateFontCollection modernFont = new System.Drawing.Text.PrivateFontCollection();
+
+            modernFont.AddFontFile(FontPath);
+
+            label.Font = new Font(modernFont.Families[0], size);
+        }
     }
 }
