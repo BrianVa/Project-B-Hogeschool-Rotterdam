@@ -76,6 +76,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
+            this.mijnAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -139,7 +140,8 @@
             // 
             this.loggen_menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.login_button,
-            this.aanmeld_button});
+            this.aanmeld_button,
+            this.mijnAccountToolStripMenuItem});
             this.loggen_menu.Name = "loggen_menu";
             this.loggen_menu.Size = new System.Drawing.Size(64, 20);
             this.loggen_menu.Text = "Account";
@@ -147,14 +149,14 @@
             // login_button
             // 
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(135, 22);
+            this.login_button.Size = new System.Drawing.Size(180, 22);
             this.login_button.Text = "Login";
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // aanmeld_button
             // 
             this.aanmeld_button.Name = "aanmeld_button";
-            this.aanmeld_button.Size = new System.Drawing.Size(135, 22);
+            this.aanmeld_button.Size = new System.Drawing.Size(180, 22);
             this.aanmeld_button.Text = "Aanmelden";
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
             // 
@@ -608,6 +610,13 @@
             this.SecondeTimer.Interval = 25;
             this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
             // 
+            // mijnAccountToolStripMenuItem
+            // 
+            this.mijnAccountToolStripMenuItem.Name = "mijnAccountToolStripMenuItem";
+            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mijnAccountToolStripMenuItem.Text = "Mijn Account";
+            this.mijnAccountToolStripMenuItem.Click += new System.EventHandler(this.mijnAccountToolStripMenuItem_Click);
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -648,16 +657,12 @@
 
         #endregion
         private System.Windows.Forms.Button search_button;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exit_button;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loggen_menu;
         private System.Windows.Forms.ToolStripMenuItem about_menu;
         private System.Windows.Forms.ToolStripMenuItem info_button;
-        private System.Windows.Forms.ToolStripMenuItem login_button;
-        private System.Windows.Forms.ToolStripMenuItem aanmeld_button;
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.PictureBox featured_5;
         private System.Windows.Forms.PictureBox featured_4;
@@ -695,6 +700,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Timer SecondeTimer;
         private System.Windows.Forms.PictureBox BackLoop;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.ToolStripMenuItem loggen_menu;
+        public System.Windows.Forms.ToolStripMenuItem login_button;
+        public System.Windows.Forms.ToolStripMenuItem aanmeld_button;
+        public System.Windows.Forms.ToolStripMenuItem mijnAccountToolStripMenuItem;
     }
 }
 

@@ -23,12 +23,13 @@ namespace TicketApp
         private List<Label> featuredFilmsPic = new List<Label>();
         private List<string> featured = new List<string>();
         private int selectedFilm;
-        
+
         public MainApp()
         {
             //deze functie haalt 5 films uit de database en laad deze in het form zien
             InitializeComponent();
-            
+            this.mijnAccountToolStripMenuItem.Visible = false;
+
             var Function = new Functions();
             DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
 
@@ -57,6 +58,21 @@ namespace TicketApp
             set_activepanel("main");
 
         }
+        public string loginText
+        {
+            get
+            {
+                return this.login_button.Text;
+            
+            }
+            set
+            {
+                this.login_button.Text = value; 
+            
+            }
+        
+        }
+
         private void search_button_Click(object sender, EventArgs e)
         {
             //hier word de functions class aangeroepen hier zitten functies in die veel gebruikt worden zie Functions.cs
@@ -209,6 +225,25 @@ namespace TicketApp
             }
 
         }
+        public void loggedin(bool logged)
+        {
+            if (logged)
+            {
+                mijnAccountToolStripMenuItem.Visible = true;
+                aanmeld_button.Visible = false;
+                login_button.Text = "Logout";
+            }
+            else
+            {
+                mijnAccountToolStripMenuItem.Visible = false;
+                aanmeld_button.Visible = true;
+                login_button.Text = "Login";
+
+            }
+
+        }
+
+
         private void set_activepanel(string panel)
         {
             TicketPanel.Visible = false;
@@ -319,6 +354,23 @@ namespace TicketApp
             }
 
             BackLoop.Location = new Point(xAxis, 0);
+        }
+
+        private void mijnAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Function = new Functions();
+
+            //deze functie roept het aanmeld formulier aan of geeft een melding als een gebruiker is ingelogd
+            if (session != null)
+            {
+                Function.Message("U Bent al ingelogd!!");
+            }
+            else
+            {
+                //aanmeld form word geladen 
+                signup SingupForm = new signup();
+                SingupForm.Show();
+            }
         }
     }
 }

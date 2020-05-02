@@ -23,10 +23,10 @@ namespace TicketApp
         public SQLiteDataAdapter da;
         public DataSet ds = new DataSet();
         public DataTable dt = new DataTable();
-        
+
 
         //globale select function die een query krijgt deze uitvoert en resulaat terug stuurt
-        static public DataRowCollection Select(string query) 
+        static public DataRowCollection Select(string query)
         {
             //deze functie haalt data op uit de database en returnd het resultaat
             string database = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database/Database.db");
@@ -66,12 +66,10 @@ namespace TicketApp
             if (session != null)
             {
                 
-                int leeftijd = 0;
                 DateTime today = DateTime.Today;
-                DateTime Birth = Convert.ToDateTime(session.DateOfBirth);
+                DateTime Birth = Convert.ToDateTime(session.DateOfBirth.ToString());
 
-                leeftijd = today.Year - Birth.Year;
-
+                int leeftijd = today.Year - Birth.Year;
 
                 if (leeftijd < Int32.Parse(age[0]["leeftijd"].ToString()))
                 {
@@ -79,13 +77,12 @@ namespace TicketApp
                     return false;
                 }
                 else {
-                    Message("well session!!!");
+
                     return true;
                 }
             }
             else
             {
-                Message("geen session!!!");
                 if (MessageBox.Show("Bent u 16 jaar of ouder?", "Leeftijds check", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     return true;

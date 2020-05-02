@@ -18,11 +18,13 @@ namespace TicketApp
     public partial class login : Form
     {
         public Session session;
+        private MainApp main;
         public login()
         {
             InitializeComponent();
 
         }
+
         private void username_TextChanged(object sender, EventArgs e)
         {
             string temp = Email.Text;
@@ -57,12 +59,16 @@ namespace TicketApp
                     session.achternaam = data[0]["achternaam"].ToString();
                     session.email = data[0]["email"].ToString();
                     session.role = data[0]["role_id"].ToString();
-
+                    session.DateOfBirth = data[0]["geboorteDatum"].ToString();
+                    session.id = Int32.Parse(data[0]["id"].ToString());
                     this.Close();
 
                     Function.Message("Welcome " + data[0]["voornaam"].ToString() + " " + data[0]["achternaam"].ToString() + "\n"
                         + "U bent ingelogd!" + " \n" + " \n" + " Uw Role is: " + data[0]["name"]);
                     MainApp.session = session;
+                    main = new MainApp();
+                    main.loginText = "Logout";
+
                 }
                 else
                 {

@@ -20,6 +20,17 @@ namespace TicketApp
             InitializeComponent();
             Agefield.Format = DateTimePickerFormat.Custom;
             Agefield.CustomFormat = "dd/MM/yyyy";
+
+            if (MainApp.session != null)
+            {
+                DataRowCollection data = Functions.Select("SELECT email FROM gebruikers WHERE id= '" + MainApp.session.id + "'");
+
+                email_field.Text = data[0]["email"].ToString();
+                voornaam_field.Text = data[0]["email"].ToString();
+                achternaam_field.Text = data[0]["email"].ToString();
+                Agefield.Enabled = false;
+
+            }
         }
 
         private void aanmeld_Click(object sender, EventArgs e)

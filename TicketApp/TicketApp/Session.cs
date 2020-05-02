@@ -14,6 +14,7 @@ namespace TicketApp
         public string email;
         public string role;
         public string DateOfBirth;
+        public int id;
 
         public Session()
         {
@@ -22,6 +23,7 @@ namespace TicketApp
             email = "";
             role = "";
             DateOfBirth = "";
+            id = 0;
         }
         public void set_satus()
         { 
