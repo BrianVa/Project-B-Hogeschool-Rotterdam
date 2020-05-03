@@ -15,7 +15,6 @@ namespace TicketApp
 {
     public partial class signup : Form
     {
-        private DataRowCollection old_data;
         public signup()
         {
             InitializeComponent();
@@ -25,7 +24,6 @@ namespace TicketApp
             if (MainApp.session != null)
             {
                 DataRowCollection data = Functions.Select("SELECT * FROM gebruikers WHERE id= '" + MainApp.session.id + "'");
-                old_data = data;
 
                 email_field.Text = data[0]["email"].ToString();
                 voornaam_field.Text = data[0]["Voornaam"].ToString();
@@ -92,6 +90,7 @@ namespace TicketApp
                 else
                 {
                     //hier worden de gegevens in de database opgeslagen en word het formulier gesloten
+                    Function.Message("Uw account is aangemaakt");
                     string hash = Function.ComputeSha256Hash(password_field.Text.Trim());
                     string query = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id, geboorteDatum) values ('" + voornaam_field.Text.Trim() + "', '" + achternaam_field.Text.Trim() + "','" + email_field.Text.Trim() + "','" + hash + "','" + 2 + "','" + date + "')";
                     Function.ExcQuery(query);
@@ -111,21 +110,6 @@ namespace TicketApp
             {
                 Function.Message("error empty fields!");
             }
-            else if (password_field.Text.Trim() != "" || password_r_field.Text.Trim() != "")
-            {
-                if (password_field.Text.Trim() != password_r_field.Text.Trim())
-                {
-                    Function.Message("Wachtwoord en herhaal wachtwoord moeten hetzelfde zijn.");
-                }
-                else if (password_field.Text.Length < 6 || password_field.Text.Length > 24)
-                {
-                    Function.Message("Wachtwoord moet minimaal 6 characters lang zijn en maximaal 24.");
-                }
-                else
-                {
-                    hash = Function.ComputeSha256Hash(password_field.Text.Trim());
-                }
-            }
             else if (!email_field.Text.Trim().Contains("@") || !email_field.Text.Trim().Contains("."))
             {
                 Function.Message(email_field.Text.Trim() + " is geen gelding emailadres!");
@@ -136,7 +120,24 @@ namespace TicketApp
             }
             else
             {
-                if (email_field.Text.Trim() != old_data[0]["email"].ToString())
+
+                if (password_field.Text.Trim() != "" || password_r_field.Text.Trim() != "")
+                {
+                    if (password_field.Text.Trim() != password_r_field.Text.Trim())
+                    {
+                        Function.Message("Wachtwoord en herhaal wachtwoord moeten hetzelfde zijn.");
+                    }
+                    else if (password_field.Text.Length < 6 || password_field.Text.Length > 24)
+                    {
+                        Function.Message("Wachtwoord moet minimaal 6 characters lang zijn en maximaal 24.");
+                    }
+                    else
+                    {
+                        hash = Function.ComputeSha256Hash(password_field.Text.Trim());
+                    }
+                }
+
+                if (email_field.Text.Trim() != MainApp.session.email)
                 {
                     DataRowCollection data = Functions.Select("SELECT email FROM gebruikers WHERE email= '" + email_field.Text.Trim() + "'");
 
@@ -145,14 +146,24 @@ namespace TicketApp
                         Function.Message(email_field.Text + "word al gebruikt kies a.u.b een ander email adres.");
 
                     }
-                    else {
+                    else
+                    {
+                        if (hash != "")
+                        {
+                            query = "UPDATE gebruikers SET Voornaam ='" + voornaam_field.Text.Trim() + "',  Achternaam = '" + achternaam_field.Text.Trim() + "', Email = '" + email_field.Text.Trim() + "', password = '" + hash + "' WHERE id= '" + MainApp.session.id + "'";
+                        }
+                        else
+                        {
+                            query = "UPDATE gebruikers SET Voornaam ='" + voornaam_field.Text.Trim() + "',  Achternaam = '" + achternaam_field.Text.Trim() + "', Email = '" + email_field.Text.Trim() + "' WHERE id= '" + MainApp.session.id + "'";
+                        }
 
-                        string email = email_field.Text.Trim();
+                        Function.ExcQuery(query);
+                        this.Close();
+
                     }
                 }
                 else
                 {
-
                     if (hash != "")
                     {
                         query = "UPDATE gebruikers SET Voornaam ='" + voornaam_field.Text.Trim() + "',  Achternaam = '" + achternaam_field.Text.Trim() + "', Email = '" + email_field.Text.Trim() + "', password = '" + hash + "' WHERE id= '" + MainApp.session.id + "'";
@@ -162,10 +173,13 @@ namespace TicketApp
                         query = "UPDATE gebruikers SET Voornaam ='" + voornaam_field.Text.Trim() + "',  Achternaam = '" + achternaam_field.Text.Trim() + "', Email = '" + email_field.Text.Trim() + "' WHERE id= '" + MainApp.session.id + "'";
                     }
 
+
                     //hier worden de gegevens in de database opgeslagen en word het formulier gesloten
                     Function.ExcQuery(query);
                     this.Close();
                 }
+
+        
             }
 
         }
