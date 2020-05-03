@@ -162,7 +162,6 @@
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 13;
             this.label6.Text = "Geboorte Datum";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // signup
             // 

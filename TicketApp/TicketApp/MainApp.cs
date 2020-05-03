@@ -341,17 +341,8 @@ namespace TicketApp
         {
             var Function = new Functions();
 
-            //deze functie roept het aanmeld formulier aan of geeft een melding als een gebruiker is ingelogd
-            if (session != null)
-            {
-                Function.Message("U Bent al ingelogd!!");
-            }
-            else
-            {
-                //aanmeld form word geladen 
-                signup SingupForm = new signup();
-                SingupForm.Show();
-            }
+            signup SingupForm = new signup();
+            SingupForm.Show();
         }
 
         private void loggen_menu_Click(object sender, EventArgs e)

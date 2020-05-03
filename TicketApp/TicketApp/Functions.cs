@@ -61,6 +61,9 @@ namespace TicketApp
             System.Windows.Forms.MessageBox.Show(message);
         }
 
+
+
+
         public bool CheckAge(Session session, DataRowCollection age) 
         {
             if (session != null)
