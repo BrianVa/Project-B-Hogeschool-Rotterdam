@@ -16,7 +16,7 @@ namespace TicketApp
 {
     public partial class BitFilm : Form
     {
-        private int childFormNumber = 0;
+        //private int childFormNumber = 0;
         private static Session session;
         public BitFilm()
         {

@@ -137,11 +137,11 @@ namespace TicketApp
         public void UseCustomFont(string name, int size, Label label)
         {
             string FontPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Fonts/" + name + ".otf");
-            System.Drawing.Text.PrivateFontCollection modernFont = new System.Drawing.Text.PrivateFontCollection();
+            System.Drawing.Text.PrivateFontCollection ModernFont = new System.Drawing.Text.PrivateFontCollection();
 
-            modernFont.AddFontFile(FontPath);
+            ModernFont.AddFontFile(FontPath);
 
-            label.Font = new Font(modernFont.Families[0], size);
+            label.Font = new Font(ModernFont.Families[0], size);
         }
     }
 }

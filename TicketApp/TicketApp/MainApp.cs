@@ -53,10 +53,9 @@ namespace TicketApp
             label4.Text = data[3]["naam"].ToString();
             label5.Text = data[4]["naam"].ToString();
 
-            Function.UseCustomFont("CoutureBold", 36, BitfilmTekst);
+            LoadFonts();
 
             set_activepanel("main");
-
         }
         public string loginText
         {
@@ -225,24 +224,6 @@ namespace TicketApp
             }
 
         }
-        public void loggedin(bool logged)
-        {
-            if (logged)
-            {
-                mijnAccountToolStripMenuItem.Visible = true;
-                aanmeld_button.Visible = false;
-                login_button.Text = "Logout";
-            }
-            else
-            {
-                mijnAccountToolStripMenuItem.Visible = false;
-                aanmeld_button.Visible = true;
-                login_button.Text = "Login";
-
-            }
-
-        }
-
 
         private void set_activepanel(string panel)
         {
@@ -371,6 +352,29 @@ namespace TicketApp
                 signup SingupForm = new signup();
                 SingupForm.Show();
             }
+        }
+
+        private void loggen_menu_Click(object sender, EventArgs e)
+        {
+            if (session != null)
+            {
+                mijnAccountToolStripMenuItem.Visible = true;
+                aanmeld_button.Visible = false;
+                login_button.Text = "Logout";
+            }
+            else
+            {
+                mijnAccountToolStripMenuItem.Visible = false;
+                aanmeld_button.Visible = true;
+                login_button.Text = "Login";
+            }
+        }
+
+        public void LoadFonts()
+        {
+            var Function = new Functions();
+            Function.UseCustomFont("CoutureBold", 36, BitfilmTekst);
+            
         }
     }
 }

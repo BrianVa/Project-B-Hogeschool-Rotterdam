@@ -34,10 +34,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exit_button = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loggen_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.login_button = new System.Windows.Forms.ToolStripMenuItem();
             this.aanmeld_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.mijnAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.about_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.info_button = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,7 +76,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
-            this.mijnAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -107,7 +106,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.aboutToolStripMenuItem,
             this.loggen_menu,
             this.about_menu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -131,11 +129,6 @@
             this.exit_button.Text = "Exit";
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
-            // 
             // loggen_menu
             // 
             this.loggen_menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -145,20 +138,28 @@
             this.loggen_menu.Name = "loggen_menu";
             this.loggen_menu.Size = new System.Drawing.Size(64, 20);
             this.loggen_menu.Text = "Account";
+            this.loggen_menu.Click += new System.EventHandler(this.loggen_menu_Click);
             // 
             // login_button
             // 
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(180, 22);
+            this.login_button.Size = new System.Drawing.Size(146, 22);
             this.login_button.Text = "Login";
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // aanmeld_button
             // 
             this.aanmeld_button.Name = "aanmeld_button";
-            this.aanmeld_button.Size = new System.Drawing.Size(180, 22);
+            this.aanmeld_button.Size = new System.Drawing.Size(146, 22);
             this.aanmeld_button.Text = "Aanmelden";
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
+            // 
+            // mijnAccountToolStripMenuItem
+            // 
+            this.mijnAccountToolStripMenuItem.Name = "mijnAccountToolStripMenuItem";
+            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.mijnAccountToolStripMenuItem.Text = "Mijn Account";
+            this.mijnAccountToolStripMenuItem.Click += new System.EventHandler(this.mijnAccountToolStripMenuItem_Click);
             // 
             // about_menu
             // 
@@ -541,6 +542,7 @@
             // TicketPanel
             // 
             this.TicketPanel.BackColor = System.Drawing.Color.Transparent;
+            this.TicketPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TicketPanel.BackgroundImage")));
             this.TicketPanel.Controls.Add(this.StoelSelectButton);
             this.TicketPanel.Controls.Add(this.TicketBack);
             this.TicketPanel.Controls.Add(this.TicketTypes);
@@ -552,9 +554,9 @@
             // 
             // StoelSelectButton
             // 
-            this.StoelSelectButton.Location = new System.Drawing.Point(1188, 667);
+            this.StoelSelectButton.Location = new System.Drawing.Point(1067, 665);
             this.StoelSelectButton.Name = "StoelSelectButton";
-            this.StoelSelectButton.Size = new System.Drawing.Size(75, 23);
+            this.StoelSelectButton.Size = new System.Drawing.Size(200, 40);
             this.StoelSelectButton.TabIndex = 2;
             this.StoelSelectButton.Text = "Stoel Kiezen";
             this.StoelSelectButton.UseVisualStyleBackColor = true;
@@ -562,9 +564,9 @@
             // 
             // TicketBack
             // 
-            this.TicketBack.Location = new System.Drawing.Point(30, 667);
+            this.TicketBack.Location = new System.Drawing.Point(10, 665);
             this.TicketBack.Name = "TicketBack";
-            this.TicketBack.Size = new System.Drawing.Size(75, 23);
+            this.TicketBack.Size = new System.Drawing.Size(200, 40);
             this.TicketBack.TabIndex = 1;
             this.TicketBack.Text = "Back";
             this.TicketBack.UseVisualStyleBackColor = true;
@@ -581,9 +583,9 @@
             this.Column2,
             this.Column3});
             this.TicketTypes.GridColor = System.Drawing.Color.Black;
-            this.TicketTypes.Location = new System.Drawing.Point(30, 20);
+            this.TicketTypes.Location = new System.Drawing.Point(30, 360);
             this.TicketTypes.Name = "TicketTypes";
-            this.TicketTypes.Size = new System.Drawing.Size(744, 184);
+            this.TicketTypes.Size = new System.Drawing.Size(690, 260);
             this.TicketTypes.TabIndex = 0;
             // 
             // Column1
@@ -610,13 +612,6 @@
             this.SecondeTimer.Interval = 25;
             this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
             // 
-            // mijnAccountToolStripMenuItem
-            // 
-            this.mijnAccountToolStripMenuItem.Name = "mijnAccountToolStripMenuItem";
-            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mijnAccountToolStripMenuItem.Text = "Mijn Account";
-            this.mijnAccountToolStripMenuItem.Click += new System.EventHandler(this.mijnAccountToolStripMenuItem_Click);
-            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -625,9 +620,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.TicketPanel);
             this.Controls.Add(this.show_film_panel);
+            this.Controls.Add(this.Main_panel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -659,7 +654,6 @@
         private System.Windows.Forms.Button search_button;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exit_button;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem about_menu;
         private System.Windows.Forms.ToolStripMenuItem info_button;
