@@ -76,6 +76,16 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
+            this.StoelenPanel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StoelBackButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -89,6 +99,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.searched_movie)).BeginInit();
             this.TicketPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TicketTypes)).BeginInit();
+            this.StoelenPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // search_button
@@ -543,6 +556,7 @@
             // 
             this.TicketPanel.BackColor = System.Drawing.Color.Transparent;
             this.TicketPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TicketPanel.BackgroundImage")));
+            this.TicketPanel.Controls.Add(this.StoelenPanel);
             this.TicketPanel.Controls.Add(this.StoelSelectButton);
             this.TicketPanel.Controls.Add(this.TicketBack);
             this.TicketPanel.Controls.Add(this.TicketTypes);
@@ -583,7 +597,7 @@
             this.Column2,
             this.Column3});
             this.TicketTypes.GridColor = System.Drawing.Color.Black;
-            this.TicketTypes.Location = new System.Drawing.Point(30, 360);
+            this.TicketTypes.Location = new System.Drawing.Point(15, 20);
             this.TicketTypes.Name = "TicketTypes";
             this.TicketTypes.Size = new System.Drawing.Size(690, 260);
             this.TicketTypes.TabIndex = 0;
@@ -611,6 +625,84 @@
             this.SecondeTimer.Enabled = true;
             this.SecondeTimer.Interval = 25;
             this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
+            // 
+            // StoelenPanel
+            // 
+            this.StoelenPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StoelenPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoelenPanel.BackgroundImage")));
+            this.StoelenPanel.Controls.Add(this.StoelBackButton);
+            this.StoelenPanel.Controls.Add(this.dataGridView2);
+            this.StoelenPanel.Controls.Add(this.dataGridView1);
+            this.StoelenPanel.Location = new System.Drawing.Point(0, 0);
+            this.StoelenPanel.Name = "StoelenPanel";
+            this.StoelenPanel.Size = new System.Drawing.Size(1280, 720);
+            this.StoelenPanel.TabIndex = 16;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dataGridView1.Location = new System.Drawing.Point(15, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(440, 307);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Column5";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Column6";
+            this.Column6.Name = "Column6";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
+            this.Column8,
+            this.Column9});
+            this.dataGridView2.Location = new System.Drawing.Point(486, 20);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(440, 312);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Column7";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Column8";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Column9";
+            this.Column9.Name = "Column9";
+            // 
+            // StoelBackButton
+            // 
+            this.StoelBackButton.Location = new System.Drawing.Point(15, 665);
+            this.StoelBackButton.Name = "StoelBackButton";
+            this.StoelBackButton.Size = new System.Drawing.Size(200, 40);
+            this.StoelBackButton.TabIndex = 2;
+            this.StoelBackButton.Text = "Back";
+            this.StoelBackButton.UseVisualStyleBackColor = true;
+            this.StoelBackButton.Click += new System.EventHandler(this.StoelBackButton_Click);
             // 
             // MainApp
             // 
@@ -645,6 +737,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.searched_movie)).EndInit();
             this.TicketPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TicketTypes)).EndInit();
+            this.StoelenPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -699,6 +794,16 @@
         public System.Windows.Forms.ToolStripMenuItem login_button;
         public System.Windows.Forms.ToolStripMenuItem aanmeld_button;
         public System.Windows.Forms.ToolStripMenuItem mijnAccountToolStripMenuItem;
+        private System.Windows.Forms.Panel StoelenPanel;
+        private System.Windows.Forms.Button StoelBackButton;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
 

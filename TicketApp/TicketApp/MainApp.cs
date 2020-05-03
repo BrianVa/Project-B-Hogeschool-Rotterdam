@@ -161,6 +161,7 @@ namespace TicketApp
             searched_movie.Image = Image.FromFile(picture_path);
             show_film_panel.BackgroundImage = Image.FromFile(BG_path);
             TicketPanel.BackgroundImage = Image.FromFile(BG_path);
+            StoelenPanel.BackgroundImage = Image.FromFile(BG_path);
             //inladen yt trailer:
 
             string html = Function.SetHtmlLink(data[0]["youtube_code"].ToString());
@@ -227,6 +228,7 @@ namespace TicketApp
 
         private void set_activepanel(string panel)
         {
+            StoelenPanel.Visible = false;
             TicketPanel.Visible = false;
             Main_panel.Visible = false;
             show_film_panel.Visible = false;
@@ -241,6 +243,9 @@ namespace TicketApp
                     break;
                 case "film":
                     show_film_panel.Visible = true;
+                    break;
+                case "stoel":
+                    StoelenPanel.Visible = true;
                     break;
                 default:
                     Main_panel.Visible = true;
@@ -279,8 +284,7 @@ namespace TicketApp
 
         private void StoelSelectButton_Click(object sender, EventArgs e)
         {
-            var Function = new Functions();
-            Function.Message("Stoel select function!!");
+            set_activepanel("stoel");
         }
         private void setfeaturedFilms(int amount)
         {
@@ -366,6 +370,11 @@ namespace TicketApp
             var Function = new Functions();
             Function.UseCustomFont("CoutureBold", 36, BitfilmTekst);
             
+        }
+
+        private void StoelBackButton_Click(object sender, EventArgs e)
+        {
+            set_activepanel("ticket");
         }
     }
 }
