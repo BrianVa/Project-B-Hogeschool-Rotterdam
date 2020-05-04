@@ -161,6 +161,7 @@ namespace TicketApp
             searched_movie.Image = Image.FromFile(picture_path);
             show_film_panel.BackgroundImage = Image.FromFile(BG_path);
             TijdPanel.BackgroundImage = Image.FromFile(BG_path);
+
             //inladen yt trailer:
 
             string html = Function.SetHtmlLink(data[0]["youtube_code"].ToString());
@@ -231,6 +232,7 @@ namespace TicketApp
         private void set_activepanel(string panel)
         {
             TijdPanel.Visible = false;
+
             Main_panel.Visible = false;
             show_film_panel.Visible = false;
 

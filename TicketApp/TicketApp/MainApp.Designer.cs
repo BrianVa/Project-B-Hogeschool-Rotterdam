@@ -615,6 +615,84 @@
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column3.Width = 50;
             // 
+            // StoelenPanel
+            // 
+            this.StoelenPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StoelenPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoelenPanel.BackgroundImage")));
+            this.StoelenPanel.Controls.Add(this.StoelBackButton);
+            this.StoelenPanel.Controls.Add(this.dataGridView2);
+            this.StoelenPanel.Controls.Add(this.dataGridView1);
+            this.StoelenPanel.Location = new System.Drawing.Point(0, 0);
+            this.StoelenPanel.Name = "StoelenPanel";
+            this.StoelenPanel.Size = new System.Drawing.Size(1280, 720);
+            this.StoelenPanel.TabIndex = 16;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dataGridView1.Location = new System.Drawing.Point(15, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(440, 307);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Column5";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Column6";
+            this.Column6.Name = "Column6";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
+            this.Column8,
+            this.Column9});
+            this.dataGridView2.Location = new System.Drawing.Point(486, 20);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(440, 312);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Column7";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Column8";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Column9";
+            this.Column9.Name = "Column9";
+            // 
+            // StoelBackButton
+            // 
+            this.StoelBackButton.Location = new System.Drawing.Point(15, 665);
+            this.StoelBackButton.Name = "StoelBackButton";
+            this.StoelBackButton.Size = new System.Drawing.Size(200, 40);
+            this.StoelBackButton.TabIndex = 2;
+            this.StoelBackButton.Text = "Back";
+            this.StoelBackButton.UseVisualStyleBackColor = true;
+            this.StoelBackButton.Click += new System.EventHandler(this.StoelBackButton_Click);
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
