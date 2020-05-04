@@ -60,21 +60,18 @@ namespace TicketApp
         {
             System.Windows.Forms.MessageBox.Show(message);
         }
-
-
-
-
         public bool CheckAge(Session session, DataRowCollection age) 
         {
             if (session != null)
             {
                 
-                DateTime today = DateTime.Today;
                 DateTime Birth = Convert.ToDateTime(session.DateOfBirth.ToString());
+                DateTime PresentYear = DateTime.Now;
+                TimeSpan ts = PresentYear - Birth;
+                DateTime Age = DateTime.MinValue.AddDays(ts.Days);
+   
 
-                int leeftijd = today.Year - Birth.Year;
-
-                if (leeftijd < Int32.Parse(age[0]["leeftijd"].ToString()))
+                if (Age.Year -1 < Int32.Parse(age[0]["leeftijd"].ToString()))
                 {
                     MessageBox.Show("U bent te jong voor deze film");
                     return false;

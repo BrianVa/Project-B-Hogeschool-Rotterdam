@@ -160,7 +160,7 @@ namespace TicketApp
             string BG_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/BG/" + data[0]["back_url"] + ".png");
             searched_movie.Image = Image.FromFile(picture_path);
             show_film_panel.BackgroundImage = Image.FromFile(BG_path);
-            TicketPanel.BackgroundImage = Image.FromFile(BG_path);
+            TijdPanel.BackgroundImage = Image.FromFile(BG_path);
             //inladen yt trailer:
 
             string html = Function.SetHtmlLink(data[0]["youtube_code"].ToString());
@@ -182,7 +182,7 @@ namespace TicketApp
             setMoviePage(data);
         }
 
-        private void OrderTicketButton_Click(object sender, EventArgs e)
+        private void OrderTijdButton_Click(object sender, EventArgs e)
         {
             var Function = new Functions();
             DataRowCollection age = Functions.Select("SELECT leeftijd FROM films WHERE id= '" + selectedFilm + "'");
@@ -192,42 +192,45 @@ namespace TicketApp
             {
                 if (Function.CheckAge(session, age))
                 {
-                    DataRowCollection data = Functions.Select("SELECT * FROM tickets");
+                    DataRowCollection data = Functions.Select("SELECT * FROM tijden WHERE film_id = '" + selectedFilm + "'");
 
-                    TicketTypes.Rows.Clear();
+                    FilmTijden.Rows.Clear();
                     foreach (DataRow row in data)
                     {
-                        int n = TicketTypes.Rows.Add();
-                        TicketTypes.Rows[n].Cells[0].Value = row["naam"];
-                        TicketTypes.Rows[n].Cells[1].Value = "€" + row["price"] + ".00";
-                        TicketTypes.Rows[n].Cells[2].Value = 0;
+                   
+                        int n = FilmTijden.Rows.Add();
+                        Function.Message(row[n].ToString());
+                        FilmTijden.Rows[n].Cells[0].Value = "datum";
+                        FilmTijden.Rows[n].Cells[1].Value = row["tijd"].ToString();
+                        FilmTijden.Rows[n].Cells[2].Value = row["zaal_id"].ToString();
+                        FilmTijden.Rows[n].Cells[3].Value = "Tickets";
                     }
 
-                    set_activepanel("ticket");
+                    set_activepanel("tijd");
                 }
             }
             else
             {
-                DataRowCollection data = Functions.Select("SELECT * FROM tickets");
+                DataRowCollection data = Functions.Select("SELECT * FROM tijden WHERE film_id = '" + selectedFilm + "'");
 
-                TicketTypes.Rows.Clear();
+                FilmTijden.Rows.Clear();
                 foreach (DataRow row in data)
                 {
-                    int n = TicketTypes.Rows.Add();
-                    TicketTypes.Rows[n].Cells[0].Value = row["naam"];
-                    TicketTypes.Rows[n].Cells[1].Value = "€" + row["price"] + ".00";
-                    TicketTypes.Rows[n].Cells[2].Value = 0;
+                    int n = FilmTijden.Rows.Add();
+                    FilmTijden.Rows[n].Cells[0].Value = row["date"];
+                    FilmTijden.Rows[n].Cells[1].Value = row["tijd"].ToString();
+                    FilmTijden.Rows[n].Cells[2].Value = row["zaal_id"].ToString();
+                    FilmTijden.Rows[n].Cells[3].Value = "Tickets";
                 }
 
-                set_activepanel("ticket");
+                set_activepanel("tijd");
 
             }
-
         }
 
         private void set_activepanel(string panel)
         {
-            TicketPanel.Visible = false;
+            TijdPanel.Visible = false;
             Main_panel.Visible = false;
             show_film_panel.Visible = false;
 
@@ -236,17 +239,21 @@ namespace TicketApp
                 case "main":
                     Main_panel.Visible = true;
                     break;
-                case "ticket":
-                    TicketPanel.Visible = true;
+                case "tijd":
+                    TijdPanel.Visible = true;
                     break;
                 case "film":
                     show_film_panel.Visible = true;
+                    break;
+                case "stoel":
+                    TijdPanel.Visible = true;
                     break;
                 default:
                     Main_panel.Visible = true;
                     break;   
             }
         }
+
         private void featured_1_Click(object sender, EventArgs e)
         {
             DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[0]) + "'");
@@ -279,8 +286,7 @@ namespace TicketApp
 
         private void StoelSelectButton_Click(object sender, EventArgs e)
         {
-            var Function = new Functions();
-            Function.Message("Stoel select function!!");
+            set_activepanel("stoel");
         }
         private void setfeaturedFilms(int amount)
         {
@@ -366,6 +372,20 @@ namespace TicketApp
             var Function = new Functions();
             Function.UseCustomFont("CoutureBold", 36, BitfilmTekst);
             
+        }
+
+        private void StoelBackButton_Click(object sender, EventArgs e)
+        {
+            set_activepanel("ticket");
+        }
+
+        private void FilmTijden_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (FilmTijden.CurrentCell.ColumnIndex.Equals(3) && e.RowIndex != -1)
+            {
+                if (FilmTijden.CurrentCell != null && FilmTijden.CurrentCell.Value != null)
+                    set_activepanel("stoel");
+            }
         }
     }
 }

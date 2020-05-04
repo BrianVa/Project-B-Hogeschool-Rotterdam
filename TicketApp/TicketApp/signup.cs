@@ -70,6 +70,10 @@ namespace TicketApp
             {
                 Function.Message("Voornaam en achternaam moeten minimaal 3 characters lang zijn.");
             }
+            else if (voornaam_field.Text.Trim().Length > 25 || achternaam_field.Text.Trim().Length > 25)
+            {
+                Function.Message("Voornaam en achternaam mogen niet langer zijn dan 25 characters");
+            }
             else if (password_field.Text.Trim() != password_r_field.Text.Trim())
             {
                 Function.Message("Wachtwoord en herhaal wachtwoord moeten hetzelfde zijn.");

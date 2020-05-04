@@ -61,21 +61,21 @@
             this.TrailerVideo = new System.Windows.Forms.WebBrowser();
             this.film_speelduur = new System.Windows.Forms.Label();
             this.film_desc = new System.Windows.Forms.RichTextBox();
-            this.OrderTicketButton = new System.Windows.Forms.Button();
+            this.OrderTijdButton = new System.Windows.Forms.Button();
             this.Back_button = new System.Windows.Forms.Button();
             this.searched_movie = new System.Windows.Forms.PictureBox();
             this.film_speelduur_title = new System.Windows.Forms.Label();
             this.film_genre_title = new System.Windows.Forms.Label();
             this.film_name = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.TicketPanel = new System.Windows.Forms.Panel();
-            this.StoelSelectButton = new System.Windows.Forms.Button();
+            this.TijdPanel = new System.Windows.Forms.Panel();
             this.TicketBack = new System.Windows.Forms.Button();
-            this.TicketTypes = new System.Windows.Forms.DataGridView();
+            this.FilmTijden = new System.Windows.Forms.DataGridView();
+            this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -87,8 +87,8 @@
             this.show_film_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searched_movie)).BeginInit();
-            this.TicketPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TicketTypes)).BeginInit();
+            this.TijdPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FilmTijden)).BeginInit();
             this.SuspendLayout();
             // 
             // search_button
@@ -394,7 +394,7 @@
             this.show_film_panel.Controls.Add(this.TrailerVideo);
             this.show_film_panel.Controls.Add(this.film_speelduur);
             this.show_film_panel.Controls.Add(this.film_desc);
-            this.show_film_panel.Controls.Add(this.OrderTicketButton);
+            this.show_film_panel.Controls.Add(this.OrderTijdButton);
             this.show_film_panel.Controls.Add(this.Back_button);
             this.show_film_panel.Controls.Add(this.searched_movie);
             this.show_film_panel.Controls.Add(this.film_speelduur_title);
@@ -466,16 +466,16 @@
             this.film_desc.TabIndex = 9;
             this.film_desc.Text = "";
             // 
-            // OrderTicketButton
+            // OrderTijdButton
             // 
-            this.OrderTicketButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderTicketButton.Location = new System.Drawing.Point(907, 667);
-            this.OrderTicketButton.Name = "OrderTicketButton";
-            this.OrderTicketButton.Size = new System.Drawing.Size(356, 38);
-            this.OrderTicketButton.TabIndex = 8;
-            this.OrderTicketButton.Text = "Bekijk Tickets";
-            this.OrderTicketButton.UseVisualStyleBackColor = true;
-            this.OrderTicketButton.Click += new System.EventHandler(this.OrderTicketButton_Click);
+            this.OrderTijdButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderTijdButton.Location = new System.Drawing.Point(907, 667);
+            this.OrderTijdButton.Name = "OrderTijdButton";
+            this.OrderTijdButton.Size = new System.Drawing.Size(356, 38);
+            this.OrderTijdButton.TabIndex = 8;
+            this.OrderTijdButton.Text = "Bekijk Tickets";
+            this.OrderTijdButton.UseVisualStyleBackColor = true;
+            this.OrderTijdButton.Click += new System.EventHandler(this.OrderTijdButton_Click);
             // 
             // Back_button
             // 
@@ -539,28 +539,17 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // TicketPanel
+            // TijdPanel
             // 
-            this.TicketPanel.BackColor = System.Drawing.Color.Transparent;
-            this.TicketPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TicketPanel.BackgroundImage")));
-            this.TicketPanel.Controls.Add(this.StoelSelectButton);
-            this.TicketPanel.Controls.Add(this.TicketBack);
-            this.TicketPanel.Controls.Add(this.TicketTypes);
-            this.TicketPanel.Location = new System.Drawing.Point(0, 24);
-            this.TicketPanel.Name = "TicketPanel";
-            this.TicketPanel.Size = new System.Drawing.Size(1280, 720);
-            this.TicketPanel.TabIndex = 16;
-            this.TicketPanel.Visible = false;
-            // 
-            // StoelSelectButton
-            // 
-            this.StoelSelectButton.Location = new System.Drawing.Point(1067, 665);
-            this.StoelSelectButton.Name = "StoelSelectButton";
-            this.StoelSelectButton.Size = new System.Drawing.Size(200, 40);
-            this.StoelSelectButton.TabIndex = 2;
-            this.StoelSelectButton.Text = "Stoel Kiezen";
-            this.StoelSelectButton.UseVisualStyleBackColor = true;
-            this.StoelSelectButton.Click += new System.EventHandler(this.StoelSelectButton_Click);
+            this.TijdPanel.BackColor = System.Drawing.Color.Transparent;
+            this.TijdPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TijdPanel.BackgroundImage")));
+            this.TijdPanel.Controls.Add(this.TicketBack);
+            this.TijdPanel.Controls.Add(this.FilmTijden);
+            this.TijdPanel.Location = new System.Drawing.Point(0, 24);
+            this.TijdPanel.Name = "TijdPanel";
+            this.TijdPanel.Size = new System.Drawing.Size(1280, 720);
+            this.TijdPanel.TabIndex = 16;
+            this.TijdPanel.Visible = false;
             // 
             // TicketBack
             // 
@@ -572,45 +561,59 @@
             this.TicketBack.UseVisualStyleBackColor = true;
             this.TicketBack.Click += new System.EventHandler(this.TicketBack_Click);
             // 
-            // TicketTypes
+            // FilmTijden
             // 
-            this.TicketTypes.AllowUserToAddRows = false;
-            this.TicketTypes.AllowUserToDeleteRows = false;
-            this.TicketTypes.BackgroundColor = System.Drawing.Color.GhostWhite;
-            this.TicketTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TicketTypes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FilmTijden.AllowUserToAddRows = false;
+            this.FilmTijden.AllowUserToDeleteRows = false;
+            this.FilmTijden.BackgroundColor = System.Drawing.Color.GhostWhite;
+            this.FilmTijden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FilmTijden.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Column4,
             this.Column3});
-            this.TicketTypes.GridColor = System.Drawing.Color.Black;
-            this.TicketTypes.Location = new System.Drawing.Point(30, 360);
-            this.TicketTypes.Name = "TicketTypes";
-            this.TicketTypes.Size = new System.Drawing.Size(690, 260);
-            this.TicketTypes.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Ticket Type";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Prijs";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Aantal";
-            this.Column3.Name = "Column3";
+            this.FilmTijden.GridColor = System.Drawing.Color.Black;
+            this.FilmTijden.Location = new System.Drawing.Point(15, 20);
+            this.FilmTijden.Name = "FilmTijden";
+            this.FilmTijden.Size = new System.Drawing.Size(690, 260);
+            this.FilmTijden.TabIndex = 0;
+            this.FilmTijden.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilmTijden_CellContentClick);
             // 
             // SecondeTimer
             // 
             this.SecondeTimer.Enabled = true;
             this.SecondeTimer.Interval = 25;
             this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Datum";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Tijd";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "Zaal";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Select";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column3.Width = 50;
             // 
             // MainApp
             // 
@@ -620,7 +623,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.TicketPanel);
+            this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.Main_panel);
             this.ForeColor = System.Drawing.Color.Black;
@@ -643,8 +646,8 @@
             this.show_film_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searched_movie)).EndInit();
-            this.TicketPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TicketTypes)).EndInit();
+            this.TijdPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FilmTijden)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -677,7 +680,7 @@
         private System.Windows.Forms.Label film_genre_title;
         private System.Windows.Forms.PictureBox searched_movie;
         private System.Windows.Forms.Button Back_button;
-        private System.Windows.Forms.Button OrderTicketButton;
+        private System.Windows.Forms.Button OrderTijdButton;
         private System.Windows.Forms.RichTextBox film_desc;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label film_speelduur;
@@ -685,13 +688,9 @@
         private System.Windows.Forms.WebBrowser TrailerVideo;
         private System.Windows.Forms.PictureBox Kijkwijzer;
         private System.Windows.Forms.Label BitfilmTekst;
-        private System.Windows.Forms.Panel TicketPanel;
-        private System.Windows.Forms.DataGridView TicketTypes;
-        private System.Windows.Forms.Button StoelSelectButton;
+        private System.Windows.Forms.Panel TijdPanel;
+        private System.Windows.Forms.DataGridView FilmTijden;
         private System.Windows.Forms.Button TicketBack;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Timer SecondeTimer;
         private System.Windows.Forms.PictureBox BackLoop;
         public System.Windows.Forms.MenuStrip menuStrip1;
@@ -699,6 +698,10 @@
         public System.Windows.Forms.ToolStripMenuItem login_button;
         public System.Windows.Forms.ToolStripMenuItem aanmeld_button;
         public System.Windows.Forms.ToolStripMenuItem mijnAccountToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewButtonColumn Column3;
     }
 }
 

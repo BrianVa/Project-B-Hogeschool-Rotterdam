@@ -149,6 +149,7 @@
             this.Agefield.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Agefield.Location = new System.Drawing.Point(116, 212);
             this.Agefield.MaxDate = new System.DateTime(2020, 5, 1, 0, 0, 0, 0);
+            this.Agefield.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.Agefield.Name = "Agefield";
             this.Agefield.Size = new System.Drawing.Size(200, 20);
             this.Agefield.TabIndex = 12;
