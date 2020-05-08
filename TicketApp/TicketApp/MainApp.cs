@@ -200,7 +200,6 @@ namespace TicketApp
                     {
                    
                         int n = FilmTijden.Rows.Add();
-                        Function.Message(row[n].ToString());
                         FilmTijden.Rows[n].Cells[0].Value = "datum";
                         FilmTijden.Rows[n].Cells[1].Value = row["tijd"].ToString();
                         FilmTijden.Rows[n].Cells[2].Value = row["zaal_id"].ToString();
@@ -232,7 +231,7 @@ namespace TicketApp
         private void set_activepanel(string panel)
         {
             TijdPanel.Visible = false;
-
+            StoelPanel.Visible = false;
             Main_panel.Visible = false;
             show_film_panel.Visible = false;
 
@@ -248,7 +247,7 @@ namespace TicketApp
                     show_film_panel.Visible = true;
                     break;
                 case "stoel":
-                    TijdPanel.Visible = true;
+                    StoelPanel.Visible = true;
                     break;
                 default:
                     Main_panel.Visible = true;
@@ -388,6 +387,11 @@ namespace TicketApp
                 if (FilmTijden.CurrentCell != null && FilmTijden.CurrentCell.Value != null)
                     set_activepanel("stoel");
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

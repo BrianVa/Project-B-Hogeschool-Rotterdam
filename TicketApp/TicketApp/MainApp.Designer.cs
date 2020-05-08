@@ -71,11 +71,13 @@
             this.TijdPanel = new System.Windows.Forms.Panel();
             this.TicketBack = new System.Windows.Forms.Button();
             this.FilmTijden = new System.Windows.Forms.DataGridView();
-            this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
+            this.StoelPanel = new System.Windows.Forms.Panel();
+            this.StoelSelect = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -89,6 +91,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.searched_movie)).BeginInit();
             this.TijdPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FilmTijden)).BeginInit();
+            this.StoelPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).BeginInit();
             this.SuspendLayout();
             // 
             // search_button
@@ -543,6 +547,7 @@
             // 
             this.TijdPanel.BackColor = System.Drawing.Color.Transparent;
             this.TijdPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TijdPanel.BackgroundImage")));
+            this.TijdPanel.Controls.Add(this.StoelPanel);
             this.TijdPanel.Controls.Add(this.TicketBack);
             this.TijdPanel.Controls.Add(this.FilmTijden);
             this.TijdPanel.Location = new System.Drawing.Point(0, 24);
@@ -579,12 +584,6 @@
             this.FilmTijden.TabIndex = 0;
             this.FilmTijden.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilmTijden_CellContentClick);
             // 
-            // SecondeTimer
-            // 
-            this.SecondeTimer.Enabled = true;
-            this.SecondeTimer.Interval = 25;
-            this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -602,7 +601,7 @@
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Zaal";
+            this.Column4.HeaderText = "Column4";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
@@ -615,83 +614,31 @@
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column3.Width = 50;
             // 
-            // StoelenPanel
+            // SecondeTimer
             // 
-            this.StoelenPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.StoelenPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoelenPanel.BackgroundImage")));
-            this.StoelenPanel.Controls.Add(this.StoelBackButton);
-            this.StoelenPanel.Controls.Add(this.dataGridView2);
-            this.StoelenPanel.Controls.Add(this.dataGridView1);
-            this.StoelenPanel.Location = new System.Drawing.Point(0, 0);
-            this.StoelenPanel.Name = "StoelenPanel";
-            this.StoelenPanel.Size = new System.Drawing.Size(1280, 720);
-            this.StoelenPanel.TabIndex = 16;
+            this.SecondeTimer.Enabled = true;
+            this.SecondeTimer.Interval = 25;
+            this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
             // 
-            // dataGridView1
+            // StoelPanel
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(440, 307);
-            this.dataGridView1.TabIndex = 0;
+            this.StoelPanel.BackColor = System.Drawing.Color.Transparent;
+            this.StoelPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoelPanel.BackgroundImage")));
+            this.StoelPanel.Controls.Add(this.StoelSelect);
+            this.StoelPanel.Location = new System.Drawing.Point(3, 3);
+            this.StoelPanel.Name = "StoelPanel";
+            this.StoelPanel.Size = new System.Drawing.Size(1280, 720);
+            this.StoelPanel.TabIndex = 16;
+            this.StoelPanel.Visible = false;
             // 
-            // Column4
+            // StoelSelect
             // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Column5";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Column6";
-            this.Column6.Name = "Column6";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column7,
-            this.Column8,
-            this.Column9});
-            this.dataGridView2.Location = new System.Drawing.Point(486, 20);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(440, 312);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Column7";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Column8";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Column9";
-            this.Column9.Name = "Column9";
-            // 
-            // StoelBackButton
-            // 
-            this.StoelBackButton.Location = new System.Drawing.Point(15, 665);
-            this.StoelBackButton.Name = "StoelBackButton";
-            this.StoelBackButton.Size = new System.Drawing.Size(200, 40);
-            this.StoelBackButton.TabIndex = 2;
-            this.StoelBackButton.Text = "Back";
-            this.StoelBackButton.UseVisualStyleBackColor = true;
-            this.StoelBackButton.Click += new System.EventHandler(this.StoelBackButton_Click);
+            this.StoelSelect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StoelSelect.Location = new System.Drawing.Point(29, 12);
+            this.StoelSelect.Name = "StoelSelect";
+            this.StoelSelect.Size = new System.Drawing.Size(543, 294);
+            this.StoelSelect.TabIndex = 0;
+            this.StoelSelect.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // MainApp
             // 
@@ -726,6 +673,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.searched_movie)).EndInit();
             this.TijdPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FilmTijden)).EndInit();
+            this.StoelPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -780,6 +729,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column3;
+        private System.Windows.Forms.Panel StoelPanel;
+        private System.Windows.Forms.DataGridView StoelSelect;
     }
 }
 

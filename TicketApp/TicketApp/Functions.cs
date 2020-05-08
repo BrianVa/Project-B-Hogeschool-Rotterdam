@@ -71,7 +71,7 @@ namespace TicketApp
                 DateTime Age = DateTime.MinValue.AddDays(ts.Days);
    
 
-                if (Age.Year -1 < Int32.Parse(age[0]["leeftijd"].ToString()))
+                if (Age.Year -1 < Int32.Parse(age[0]["leeftijd"].ToString()))                   
                 {
                     MessageBox.Show("U bent te jong voor deze film");
                     return false;
