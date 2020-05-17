@@ -38,6 +38,7 @@
             this.login_button = new System.Windows.Forms.ToolStripMenuItem();
             this.aanmeld_button = new System.Windows.Forms.ToolStripMenuItem();
             this.mijnAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mijnOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.about_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.info_button = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,11 +77,12 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.StoelPanel = new System.Windows.Forms.Panel();
+            this.AfrekenKnop = new System.Windows.Forms.Button();
+            this.AlgVoorwaardenCheckBox = new System.Windows.Forms.CheckBox();
             this.StoelSelect = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
-            this.mijnOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -151,23 +153,30 @@
             // login_button
             // 
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(180, 22);
+            this.login_button.Size = new System.Drawing.Size(146, 22);
             this.login_button.Text = "Login";
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // aanmeld_button
             // 
             this.aanmeld_button.Name = "aanmeld_button";
-            this.aanmeld_button.Size = new System.Drawing.Size(180, 22);
+            this.aanmeld_button.Size = new System.Drawing.Size(146, 22);
             this.aanmeld_button.Text = "Aanmelden";
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
             // 
             // mijnAccountToolStripMenuItem
             // 
             this.mijnAccountToolStripMenuItem.Name = "mijnAccountToolStripMenuItem";
-            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.mijnAccountToolStripMenuItem.Text = "Mijn Account";
             this.mijnAccountToolStripMenuItem.Click += new System.EventHandler(this.mijnAccountToolStripMenuItem_Click);
+            // 
+            // mijnOrdersToolStripMenuItem
+            // 
+            this.mijnOrdersToolStripMenuItem.Name = "mijnOrdersToolStripMenuItem";
+            this.mijnOrdersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.mijnOrdersToolStripMenuItem.Text = "Mijn Orders";
+            this.mijnOrdersToolStripMenuItem.Click += new System.EventHandler(this.mijnOrdersToolStripMenuItem_Click);
             // 
             // about_menu
             // 
@@ -621,12 +630,37 @@
             // 
             this.StoelPanel.BackColor = System.Drawing.Color.Transparent;
             this.StoelPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoelPanel.BackgroundImage")));
+            this.StoelPanel.Controls.Add(this.AfrekenKnop);
+            this.StoelPanel.Controls.Add(this.AlgVoorwaardenCheckBox);
             this.StoelPanel.Controls.Add(this.StoelSelect);
             this.StoelPanel.Location = new System.Drawing.Point(0, 21);
             this.StoelPanel.Name = "StoelPanel";
             this.StoelPanel.Size = new System.Drawing.Size(1280, 720);
             this.StoelPanel.TabIndex = 16;
             this.StoelPanel.Visible = false;
+            // 
+            // AfrekenKnop
+            // 
+            this.AfrekenKnop.BackColor = System.Drawing.Color.White;
+            this.AfrekenKnop.Enabled = false;
+            this.AfrekenKnop.Location = new System.Drawing.Point(1092, 647);
+            this.AfrekenKnop.Name = "AfrekenKnop";
+            this.AfrekenKnop.Size = new System.Drawing.Size(103, 26);
+            this.AfrekenKnop.TabIndex = 2;
+            this.AfrekenKnop.Text = "Afrekenen";
+            this.AfrekenKnop.UseVisualStyleBackColor = false;
+            // 
+            // AlgVoorwaardenCheckBox
+            // 
+            this.AlgVoorwaardenCheckBox.AutoSize = true;
+            this.AlgVoorwaardenCheckBox.BackColor = System.Drawing.Color.White;
+            this.AlgVoorwaardenCheckBox.Location = new System.Drawing.Point(955, 624);
+            this.AlgVoorwaardenCheckBox.Name = "AlgVoorwaardenCheckBox";
+            this.AlgVoorwaardenCheckBox.Size = new System.Drawing.Size(240, 17);
+            this.AlgVoorwaardenCheckBox.TabIndex = 1;
+            this.AlgVoorwaardenCheckBox.Text = "ik ga akkoord met de algemene voorwaarden";
+            this.AlgVoorwaardenCheckBox.UseVisualStyleBackColor = false;
+            this.AlgVoorwaardenCheckBox.CheckedChanged += new System.EventHandler(this.AlgVoorwaardenCheckBox_CheckedChanged);
             // 
             // StoelSelect
             // 
@@ -659,13 +693,6 @@
             this.SecondeTimer.Enabled = true;
             this.SecondeTimer.Interval = 25;
             this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
-            // 
-            // mijnOrdersToolStripMenuItem
-            // 
-            this.mijnOrdersToolStripMenuItem.Name = "mijnOrdersToolStripMenuItem";
-            this.mijnOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mijnOrdersToolStripMenuItem.Text = "Mijn Orders";
-            this.mijnOrdersToolStripMenuItem.Click += new System.EventHandler(this.mijnOrdersToolStripMenuItem_Click);
             // 
             // MainApp
             // 
@@ -702,6 +729,7 @@
             this.TijdPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FilmTijden)).EndInit();
             this.StoelPanel.ResumeLayout(false);
+            this.StoelPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -762,6 +790,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.ToolStripMenuItem mijnOrdersToolStripMenuItem;
+        private System.Windows.Forms.CheckBox AlgVoorwaardenCheckBox;
+        private System.Windows.Forms.Button AfrekenKnop;
     }
 }
 

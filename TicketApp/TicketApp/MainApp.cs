@@ -412,5 +412,17 @@ namespace TicketApp
             Orders orders = new Orders(session);
             orders.Show();
         }
+
+        private void AlgVoorwaardenCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AlgVoorwaardenCheckBox.Checked)
+            {
+                AfrekenKnop.Enabled = true;
+            }
+            else
+            {
+                AfrekenKnop.Enabled = false;
+            }
+        }
     }
 }
