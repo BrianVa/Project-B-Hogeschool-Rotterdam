@@ -104,10 +104,10 @@
             // search_button
             // 
             this.search_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search_button.Location = new System.Drawing.Point(2284, 25);
+            this.search_button.Location = new System.Drawing.Point(1142, 13);
             this.search_button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.search_button.Name = "search_button";
-            this.search_button.Size = new System.Drawing.Size(260, 38);
+            this.search_button.Size = new System.Drawing.Size(130, 20);
             this.search_button.TabIndex = 2;
             this.search_button.Text = "Browse Movies";
             this.search_button.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             this.algemeneVoorwaardenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2558, 46);
+            this.menuStrip1.Size = new System.Drawing.Size(1279, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -133,13 +133,13 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exit_button});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(72, 38);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exit_button
             // 
             this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(186, 44);
+            this.exit_button.Size = new System.Drawing.Size(93, 22);
             this.exit_button.Text = "Exit";
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
@@ -151,35 +151,35 @@
             this.mijnAccountToolStripMenuItem,
             this.mijnOrdersToolStripMenuItem});
             this.loggen_menu.Name = "loggen_menu";
-            this.loggen_menu.Size = new System.Drawing.Size(122, 38);
+            this.loggen_menu.Size = new System.Drawing.Size(64, 20);
             this.loggen_menu.Text = "Account";
             this.loggen_menu.Click += new System.EventHandler(this.loggen_menu_Click);
             // 
             // login_button
             // 
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(291, 44);
+            this.login_button.Size = new System.Drawing.Size(146, 22);
             this.login_button.Text = "Login";
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // aanmeld_button
             // 
             this.aanmeld_button.Name = "aanmeld_button";
-            this.aanmeld_button.Size = new System.Drawing.Size(291, 44);
+            this.aanmeld_button.Size = new System.Drawing.Size(146, 22);
             this.aanmeld_button.Text = "Aanmelden";
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
             // 
             // mijnAccountToolStripMenuItem
             // 
             this.mijnAccountToolStripMenuItem.Name = "mijnAccountToolStripMenuItem";
-            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(291, 44);
+            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.mijnAccountToolStripMenuItem.Text = "Mijn Account";
             this.mijnAccountToolStripMenuItem.Click += new System.EventHandler(this.mijnAccountToolStripMenuItem_Click);
             // 
             // mijnOrdersToolStripMenuItem
             // 
             this.mijnOrdersToolStripMenuItem.Name = "mijnOrdersToolStripMenuItem";
-            this.mijnOrdersToolStripMenuItem.Size = new System.Drawing.Size(291, 44);
+            this.mijnOrdersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.mijnOrdersToolStripMenuItem.Text = "Mijn Orders";
             this.mijnOrdersToolStripMenuItem.Click += new System.EventHandler(this.mijnOrdersToolStripMenuItem_Click);
             // 
@@ -188,13 +188,13 @@
             this.about_menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.info_button});
             this.about_menu.Name = "about_menu";
-            this.about_menu.Size = new System.Drawing.Size(100, 38);
+            this.about_menu.Size = new System.Drawing.Size(52, 20);
             this.about_menu.Text = "About";
             // 
             // info_button
             // 
             this.info_button.Name = "info_button";
-            this.info_button.Size = new System.Drawing.Size(191, 44);
+            this.info_button.Size = new System.Drawing.Size(95, 22);
             this.info_button.Text = "Info";
             this.info_button.Click += new System.EventHandler(this.info_button_click);
             // 
@@ -208,10 +208,10 @@
             // SearchBox
             // 
             this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchBox.Location = new System.Drawing.Point(1812, 25);
+            this.SearchBox.Location = new System.Drawing.Point(906, 13);
             this.SearchBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(456, 31);
+            this.SearchBox.Size = new System.Drawing.Size(230, 20);
             this.SearchBox.TabIndex = 10;
             // 
             // featured_5
@@ -220,10 +220,10 @@
             this.featured_5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_5.Image = ((System.Drawing.Image)(resources.GetObject("featured_5.Image")));
-            this.featured_5.Location = new System.Drawing.Point(2040, 192);
+            this.featured_5.Location = new System.Drawing.Point(1020, 100);
             this.featured_5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.featured_5.Name = "featured_5";
-            this.featured_5.Size = new System.Drawing.Size(356, 485);
+            this.featured_5.Size = new System.Drawing.Size(180, 254);
             this.featured_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_5.TabIndex = 9;
             this.featured_5.TabStop = false;
@@ -235,10 +235,10 @@
             this.featured_4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_4.Image = ((System.Drawing.Image)(resources.GetObject("featured_4.Image")));
-            this.featured_4.Location = new System.Drawing.Point(1560, 192);
+            this.featured_4.Location = new System.Drawing.Point(780, 100);
             this.featured_4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.featured_4.Name = "featured_4";
-            this.featured_4.Size = new System.Drawing.Size(356, 485);
+            this.featured_4.Size = new System.Drawing.Size(180, 254);
             this.featured_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_4.TabIndex = 8;
             this.featured_4.TabStop = false;
@@ -250,10 +250,10 @@
             this.featured_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_1.Image = ((System.Drawing.Image)(resources.GetObject("featured_1.Image")));
-            this.featured_1.Location = new System.Drawing.Point(120, 192);
+            this.featured_1.Location = new System.Drawing.Point(60, 100);
             this.featured_1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.featured_1.Name = "featured_1";
-            this.featured_1.Size = new System.Drawing.Size(356, 485);
+            this.featured_1.Size = new System.Drawing.Size(180, 254);
             this.featured_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_1.TabIndex = 7;
             this.featured_1.TabStop = false;
@@ -265,10 +265,10 @@
             this.featured_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_2.Image = ((System.Drawing.Image)(resources.GetObject("featured_2.Image")));
-            this.featured_2.Location = new System.Drawing.Point(600, 192);
+            this.featured_2.Location = new System.Drawing.Point(300, 100);
             this.featured_2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.featured_2.Name = "featured_2";
-            this.featured_2.Size = new System.Drawing.Size(356, 485);
+            this.featured_2.Size = new System.Drawing.Size(180, 254);
             this.featured_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_2.TabIndex = 6;
             this.featured_2.TabStop = false;
@@ -280,10 +280,10 @@
             this.featured_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_3.Image = ((System.Drawing.Image)(resources.GetObject("featured_3.Image")));
-            this.featured_3.Location = new System.Drawing.Point(1080, 192);
+            this.featured_3.Location = new System.Drawing.Point(540, 100);
             this.featured_3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.featured_3.Name = "featured_3";
-            this.featured_3.Size = new System.Drawing.Size(356, 485);
+            this.featured_3.Size = new System.Drawing.Size(180, 254);
             this.featured_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_3.TabIndex = 5;
             this.featured_3.TabStop = false;
@@ -296,10 +296,10 @@
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1500, 712);
+            this.label4.Location = new System.Drawing.Point(750, 370);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(478, 56);
+            this.label4.Size = new System.Drawing.Size(240, 30);
             this.label4.TabIndex = 11;
             this.label4.Text = "No time to die";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -312,10 +312,10 @@
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(60, 712);
+            this.label1.Location = new System.Drawing.Point(30, 370);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(478, 56);
+            this.label1.Size = new System.Drawing.Size(240, 30);
             this.label1.TabIndex = 12;
             this.label1.Text = "Bad Boys for life";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -327,10 +327,10 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(1980, 712);
+            this.label5.Location = new System.Drawing.Point(990, 370);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(478, 56);
+            this.label5.Size = new System.Drawing.Size(240, 30);
             this.label5.TabIndex = 13;
             this.label5.Text = "Sonic";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -342,10 +342,10 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(540, 712);
+            this.label2.Location = new System.Drawing.Point(270, 370);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(478, 56);
+            this.label2.Size = new System.Drawing.Size(240, 30);
             this.label2.TabIndex = 14;
             this.label2.Text = "SONIC";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -357,10 +357,10 @@
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(1020, 712);
+            this.label3.Location = new System.Drawing.Point(510, 370);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(478, 56);
+            this.label3.Size = new System.Drawing.Size(240, 30);
             this.label3.TabIndex = 15;
             this.label3.Text = "Birds of prey";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -386,10 +386,10 @@
             this.Main_panel.Controls.Add(this.label1);
             this.Main_panel.Controls.Add(this.label4);
             this.Main_panel.Controls.Add(this.BackLoop);
-            this.Main_panel.Location = new System.Drawing.Point(0, 46);
+            this.Main_panel.Location = new System.Drawing.Point(0, 24);
             this.Main_panel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Main_panel.Name = "Main_panel";
-            this.Main_panel.Size = new System.Drawing.Size(2560, 1385);
+            this.Main_panel.Size = new System.Drawing.Size(1280, 720);
             this.Main_panel.TabIndex = 16;
             this.Main_panel.Visible = false;
             // 
@@ -398,10 +398,10 @@
             this.BitfilmTekst.BackColor = System.Drawing.Color.White;
             this.BitfilmTekst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BitfilmTekst.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BitfilmTekst.Location = new System.Drawing.Point(1020, 38);
+            this.BitfilmTekst.Location = new System.Drawing.Point(510, 20);
             this.BitfilmTekst.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.BitfilmTekst.Name = "BitfilmTekst";
-            this.BitfilmTekst.Size = new System.Drawing.Size(478, 114);
+            this.BitfilmTekst.Size = new System.Drawing.Size(240, 60);
             this.BitfilmTekst.TabIndex = 16;
             this.BitfilmTekst.Text = "BITFILM";
             this.BitfilmTekst.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -409,10 +409,10 @@
             // BackLoop
             // 
             this.BackLoop.Image = ((System.Drawing.Image)(resources.GetObject("BackLoop.Image")));
-            this.BackLoop.Location = new System.Drawing.Point(-2560, 0);
+            this.BackLoop.Location = new System.Drawing.Point(-1280, 0);
             this.BackLoop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.BackLoop.Name = "BackLoop";
-            this.BackLoop.Size = new System.Drawing.Size(5120, 1385);
+            this.BackLoop.Size = new System.Drawing.Size(2560, 720);
             this.BackLoop.TabIndex = 17;
             this.BackLoop.TabStop = false;
             // 
@@ -436,10 +436,10 @@
             this.show_film_panel.Controls.Add(this.film_speelduur_title);
             this.show_film_panel.Controls.Add(this.film_genre_title);
             this.show_film_panel.Controls.Add(this.film_name);
-            this.show_film_panel.Location = new System.Drawing.Point(0, 46);
+            this.show_film_panel.Location = new System.Drawing.Point(0, 24);
             this.show_film_panel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.show_film_panel.Name = "show_film_panel";
-            this.show_film_panel.Size = new System.Drawing.Size(2560, 1385);
+            this.show_film_panel.Size = new System.Drawing.Size(1280, 720);
             this.show_film_panel.TabIndex = 16;
             this.show_film_panel.Visible = false;
             // 
@@ -447,10 +447,10 @@
             // 
             this.Kijkwijzer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Kijkwijzer.Image = ((System.Drawing.Image)(resources.GetObject("Kijkwijzer.Image")));
-            this.Kijkwijzer.Location = new System.Drawing.Point(894, 1079);
+            this.Kijkwijzer.Location = new System.Drawing.Point(447, 561);
             this.Kijkwijzer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Kijkwijzer.Name = "Kijkwijzer";
-            this.Kijkwijzer.Size = new System.Drawing.Size(200, 192);
+            this.Kijkwijzer.Size = new System.Drawing.Size(100, 100);
             this.Kijkwijzer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Kijkwijzer.TabIndex = 13;
             this.Kijkwijzer.TabStop = false;
@@ -461,22 +461,22 @@
             this.film_genre.AutoSize = true;
             this.film_genre.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_genre.ForeColor = System.Drawing.Color.White;
-            this.film_genre.Location = new System.Drawing.Point(1230, 894);
+            this.film_genre.Location = new System.Drawing.Point(615, 465);
             this.film_genre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_genre.Name = "film_genre";
-            this.film_genre.Size = new System.Drawing.Size(296, 101);
+            this.film_genre.Size = new System.Drawing.Size(150, 47);
             this.film_genre.TabIndex = 10;
             this.film_genre.Text = "Genre: ";
             // 
             // TrailerVideo
             // 
             this.TrailerVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.TrailerVideo.Location = new System.Drawing.Point(30, 894);
+            this.TrailerVideo.Location = new System.Drawing.Point(15, 465);
             this.TrailerVideo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.TrailerVideo.MinimumSize = new System.Drawing.Size(40, 38);
+            this.TrailerVideo.MinimumSize = new System.Drawing.Size(20, 20);
             this.TrailerVideo.Name = "TrailerVideo";
             this.TrailerVideo.ScrollBarsEnabled = false;
-            this.TrailerVideo.Size = new System.Drawing.Size(852, 462);
+            this.TrailerVideo.Size = new System.Drawing.Size(426, 240);
             this.TrailerVideo.TabIndex = 12;
             // 
             // film_speelduur
@@ -485,10 +485,10 @@
             this.film_speelduur.AutoSize = true;
             this.film_speelduur.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_speelduur.ForeColor = System.Drawing.Color.White;
-            this.film_speelduur.Location = new System.Drawing.Point(1176, 971);
+            this.film_speelduur.Location = new System.Drawing.Point(588, 505);
             this.film_speelduur.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_speelduur.Name = "film_speelduur";
-            this.film_speelduur.Size = new System.Drawing.Size(251, 101);
+            this.film_speelduur.Size = new System.Drawing.Size(128, 47);
             this.film_speelduur.TabIndex = 11;
             this.film_speelduur.Text = "Duur: ";
             // 
@@ -498,23 +498,23 @@
             this.film_desc.Cursor = System.Windows.Forms.Cursors.Default;
             this.film_desc.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_desc.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.film_desc.Location = new System.Drawing.Point(448, 123);
+            this.film_desc.Location = new System.Drawing.Point(224, 64);
             this.film_desc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.film_desc.MaxLength = 380;
             this.film_desc.Name = "film_desc";
             this.film_desc.ReadOnly = true;
             this.film_desc.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.film_desc.Size = new System.Drawing.Size(1136, 412);
+            this.film_desc.Size = new System.Drawing.Size(570, 216);
             this.film_desc.TabIndex = 9;
             this.film_desc.Text = "";
             // 
             // OrderTijdButton
             // 
             this.OrderTijdButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderTijdButton.Location = new System.Drawing.Point(1814, 1283);
+            this.OrderTijdButton.Location = new System.Drawing.Point(907, 667);
             this.OrderTijdButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.OrderTijdButton.Name = "OrderTijdButton";
-            this.OrderTijdButton.Size = new System.Drawing.Size(712, 73);
+            this.OrderTijdButton.Size = new System.Drawing.Size(356, 38);
             this.OrderTijdButton.TabIndex = 8;
             this.OrderTijdButton.Text = "Bekijk Tickets";
             this.OrderTijdButton.UseVisualStyleBackColor = true;
@@ -523,10 +523,10 @@
             // Back_button
             // 
             this.Back_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Back_button.Location = new System.Drawing.Point(894, 1283);
+            this.Back_button.Location = new System.Drawing.Point(447, 667);
             this.Back_button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Back_button.Name = "Back_button";
-            this.Back_button.Size = new System.Drawing.Size(370, 73);
+            this.Back_button.Size = new System.Drawing.Size(185, 38);
             this.Back_button.TabIndex = 7;
             this.Back_button.Text = "Back";
             this.Back_button.UseVisualStyleBackColor = true;
@@ -536,10 +536,10 @@
             // 
             this.searched_movie.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.searched_movie.Image = ((System.Drawing.Image)(resources.GetObject("searched_movie.Image")));
-            this.searched_movie.Location = new System.Drawing.Point(30, 29);
+            this.searched_movie.Location = new System.Drawing.Point(15, 15);
             this.searched_movie.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.searched_movie.Name = "searched_movie";
-            this.searched_movie.Size = new System.Drawing.Size(386, 506);
+            this.searched_movie.Size = new System.Drawing.Size(195, 265);
             this.searched_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.searched_movie.TabIndex = 6;
             this.searched_movie.TabStop = false;
@@ -550,10 +550,10 @@
             this.film_speelduur_title.AutoSize = true;
             this.film_speelduur_title.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_speelduur_title.ForeColor = System.Drawing.Color.White;
-            this.film_speelduur_title.Location = new System.Drawing.Point(894, 971);
+            this.film_speelduur_title.Location = new System.Drawing.Point(447, 505);
             this.film_speelduur_title.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_speelduur_title.Name = "film_speelduur_title";
-            this.film_speelduur_title.Size = new System.Drawing.Size(251, 101);
+            this.film_speelduur_title.Size = new System.Drawing.Size(128, 47);
             this.film_speelduur_title.TabIndex = 2;
             this.film_speelduur_title.Text = "Duur: ";
             // 
@@ -563,10 +563,10 @@
             this.film_genre_title.AutoSize = true;
             this.film_genre_title.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_genre_title.ForeColor = System.Drawing.Color.White;
-            this.film_genre_title.Location = new System.Drawing.Point(894, 894);
+            this.film_genre_title.Location = new System.Drawing.Point(447, 465);
             this.film_genre_title.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_genre_title.Name = "film_genre_title";
-            this.film_genre_title.Size = new System.Drawing.Size(296, 101);
+            this.film_genre_title.Size = new System.Drawing.Size(150, 47);
             this.film_genre_title.TabIndex = 1;
             this.film_genre_title.Text = "Genre: ";
             // 
@@ -575,10 +575,10 @@
             this.film_name.AutoSize = true;
             this.film_name.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_name.ForeColor = System.Drawing.Color.White;
-            this.film_name.Location = new System.Drawing.Point(432, 29);
+            this.film_name.Location = new System.Drawing.Point(216, 15);
             this.film_name.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_name.Name = "film_name";
-            this.film_name.Size = new System.Drawing.Size(416, 101);
+            this.film_name.Size = new System.Drawing.Size(210, 47);
             this.film_name.TabIndex = 0;
             this.film_name.Text = "Film name";
             // 
@@ -594,19 +594,19 @@
             this.TijdPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TijdPanel.BackgroundImage")));
             this.TijdPanel.Controls.Add(this.TicketBack);
             this.TijdPanel.Controls.Add(this.FilmTijden);
-            this.TijdPanel.Location = new System.Drawing.Point(0, 46);
+            this.TijdPanel.Location = new System.Drawing.Point(0, 24);
             this.TijdPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TijdPanel.Name = "TijdPanel";
-            this.TijdPanel.Size = new System.Drawing.Size(2560, 1385);
+            this.TijdPanel.Size = new System.Drawing.Size(1280, 720);
             this.TijdPanel.TabIndex = 16;
             this.TijdPanel.Visible = false;
             // 
             // TicketBack
             // 
-            this.TicketBack.Location = new System.Drawing.Point(20, 1279);
+            this.TicketBack.Location = new System.Drawing.Point(10, 665);
             this.TicketBack.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TicketBack.Name = "TicketBack";
-            this.TicketBack.Size = new System.Drawing.Size(400, 77);
+            this.TicketBack.Size = new System.Drawing.Size(200, 40);
             this.TicketBack.TabIndex = 1;
             this.TicketBack.Text = "Back";
             this.TicketBack.UseVisualStyleBackColor = true;
@@ -624,11 +624,11 @@
             this.Column4,
             this.Column3});
             this.FilmTijden.GridColor = System.Drawing.Color.Black;
-            this.FilmTijden.Location = new System.Drawing.Point(30, 38);
+            this.FilmTijden.Location = new System.Drawing.Point(15, 20);
             this.FilmTijden.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.FilmTijden.Name = "FilmTijden";
             this.FilmTijden.RowHeadersWidth = 82;
-            this.FilmTijden.Size = new System.Drawing.Size(1380, 500);
+            this.FilmTijden.Size = new System.Drawing.Size(690, 260);
             this.FilmTijden.TabIndex = 0;
             this.FilmTijden.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilmTijden_CellContentClick);
             // 
@@ -673,10 +673,10 @@
             this.StoelPanel.Controls.Add(this.AfrekenKnop);
             this.StoelPanel.Controls.Add(this.AlgVoorwaardenCheckBox);
             this.StoelPanel.Controls.Add(this.StoelSelect);
-            this.StoelPanel.Location = new System.Drawing.Point(0, 40);
+            this.StoelPanel.Location = new System.Drawing.Point(0, 21);
             this.StoelPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.StoelPanel.Name = "StoelPanel";
-            this.StoelPanel.Size = new System.Drawing.Size(2560, 1385);
+            this.StoelPanel.Size = new System.Drawing.Size(1280, 720);
             this.StoelPanel.TabIndex = 16;
             this.StoelPanel.Visible = false;
             // 
@@ -684,10 +684,10 @@
             // 
             this.AfrekenKnop.BackColor = System.Drawing.Color.White;
             this.AfrekenKnop.Enabled = false;
-            this.AfrekenKnop.Location = new System.Drawing.Point(2184, 1244);
+            this.AfrekenKnop.Location = new System.Drawing.Point(1092, 647);
             this.AfrekenKnop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.AfrekenKnop.Name = "AfrekenKnop";
-            this.AfrekenKnop.Size = new System.Drawing.Size(206, 50);
+            this.AfrekenKnop.Size = new System.Drawing.Size(103, 26);
             this.AfrekenKnop.TabIndex = 2;
             this.AfrekenKnop.Text = "Afrekenen";
             this.AfrekenKnop.UseVisualStyleBackColor = false;
@@ -696,10 +696,10 @@
             // 
             this.AlgVoorwaardenCheckBox.AutoSize = true;
             this.AlgVoorwaardenCheckBox.BackColor = System.Drawing.Color.White;
-            this.AlgVoorwaardenCheckBox.Location = new System.Drawing.Point(1910, 1200);
+            this.AlgVoorwaardenCheckBox.Location = new System.Drawing.Point(955, 624);
             this.AlgVoorwaardenCheckBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.AlgVoorwaardenCheckBox.Name = "AlgVoorwaardenCheckBox";
-            this.AlgVoorwaardenCheckBox.Size = new System.Drawing.Size(474, 29);
+            this.AlgVoorwaardenCheckBox.Size = new System.Drawing.Size(240, 17);
             this.AlgVoorwaardenCheckBox.TabIndex = 1;
             this.AlgVoorwaardenCheckBox.Text = "ik ga akkoord met de algemene voorwaarden";
             this.AlgVoorwaardenCheckBox.UseVisualStyleBackColor = false;
@@ -711,11 +711,11 @@
             this.StoelSelect.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column5,
             this.Column6});
-            this.StoelSelect.Location = new System.Drawing.Point(58, 23);
+            this.StoelSelect.Location = new System.Drawing.Point(29, 12);
             this.StoelSelect.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.StoelSelect.Name = "StoelSelect";
             this.StoelSelect.RowHeadersWidth = 82;
-            this.StoelSelect.Size = new System.Drawing.Size(1352, 781);
+            this.StoelSelect.Size = new System.Drawing.Size(676, 403);
             this.StoelSelect.TabIndex = 0;
             // 
             // Column5
@@ -751,11 +751,11 @@
             // 
             // MainApp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2558, 1429);
+            this.ClientSize = new System.Drawing.Size(1279, 743);
             this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.TijdPanel);
