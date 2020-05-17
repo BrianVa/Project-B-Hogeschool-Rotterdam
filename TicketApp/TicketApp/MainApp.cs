@@ -424,5 +424,18 @@ namespace TicketApp
                 AfrekenKnop.Enabled = false;
             }
         }
+
+        private void algemeneVoorwaardenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Functions = new Functions();
+            Functions.Message("Algemene Voorwaarden: \n\n" +
+                "1. De consument heeft na het akkoord gaan van de algemene voorwaarden een betalingsverplichting aan Bitfilm \n\n" +
+                "2. De consument heeft standaard 14 dagen herroepingsrecht waarin deze zonder verklaring zijn/haar reservering ongedaan kan maken, mits de annulering minimaal 24 uur van te voren plaatsvindt. \n\n" +
+                "3. Met het afrekenen gaat de consument akkoord met de betaling en moet de betaling binnen 30 dagen voltooid zijn, tenzij de reservering tijdig wordt geannuleerd. \n\n" +
+                "4. Het kopen van tickets kan alleen gedaan worden met een geldige naam en emailadres. Bitfilm verstrekt deze gegevens niet zonder toestemming aan derde partijen. \n\n" +
+                "5. Bij het reserveren van een 16+ film wordt bevestiging van een geldige leeftijd gevraagd. Bij een niet-geldige leeftijd kan er geen ticket worden verkocht. \n\n" +
+                "6. Bitfilm hanteert de regels van Nicam in de Kijkwijzer. Deze regels zijn vastgelegd in het Wetboek van Strafrecht artikel 240a. Vanwege deze regelgeving kan er om legitimatie gevraagd worden door onze medewerkers. Wilt of kan u uzelf niet legitimeren of voldoet u niet aan de regelgeving dan zal de toegang worden geweigerd.In deze situatie vind geen restitutie of vergoeding plaats.\n");
+        }
+        
     }
 }
