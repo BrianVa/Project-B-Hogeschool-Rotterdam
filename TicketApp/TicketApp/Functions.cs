@@ -40,6 +40,8 @@ namespace TicketApp
             return dt.Rows;
         }
 
+
+
         public string ComputeSha256Hash(string rawData)
         {
             //in deze functie worden wachtworden geencrypt

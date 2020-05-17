@@ -43,3 +43,4 @@ C:\Users\Jeroen\Documents\Processing folder\ProjectB\TicketApp\TicketApp\obj\Deb
 C:\Users\Jeroen\Documents\Processing folder\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.csproj.CopyComplete
 C:\Users\Jeroen\Documents\Processing folder\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.exe
 C:\Users\Jeroen\Documents\Processing folder\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.pdb
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.Orders.resources

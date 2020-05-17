@@ -23,14 +23,16 @@ namespace TicketApp
         private List<Label> featuredFilmsPic = new List<Label>();
         private List<string> featured = new List<string>();
         private int selectedFilm;
+        private int selectedTime;
 
         public MainApp()
         {
             //deze functie haalt 5 films uit de database en laad deze in het form zien
             InitializeComponent();
-            this.mijnAccountToolStripMenuItem.Visible = false;
 
             var Function = new Functions();
+
+            this.mijnAccountToolStripMenuItem.Visible = false;
             DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
 
             //nieuwe functie voor feature films
@@ -141,7 +143,7 @@ namespace TicketApp
             }
         }
 
-        private void setMoviePage(DataRowCollection data)
+        public void setMoviePage(DataRowCollection data)
         {
             var totalMinutes = Int32.Parse(data[0]["speel_duur"].ToString());
             int hours = totalMinutes / 60;
@@ -287,6 +289,18 @@ namespace TicketApp
 
         private void StoelSelectButton_Click(object sender, EventArgs e)
         {
+
+            DataRowCollection zaal = Functions.Select("SELECT zaal_id FROM tijden WHERE id= '" + selectedTime + "'");
+            DataRowCollection data = Functions.Select("SELECT * FROM stoelen WHERE zaal_id= '" + zaal[0]["zaal_id"] + "'");
+
+            StoelSelect.Rows.Clear();
+            foreach (DataRow row in data)
+            {
+
+                int n = FilmTijden.Rows.Add();
+                StoelSelect.Rows[n].Cells[0].Value = data[0]["naam"].ToString();
+                StoelSelect.Rows[n].Cells[3].Value = "Selecteer";
+            }
             set_activepanel("stoel");
         }
         private void setfeaturedFilms(int amount)
@@ -357,12 +371,14 @@ namespace TicketApp
             if (session != null)
             {
                 mijnAccountToolStripMenuItem.Visible = true;
+                mijnOrdersToolStripMenuItem.Visible = true;
                 aanmeld_button.Visible = false;
                 login_button.Text = "Logout";
             }
             else
             {
                 mijnAccountToolStripMenuItem.Visible = false;
+                mijnOrdersToolStripMenuItem.Visible = false;
                 aanmeld_button.Visible = true;
                 login_button.Text = "Login";
             }
@@ -389,9 +405,12 @@ namespace TicketApp
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void mijnOrdersToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var Function = new Functions();
 
+            Orders orders = new Orders();
+            orders.Show();
         }
     }
 }

@@ -75,9 +75,12 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
             this.StoelPanel = new System.Windows.Forms.Panel();
             this.StoelSelect = new System.Windows.Forms.DataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
+            this.mijnOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -138,7 +141,8 @@
             this.loggen_menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.login_button,
             this.aanmeld_button,
-            this.mijnAccountToolStripMenuItem});
+            this.mijnAccountToolStripMenuItem,
+            this.mijnOrdersToolStripMenuItem});
             this.loggen_menu.Name = "loggen_menu";
             this.loggen_menu.Size = new System.Drawing.Size(64, 20);
             this.loggen_menu.Text = "Account";
@@ -147,21 +151,21 @@
             // login_button
             // 
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(146, 22);
+            this.login_button.Size = new System.Drawing.Size(180, 22);
             this.login_button.Text = "Login";
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // aanmeld_button
             // 
             this.aanmeld_button.Name = "aanmeld_button";
-            this.aanmeld_button.Size = new System.Drawing.Size(146, 22);
+            this.aanmeld_button.Size = new System.Drawing.Size(180, 22);
             this.aanmeld_button.Text = "Aanmelden";
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
             // 
             // mijnAccountToolStripMenuItem
             // 
             this.mijnAccountToolStripMenuItem.Name = "mijnAccountToolStripMenuItem";
-            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mijnAccountToolStripMenuItem.Text = "Mijn Account";
             this.mijnAccountToolStripMenuItem.Click += new System.EventHandler(this.mijnAccountToolStripMenuItem_Click);
             // 
@@ -547,7 +551,6 @@
             // 
             this.TijdPanel.BackColor = System.Drawing.Color.Transparent;
             this.TijdPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TijdPanel.BackgroundImage")));
-            this.TijdPanel.Controls.Add(this.StoelPanel);
             this.TijdPanel.Controls.Add(this.TicketBack);
             this.TijdPanel.Controls.Add(this.FilmTijden);
             this.TijdPanel.Location = new System.Drawing.Point(0, 24);
@@ -614,18 +617,12 @@
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column3.Width = 50;
             // 
-            // SecondeTimer
-            // 
-            this.SecondeTimer.Enabled = true;
-            this.SecondeTimer.Interval = 25;
-            this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
-            // 
             // StoelPanel
             // 
             this.StoelPanel.BackColor = System.Drawing.Color.Transparent;
             this.StoelPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoelPanel.BackgroundImage")));
             this.StoelPanel.Controls.Add(this.StoelSelect);
-            this.StoelPanel.Location = new System.Drawing.Point(3, 3);
+            this.StoelPanel.Location = new System.Drawing.Point(0, 21);
             this.StoelPanel.Name = "StoelPanel";
             this.StoelPanel.Size = new System.Drawing.Size(1280, 720);
             this.StoelPanel.TabIndex = 16;
@@ -634,11 +631,41 @@
             // StoelSelect
             // 
             this.StoelSelect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StoelSelect.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
+            this.Column6});
             this.StoelSelect.Location = new System.Drawing.Point(29, 12);
             this.StoelSelect.Name = "StoelSelect";
-            this.StoelSelect.Size = new System.Drawing.Size(543, 294);
+            this.StoelSelect.Size = new System.Drawing.Size(676, 406);
             this.StoelSelect.TabIndex = 0;
-            this.StoelSelect.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "Stoel";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Selecteer";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // SecondeTimer
+            // 
+            this.SecondeTimer.Enabled = true;
+            this.SecondeTimer.Interval = 25;
+            this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
+            // 
+            // mijnOrdersToolStripMenuItem
+            // 
+            this.mijnOrdersToolStripMenuItem.Name = "mijnOrdersToolStripMenuItem";
+            this.mijnOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mijnOrdersToolStripMenuItem.Text = "Mijn Orders";
+            this.mijnOrdersToolStripMenuItem.Click += new System.EventHandler(this.mijnOrdersToolStripMenuItem_Click);
             // 
             // MainApp
             // 
@@ -647,6 +674,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
+            this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.show_film_panel);
@@ -731,6 +759,9 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column3;
         private System.Windows.Forms.Panel StoelPanel;
         private System.Windows.Forms.DataGridView StoelSelect;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.ToolStripMenuItem mijnOrdersToolStripMenuItem;
     }
 }
 
