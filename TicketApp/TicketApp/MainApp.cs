@@ -409,7 +409,7 @@ namespace TicketApp
         {
             var Function = new Functions();
 
-            Orders orders = new Orders();
+            Orders orders = new Orders(session);
             orders.Show();
         }
     }

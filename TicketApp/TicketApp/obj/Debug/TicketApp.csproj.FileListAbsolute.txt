@@ -44,3 +44,26 @@ C:\Users\Jeroen\Documents\Processing folder\ProjectB\TicketApp\TicketApp\obj\Deb
 C:\Users\Jeroen\Documents\Processing folder\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.exe
 C:\Users\Jeroen\Documents\Processing folder\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.pdb
 C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.Orders.resources
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.csprojAssemblyReference.cache
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.BitFilm.resources
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.login.resources
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.MainApp.resources
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.Orders.resources
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.Properties.Resources.resources
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.signup.resources
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.csproj.GenerateResource.cache
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.exe
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.pdb
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\TicketApp.exe.config
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\TicketApp.exe
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\TicketApp.pdb
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\EntityFramework.dll
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.dll
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\EntityFramework.xml
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.xml
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\jeroe\Desktop\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.csproj.CopyComplete
