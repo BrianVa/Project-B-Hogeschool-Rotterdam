@@ -165,6 +165,7 @@ namespace TicketApp
             TijdPanel.BackgroundImage = Image.FromFile(BG_path);
             StoelPanel.BackgroundImage = Image.FromFile(BG_path);
             AfrekenPanel.BackgroundImage = Image.FromFile(BG_path);
+            BedanktPanel.BackgroundImage = Image.FromFile(BG_path);
 
             //inladen yt trailer:
 
@@ -239,6 +240,7 @@ namespace TicketApp
             Main_panel.Visible = false;
             show_film_panel.Visible = false;
             AfrekenPanel.Visible = false;
+            BedanktPanel.Visible = false;
 
             switch (panel)
             {
@@ -256,6 +258,9 @@ namespace TicketApp
                     break;
                 case "afrekenen":
                     AfrekenPanel.Visible = true;
+                    break;
+                case "bedankt":
+                    BedanktPanel.Visible = true;
                     break;
                 default:
                     Main_panel.Visible = true;
@@ -432,7 +437,12 @@ namespace TicketApp
             set_activepanel("tijd");
         }
 
-        private void AkkoordCheckbox_CheckedChanged(object sender, EventArgs e)
+        private void NaarAfrekenenKnop_Click(object sender, EventArgs e)
+        {
+            set_activepanel("afrekenen");
+        }
+
+        private void AlgVoorwaardenCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (AlgVoorwaardenCheckBox.Checked)
             {
@@ -449,9 +459,14 @@ namespace TicketApp
             set_activepanel("stoel");
         }
 
-        private void NaarAfrekenenKnop_Click(object sender, EventArgs e)
+        private void BackToHomeButton_Click(object sender, EventArgs e)
         {
-            set_activepanel("afrekenen");
+            set_activepanel("main");
+        }
+
+        private void AfrekenKnop_Click(object sender, EventArgs e)
+        {
+            set_activepanel("bedankt");
         }
     }
 }

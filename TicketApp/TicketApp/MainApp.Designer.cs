@@ -78,16 +78,18 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.StoelPanel = new System.Windows.Forms.Panel();
-            this.AfrekenPanel = new System.Windows.Forms.Panel();
-            this.AfrekenTerugKnop = new System.Windows.Forms.Button();
-            this.AfrekenKnop = new System.Windows.Forms.Button();
-            this.AlgVoorwaardenCheckBox = new System.Windows.Forms.CheckBox();
             this.NaarAfrekenenKnop = new System.Windows.Forms.Button();
             this.StoelBackButton = new System.Windows.Forms.Button();
             this.StoelSelect = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.AfrekenPanel = new System.Windows.Forms.Panel();
+            this.AfrekenTerugKnop = new System.Windows.Forms.Button();
+            this.AfrekenKnop = new System.Windows.Forms.Button();
+            this.AlgVoorwaardenCheckBox = new System.Windows.Forms.CheckBox();
             this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
+            this.BedanktPanel = new System.Windows.Forms.Panel();
+            this.BackToHomeButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -102,8 +104,9 @@
             this.TijdPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FilmTijden)).BeginInit();
             this.StoelPanel.SuspendLayout();
-            this.AfrekenPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).BeginInit();
+            this.AfrekenPanel.SuspendLayout();
+            this.BedanktPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // search_button
@@ -681,7 +684,6 @@
             // 
             this.StoelPanel.BackColor = System.Drawing.Color.Transparent;
             this.StoelPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoelPanel.BackgroundImage")));
-            this.StoelPanel.Controls.Add(this.AfrekenPanel);
             this.StoelPanel.Controls.Add(this.NaarAfrekenenKnop);
             this.StoelPanel.Controls.Add(this.StoelBackButton);
             this.StoelPanel.Controls.Add(this.StoelSelect);
@@ -691,51 +693,6 @@
             this.StoelPanel.Size = new System.Drawing.Size(1280, 720);
             this.StoelPanel.TabIndex = 16;
             this.StoelPanel.Visible = false;
-            // 
-            // AfrekenPanel
-            // 
-            this.AfrekenPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AfrekenPanel.BackgroundImage")));
-            this.AfrekenPanel.Controls.Add(this.AfrekenTerugKnop);
-            this.AfrekenPanel.Controls.Add(this.AfrekenKnop);
-            this.AfrekenPanel.Controls.Add(this.AlgVoorwaardenCheckBox);
-            this.AfrekenPanel.Location = new System.Drawing.Point(0, 0);
-            this.AfrekenPanel.Name = "AfrekenPanel";
-            this.AfrekenPanel.Size = new System.Drawing.Size(1280, 720);
-            this.AfrekenPanel.TabIndex = 16;
-            this.AfrekenPanel.Visible = false;
-            // 
-            // AfrekenTerugKnop
-            // 
-            this.AfrekenTerugKnop.Location = new System.Drawing.Point(30, 649);
-            this.AfrekenTerugKnop.Name = "AfrekenTerugKnop";
-            this.AfrekenTerugKnop.Size = new System.Drawing.Size(165, 41);
-            this.AfrekenTerugKnop.TabIndex = 6;
-            this.AfrekenTerugKnop.Text = " Back";
-            this.AfrekenTerugKnop.UseVisualStyleBackColor = true;
-            // 
-            // AfrekenKnop
-            // 
-            this.AfrekenKnop.BackColor = System.Drawing.Color.White;
-            this.AfrekenKnop.Enabled = false;
-            this.AfrekenKnop.Location = new System.Drawing.Point(1161, 675);
-            this.AfrekenKnop.Margin = new System.Windows.Forms.Padding(6);
-            this.AfrekenKnop.Name = "AfrekenKnop";
-            this.AfrekenKnop.Size = new System.Drawing.Size(103, 26);
-            this.AfrekenKnop.TabIndex = 4;
-            this.AfrekenKnop.Text = "Afrekenen";
-            this.AfrekenKnop.UseVisualStyleBackColor = false;
-            // 
-            // AlgVoorwaardenCheckBox
-            // 
-            this.AlgVoorwaardenCheckBox.AutoSize = true;
-            this.AlgVoorwaardenCheckBox.BackColor = System.Drawing.Color.White;
-            this.AlgVoorwaardenCheckBox.Location = new System.Drawing.Point(1024, 652);
-            this.AlgVoorwaardenCheckBox.Margin = new System.Windows.Forms.Padding(6);
-            this.AlgVoorwaardenCheckBox.Name = "AlgVoorwaardenCheckBox";
-            this.AlgVoorwaardenCheckBox.Size = new System.Drawing.Size(240, 17);
-            this.AlgVoorwaardenCheckBox.TabIndex = 3;
-            this.AlgVoorwaardenCheckBox.Text = "ik ga akkoord met de algemene voorwaarden";
-            this.AlgVoorwaardenCheckBox.UseVisualStyleBackColor = false;
             // 
             // NaarAfrekenenKnop
             // 
@@ -788,11 +745,79 @@
             this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column6.Width = 200;
             // 
+            // AfrekenPanel
+            // 
+            this.AfrekenPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AfrekenPanel.BackgroundImage")));
+            this.AfrekenPanel.Controls.Add(this.AfrekenTerugKnop);
+            this.AfrekenPanel.Controls.Add(this.AfrekenKnop);
+            this.AfrekenPanel.Controls.Add(this.AlgVoorwaardenCheckBox);
+            this.AfrekenPanel.Location = new System.Drawing.Point(0, 23);
+            this.AfrekenPanel.Name = "AfrekenPanel";
+            this.AfrekenPanel.Size = new System.Drawing.Size(1280, 720);
+            this.AfrekenPanel.TabIndex = 16;
+            this.AfrekenPanel.Visible = false;
+            // 
+            // AfrekenTerugKnop
+            // 
+            this.AfrekenTerugKnop.Location = new System.Drawing.Point(30, 649);
+            this.AfrekenTerugKnop.Name = "AfrekenTerugKnop";
+            this.AfrekenTerugKnop.Size = new System.Drawing.Size(165, 41);
+            this.AfrekenTerugKnop.TabIndex = 6;
+            this.AfrekenTerugKnop.Text = " Back";
+            this.AfrekenTerugKnop.UseVisualStyleBackColor = true;
+            this.AfrekenTerugKnop.Click += new System.EventHandler(this.AfrekenTerugKnop_Click);
+            // 
+            // AfrekenKnop
+            // 
+            this.AfrekenKnop.BackColor = System.Drawing.Color.White;
+            this.AfrekenKnop.Enabled = false;
+            this.AfrekenKnop.Location = new System.Drawing.Point(1161, 675);
+            this.AfrekenKnop.Margin = new System.Windows.Forms.Padding(6);
+            this.AfrekenKnop.Name = "AfrekenKnop";
+            this.AfrekenKnop.Size = new System.Drawing.Size(103, 26);
+            this.AfrekenKnop.TabIndex = 4;
+            this.AfrekenKnop.Text = "Afrekenen";
+            this.AfrekenKnop.UseVisualStyleBackColor = false;
+            this.AfrekenKnop.Click += new System.EventHandler(this.AfrekenKnop_Click);
+            // 
+            // AlgVoorwaardenCheckBox
+            // 
+            this.AlgVoorwaardenCheckBox.AutoSize = true;
+            this.AlgVoorwaardenCheckBox.BackColor = System.Drawing.Color.White;
+            this.AlgVoorwaardenCheckBox.Location = new System.Drawing.Point(1024, 652);
+            this.AlgVoorwaardenCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.AlgVoorwaardenCheckBox.Name = "AlgVoorwaardenCheckBox";
+            this.AlgVoorwaardenCheckBox.Size = new System.Drawing.Size(240, 17);
+            this.AlgVoorwaardenCheckBox.TabIndex = 3;
+            this.AlgVoorwaardenCheckBox.Text = "ik ga akkoord met de algemene voorwaarden";
+            this.AlgVoorwaardenCheckBox.UseVisualStyleBackColor = false;
+            this.AlgVoorwaardenCheckBox.CheckedChanged += new System.EventHandler(this.AlgVoorwaardenCheckBox_CheckedChanged);
+            // 
             // SecondeTimer
             // 
             this.SecondeTimer.Enabled = true;
             this.SecondeTimer.Interval = 25;
             this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
+            // 
+            // BedanktPanel
+            // 
+            this.BedanktPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BedanktPanel.BackgroundImage")));
+            this.BedanktPanel.Controls.Add(this.BackToHomeButton);
+            this.BedanktPanel.Location = new System.Drawing.Point(0, 23);
+            this.BedanktPanel.Name = "BedanktPanel";
+            this.BedanktPanel.Size = new System.Drawing.Size(1280, 720);
+            this.BedanktPanel.TabIndex = 17;
+            this.BedanktPanel.Visible = false;
+            // 
+            // BackToHomeButton
+            // 
+            this.BackToHomeButton.Location = new System.Drawing.Point(15, 652);
+            this.BackToHomeButton.Name = "BackToHomeButton";
+            this.BackToHomeButton.Size = new System.Drawing.Size(169, 49);
+            this.BackToHomeButton.TabIndex = 0;
+            this.BackToHomeButton.Text = "Home";
+            this.BackToHomeButton.UseVisualStyleBackColor = true;
+            this.BackToHomeButton.Click += new System.EventHandler(this.BackToHomeButton_Click);
             // 
             // MainApp
             // 
@@ -801,11 +826,13 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
-            this.Controls.Add(this.StoelPanel);
+            this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.Main_panel);
+            this.Controls.Add(this.BedanktPanel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -830,9 +857,10 @@
             this.TijdPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FilmTijden)).EndInit();
             this.StoelPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).EndInit();
             this.AfrekenPanel.ResumeLayout(false);
             this.AfrekenPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).EndInit();
+            this.BedanktPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -899,6 +927,8 @@
         private System.Windows.Forms.Button AfrekenTerugKnop;
         private System.Windows.Forms.Button AfrekenKnop;
         private System.Windows.Forms.CheckBox AlgVoorwaardenCheckBox;
+        private System.Windows.Forms.Panel BedanktPanel;
+        private System.Windows.Forms.Button BackToHomeButton;
     }
 }
 
