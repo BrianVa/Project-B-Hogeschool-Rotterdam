@@ -41,6 +41,7 @@
             this.mijnOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.about_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.info_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.algemeneVoorwaardenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.featured_5 = new System.Windows.Forms.PictureBox();
@@ -77,13 +78,16 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.StoelPanel = new System.Windows.Forms.Panel();
-            this.AfrekenKnop = new System.Windows.Forms.Button();
-            this.AlgVoorwaardenCheckBox = new System.Windows.Forms.CheckBox();
+            this.StoelBackButton = new System.Windows.Forms.Button();
             this.StoelSelect = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
-            this.algemeneVoorwaardenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NaarAfrekenenKnop = new System.Windows.Forms.Button();
+            this.AfrekenPanel = new System.Windows.Forms.Panel();
+            this.AfrekenTerugKnop = new System.Windows.Forms.Button();
+            this.AfrekenKnop = new System.Windows.Forms.Button();
+            this.AlgVoorwaardenCheckBox = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -99,13 +103,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.FilmTijden)).BeginInit();
             this.StoelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).BeginInit();
+            this.AfrekenPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // search_button
             // 
             this.search_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search_button.Location = new System.Drawing.Point(1142, 13);
-            this.search_button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.search_button.Margin = new System.Windows.Forms.Padding(6);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(130, 20);
             this.search_button.TabIndex = 2;
@@ -115,7 +120,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -198,6 +202,13 @@
             this.info_button.Text = "Info";
             this.info_button.Click += new System.EventHandler(this.info_button_click);
             // 
+            // algemeneVoorwaardenToolStripMenuItem
+            // 
+            this.algemeneVoorwaardenToolStripMenuItem.Name = "algemeneVoorwaardenToolStripMenuItem";
+            this.algemeneVoorwaardenToolStripMenuItem.Size = new System.Drawing.Size(145, 20);
+            this.algemeneVoorwaardenToolStripMenuItem.Text = "Algemene Voorwaarden";
+            this.algemeneVoorwaardenToolStripMenuItem.Click += new System.EventHandler(this.algemeneVoorwaardenToolStripMenuItem_Click);
+            // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
@@ -209,7 +220,7 @@
             // 
             this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SearchBox.Location = new System.Drawing.Point(906, 13);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(6);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(230, 20);
             this.SearchBox.TabIndex = 10;
@@ -221,7 +232,7 @@
             this.featured_5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_5.Image = ((System.Drawing.Image)(resources.GetObject("featured_5.Image")));
             this.featured_5.Location = new System.Drawing.Point(1020, 100);
-            this.featured_5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.featured_5.Margin = new System.Windows.Forms.Padding(6);
             this.featured_5.Name = "featured_5";
             this.featured_5.Size = new System.Drawing.Size(180, 254);
             this.featured_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -236,7 +247,7 @@
             this.featured_4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_4.Image = ((System.Drawing.Image)(resources.GetObject("featured_4.Image")));
             this.featured_4.Location = new System.Drawing.Point(780, 100);
-            this.featured_4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.featured_4.Margin = new System.Windows.Forms.Padding(6);
             this.featured_4.Name = "featured_4";
             this.featured_4.Size = new System.Drawing.Size(180, 254);
             this.featured_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,7 +262,7 @@
             this.featured_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_1.Image = ((System.Drawing.Image)(resources.GetObject("featured_1.Image")));
             this.featured_1.Location = new System.Drawing.Point(60, 100);
-            this.featured_1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.featured_1.Margin = new System.Windows.Forms.Padding(6);
             this.featured_1.Name = "featured_1";
             this.featured_1.Size = new System.Drawing.Size(180, 254);
             this.featured_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -266,7 +277,7 @@
             this.featured_2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_2.Image = ((System.Drawing.Image)(resources.GetObject("featured_2.Image")));
             this.featured_2.Location = new System.Drawing.Point(300, 100);
-            this.featured_2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.featured_2.Margin = new System.Windows.Forms.Padding(6);
             this.featured_2.Name = "featured_2";
             this.featured_2.Size = new System.Drawing.Size(180, 254);
             this.featured_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -281,7 +292,7 @@
             this.featured_3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_3.Image = ((System.Drawing.Image)(resources.GetObject("featured_3.Image")));
             this.featured_3.Location = new System.Drawing.Point(540, 100);
-            this.featured_3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.featured_3.Margin = new System.Windows.Forms.Padding(6);
             this.featured_3.Name = "featured_3";
             this.featured_3.Size = new System.Drawing.Size(180, 254);
             this.featured_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -387,7 +398,7 @@
             this.Main_panel.Controls.Add(this.label4);
             this.Main_panel.Controls.Add(this.BackLoop);
             this.Main_panel.Location = new System.Drawing.Point(0, 24);
-            this.Main_panel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Main_panel.Margin = new System.Windows.Forms.Padding(6);
             this.Main_panel.Name = "Main_panel";
             this.Main_panel.Size = new System.Drawing.Size(1280, 720);
             this.Main_panel.TabIndex = 16;
@@ -410,7 +421,7 @@
             // 
             this.BackLoop.Image = ((System.Drawing.Image)(resources.GetObject("BackLoop.Image")));
             this.BackLoop.Location = new System.Drawing.Point(-1280, 0);
-            this.BackLoop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.BackLoop.Margin = new System.Windows.Forms.Padding(6);
             this.BackLoop.Name = "BackLoop";
             this.BackLoop.Size = new System.Drawing.Size(2560, 720);
             this.BackLoop.TabIndex = 17;
@@ -437,7 +448,7 @@
             this.show_film_panel.Controls.Add(this.film_genre_title);
             this.show_film_panel.Controls.Add(this.film_name);
             this.show_film_panel.Location = new System.Drawing.Point(0, 24);
-            this.show_film_panel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.show_film_panel.Margin = new System.Windows.Forms.Padding(6);
             this.show_film_panel.Name = "show_film_panel";
             this.show_film_panel.Size = new System.Drawing.Size(1280, 720);
             this.show_film_panel.TabIndex = 16;
@@ -448,7 +459,7 @@
             this.Kijkwijzer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Kijkwijzer.Image = ((System.Drawing.Image)(resources.GetObject("Kijkwijzer.Image")));
             this.Kijkwijzer.Location = new System.Drawing.Point(447, 561);
-            this.Kijkwijzer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Kijkwijzer.Margin = new System.Windows.Forms.Padding(6);
             this.Kijkwijzer.Name = "Kijkwijzer";
             this.Kijkwijzer.Size = new System.Drawing.Size(100, 100);
             this.Kijkwijzer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -472,7 +483,7 @@
             // 
             this.TrailerVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.TrailerVideo.Location = new System.Drawing.Point(15, 465);
-            this.TrailerVideo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TrailerVideo.Margin = new System.Windows.Forms.Padding(6);
             this.TrailerVideo.MinimumSize = new System.Drawing.Size(20, 20);
             this.TrailerVideo.Name = "TrailerVideo";
             this.TrailerVideo.ScrollBarsEnabled = false;
@@ -499,7 +510,7 @@
             this.film_desc.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_desc.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.film_desc.Location = new System.Drawing.Point(224, 64);
-            this.film_desc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.film_desc.Margin = new System.Windows.Forms.Padding(6);
             this.film_desc.MaxLength = 380;
             this.film_desc.Name = "film_desc";
             this.film_desc.ReadOnly = true;
@@ -512,7 +523,7 @@
             // 
             this.OrderTijdButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderTijdButton.Location = new System.Drawing.Point(907, 667);
-            this.OrderTijdButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.OrderTijdButton.Margin = new System.Windows.Forms.Padding(6);
             this.OrderTijdButton.Name = "OrderTijdButton";
             this.OrderTijdButton.Size = new System.Drawing.Size(356, 38);
             this.OrderTijdButton.TabIndex = 8;
@@ -524,7 +535,7 @@
             // 
             this.Back_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Back_button.Location = new System.Drawing.Point(447, 667);
-            this.Back_button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Back_button.Margin = new System.Windows.Forms.Padding(6);
             this.Back_button.Name = "Back_button";
             this.Back_button.Size = new System.Drawing.Size(185, 38);
             this.Back_button.TabIndex = 7;
@@ -537,7 +548,7 @@
             this.searched_movie.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.searched_movie.Image = ((System.Drawing.Image)(resources.GetObject("searched_movie.Image")));
             this.searched_movie.Location = new System.Drawing.Point(15, 15);
-            this.searched_movie.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.searched_movie.Margin = new System.Windows.Forms.Padding(6);
             this.searched_movie.Name = "searched_movie";
             this.searched_movie.Size = new System.Drawing.Size(195, 265);
             this.searched_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -595,7 +606,7 @@
             this.TijdPanel.Controls.Add(this.TicketBack);
             this.TijdPanel.Controls.Add(this.FilmTijden);
             this.TijdPanel.Location = new System.Drawing.Point(0, 24);
-            this.TijdPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TijdPanel.Margin = new System.Windows.Forms.Padding(6);
             this.TijdPanel.Name = "TijdPanel";
             this.TijdPanel.Size = new System.Drawing.Size(1280, 720);
             this.TijdPanel.TabIndex = 16;
@@ -604,7 +615,7 @@
             // TicketBack
             // 
             this.TicketBack.Location = new System.Drawing.Point(10, 665);
-            this.TicketBack.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TicketBack.Margin = new System.Windows.Forms.Padding(6);
             this.TicketBack.Name = "TicketBack";
             this.TicketBack.Size = new System.Drawing.Size(200, 40);
             this.TicketBack.TabIndex = 1;
@@ -625,7 +636,7 @@
             this.Column3});
             this.FilmTijden.GridColor = System.Drawing.Color.Black;
             this.FilmTijden.Location = new System.Drawing.Point(15, 20);
-            this.FilmTijden.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FilmTijden.Margin = new System.Windows.Forms.Padding(6);
             this.FilmTijden.Name = "FilmTijden";
             this.FilmTijden.RowHeadersWidth = 82;
             this.FilmTijden.Size = new System.Drawing.Size(690, 260);
@@ -670,40 +681,26 @@
             // 
             this.StoelPanel.BackColor = System.Drawing.Color.Transparent;
             this.StoelPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoelPanel.BackgroundImage")));
-            this.StoelPanel.Controls.Add(this.AfrekenKnop);
-            this.StoelPanel.Controls.Add(this.AlgVoorwaardenCheckBox);
+            this.StoelPanel.Controls.Add(this.AfrekenPanel);
+            this.StoelPanel.Controls.Add(this.NaarAfrekenenKnop);
+            this.StoelPanel.Controls.Add(this.StoelBackButton);
             this.StoelPanel.Controls.Add(this.StoelSelect);
             this.StoelPanel.Location = new System.Drawing.Point(0, 21);
-            this.StoelPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.StoelPanel.Margin = new System.Windows.Forms.Padding(6);
             this.StoelPanel.Name = "StoelPanel";
             this.StoelPanel.Size = new System.Drawing.Size(1280, 720);
             this.StoelPanel.TabIndex = 16;
             this.StoelPanel.Visible = false;
             // 
-            // AfrekenKnop
+            // StoelBackButton
             // 
-            this.AfrekenKnop.BackColor = System.Drawing.Color.White;
-            this.AfrekenKnop.Enabled = false;
-            this.AfrekenKnop.Location = new System.Drawing.Point(1092, 647);
-            this.AfrekenKnop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.AfrekenKnop.Name = "AfrekenKnop";
-            this.AfrekenKnop.Size = new System.Drawing.Size(103, 26);
-            this.AfrekenKnop.TabIndex = 2;
-            this.AfrekenKnop.Text = "Afrekenen";
-            this.AfrekenKnop.UseVisualStyleBackColor = false;
-            // 
-            // AlgVoorwaardenCheckBox
-            // 
-            this.AlgVoorwaardenCheckBox.AutoSize = true;
-            this.AlgVoorwaardenCheckBox.BackColor = System.Drawing.Color.White;
-            this.AlgVoorwaardenCheckBox.Location = new System.Drawing.Point(955, 624);
-            this.AlgVoorwaardenCheckBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.AlgVoorwaardenCheckBox.Name = "AlgVoorwaardenCheckBox";
-            this.AlgVoorwaardenCheckBox.Size = new System.Drawing.Size(240, 17);
-            this.AlgVoorwaardenCheckBox.TabIndex = 1;
-            this.AlgVoorwaardenCheckBox.Text = "ik ga akkoord met de algemene voorwaarden";
-            this.AlgVoorwaardenCheckBox.UseVisualStyleBackColor = false;
-            this.AlgVoorwaardenCheckBox.CheckedChanged += new System.EventHandler(this.AlgVoorwaardenCheckBox_CheckedChanged);
+            this.StoelBackButton.Location = new System.Drawing.Point(42, 649);
+            this.StoelBackButton.Name = "StoelBackButton";
+            this.StoelBackButton.Size = new System.Drawing.Size(168, 48);
+            this.StoelBackButton.TabIndex = 3;
+            this.StoelBackButton.Text = "Back";
+            this.StoelBackButton.UseVisualStyleBackColor = true;
+            this.StoelBackButton.Click += new System.EventHandler(this.StoelBackButton_Click);
             // 
             // StoelSelect
             // 
@@ -712,7 +709,7 @@
             this.Column5,
             this.Column6});
             this.StoelSelect.Location = new System.Drawing.Point(29, 12);
-            this.StoelSelect.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.StoelSelect.Margin = new System.Windows.Forms.Padding(6);
             this.StoelSelect.Name = "StoelSelect";
             this.StoelSelect.RowHeadersWidth = 82;
             this.StoelSelect.Size = new System.Drawing.Size(676, 403);
@@ -742,12 +739,60 @@
             this.SecondeTimer.Interval = 25;
             this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
             // 
-            // algemeneVoorwaardenToolStripMenuItem
+            // NaarAfrekenenKnop
             // 
-            this.algemeneVoorwaardenToolStripMenuItem.Name = "algemeneVoorwaardenToolStripMenuItem";
-            this.algemeneVoorwaardenToolStripMenuItem.Size = new System.Drawing.Size(290, 38);
-            this.algemeneVoorwaardenToolStripMenuItem.Text = "Algemene Voorwaarden";
-            this.algemeneVoorwaardenToolStripMenuItem.Click += new System.EventHandler(this.algemeneVoorwaardenToolStripMenuItem_Click);
+            this.NaarAfrekenenKnop.Location = new System.Drawing.Point(1078, 649);
+            this.NaarAfrekenenKnop.Name = "NaarAfrekenenKnop";
+            this.NaarAfrekenenKnop.Size = new System.Drawing.Size(184, 48);
+            this.NaarAfrekenenKnop.TabIndex = 4;
+            this.NaarAfrekenenKnop.Text = "Next";
+            this.NaarAfrekenenKnop.UseVisualStyleBackColor = true;
+            this.NaarAfrekenenKnop.Click += new System.EventHandler(this.NaarAfrekenenKnop_Click);
+            // 
+            // AfrekenPanel
+            // 
+            this.AfrekenPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AfrekenPanel.BackgroundImage")));
+            this.AfrekenPanel.Controls.Add(this.AfrekenTerugKnop);
+            this.AfrekenPanel.Controls.Add(this.AfrekenKnop);
+            this.AfrekenPanel.Controls.Add(this.AlgVoorwaardenCheckBox);
+            this.AfrekenPanel.Location = new System.Drawing.Point(0, 0);
+            this.AfrekenPanel.Name = "AfrekenPanel";
+            this.AfrekenPanel.Size = new System.Drawing.Size(1280, 720);
+            this.AfrekenPanel.TabIndex = 16;
+            this.AfrekenPanel.Visible = false;
+            // 
+            // AfrekenTerugKnop
+            // 
+            this.AfrekenTerugKnop.Location = new System.Drawing.Point(30, 649);
+            this.AfrekenTerugKnop.Name = "AfrekenTerugKnop";
+            this.AfrekenTerugKnop.Size = new System.Drawing.Size(165, 41);
+            this.AfrekenTerugKnop.TabIndex = 6;
+            this.AfrekenTerugKnop.Text = " Back";
+            this.AfrekenTerugKnop.UseVisualStyleBackColor = true;
+            // 
+            // AfrekenKnop
+            // 
+            this.AfrekenKnop.BackColor = System.Drawing.Color.White;
+            this.AfrekenKnop.Enabled = false;
+            this.AfrekenKnop.Location = new System.Drawing.Point(1161, 675);
+            this.AfrekenKnop.Margin = new System.Windows.Forms.Padding(6);
+            this.AfrekenKnop.Name = "AfrekenKnop";
+            this.AfrekenKnop.Size = new System.Drawing.Size(103, 26);
+            this.AfrekenKnop.TabIndex = 4;
+            this.AfrekenKnop.Text = "Afrekenen";
+            this.AfrekenKnop.UseVisualStyleBackColor = false;
+            // 
+            // AlgVoorwaardenCheckBox
+            // 
+            this.AlgVoorwaardenCheckBox.AutoSize = true;
+            this.AlgVoorwaardenCheckBox.BackColor = System.Drawing.Color.White;
+            this.AlgVoorwaardenCheckBox.Location = new System.Drawing.Point(1024, 652);
+            this.AlgVoorwaardenCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.AlgVoorwaardenCheckBox.Name = "AlgVoorwaardenCheckBox";
+            this.AlgVoorwaardenCheckBox.Size = new System.Drawing.Size(240, 17);
+            this.AlgVoorwaardenCheckBox.TabIndex = 3;
+            this.AlgVoorwaardenCheckBox.Text = "ik ga akkoord met de algemene voorwaarden";
+            this.AlgVoorwaardenCheckBox.UseVisualStyleBackColor = false;
             // 
             // MainApp
             // 
@@ -764,7 +809,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.Name = "MainApp";
             this.Text = "TicketApp";
@@ -785,8 +830,9 @@
             this.TijdPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FilmTijden)).EndInit();
             this.StoelPanel.ResumeLayout(false);
-            this.StoelPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).EndInit();
+            this.AfrekenPanel.ResumeLayout(false);
+            this.AfrekenPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -846,9 +892,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.ToolStripMenuItem mijnOrdersToolStripMenuItem;
-        private System.Windows.Forms.CheckBox AlgVoorwaardenCheckBox;
-        private System.Windows.Forms.Button AfrekenKnop;
         private System.Windows.Forms.ToolStripMenuItem algemeneVoorwaardenToolStripMenuItem;
+        private System.Windows.Forms.Button StoelBackButton;
+        private System.Windows.Forms.Button NaarAfrekenenKnop;
+        private System.Windows.Forms.Panel AfrekenPanel;
+        private System.Windows.Forms.Button AfrekenTerugKnop;
+        private System.Windows.Forms.Button AfrekenKnop;
+        private System.Windows.Forms.CheckBox AlgVoorwaardenCheckBox;
     }
 }
 

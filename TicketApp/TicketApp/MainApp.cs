@@ -163,6 +163,8 @@ namespace TicketApp
             searched_movie.Image = Image.FromFile(picture_path);
             show_film_panel.BackgroundImage = Image.FromFile(BG_path);
             TijdPanel.BackgroundImage = Image.FromFile(BG_path);
+            StoelPanel.BackgroundImage = Image.FromFile(BG_path);
+            AfrekenPanel.BackgroundImage = Image.FromFile(BG_path);
 
             //inladen yt trailer:
 
@@ -236,6 +238,7 @@ namespace TicketApp
             StoelPanel.Visible = false;
             Main_panel.Visible = false;
             show_film_panel.Visible = false;
+            AfrekenPanel.Visible = false;
 
             switch (panel)
             {
@@ -250,6 +253,9 @@ namespace TicketApp
                     break;
                 case "stoel":
                     StoelPanel.Visible = true;
+                    break;
+                case "afrekenen":
+                    AfrekenPanel.Visible = true;
                     break;
                 default:
                     Main_panel.Visible = true;
@@ -391,11 +397,6 @@ namespace TicketApp
             
         }
 
-        private void StoelBackButton_Click(object sender, EventArgs e)
-        {
-            set_activepanel("ticket");
-        }
-
         private void FilmTijden_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (FilmTijden.CurrentCell.ColumnIndex.Equals(3) && e.RowIndex != -1)
@@ -413,18 +414,7 @@ namespace TicketApp
             orders.Show();
         }
 
-        private void AlgVoorwaardenCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (AlgVoorwaardenCheckBox.Checked)
-            {
-                AfrekenKnop.Enabled = true;
-            }
-            else
-            {
-                AfrekenKnop.Enabled = false;
-            }
-        }
-
+        
         private void algemeneVoorwaardenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var Functions = new Functions();
@@ -436,6 +426,32 @@ namespace TicketApp
                 "5. Bij het reserveren van een 16+ film wordt bevestiging van een geldige leeftijd gevraagd. Bij een niet-geldige leeftijd kan er geen ticket worden verkocht. \n\n" +
                 "6. Bitfilm hanteert de regels van Nicam in de Kijkwijzer. Deze regels zijn vastgelegd in het Wetboek van Strafrecht artikel 240a. Vanwege deze regelgeving kan er om legitimatie gevraagd worden door onze medewerkers. Wilt of kan u uzelf niet legitimeren of voldoet u niet aan de regelgeving dan zal de toegang worden geweigerd.In deze situatie vind geen restitutie of vergoeding plaats.\n");
         }
-        
+
+        private void StoelBackButton_Click(object sender, EventArgs e)
+        {
+            set_activepanel("tijd");
+        }
+
+        private void AkkoordCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AlgVoorwaardenCheckBox.Checked)
+            {
+                AfrekenKnop.Enabled = true;
+            }
+            else
+            {
+                AfrekenKnop.Enabled = false;
+            }
+        }
+
+        private void AfrekenTerugKnop_Click(object sender, EventArgs e)
+        {
+            set_activepanel("stoel");
+        }
+
+        private void NaarAfrekenenKnop_Click(object sender, EventArgs e)
+        {
+            set_activepanel("afrekenen");
+        }
     }
 }

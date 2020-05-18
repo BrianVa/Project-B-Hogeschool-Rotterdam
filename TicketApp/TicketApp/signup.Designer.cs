@@ -69,7 +69,7 @@
             this.achternaam_field.Location = new System.Drawing.Point(116, 98);
             this.achternaam_field.Name = "achternaam_field";
             this.achternaam_field.Size = new System.Drawing.Size(193, 20);
-            this.achternaam_field.TabIndex = 3;
+            this.achternaam_field.TabIndex = 1;
             // 
             // password_field
             // 
@@ -121,7 +121,7 @@
             this.password_r_field.Name = "password_r_field";
             this.password_r_field.PasswordChar = '*';
             this.password_r_field.Size = new System.Drawing.Size(193, 20);
-            this.password_r_field.TabIndex = 9;
+            this.password_r_field.TabIndex = 5;
             // 
             // label5
             // 
@@ -137,7 +137,7 @@
             this.aanmeld_button.Location = new System.Drawing.Point(369, 385);
             this.aanmeld_button.Name = "aanmeld_button";
             this.aanmeld_button.Size = new System.Drawing.Size(75, 23);
-            this.aanmeld_button.TabIndex = 11;
+            this.aanmeld_button.TabIndex = 6;
             this.aanmeld_button.Text = "aanmelden";
             this.aanmeld_button.UseVisualStyleBackColor = true;
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_Click);
@@ -152,7 +152,7 @@
             this.Agefield.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.Agefield.Name = "Agefield";
             this.Agefield.Size = new System.Drawing.Size(200, 20);
-            this.Agefield.TabIndex = 12;
+            this.Agefield.TabIndex = 3;
             this.Agefield.Value = new System.DateTime(2020, 5, 1, 0, 0, 0, 0);
             // 
             // label6
