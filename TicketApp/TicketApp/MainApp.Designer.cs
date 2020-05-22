@@ -358,6 +358,7 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "No time to die";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.featured_4_Click);
             // 
             // label1
             // 
@@ -374,6 +375,7 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Bad Boys for life";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.featured_1_Click);
             // 
             // label5
             // 
@@ -389,6 +391,7 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Sonic";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.featured_5_Click);
             // 
             // label2
             // 
@@ -404,6 +407,7 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "SONIC";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.featured_2_Click);
             // 
             // label3
             // 
@@ -419,6 +423,7 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Birds of prey";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.featured_3_Click);
             // 
             // Main_panel
             // 
