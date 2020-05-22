@@ -551,7 +551,7 @@
             // 
             this.film_desc.BackColor = System.Drawing.Color.DarkGray;
             this.film_desc.Cursor = System.Windows.Forms.Cursors.Default;
-            this.film_desc.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.film_desc.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_desc.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.film_desc.Location = new System.Drawing.Point(224, 64);
             this.film_desc.Margin = new System.Windows.Forms.Padding(6);

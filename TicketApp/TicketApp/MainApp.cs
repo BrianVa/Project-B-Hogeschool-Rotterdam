@@ -153,7 +153,7 @@ namespace TicketApp
 
             var Function = new Functions();
             film_name.Text = data[0]["naam"].ToString();
-            film_desc.Text = "Film Beschrijving: " + data[0]["beschrijving"].ToString();
+            film_desc.Text = "Film Beschrijving:\n" + data[0]["beschrijving"].ToString();
             film_speelduur.Text = hours.ToString() + " uur " + " en " + minutes + " minuten";
             film_genre.Text = data[0]["genre"].ToString();
 
