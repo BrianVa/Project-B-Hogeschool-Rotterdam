@@ -61,6 +61,11 @@ namespace TicketApp
                     session.role = data[0]["role_id"].ToString();
                     session.DateOfBirth = data[0]["geboorteDatum"].ToString();
                     session.id = Int32.Parse(data[0]["id"].ToString());
+                    if (data[0]["role_id"].ToString() == "1")
+                    {
+                        session.isAdmin = true;
+                    
+                    }
                     this.Close();
 
                     Function.Message("Welcome " + data[0]["voornaam"].ToString() + " " + data[0]["achternaam"].ToString() + "\n"

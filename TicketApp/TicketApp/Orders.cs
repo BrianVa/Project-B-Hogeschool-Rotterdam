@@ -45,7 +45,7 @@ namespace TicketApp
                     int n = OrdersTable.Rows.Add();
                     OrdersTable.Rows[n].Cells[0].Value = row["order_date"].ToString();
                     OrdersTable.Rows[n].Cells[1].Value = row["naam"].ToString();
-                    OrdersTable.Rows[n].Cells[2].Value = row["tijd_id"].ToString();
+                    OrdersTable.Rows[n].Cells[2].Value = row["tijd"].ToString();
                     OrdersTable.Rows[n].Cells[3].Value = "Annuleer";
                     OrdersTable.Rows[n].Cells[4].Value = "Bekijk";
                 }
