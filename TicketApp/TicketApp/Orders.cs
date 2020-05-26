@@ -62,7 +62,19 @@ namespace TicketApp
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            var senderGrid = (DataGridView)sender;
+            var Function = new Functions();
 
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "3")
+            {
+                Function.Message("Anuleer!");
+            }
+            else if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "4")
+            {
+
+                Function.Message("Bekijk!");
+            }
         }
     }
 }

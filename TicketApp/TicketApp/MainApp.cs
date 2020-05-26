@@ -201,16 +201,20 @@ namespace TicketApp
                 if (Function.CheckAge(session, age))
                 {
                     DataRowCollection data = Functions.Select("SELECT * FROM tijden WHERE film_id = '" + selectedFilm + "'");
+                    
 
                     FilmTijden.Rows.Clear();
                     foreach (DataRow row in data)
                     {
-                   
+                        DataRowCollection count = Functions.Select("SELECT COUNT(id) as all_stoelen FROM stoelen WHERE zaal_id = '" + row["zaal_id"] + "'");
+                        DataRowCollection orders = Functions.Select("SELECT COUNT(id) as all_orders FROM orders WHERE tijd_id = '" + row["id"] + "'");
                         int n = FilmTijden.Rows.Add();
                         FilmTijden.Rows[n].Cells[0].Value = row["id"].ToString();
                         FilmTijden.Rows[n].Cells[1].Value = "datum";
                         FilmTijden.Rows[n].Cells[2].Value = row["tijd"].ToString();
-                        FilmTijden.Rows[n].Cells[3].Value = row["zaal_id"].ToString();
+
+                        FilmTijden.Rows[n].Cells[3].Value = Int32.Parse(count[0]["all_stoelen"].ToString()) - Int32.Parse(orders[0]["all_orders"].ToString());
+
                         FilmTijden.Rows[n].Cells[4].Value = "Tickets";
                     }
 
