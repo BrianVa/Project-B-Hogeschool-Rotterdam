@@ -21,6 +21,7 @@ namespace TicketApp
         public static Session session;
         private List<Label> featuredFilmsTitle = new List<Label>();
         private List<Label> featuredFilmsPic = new List<Label>();
+        private List<string> selectedStoelen = new List<string>();
         private List<string> featured = new List<string>();
         private int selectedFilm;
         private int selectedTime;
@@ -508,25 +509,21 @@ namespace TicketApp
         private void StoelSelect_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var Function = new Functions();
-            var selected = new List<string>();
             int amount = 3;
             var senderGrid = (DataGridView)sender;
-            for (int i = 0; i < selected.Count;i++) {
-                Function.Message(selected[i]);
-            }
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                if (selected.Contains(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString()))
+                if (selectedStoelen.Contains(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString()))
                 {
                     senderGrid.Rows[e.RowIndex].Cells[2].Value = "Beschikbaar";
-                    selected.Remove(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
-                    senderGrid.Refresh();
+                    selectedStoelen.Remove(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
                 }
+
                 else{
-                    if (selected.Count < amount)
+                    if (selectedStoelen.Count < amount)
                     {
-                        selected.Add(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        selectedStoelen.Add(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
                         NaarAfrekenenKnop.Enabled = false;
                         senderGrid.Rows[e.RowIndex].Cells[2].Value = ((char)0x221A).ToString();
                     }
