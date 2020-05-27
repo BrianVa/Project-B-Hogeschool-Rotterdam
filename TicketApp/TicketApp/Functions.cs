@@ -17,6 +17,11 @@ namespace TicketApp
 {
     class Functions
     {
+        public Functions() { 
+        
+        
+        }
+
         //database variable worden aangemaakt
         public SQLiteConnection conn;
         public SQLiteCommand cmd;
@@ -39,8 +44,6 @@ namespace TicketApp
             conn.Close();
             return dt.Rows;
         }
-
-
 
         public string ComputeSha256Hash(string rawData)
         {

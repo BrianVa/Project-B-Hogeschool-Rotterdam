@@ -21,6 +21,7 @@ namespace TicketApp
         public static Session session;
         private List<Label> featuredFilmsTitle = new List<Label>();
         private List<Label> featuredFilmsPic = new List<Label>();
+        private List<string> selectedStoelen = new List<string>();
         private List<string> featured = new List<string>();
         private int selectedFilm;
         private int selectedTime;
@@ -33,6 +34,8 @@ namespace TicketApp
             var Function = new Functions();
 
             this.mijnAccountToolStripMenuItem.Visible = false;
+            this.medewerkerToolStripMenuItem.Visible = false;
+
             DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
 
             //nieuwe functie voor feature films
@@ -151,7 +154,7 @@ namespace TicketApp
 
             var Function = new Functions();
             film_name.Text = data[0]["naam"].ToString();
-            film_desc.Text = "Film Beschrijving: " + data[0]["beschrijving"].ToString();
+            film_desc.Text = "Film Beschrijving:\n" + data[0]["beschrijving"].ToString();
             film_speelduur.Text = hours.ToString() + " uur " + " en " + minutes + " minuten";
             film_genre.Text = data[0]["genre"].ToString();
 
@@ -199,16 +202,21 @@ namespace TicketApp
                 if (Function.CheckAge(session, age))
                 {
                     DataRowCollection data = Functions.Select("SELECT * FROM tijden WHERE film_id = '" + selectedFilm + "'");
+                    
 
                     FilmTijden.Rows.Clear();
                     foreach (DataRow row in data)
                     {
-                   
+                        DataRowCollection count = Functions.Select("SELECT COUNT(id) as all_stoelen FROM stoelen WHERE zaal_id = '" + row["zaal_id"] + "'");
+                        DataRowCollection orders = Functions.Select("SELECT COUNT(id) as all_orders FROM orders WHERE tijd_id = '" + row["id"] + "'");
                         int n = FilmTijden.Rows.Add();
-                        FilmTijden.Rows[n].Cells[0].Value = "datum";
-                        FilmTijden.Rows[n].Cells[1].Value = row["tijd"].ToString();
-                        FilmTijden.Rows[n].Cells[2].Value = row["zaal_id"].ToString();
-                        FilmTijden.Rows[n].Cells[3].Value = "Tickets";
+                        FilmTijden.Rows[n].Cells[0].Value = row["id"].ToString();
+                        FilmTijden.Rows[n].Cells[1].Value = "datum";
+                        FilmTijden.Rows[n].Cells[2].Value = row["tijd"].ToString();
+
+                        FilmTijden.Rows[n].Cells[3].Value = Int32.Parse(count[0]["all_stoelen"].ToString()) - Int32.Parse(orders[0]["all_orders"].ToString());
+
+                        FilmTijden.Rows[n].Cells[4].Value = "Tickets";
                     }
 
                     set_activepanel("tijd");
@@ -222,10 +230,11 @@ namespace TicketApp
                 foreach (DataRow row in data)
                 {
                     int n = FilmTijden.Rows.Add();
-                    FilmTijden.Rows[n].Cells[0].Value = row["date"];
-                    FilmTijden.Rows[n].Cells[1].Value = row["tijd"].ToString();
-                    FilmTijden.Rows[n].Cells[2].Value = row["zaal_id"].ToString();
-                    FilmTijden.Rows[n].Cells[3].Value = "Tickets";
+                    FilmTijden.Rows[n].Cells[0].Value = row["id"].ToString();
+                    FilmTijden.Rows[n].Cells[1].Value = "datum";
+                    FilmTijden.Rows[n].Cells[2].Value = row["tijd"].ToString();
+                    FilmTijden.Rows[n].Cells[3].Value = row["zaal_id"].ToString();
+                    FilmTijden.Rows[n].Cells[4].Value = "Tickets";
                 }
 
                 set_activepanel("tijd");
@@ -298,19 +307,38 @@ namespace TicketApp
             setMoviePage(data);
         }
 
-        private void StoelSelectButton_Click(object sender, EventArgs e)
+        private void StoelSelectButton_Click(int selectedTime)
         {
+            var orders = new List<string>();
 
+            string taken = "";
+            var Function = new Functions();
             DataRowCollection zaal = Functions.Select("SELECT zaal_id FROM tijden WHERE id= '" + selectedTime + "'");
             DataRowCollection data = Functions.Select("SELECT * FROM stoelen WHERE zaal_id= '" + zaal[0]["zaal_id"] + "'");
+
+            DataRowCollection ordered = Functions.Select("SELECT stoel_id FROM orders WHERE tijd_id= '" + selectedTime + "'");
+
+            foreach (DataRow row in ordered)
+            {
+                orders.Add(row["stoel_id"].ToString());        
+            }
 
             StoelSelect.Rows.Clear();
             foreach (DataRow row in data)
             {
+                int n = StoelSelect.Rows.Add();
+                StoelSelect.Rows[n].Cells[0].Value = row["id"].ToString();
+                StoelSelect.Rows[n].Cells[1].Value = row["naam"].ToString();
 
-                int n = FilmTijden.Rows.Add();
-                StoelSelect.Rows[n].Cells[0].Value = data[0]["naam"].ToString();
-                StoelSelect.Rows[n].Cells[3].Value = "Selecteer";
+                if (orders.Contains(row["id"].ToString()))
+                {
+                    taken = "Bezet";
+                }
+                else
+                {
+                    taken = "Beschikbaar";
+                }
+                StoelSelect.Rows[n].Cells[2].Value = taken;
             }
             set_activepanel("stoel");
         }
@@ -384,12 +412,17 @@ namespace TicketApp
                 mijnAccountToolStripMenuItem.Visible = true;
                 mijnOrdersToolStripMenuItem.Visible = true;
                 aanmeld_button.Visible = false;
+                if(session.isAdmin)
+                {
+                    medewerkerToolStripMenuItem.Visible = true;
+                }
                 login_button.Text = "Logout";
             }
             else
             {
                 mijnAccountToolStripMenuItem.Visible = false;
                 mijnOrdersToolStripMenuItem.Visible = false;
+                medewerkerToolStripMenuItem.Visible = false;
                 aanmeld_button.Visible = true;
                 login_button.Text = "Login";
             }
@@ -404,10 +437,14 @@ namespace TicketApp
 
         private void FilmTijden_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (FilmTijden.CurrentCell.ColumnIndex.Equals(3) && e.RowIndex != -1)
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
             {
-                if (FilmTijden.CurrentCell != null && FilmTijden.CurrentCell.Value != null)
-                    set_activepanel("stoel");
+                DataGridViewRow row = FilmTijden.Rows[e.RowIndex];
+                selectedTime = Int32.Parse(row.Cells[0].Value.ToString());
+                StoelSelectButton_Click(selectedTime);
             }
         }
 
@@ -467,6 +504,38 @@ namespace TicketApp
         private void AfrekenKnop_Click(object sender, EventArgs e)
         {
             set_activepanel("bedankt");
+        }
+
+        private void StoelSelect_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var Function = new Functions();
+            int amount = 3;
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                if (selectedStoelen.Contains(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString()))
+                {
+                    senderGrid.Rows[e.RowIndex].Cells[2].Value = "Beschikbaar";
+                    selectedStoelen.Remove(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+                }
+
+                else{
+                    if (selectedStoelen.Count < amount)
+                    {
+                        selectedStoelen.Add(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        NaarAfrekenenKnop.Enabled = false;
+                        senderGrid.Rows[e.RowIndex].Cells[2].Value = ((char)0x221A).ToString();
+                    }
+                    else {
+
+                        NaarAfrekenenKnop.Enabled = true;
+
+                    }
+
+                }
+   
+            }  
         }
     }
 }

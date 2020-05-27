@@ -46,11 +46,10 @@
             this.Column6,
             this.Column3,
             this.Column1});
-            this.OrdersTable.Location = new System.Drawing.Point(24, 23);
-            this.OrdersTable.Margin = new System.Windows.Forms.Padding(6);
+            this.OrdersTable.Location = new System.Drawing.Point(12, 12);
             this.OrdersTable.Name = "OrdersTable";
             this.OrdersTable.RowHeadersWidth = 82;
-            this.OrdersTable.Size = new System.Drawing.Size(1552, 819);
+            this.OrdersTable.Size = new System.Drawing.Size(1552, 574);
             this.OrdersTable.TabIndex = 0;
             this.OrdersTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -96,11 +95,10 @@
             // 
             // Orders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.ClientSize = new System.Drawing.Size(1589, 598);
             this.Controls.Add(this.OrdersTable);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Orders";
             this.Text = "Orders";
             ((System.ComponentModel.ISupportInitialize)(this.OrdersTable)).EndInit();

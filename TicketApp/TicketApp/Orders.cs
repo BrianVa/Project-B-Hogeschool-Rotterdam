@@ -45,7 +45,7 @@ namespace TicketApp
                     int n = OrdersTable.Rows.Add();
                     OrdersTable.Rows[n].Cells[0].Value = row["order_date"].ToString();
                     OrdersTable.Rows[n].Cells[1].Value = row["naam"].ToString();
-                    OrdersTable.Rows[n].Cells[2].Value = row["tijd_id"].ToString();
+                    OrdersTable.Rows[n].Cells[2].Value = row["tijd"].ToString();
                     OrdersTable.Rows[n].Cells[3].Value = "Annuleer";
                     OrdersTable.Rows[n].Cells[4].Value = "Bekijk";
                 }
@@ -62,7 +62,19 @@ namespace TicketApp
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            var senderGrid = (DataGridView)sender;
+            var Function = new Functions();
 
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "3")
+            {
+                Function.Message("Anuleer!");
+            }
+            else if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "4")
+            {
+
+                Function.Message("Bekijk!");
+            }
         }
     }
 }

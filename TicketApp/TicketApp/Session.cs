@@ -15,6 +15,7 @@ namespace TicketApp
         public string role;
         public string DateOfBirth;
         public int id;
+        public bool isAdmin;
 
         public Session()
         {
@@ -24,6 +25,7 @@ namespace TicketApp
             role = "";
             DateOfBirth = "";
             id = 0;
+            isAdmin = false;
         }
         public void set_satus()
         { 
