@@ -82,6 +82,7 @@
             this.TijdPanel = new System.Windows.Forms.Panel();
             this.TicketBack = new System.Windows.Forms.Button();
             this.FilmTijden = new System.Windows.Forms.DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,6 +91,7 @@
             this.NaarAfrekenenKnop = new System.Windows.Forms.Button();
             this.StoelBackButton = new System.Windows.Forms.Button();
             this.StoelSelect = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.AfrekenPanel = new System.Windows.Forms.Panel();
@@ -99,16 +101,6 @@
             this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
             this.BedanktPanel = new System.Windows.Forms.Panel();
             this.BackToHomeButton = new System.Windows.Forms.Button();
-            this.bioscoopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zaalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tijdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -126,7 +118,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).BeginInit();
             this.AfrekenPanel.SuspendLayout();
             this.BedanktPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // search_button
@@ -148,7 +139,8 @@
             this.fileToolStripMenuItem,
             this.loggen_menu,
             this.about_menu,
-            this.algemeneVoorwaardenToolStripMenuItem});
+            this.algemeneVoorwaardenToolStripMenuItem,
+            this.medewerkerToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1279, 24);
@@ -236,8 +228,7 @@
             // 
             this.medewerkerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.filmToevoegenToolStripMenuItem,
-            this.klantToevoegenToolStripMenuItem,
-            this.bioscoopToolStripMenuItem});
+            this.klantToevoegenToolStripMenuItem});
             this.medewerkerToolStripMenuItem.Name = "medewerkerToolStripMenuItem";
             this.medewerkerToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.medewerkerToolStripMenuItem.Text = "Medewerker";
@@ -249,26 +240,25 @@
             this.aanpassenToolStripMenuItem,
             this.verwijderenToolStripMenuItem});
             this.filmToevoegenToolStripMenuItem.Name = "filmToevoegenToolStripMenuItem";
-            this.filmToevoegenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filmToevoegenToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.filmToevoegenToolStripMenuItem.Text = "Film";
-            this.filmToevoegenToolStripMenuItem.Click += new System.EventHandler(this.filmToevoegenToolStripMenuItem_Click);
             // 
             // toevoegenToolStripMenuItem
             // 
             this.toevoegenToolStripMenuItem.Name = "toevoegenToolStripMenuItem";
-            this.toevoegenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.toevoegenToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.toevoegenToolStripMenuItem.Text = "Toevoegen";
             // 
             // aanpassenToolStripMenuItem
             // 
             this.aanpassenToolStripMenuItem.Name = "aanpassenToolStripMenuItem";
-            this.aanpassenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aanpassenToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.aanpassenToolStripMenuItem.Text = "Aanpassen";
             // 
             // verwijderenToolStripMenuItem
             // 
             this.verwijderenToolStripMenuItem.Name = "verwijderenToolStripMenuItem";
-            this.verwijderenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verwijderenToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.verwijderenToolStripMenuItem.Text = "Verwijderen";
             // 
             // klantToevoegenToolStripMenuItem
@@ -278,7 +268,7 @@
             this.aanpassenToolStripMenuItem1,
             this.verwijderenToolStripMenuItem1});
             this.klantToevoegenToolStripMenuItem.Name = "klantToevoegenToolStripMenuItem";
-            this.klantToevoegenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.klantToevoegenToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.klantToevoegenToolStripMenuItem.Text = "Klant";
             // 
             // toevoegenToolStripMenuItem1
@@ -483,12 +473,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Main_panel.BackColor = System.Drawing.Color.Transparent;
             this.Main_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Main_panel.Controls.Add(this.button5);
-            this.Main_panel.Controls.Add(this.button4);
-            this.Main_panel.Controls.Add(this.button3);
-            this.Main_panel.Controls.Add(this.button2);
-            this.Main_panel.Controls.Add(this.button1);
-            this.Main_panel.Controls.Add(this.dataGridView1);
             this.Main_panel.Controls.Add(this.BitfilmTekst);
             this.Main_panel.Controls.Add(this.featured_3);
             this.Main_panel.Controls.Add(this.featured_2);
@@ -613,7 +597,7 @@
             // 
             this.film_desc.BackColor = System.Drawing.Color.DarkGray;
             this.film_desc.Cursor = System.Windows.Forms.Cursors.Default;
-            this.film_desc.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.film_desc.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_desc.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.film_desc.Location = new System.Drawing.Point(224, 64);
             this.film_desc.Margin = new System.Windows.Forms.Padding(6);
@@ -736,6 +720,7 @@
             this.FilmTijden.BackgroundColor = System.Drawing.Color.GhostWhite;
             this.FilmTijden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FilmTijden.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column7,
             this.Column1,
             this.Column2,
             this.Column4,
@@ -748,6 +733,12 @@
             this.FilmTijden.Size = new System.Drawing.Size(690, 260);
             this.FilmTijden.TabIndex = 0;
             this.FilmTijden.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilmTijden_CellContentClick);
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "id";
+            this.Column7.Name = "Column7";
+            this.Column7.Visible = false;
             // 
             // Column1
             // 
@@ -768,7 +759,7 @@
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Column4";
+            this.Column4.HeaderText = "Stoelen Vrij";
             this.Column4.MinimumWidth = 10;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -790,7 +781,7 @@
             this.StoelPanel.Controls.Add(this.NaarAfrekenenKnop);
             this.StoelPanel.Controls.Add(this.StoelBackButton);
             this.StoelPanel.Controls.Add(this.StoelSelect);
-            this.StoelPanel.Location = new System.Drawing.Point(0, 21);
+            this.StoelPanel.Location = new System.Drawing.Point(0, 24);
             this.StoelPanel.Margin = new System.Windows.Forms.Padding(6);
             this.StoelPanel.Name = "StoelPanel";
             this.StoelPanel.Size = new System.Drawing.Size(1280, 720);
@@ -799,6 +790,7 @@
             // 
             // NaarAfrekenenKnop
             // 
+            this.NaarAfrekenenKnop.Enabled = false;
             this.NaarAfrekenenKnop.Location = new System.Drawing.Point(1078, 649);
             this.NaarAfrekenenKnop.Name = "NaarAfrekenenKnop";
             this.NaarAfrekenenKnop.Size = new System.Drawing.Size(184, 48);
@@ -821,6 +813,7 @@
             // 
             this.StoelSelect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StoelSelect.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column8,
             this.Column5,
             this.Column6});
             this.StoelSelect.Location = new System.Drawing.Point(29, 12);
@@ -829,6 +822,13 @@
             this.StoelSelect.RowHeadersWidth = 82;
             this.StoelSelect.Size = new System.Drawing.Size(676, 403);
             this.StoelSelect.TabIndex = 0;
+            this.StoelSelect.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StoelSelect_CellContentClick);
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "id";
+            this.Column8.Name = "Column8";
+            this.Column8.Visible = false;
             // 
             // Column5
             // 
@@ -854,7 +854,7 @@
             this.AfrekenPanel.Controls.Add(this.AfrekenTerugKnop);
             this.AfrekenPanel.Controls.Add(this.AfrekenKnop);
             this.AfrekenPanel.Controls.Add(this.AlgVoorwaardenCheckBox);
-            this.AfrekenPanel.Location = new System.Drawing.Point(0, 23);
+            this.AfrekenPanel.Location = new System.Drawing.Point(0, 24);
             this.AfrekenPanel.Name = "AfrekenPanel";
             this.AfrekenPanel.Size = new System.Drawing.Size(1280, 720);
             this.AfrekenPanel.TabIndex = 16;
@@ -922,101 +922,21 @@
             this.BackToHomeButton.UseVisualStyleBackColor = true;
             this.BackToHomeButton.Click += new System.EventHandler(this.BackToHomeButton_Click);
             // 
-            // bioscoopToolStripMenuItem
-            // 
-            this.bioscoopToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.zaalToolStripMenuItem,
-            this.tijdToolStripMenuItem,
-            this.ticketToolStripMenuItem});
-            this.bioscoopToolStripMenuItem.Name = "bioscoopToolStripMenuItem";
-            this.bioscoopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bioscoopToolStripMenuItem.Text = "Bioscoop";
-            // 
-            // zaalToolStripMenuItem
-            // 
-            this.zaalToolStripMenuItem.Name = "zaalToolStripMenuItem";
-            this.zaalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.zaalToolStripMenuItem.Text = "Zaal";
-            // 
-            // tijdToolStripMenuItem
-            // 
-            this.tijdToolStripMenuItem.Name = "tijdToolStripMenuItem";
-            this.tijdToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tijdToolStripMenuItem.Text = "Tijd";
-            // 
-            // ticketToolStripMenuItem
-            // 
-            this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
-            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ticketToolStripMenuItem.Text = "Ticket";
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(307, 421);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(653, 273);
-            this.dataGridView1.TabIndex = 18;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(29, 421);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Actie";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(29, 465);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Animatie";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(29, 505);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Drama";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(29, 544);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Misdaad";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(29, 584);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Horror";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // MainApp
             // 
+            this.AcceptButton = this.search_button;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.Main_panel);
-            this.Controls.Add(this.BedanktPanel);
-            this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.show_film_panel);
+            this.Controls.Add(this.Main_panel);
+            this.Controls.Add(this.BedanktPanel);
+            this.Controls.Add(this.AfrekenPanel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -1045,7 +965,6 @@
             this.AfrekenPanel.ResumeLayout(false);
             this.AfrekenPanel.PerformLayout();
             this.BedanktPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1096,14 +1015,8 @@
         public System.Windows.Forms.ToolStripMenuItem login_button;
         public System.Windows.Forms.ToolStripMenuItem aanmeld_button;
         public System.Windows.Forms.ToolStripMenuItem mijnAccountToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewButtonColumn Column3;
         private System.Windows.Forms.Panel StoelPanel;
         private System.Windows.Forms.DataGridView StoelSelect;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.ToolStripMenuItem mijnOrdersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem algemeneVoorwaardenToolStripMenuItem;
         private System.Windows.Forms.Button StoelBackButton;
@@ -1131,16 +1044,6 @@
         private System.Windows.Forms.ToolStripMenuItem toevoegenToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aanpassenToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem verwijderenToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem bioscoopToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zaalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tijdToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
     }
 }
 

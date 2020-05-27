@@ -514,7 +514,6 @@ namespace TicketApp
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-               
                 if (selectedStoelen.Contains(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString()))
                 {
                     senderGrid.Rows[e.RowIndex].Cells[2].Value = "Beschikbaar";
@@ -524,13 +523,9 @@ namespace TicketApp
                 else{
                     if (selectedStoelen.Count < amount)
                     {
-                        if(senderGrid.Rows[e.RowIndex].Cells[2].Value.ToString() != "Bezet")
-                        {
-                            selectedStoelen.Add(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
-                            NaarAfrekenenKnop.Enabled = false;
-                            senderGrid.Rows[e.RowIndex].Cells[2].Value = ((char)0x221A).ToString();
-                        }
-                        
+                        selectedStoelen.Add(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        NaarAfrekenenKnop.Enabled = false;
+                        senderGrid.Rows[e.RowIndex].Cells[2].Value = ((char)0x221A).ToString();
                     }
                     else {
 
@@ -541,13 +536,6 @@ namespace TicketApp
                 }
    
             }  
-        }
-
-        private void filmToevoegenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var Function = new Functions();
-            AdminFilm admin = new AdminFilm(session, "view");
-            admin.Show();
         }
     }
 }
