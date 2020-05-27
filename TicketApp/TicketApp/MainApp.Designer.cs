@@ -42,6 +42,15 @@
             this.about_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.info_button = new System.Windows.Forms.ToolStripMenuItem();
             this.algemeneVoorwaardenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medewerkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filmToevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aanpassenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verwijderenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.klantToevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toevoegenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aanpassenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.verwijderenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.featured_5 = new System.Windows.Forms.PictureBox();
@@ -90,6 +99,10 @@
             this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
             this.BedanktPanel = new System.Windows.Forms.Panel();
             this.BackToHomeButton = new System.Windows.Forms.Button();
+            this.bioscoopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zaalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tijdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -219,6 +232,73 @@
             this.algemeneVoorwaardenToolStripMenuItem.Text = "Algemene Voorwaarden";
             this.algemeneVoorwaardenToolStripMenuItem.Click += new System.EventHandler(this.algemeneVoorwaardenToolStripMenuItem_Click);
             // 
+            // medewerkerToolStripMenuItem
+            // 
+            this.medewerkerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filmToevoegenToolStripMenuItem,
+            this.klantToevoegenToolStripMenuItem,
+            this.bioscoopToolStripMenuItem});
+            this.medewerkerToolStripMenuItem.Name = "medewerkerToolStripMenuItem";
+            this.medewerkerToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.medewerkerToolStripMenuItem.Text = "Medewerker";
+            // 
+            // filmToevoegenToolStripMenuItem
+            // 
+            this.filmToevoegenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toevoegenToolStripMenuItem,
+            this.aanpassenToolStripMenuItem,
+            this.verwijderenToolStripMenuItem});
+            this.filmToevoegenToolStripMenuItem.Name = "filmToevoegenToolStripMenuItem";
+            this.filmToevoegenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filmToevoegenToolStripMenuItem.Text = "Film";
+            this.filmToevoegenToolStripMenuItem.Click += new System.EventHandler(this.filmToevoegenToolStripMenuItem_Click);
+            // 
+            // toevoegenToolStripMenuItem
+            // 
+            this.toevoegenToolStripMenuItem.Name = "toevoegenToolStripMenuItem";
+            this.toevoegenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.toevoegenToolStripMenuItem.Text = "Toevoegen";
+            // 
+            // aanpassenToolStripMenuItem
+            // 
+            this.aanpassenToolStripMenuItem.Name = "aanpassenToolStripMenuItem";
+            this.aanpassenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aanpassenToolStripMenuItem.Text = "Aanpassen";
+            // 
+            // verwijderenToolStripMenuItem
+            // 
+            this.verwijderenToolStripMenuItem.Name = "verwijderenToolStripMenuItem";
+            this.verwijderenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verwijderenToolStripMenuItem.Text = "Verwijderen";
+            // 
+            // klantToevoegenToolStripMenuItem
+            // 
+            this.klantToevoegenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toevoegenToolStripMenuItem1,
+            this.aanpassenToolStripMenuItem1,
+            this.verwijderenToolStripMenuItem1});
+            this.klantToevoegenToolStripMenuItem.Name = "klantToevoegenToolStripMenuItem";
+            this.klantToevoegenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.klantToevoegenToolStripMenuItem.Text = "Klant";
+            // 
+            // toevoegenToolStripMenuItem1
+            // 
+            this.toevoegenToolStripMenuItem1.Name = "toevoegenToolStripMenuItem1";
+            this.toevoegenToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
+            this.toevoegenToolStripMenuItem1.Text = "Toevoegen";
+            // 
+            // aanpassenToolStripMenuItem1
+            // 
+            this.aanpassenToolStripMenuItem1.Name = "aanpassenToolStripMenuItem1";
+            this.aanpassenToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
+            this.aanpassenToolStripMenuItem1.Text = "Aanpassen";
+            // 
+            // verwijderenToolStripMenuItem1
+            // 
+            this.verwijderenToolStripMenuItem1.Name = "verwijderenToolStripMenuItem1";
+            this.verwijderenToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
+            this.verwijderenToolStripMenuItem1.Text = "Verwijderen";
+            // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
@@ -315,6 +395,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(750, 370);
@@ -324,12 +405,14 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "No time to die";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.featured_4_Click);
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -340,12 +423,14 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Bad Boys for life";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.featured_1_Click);
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(990, 370);
@@ -355,12 +440,14 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Sonic";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.featured_5_Click);
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(270, 370);
@@ -370,12 +457,14 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "SONIC";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.featured_2_Click);
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(510, 370);
@@ -385,6 +474,7 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Birds of prey";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.featured_3_Click);
             // 
             // Main_panel
             // 
@@ -832,6 +922,33 @@
             this.BackToHomeButton.UseVisualStyleBackColor = true;
             this.BackToHomeButton.Click += new System.EventHandler(this.BackToHomeButton_Click);
             // 
+            // bioscoopToolStripMenuItem
+            // 
+            this.bioscoopToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zaalToolStripMenuItem,
+            this.tijdToolStripMenuItem,
+            this.ticketToolStripMenuItem});
+            this.bioscoopToolStripMenuItem.Name = "bioscoopToolStripMenuItem";
+            this.bioscoopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bioscoopToolStripMenuItem.Text = "Bioscoop";
+            // 
+            // zaalToolStripMenuItem
+            // 
+            this.zaalToolStripMenuItem.Name = "zaalToolStripMenuItem";
+            this.zaalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zaalToolStripMenuItem.Text = "Zaal";
+            // 
+            // tijdToolStripMenuItem
+            // 
+            this.tijdToolStripMenuItem.Name = "tijdToolStripMenuItem";
+            this.tijdToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tijdToolStripMenuItem.Text = "Tijd";
+            // 
+            // ticketToolStripMenuItem
+            // 
+            this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
+            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ticketToolStripMenuItem.Text = "Ticket";
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
@@ -997,6 +1114,27 @@
         private System.Windows.Forms.CheckBox AlgVoorwaardenCheckBox;
         private System.Windows.Forms.Panel BedanktPanel;
         private System.Windows.Forms.Button BackToHomeButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewButtonColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.ToolStripMenuItem medewerkerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filmToevoegenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem klantToevoegenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toevoegenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aanpassenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verwijderenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toevoegenToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem aanpassenToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem verwijderenToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bioscoopToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zaalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tijdToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;

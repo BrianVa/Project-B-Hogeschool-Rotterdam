@@ -91,3 +91,7 @@ C:\Users\Glenn\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp
 C:\Users\Glenn\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.exe
 C:\Users\Glenn\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.pdb
 C:\Users\Jeroen\Documents\Processing folder\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.Orders.resources
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.AdminFilm.resources
+C:\Users\Brian V\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.AdminKlant.resources
+C:\Users\Jeroen\Documents\Processing folder\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.AdminFilm.resources
+C:\Users\Jeroen\Documents\Processing folder\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.AdminKlant.resources

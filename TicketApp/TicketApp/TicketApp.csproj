@@ -66,6 +66,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
+    <Compile Include="AdminFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFilm.Designer.cs">
+      <DependentUpon>AdminFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminKlant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminKlant.Designer.cs">
+      <DependentUpon>AdminKlant.cs</DependentUpon>
+    </Compile>
     <Compile Include="BitFilm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     <Compile Include="signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminFilm.resx">
+      <DependentUpon>AdminFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminKlant.resx">
+      <DependentUpon>AdminKlant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BitFilm.resx">
       <DependentUpon>BitFilm.cs</DependentUpon>
     </EmbeddedResource>
