@@ -58,8 +58,6 @@ namespace TicketApp
             label4.Text = data[3]["naam"].ToString();
             label5.Text = data[4]["naam"].ToString();
 
-            LoadFonts();
-
             set_activepanel("main");
         }
         public string loginText
@@ -250,6 +248,8 @@ namespace TicketApp
             show_film_panel.Visible = false;
             AfrekenPanel.Visible = false;
             BedanktPanel.Visible = false;
+            in_de_bios_panel.Visible = false;
+            genres_panel.Visible = false;
 
             switch (panel)
             {
@@ -270,6 +270,12 @@ namespace TicketApp
                     break;
                 case "bedankt":
                     BedanktPanel.Visible = true;
+                    break;
+                case "bioscoop":
+                    in_de_bios_panel.Visible = true;
+                    break;
+                case "genres":
+                    genres_panel.Visible = true;
                     break;
                 default:
                     Main_panel.Visible = true;
@@ -413,13 +419,6 @@ namespace TicketApp
             }
         }
 
-        public void LoadFonts()
-        {
-            var Function = new Functions();
-            Function.UseCustomFont("CoutureBold", 36, BitfilmTekst);
-            
-        }
-
         private void FilmTijden_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
@@ -521,6 +520,22 @@ namespace TicketApp
                 }
    
             }  
+        }
+
+        private void menuComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (menuComboBox.SelectedIndex == 0)
+            {
+                set_activepanel("main");
+            }
+            else if (menuComboBox.SelectedIndex == 1)
+            {
+                set_activepanel("bioscoop");
+            }
+            else if (menuComboBox.SelectedIndex == 2)
+            {
+                set_activepanel("genres");
+            }
         }
     }
 }

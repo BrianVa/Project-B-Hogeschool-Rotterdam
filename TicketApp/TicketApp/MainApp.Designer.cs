@@ -64,12 +64,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Main_panel = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.top5Label = new System.Windows.Forms.Label();
             this.BitfilmTekst = new System.Windows.Forms.Label();
+            this.BitfilmTekst2 = new System.Windows.Forms.Label();
+            this.BitfilmTekst3 = new System.Windows.Forms.Label();
+            this.menuComboBox = new System.Windows.Forms.ComboBox();
+            this.in_de_bios_panel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.show_film_panel = new System.Windows.Forms.Panel();
             this.Kijkwijzer = new System.Windows.Forms.PictureBox();
             this.film_genre = new System.Windows.Forms.Label();
-            this.TrailerVideo = new System.Windows.Forms.WebBrowser();
             this.film_speelduur = new System.Windows.Forms.Label();
             this.film_desc = new System.Windows.Forms.RichTextBox();
             this.OrderTijdButton = new System.Windows.Forms.Button();
@@ -78,6 +82,7 @@
             this.film_speelduur_title = new System.Windows.Forms.Label();
             this.film_genre_title = new System.Windows.Forms.Label();
             this.film_name = new System.Windows.Forms.Label();
+            this.TrailerVideo = new System.Windows.Forms.WebBrowser();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TijdPanel = new System.Windows.Forms.Panel();
             this.TicketBack = new System.Windows.Forms.Button();
@@ -109,6 +114,7 @@
             this.BedanktBeschrijving = new System.Windows.Forms.Label();
             this.BedanktLabel = new System.Windows.Forms.Label();
             this.BackToHomeButton = new System.Windows.Forms.Button();
+            this.genres_panel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -116,6 +122,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).BeginInit();
             this.Main_panel.SuspendLayout();
+            this.in_de_bios_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.show_film_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).BeginInit();
@@ -127,12 +134,13 @@
             this.AfrekenPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.BedanktPanel.SuspendLayout();
+            this.genres_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // search_button
             // 
             this.search_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search_button.Location = new System.Drawing.Point(1142, 13);
+            this.search_button.Location = new System.Drawing.Point(1118, 29);
             this.search_button.Margin = new System.Windows.Forms.Padding(6);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(130, 20);
@@ -308,7 +316,7 @@
             // SearchBox
             // 
             this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchBox.Location = new System.Drawing.Point(906, 13);
+            this.SearchBox.Location = new System.Drawing.Point(882, 29);
             this.SearchBox.Margin = new System.Windows.Forms.Padding(6);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(230, 20);
@@ -320,10 +328,10 @@
             this.featured_5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_5.Image = ((System.Drawing.Image)(resources.GetObject("featured_5.Image")));
-            this.featured_5.Location = new System.Drawing.Point(1020, 100);
+            this.featured_5.Location = new System.Drawing.Point(1044, 173);
             this.featured_5.Margin = new System.Windows.Forms.Padding(6);
             this.featured_5.Name = "featured_5";
-            this.featured_5.Size = new System.Drawing.Size(180, 254);
+            this.featured_5.Size = new System.Drawing.Size(166, 242);
             this.featured_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_5.TabIndex = 9;
             this.featured_5.TabStop = false;
@@ -335,10 +343,10 @@
             this.featured_4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_4.Image = ((System.Drawing.Image)(resources.GetObject("featured_4.Image")));
-            this.featured_4.Location = new System.Drawing.Point(780, 100);
+            this.featured_4.Location = new System.Drawing.Point(804, 173);
             this.featured_4.Margin = new System.Windows.Forms.Padding(6);
             this.featured_4.Name = "featured_4";
-            this.featured_4.Size = new System.Drawing.Size(180, 254);
+            this.featured_4.Size = new System.Drawing.Size(166, 242);
             this.featured_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_4.TabIndex = 8;
             this.featured_4.TabStop = false;
@@ -350,10 +358,10 @@
             this.featured_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_1.Image = ((System.Drawing.Image)(resources.GetObject("featured_1.Image")));
-            this.featured_1.Location = new System.Drawing.Point(60, 100);
+            this.featured_1.Location = new System.Drawing.Point(84, 173);
             this.featured_1.Margin = new System.Windows.Forms.Padding(6);
             this.featured_1.Name = "featured_1";
-            this.featured_1.Size = new System.Drawing.Size(180, 254);
+            this.featured_1.Size = new System.Drawing.Size(166, 242);
             this.featured_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_1.TabIndex = 7;
             this.featured_1.TabStop = false;
@@ -365,10 +373,10 @@
             this.featured_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_2.Image = ((System.Drawing.Image)(resources.GetObject("featured_2.Image")));
-            this.featured_2.Location = new System.Drawing.Point(300, 100);
+            this.featured_2.Location = new System.Drawing.Point(324, 173);
             this.featured_2.Margin = new System.Windows.Forms.Padding(6);
             this.featured_2.Name = "featured_2";
-            this.featured_2.Size = new System.Drawing.Size(180, 254);
+            this.featured_2.Size = new System.Drawing.Size(166, 242);
             this.featured_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_2.TabIndex = 6;
             this.featured_2.TabStop = false;
@@ -380,10 +388,10 @@
             this.featured_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_3.Image = ((System.Drawing.Image)(resources.GetObject("featured_3.Image")));
-            this.featured_3.Location = new System.Drawing.Point(540, 100);
+            this.featured_3.Location = new System.Drawing.Point(564, 173);
             this.featured_3.Margin = new System.Windows.Forms.Padding(6);
             this.featured_3.Name = "featured_3";
-            this.featured_3.Size = new System.Drawing.Size(180, 254);
+            this.featured_3.Size = new System.Drawing.Size(166, 242);
             this.featured_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.featured_3.TabIndex = 5;
             this.featured_3.TabStop = false;
@@ -397,12 +405,12 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(750, 370);
+            this.label4.Location = new System.Drawing.Point(804, 421);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(240, 30);
+            this.label4.Size = new System.Drawing.Size(166, 30);
             this.label4.TabIndex = 11;
-            this.label4.Text = "No time to die";
+            this.label4.Text = "Joker";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.featured_4_Click);
             // 
@@ -412,13 +420,13 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(30, 370);
+            this.label1.Location = new System.Drawing.Point(84, 421);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 30);
+            this.label1.Size = new System.Drawing.Size(166, 30);
             this.label1.TabIndex = 12;
             this.label1.Text = "Bad Boys for life";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -432,12 +440,12 @@
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(990, 370);
+            this.label5.Location = new System.Drawing.Point(1044, 421);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(240, 30);
+            this.label5.Size = new System.Drawing.Size(166, 30);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Sonic";
+            this.label5.Text = "No Time to Die";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.Click += new System.EventHandler(this.featured_5_Click);
             // 
@@ -449,12 +457,12 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(270, 370);
+            this.label2.Location = new System.Drawing.Point(324, 421);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 30);
+            this.label2.Size = new System.Drawing.Size(166, 30);
             this.label2.TabIndex = 14;
-            this.label2.Text = "SONIC";
+            this.label2.Text = "Sonic";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.featured_2_Click);
             // 
@@ -466,10 +474,10 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(510, 370);
+            this.label3.Location = new System.Drawing.Point(564, 421);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(240, 30);
+            this.label3.Size = new System.Drawing.Size(166, 30);
             this.label3.TabIndex = 15;
             this.label3.Text = "Birds of prey";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -483,12 +491,8 @@
             this.Main_panel.BackColor = System.Drawing.Color.Transparent;
             this.Main_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Main_panel.BackgroundImage")));
             this.Main_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Main_panel.Controls.Add(this.dataGridView1);
-            this.Main_panel.Controls.Add(this.BitfilmTekst);
             this.Main_panel.Controls.Add(this.featured_3);
             this.Main_panel.Controls.Add(this.featured_2);
-            this.Main_panel.Controls.Add(this.search_button);
-            this.Main_panel.Controls.Add(this.SearchBox);
             this.Main_panel.Controls.Add(this.label3);
             this.Main_panel.Controls.Add(this.featured_1);
             this.Main_panel.Controls.Add(this.label2);
@@ -497,6 +501,8 @@
             this.Main_panel.Controls.Add(this.featured_5);
             this.Main_panel.Controls.Add(this.label1);
             this.Main_panel.Controls.Add(this.label4);
+            this.Main_panel.Controls.Add(this.top5Label);
+            this.Main_panel.Controls.Add(this.BitfilmTekst);
             this.Main_panel.Location = new System.Drawing.Point(0, 24);
             this.Main_panel.Margin = new System.Windows.Forms.Padding(6);
             this.Main_panel.Name = "Main_panel";
@@ -504,26 +510,88 @@
             this.Main_panel.TabIndex = 16;
             this.Main_panel.Visible = false;
             // 
-            // dataGridView1
+            // top5Label
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(300, 425);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(660, 272);
-            this.dataGridView1.TabIndex = 18;
+            this.top5Label.BackColor = System.Drawing.Color.Transparent;
+            this.top5Label.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.top5Label.Location = new System.Drawing.Point(66, 123);
+            this.top5Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.top5Label.Name = "top5Label";
+            this.top5Label.Size = new System.Drawing.Size(117, 43);
+            this.top5Label.TabIndex = 23;
+            this.top5Label.Text = "Top 5";
+            this.top5Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BitfilmTekst
             // 
-            this.BitfilmTekst.BackColor = System.Drawing.Color.White;
-            this.BitfilmTekst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BitfilmTekst.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BitfilmTekst.Location = new System.Drawing.Point(510, 20);
+            this.BitfilmTekst.BackColor = System.Drawing.Color.Transparent;
+            this.BitfilmTekst.Font = new System.Drawing.Font("Cambria", 54F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BitfilmTekst.Location = new System.Drawing.Point(69, 31);
             this.BitfilmTekst.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.BitfilmTekst.Name = "BitfilmTekst";
-            this.BitfilmTekst.Size = new System.Drawing.Size(240, 60);
-            this.BitfilmTekst.TabIndex = 16;
+            this.BitfilmTekst.Size = new System.Drawing.Size(321, 115);
+            this.BitfilmTekst.TabIndex = 21;
             this.BitfilmTekst.Text = "BITFILM";
             this.BitfilmTekst.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BitfilmTekst2
+            // 
+            this.BitfilmTekst2.BackColor = System.Drawing.Color.Transparent;
+            this.BitfilmTekst2.Font = new System.Drawing.Font("Cambria", 54F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BitfilmTekst2.Location = new System.Drawing.Point(69, 31);
+            this.BitfilmTekst2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.BitfilmTekst2.Name = "BitfilmTekst2";
+            this.BitfilmTekst2.Size = new System.Drawing.Size(321, 115);
+            this.BitfilmTekst2.TabIndex = 21;
+            this.BitfilmTekst2.Text = "BITFILM";
+            this.BitfilmTekst2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BitfilmTekst3
+            // 
+            this.BitfilmTekst3.BackColor = System.Drawing.Color.Transparent;
+            this.BitfilmTekst3.Font = new System.Drawing.Font("Cambria", 54F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BitfilmTekst3.Location = new System.Drawing.Point(69, 31);
+            this.BitfilmTekst3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.BitfilmTekst3.Name = "BitfilmTekst3";
+            this.BitfilmTekst3.Size = new System.Drawing.Size(321, 115);
+            this.BitfilmTekst3.TabIndex = 21;
+            this.BitfilmTekst3.Text = "BITFILM";
+            this.BitfilmTekst3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // menuComboBox
+            // 
+            this.menuComboBox.FormattingEnabled = true;
+            this.menuComboBox.Items.AddRange(new object[] {
+            "Top 5",
+            "Nu in de bioscoop",
+            "Genres"});
+            this.menuComboBox.Location = new System.Drawing.Point(743, 29);
+            this.menuComboBox.Name = "menuComboBox";
+            this.menuComboBox.Size = new System.Drawing.Size(121, 21);
+            this.menuComboBox.TabIndex = 24;
+            this.menuComboBox.Text = "Top 5";
+            this.menuComboBox.SelectedIndexChanged += new System.EventHandler(this.menuComboBox_SelectedIndexChanged);
+            // 
+            // in_de_bios_panel
+            // 
+            this.in_de_bios_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("in_de_bios_panel.BackgroundImage")));
+            this.in_de_bios_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.in_de_bios_panel.Controls.Add(this.dataGridView1);
+            this.in_de_bios_panel.Controls.Add(this.BitfilmTekst2);
+            this.in_de_bios_panel.Location = new System.Drawing.Point(0, 23);
+            this.in_de_bios_panel.Margin = new System.Windows.Forms.Padding(6);
+            this.in_de_bios_panel.Name = "in_de_bios_panel";
+            this.in_de_bios_panel.Size = new System.Drawing.Size(1278, 719);
+            this.in_de_bios_panel.TabIndex = 21;
+            this.in_de_bios_panel.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(296, 211);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(715, 220);
+            this.dataGridView1.TabIndex = 19;
             // 
             // show_film_panel
             // 
@@ -536,7 +604,6 @@
             this.show_film_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.show_film_panel.Controls.Add(this.Kijkwijzer);
             this.show_film_panel.Controls.Add(this.film_genre);
-            this.show_film_panel.Controls.Add(this.TrailerVideo);
             this.show_film_panel.Controls.Add(this.film_speelduur);
             this.show_film_panel.Controls.Add(this.film_desc);
             this.show_film_panel.Controls.Add(this.OrderTijdButton);
@@ -545,6 +612,7 @@
             this.show_film_panel.Controls.Add(this.film_speelduur_title);
             this.show_film_panel.Controls.Add(this.film_genre_title);
             this.show_film_panel.Controls.Add(this.film_name);
+            this.show_film_panel.Controls.Add(this.TrailerVideo);
             this.show_film_panel.Location = new System.Drawing.Point(0, 24);
             this.show_film_panel.Margin = new System.Windows.Forms.Padding(6);
             this.show_film_panel.Name = "show_film_panel";
@@ -576,17 +644,6 @@
             this.film_genre.Size = new System.Drawing.Size(150, 47);
             this.film_genre.TabIndex = 10;
             this.film_genre.Text = "Genre: ";
-            // 
-            // TrailerVideo
-            // 
-            this.TrailerVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.TrailerVideo.Location = new System.Drawing.Point(15, 465);
-            this.TrailerVideo.Margin = new System.Windows.Forms.Padding(6);
-            this.TrailerVideo.MinimumSize = new System.Drawing.Size(20, 20);
-            this.TrailerVideo.Name = "TrailerVideo";
-            this.TrailerVideo.ScrollBarsEnabled = false;
-            this.TrailerVideo.Size = new System.Drawing.Size(426, 240);
-            this.TrailerVideo.TabIndex = 12;
             // 
             // film_speelduur
             // 
@@ -690,6 +747,17 @@
             this.film_name.Size = new System.Drawing.Size(210, 47);
             this.film_name.TabIndex = 0;
             this.film_name.Text = "Film name";
+            // 
+            // TrailerVideo
+            // 
+            this.TrailerVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.TrailerVideo.Location = new System.Drawing.Point(15, 465);
+            this.TrailerVideo.Margin = new System.Windows.Forms.Padding(6);
+            this.TrailerVideo.MinimumSize = new System.Drawing.Size(20, 20);
+            this.TrailerVideo.Name = "TrailerVideo";
+            this.TrailerVideo.ScrollBarsEnabled = false;
+            this.TrailerVideo.Size = new System.Drawing.Size(426, 240);
+            this.TrailerVideo.TabIndex = 12;
             // 
             // contextMenuStrip1
             // 
@@ -992,7 +1060,7 @@
             this.BedanktBeschrijving.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BedanktBeschrijving.Location = new System.Drawing.Point(29, 148);
             this.BedanktBeschrijving.Name = "BedanktBeschrijving";
-            this.BedanktBeschrijving.Size = new System.Drawing.Size(241, 72);
+            this.BedanktBeschrijving.Size = new System.Drawing.Size(241, 97);
             this.BedanktBeschrijving.TabIndex = 2;
             this.BedanktBeschrijving.Text = "Uw tickets zijn toegevoegd aan uw orders.";
             // 
@@ -1017,6 +1085,17 @@
             this.BackToHomeButton.UseVisualStyleBackColor = true;
             this.BackToHomeButton.Click += new System.EventHandler(this.BackToHomeButton_Click);
             // 
+            // genres_panel
+            // 
+            this.genres_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("genres_panel.BackgroundImage")));
+            this.genres_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.genres_panel.Controls.Add(this.BitfilmTekst3);
+            this.genres_panel.Location = new System.Drawing.Point(0, 24);
+            this.genres_panel.Name = "genres_panel";
+            this.genres_panel.Size = new System.Drawing.Size(1280, 720);
+            this.genres_panel.TabIndex = 22;
+            this.genres_panel.Visible = false;
+            // 
             // MainApp
             // 
             this.AcceptButton = this.search_button;
@@ -1025,13 +1104,18 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
+            this.Controls.Add(this.menuComboBox);
+            this.Controls.Add(this.search_button);
+            this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.Main_panel);
+            this.Controls.Add(this.BedanktPanel);
             this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.show_film_panel);
-            this.Controls.Add(this.Main_panel);
-            this.Controls.Add(this.BedanktPanel);
+            this.Controls.Add(this.genres_panel);
+            this.Controls.Add(this.in_de_bios_panel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -1047,7 +1131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).EndInit();
             this.Main_panel.ResumeLayout(false);
-            this.Main_panel.PerformLayout();
+            this.in_de_bios_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.show_film_panel.ResumeLayout(false);
             this.show_film_panel.PerformLayout();
@@ -1061,6 +1145,7 @@
             this.AfrekenPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.BedanktPanel.ResumeLayout(false);
+            this.genres_panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1100,7 +1185,6 @@
         private System.Windows.Forms.Label film_genre;
         private System.Windows.Forms.WebBrowser TrailerVideo;
         private System.Windows.Forms.PictureBox Kijkwijzer;
-        private System.Windows.Forms.Label BitfilmTekst;
         private System.Windows.Forms.Panel TijdPanel;
         private System.Windows.Forms.DataGridView FilmTijden;
         private System.Windows.Forms.Button TicketBack;
@@ -1138,7 +1222,6 @@
         private System.Windows.Forms.ToolStripMenuItem toevoegenToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aanpassenToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem verwijderenToolStripMenuItem1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label BedanktBeschrijving;
         private System.Windows.Forms.Label BedanktLabel;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -1148,6 +1231,14 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel in_de_bios_panel;
+        private System.Windows.Forms.Label top5Label;
+        private System.Windows.Forms.Label BitfilmTekst;
+        private System.Windows.Forms.Label BitfilmTekst2;
+        private System.Windows.Forms.Label BitfilmTekst3;
+        private System.Windows.Forms.ComboBox menuComboBox;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel genres_panel;
     }
 }
 
