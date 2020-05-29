@@ -58,7 +58,7 @@ namespace TicketApp
             label4.Text = data[3]["naam"].ToString();
             label5.Text = data[4]["naam"].ToString();
 
-            LoadFonts();
+            //LoadFonts();
 
             set_activepanel("main");
         }
@@ -382,21 +382,6 @@ namespace TicketApp
 
         }
 
-        private void SecondeTimer_Tick(object sender, EventArgs e)
-        {
-            int xAxis = BackLoop.Location.X;
-            if (xAxis <= -1280)
-            {
-                xAxis = 0;
-            }
-            else
-            {
-                xAxis -= 1;
-            }
-
-            BackLoop.Location = new Point(xAxis, 0);
-        }
-
         private void mijnAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var Function = new Functions();
@@ -428,12 +413,12 @@ namespace TicketApp
             }
         }
 
-        public void LoadFonts()
-        {
-            var Function = new Functions();
-            Function.UseCustomFont("CoutureBold", 36, BitfilmTekst);
-            
-        }
+        //public void LoadFonts()
+        //{
+        //    var Function = new Functions();
+        //    Function.UseCustomFont("CoutureBold", 72, BitfilmTekst);
+        //    
+        //}
 
         private void FilmTijden_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -536,6 +521,11 @@ namespace TicketApp
                 }
    
             }  
+        }
+
+        private void Main_panel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
