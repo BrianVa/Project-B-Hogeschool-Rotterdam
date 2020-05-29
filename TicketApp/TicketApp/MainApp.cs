@@ -382,21 +382,6 @@ namespace TicketApp
 
         }
 
-        private void SecondeTimer_Tick(object sender, EventArgs e)
-        {
-            int xAxis = BackLoop.Location.X;
-            if (xAxis <= -1280)
-            {
-                xAxis = 0;
-            }
-            else
-            {
-                xAxis -= 1;
-            }
-
-            BackLoop.Location = new Point(xAxis, 0);
-        }
-
         private void mijnAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var Function = new Functions();
