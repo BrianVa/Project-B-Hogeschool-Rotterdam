@@ -64,8 +64,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Main_panel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BitfilmTekst = new System.Windows.Forms.Label();
-            this.BackLoop = new System.Windows.Forms.PictureBox();
             this.show_film_panel = new System.Windows.Forms.Panel();
             this.Kijkwijzer = new System.Windows.Forms.PictureBox();
             this.film_genre = new System.Windows.Forms.Label();
@@ -95,11 +95,19 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.AfrekenPanel = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.AfrekenTerugKnop = new System.Windows.Forms.Button();
             this.AfrekenKnop = new System.Windows.Forms.Button();
             this.AlgVoorwaardenCheckBox = new System.Windows.Forms.CheckBox();
-            this.SecondeTimer = new System.Windows.Forms.Timer(this.components);
             this.BedanktPanel = new System.Windows.Forms.Panel();
+            this.BedanktBeschrijving = new System.Windows.Forms.Label();
+            this.BedanktLabel = new System.Windows.Forms.Label();
             this.BackToHomeButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
@@ -108,7 +116,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).BeginInit();
             this.Main_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BackLoop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.show_film_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searched_movie)).BeginInit();
@@ -117,6 +125,7 @@
             this.StoelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).BeginInit();
             this.AfrekenPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.BedanktPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -473,6 +482,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Main_panel.BackColor = System.Drawing.Color.Transparent;
             this.Main_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Main_panel.Controls.Add(this.dataGridView1);
             this.Main_panel.Controls.Add(this.BitfilmTekst);
             this.Main_panel.Controls.Add(this.featured_3);
             this.Main_panel.Controls.Add(this.featured_2);
@@ -486,13 +496,20 @@
             this.Main_panel.Controls.Add(this.featured_5);
             this.Main_panel.Controls.Add(this.label1);
             this.Main_panel.Controls.Add(this.label4);
-            this.Main_panel.Controls.Add(this.BackLoop);
             this.Main_panel.Location = new System.Drawing.Point(0, 24);
             this.Main_panel.Margin = new System.Windows.Forms.Padding(6);
             this.Main_panel.Name = "Main_panel";
             this.Main_panel.Size = new System.Drawing.Size(1280, 720);
             this.Main_panel.TabIndex = 16;
             this.Main_panel.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(300, 425);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(660, 272);
+            this.dataGridView1.TabIndex = 18;
             // 
             // BitfilmTekst
             // 
@@ -506,16 +523,6 @@
             this.BitfilmTekst.TabIndex = 16;
             this.BitfilmTekst.Text = "BITFILM";
             this.BitfilmTekst.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // BackLoop
-            // 
-            this.BackLoop.Image = ((System.Drawing.Image)(resources.GetObject("BackLoop.Image")));
-            this.BackLoop.Location = new System.Drawing.Point(-1280, 0);
-            this.BackLoop.Margin = new System.Windows.Forms.Padding(6);
-            this.BackLoop.Name = "BackLoop";
-            this.BackLoop.Size = new System.Drawing.Size(2560, 720);
-            this.BackLoop.TabIndex = 17;
-            this.BackLoop.TabStop = false;
             // 
             // show_film_panel
             // 
@@ -851,6 +858,13 @@
             // AfrekenPanel
             // 
             this.AfrekenPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AfrekenPanel.BackgroundImage")));
+            this.AfrekenPanel.Controls.Add(this.dataGridView2);
+            this.AfrekenPanel.Controls.Add(this.textBox4);
+            this.AfrekenPanel.Controls.Add(this.comboBox1);
+            this.AfrekenPanel.Controls.Add(this.dateTimePicker1);
+            this.AfrekenPanel.Controls.Add(this.textBox3);
+            this.AfrekenPanel.Controls.Add(this.textBox2);
+            this.AfrekenPanel.Controls.Add(this.textBox1);
             this.AfrekenPanel.Controls.Add(this.AfrekenTerugKnop);
             this.AfrekenPanel.Controls.Add(this.AfrekenKnop);
             this.AfrekenPanel.Controls.Add(this.AlgVoorwaardenCheckBox);
@@ -859,6 +873,69 @@
             this.AfrekenPanel.Size = new System.Drawing.Size(1280, 720);
             this.AfrekenPanel.TabIndex = 16;
             this.AfrekenPanel.Visible = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(60, 118);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(411, 282);
+            this.dataGridView2.TabIndex = 13;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(969, 322);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(231, 20);
+            this.textBox4.TabIndex = 12;
+            this.textBox4.Text = "Rekeningnummer";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Rabobank",
+            "Abn Amro",
+            "ING",
+            "SNS",
+            "Regiobank",
+            "ASN"});
+            this.comboBox1.Location = new System.Drawing.Point(969, 284);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(231, 21);
+            this.comboBox1.TabIndex = 11;
+            this.comboBox1.Text = "<Selecteer uw bank>";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(969, 248);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(231, 20);
+            this.dateTimePicker1.TabIndex = 10;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(969, 210);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(231, 20);
+            this.textBox3.TabIndex = 9;
+            this.textBox3.Text = "Email";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(970, 169);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(230, 20);
+            this.textBox2.TabIndex = 8;
+            this.textBox2.Text = "Achternaam";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(970, 131);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(230, 20);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.Text = "Voornaam";
             // 
             // AfrekenTerugKnop
             // 
@@ -896,21 +973,38 @@
             this.AlgVoorwaardenCheckBox.UseVisualStyleBackColor = false;
             this.AlgVoorwaardenCheckBox.CheckedChanged += new System.EventHandler(this.AlgVoorwaardenCheckBox_CheckedChanged);
             // 
-            // SecondeTimer
-            // 
-            this.SecondeTimer.Enabled = true;
-            this.SecondeTimer.Interval = 25;
-            this.SecondeTimer.Tick += new System.EventHandler(this.SecondeTimer_Tick);
-            // 
             // BedanktPanel
             // 
             this.BedanktPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BedanktPanel.BackgroundImage")));
+            this.BedanktPanel.Controls.Add(this.BedanktBeschrijving);
+            this.BedanktPanel.Controls.Add(this.BedanktLabel);
             this.BedanktPanel.Controls.Add(this.BackToHomeButton);
             this.BedanktPanel.Location = new System.Drawing.Point(0, 23);
             this.BedanktPanel.Name = "BedanktPanel";
             this.BedanktPanel.Size = new System.Drawing.Size(1280, 720);
             this.BedanktPanel.TabIndex = 17;
             this.BedanktPanel.Visible = false;
+            // 
+            // BedanktBeschrijving
+            // 
+            this.BedanktBeschrijving.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BedanktBeschrijving.Font = new System.Drawing.Font("Couture", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BedanktBeschrijving.Location = new System.Drawing.Point(29, 148);
+            this.BedanktBeschrijving.Name = "BedanktBeschrijving";
+            this.BedanktBeschrijving.Size = new System.Drawing.Size(241, 72);
+            this.BedanktBeschrijving.TabIndex = 2;
+            this.BedanktBeschrijving.Text = "Uw tickets zijn toegevoegd aan uw orders.";
+            // 
+            // BedanktLabel
+            // 
+            this.BedanktLabel.BackColor = System.Drawing.Color.White;
+            this.BedanktLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BedanktLabel.Font = new System.Drawing.Font("Couture", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BedanktLabel.Location = new System.Drawing.Point(29, 21);
+            this.BedanktLabel.Name = "BedanktLabel";
+            this.BedanktLabel.Size = new System.Drawing.Size(432, 102);
+            this.BedanktLabel.TabIndex = 1;
+            this.BedanktLabel.Text = "Bedankt voor uw bestelling!";
             // 
             // BackToHomeButton
             // 
@@ -931,12 +1025,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.BedanktPanel);
-            this.Controls.Add(this.AfrekenPanel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -953,7 +1047,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).EndInit();
             this.Main_panel.ResumeLayout(false);
             this.Main_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BackLoop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.show_film_panel.ResumeLayout(false);
             this.show_film_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).EndInit();
@@ -964,6 +1058,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).EndInit();
             this.AfrekenPanel.ResumeLayout(false);
             this.AfrekenPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.BedanktPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1008,8 +1103,6 @@
         private System.Windows.Forms.Panel TijdPanel;
         private System.Windows.Forms.DataGridView FilmTijden;
         private System.Windows.Forms.Button TicketBack;
-        private System.Windows.Forms.Timer SecondeTimer;
-        private System.Windows.Forms.PictureBox BackLoop;
         public System.Windows.Forms.MenuStrip menuStrip1;
         public System.Windows.Forms.ToolStripMenuItem loggen_menu;
         public System.Windows.Forms.ToolStripMenuItem login_button;
@@ -1044,6 +1137,16 @@
         private System.Windows.Forms.ToolStripMenuItem toevoegenToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aanpassenToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem verwijderenToolStripMenuItem1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label BedanktBeschrijving;
+        private System.Windows.Forms.Label BedanktLabel;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
