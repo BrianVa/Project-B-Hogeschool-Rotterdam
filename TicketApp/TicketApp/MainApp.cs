@@ -254,27 +254,35 @@ namespace TicketApp
             switch (panel)
             {
                 case "main":
+                    this.menuComboBox.Text = "Top 5";
                     Main_panel.Visible = true;
                     break;
                 case "tijd":
+                    this.menuComboBox.Text = "";
                     TijdPanel.Visible = true;
                     break;
                 case "film":
+                    this.menuComboBox.Text = "";
                     show_film_panel.Visible = true;
                     break;
                 case "stoel":
+                    this.menuComboBox.Text = "";
                     StoelPanel.Visible = true;
                     break;
                 case "afrekenen":
+                    this.menuComboBox.Text = "";
                     AfrekenPanel.Visible = true;
                     break;
                 case "bedankt":
+                    this.menuComboBox.Text = "";
                     BedanktPanel.Visible = true;
                     break;
                 case "bioscoop":
+                    this.menuComboBox.Text = "Nu in de bioscoop";
                     in_de_bios_panel.Visible = true;
                     break;
                 case "genres":
+                    this.menuComboBox.Text = "Genres";
                     genres_panel.Visible = true;
                     break;
                 default:
@@ -530,11 +538,36 @@ namespace TicketApp
             }
             else if (menuComboBox.SelectedIndex == 1)
             {
+                var Function = new Functions();
+                DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT '20'");
+                filmSelectGrid.Rows.Clear();
+                foreach (DataRow row in data)
+                {
+                    int n = filmSelectGrid.Rows.Add();
+                    filmSelectGrid.Rows[n].Cells[0].Value = row["naam"];
+                    filmSelectGrid.Rows[n].Cells[1].Value = row["genre"];
+                    filmSelectGrid.Rows[n].Cells[2].Value = row["speel_duur"].ToString() + " minuten";
+                    filmSelectGrid.Rows[n].Cells[3].Value = row["leeftijd"].ToString();
+                    filmSelectGrid.Rows[n].Cells[4].Value = "Filmpagina";
+                }
                 set_activepanel("bioscoop");
             }
             else if (menuComboBox.SelectedIndex == 2)
             {
                 set_activepanel("genres");
+            }
+        }
+
+        private void filmSelectGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                int x = e.RowIndex + 1;
+                DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + x + "'");
+                setMoviePage(data);
             }
         }
     }

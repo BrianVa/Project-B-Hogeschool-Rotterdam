@@ -70,7 +70,7 @@
             this.BitfilmTekst3 = new System.Windows.Forms.Label();
             this.menuComboBox = new System.Windows.Forms.ComboBox();
             this.in_de_bios_panel = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.filmSelectGrid = new System.Windows.Forms.DataGridView();
             this.show_film_panel = new System.Windows.Forms.Panel();
             this.Kijkwijzer = new System.Windows.Forms.PictureBox();
             this.film_genre = new System.Windows.Forms.Label();
@@ -115,6 +115,11 @@
             this.BedanktLabel = new System.Windows.Forms.Label();
             this.BackToHomeButton = new System.Windows.Forms.Button();
             this.genres_panel = new System.Windows.Forms.Panel();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -123,7 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).BeginInit();
             this.Main_panel.SuspendLayout();
             this.in_de_bios_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmSelectGrid)).BeginInit();
             this.show_film_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searched_movie)).BeginInit();
@@ -175,7 +180,7 @@
             // exit_button
             // 
             this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(180, 22);
+            this.exit_button.Size = new System.Drawing.Size(93, 22);
             this.exit_button.Text = "Exit";
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
@@ -194,28 +199,28 @@
             // login_button
             // 
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(180, 22);
+            this.login_button.Size = new System.Drawing.Size(146, 22);
             this.login_button.Text = "Login";
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // aanmeld_button
             // 
             this.aanmeld_button.Name = "aanmeld_button";
-            this.aanmeld_button.Size = new System.Drawing.Size(180, 22);
+            this.aanmeld_button.Size = new System.Drawing.Size(146, 22);
             this.aanmeld_button.Text = "Aanmelden";
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
             // 
             // mijnAccountToolStripMenuItem
             // 
             this.mijnAccountToolStripMenuItem.Name = "mijnAccountToolStripMenuItem";
-            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.mijnAccountToolStripMenuItem.Text = "Mijn Account";
             this.mijnAccountToolStripMenuItem.Click += new System.EventHandler(this.mijnAccountToolStripMenuItem_Click);
             // 
             // mijnOrdersToolStripMenuItem
             // 
             this.mijnOrdersToolStripMenuItem.Name = "mijnOrdersToolStripMenuItem";
-            this.mijnOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mijnOrdersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.mijnOrdersToolStripMenuItem.Text = "Mijn Orders";
             this.mijnOrdersToolStripMenuItem.Click += new System.EventHandler(this.mijnOrdersToolStripMenuItem_Click);
             // 
@@ -230,7 +235,7 @@
             // info_button
             // 
             this.info_button.Name = "info_button";
-            this.info_button.Size = new System.Drawing.Size(180, 22);
+            this.info_button.Size = new System.Drawing.Size(95, 22);
             this.info_button.Text = "Info";
             this.info_button.Click += new System.EventHandler(this.info_button_click);
             // 
@@ -576,7 +581,7 @@
             // 
             this.in_de_bios_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("in_de_bios_panel.BackgroundImage")));
             this.in_de_bios_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.in_de_bios_panel.Controls.Add(this.dataGridView1);
+            this.in_de_bios_panel.Controls.Add(this.filmSelectGrid);
             this.in_de_bios_panel.Controls.Add(this.BitfilmTekst2);
             this.in_de_bios_panel.Location = new System.Drawing.Point(0, 23);
             this.in_de_bios_panel.Margin = new System.Windows.Forms.Padding(6);
@@ -585,13 +590,24 @@
             this.in_de_bios_panel.TabIndex = 21;
             this.in_de_bios_panel.Visible = false;
             // 
-            // dataGridView1
+            // filmSelectGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(296, 211);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(715, 220);
-            this.dataGridView1.TabIndex = 19;
+            this.filmSelectGrid.AllowUserToAddRows = false;
+            this.filmSelectGrid.AllowUserToDeleteRows = false;
+            this.filmSelectGrid.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.filmSelectGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.filmSelectGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13});
+            this.filmSelectGrid.Location = new System.Drawing.Point(84, 150);
+            this.filmSelectGrid.Margin = new System.Windows.Forms.Padding(6);
+            this.filmSelectGrid.Name = "filmSelectGrid";
+            this.filmSelectGrid.Size = new System.Drawing.Size(793, 353);
+            this.filmSelectGrid.TabIndex = 19;
+            this.filmSelectGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.filmSelectGrid_CellContentClick);
             // 
             // show_film_panel
             // 
@@ -1096,6 +1112,38 @@
             this.genres_panel.TabIndex = 22;
             this.genres_panel.Visible = false;
             // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Titel";
+            this.Column9.Name = "Column9";
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column9.Width = 200;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Genre";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 150;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Speelduur";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 150;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Leeftijd";
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 150;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Select";
+            this.Column13.Name = "Column13";
+            this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // MainApp
             // 
             this.AcceptButton = this.search_button;
@@ -1108,6 +1156,7 @@
             this.Controls.Add(this.search_button);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.in_de_bios_panel);
             this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.BedanktPanel);
             this.Controls.Add(this.AfrekenPanel);
@@ -1115,7 +1164,6 @@
             this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.genres_panel);
-            this.Controls.Add(this.in_de_bios_panel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -1132,7 +1180,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).EndInit();
             this.Main_panel.ResumeLayout(false);
             this.in_de_bios_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmSelectGrid)).EndInit();
             this.show_film_panel.ResumeLayout(false);
             this.show_film_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).EndInit();
@@ -1237,8 +1285,13 @@
         private System.Windows.Forms.Label BitfilmTekst2;
         private System.Windows.Forms.Label BitfilmTekst3;
         private System.Windows.Forms.ComboBox menuComboBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView filmSelectGrid;
         private System.Windows.Forms.Panel genres_panel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewButtonColumn Column13;
     }
 }
 
