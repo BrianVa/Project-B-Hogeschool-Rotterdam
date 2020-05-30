@@ -140,12 +140,12 @@
             // search_button
             // 
             this.search_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.search_button.Location = new System.Drawing.Point(1118, 29);
+            this.search_button.Location = new System.Drawing.Point(1124, 2);
             this.search_button.Margin = new System.Windows.Forms.Padding(6);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(130, 20);
             this.search_button.TabIndex = 2;
-            this.search_button.Text = "Browse Movies";
+            this.search_button.Text = "Zoeken";
             this.search_button.UseVisualStyleBackColor = true;
             this.search_button.Click += new System.EventHandler(this.search_button_Click);
             // 
@@ -175,7 +175,7 @@
             // exit_button
             // 
             this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(93, 22);
+            this.exit_button.Size = new System.Drawing.Size(180, 22);
             this.exit_button.Text = "Exit";
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
@@ -194,28 +194,28 @@
             // login_button
             // 
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(146, 22);
+            this.login_button.Size = new System.Drawing.Size(180, 22);
             this.login_button.Text = "Login";
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // aanmeld_button
             // 
             this.aanmeld_button.Name = "aanmeld_button";
-            this.aanmeld_button.Size = new System.Drawing.Size(146, 22);
+            this.aanmeld_button.Size = new System.Drawing.Size(180, 22);
             this.aanmeld_button.Text = "Aanmelden";
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
             // 
             // mijnAccountToolStripMenuItem
             // 
             this.mijnAccountToolStripMenuItem.Name = "mijnAccountToolStripMenuItem";
-            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mijnAccountToolStripMenuItem.Text = "Mijn Account";
             this.mijnAccountToolStripMenuItem.Click += new System.EventHandler(this.mijnAccountToolStripMenuItem_Click);
             // 
             // mijnOrdersToolStripMenuItem
             // 
             this.mijnOrdersToolStripMenuItem.Name = "mijnOrdersToolStripMenuItem";
-            this.mijnOrdersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.mijnOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mijnOrdersToolStripMenuItem.Text = "Mijn Orders";
             this.mijnOrdersToolStripMenuItem.Click += new System.EventHandler(this.mijnOrdersToolStripMenuItem_Click);
             // 
@@ -224,13 +224,13 @@
             this.about_menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.info_button});
             this.about_menu.Name = "about_menu";
-            this.about_menu.Size = new System.Drawing.Size(52, 20);
-            this.about_menu.Text = "About";
+            this.about_menu.Size = new System.Drawing.Size(44, 20);
+            this.about_menu.Text = "Over";
             // 
             // info_button
             // 
             this.info_button.Name = "info_button";
-            this.info_button.Size = new System.Drawing.Size(95, 22);
+            this.info_button.Size = new System.Drawing.Size(180, 22);
             this.info_button.Text = "Info";
             this.info_button.Click += new System.EventHandler(this.info_button_click);
             // 
@@ -316,7 +316,7 @@
             // SearchBox
             // 
             this.SearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchBox.Location = new System.Drawing.Point(882, 29);
+            this.SearchBox.Location = new System.Drawing.Point(888, 2);
             this.SearchBox.Margin = new System.Windows.Forms.Padding(6);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(230, 20);
@@ -565,9 +565,9 @@
             "Top 5",
             "Nu in de bioscoop",
             "Genres"});
-            this.menuComboBox.Location = new System.Drawing.Point(743, 29);
+            this.menuComboBox.Location = new System.Drawing.Point(749, 2);
             this.menuComboBox.Name = "menuComboBox";
-            this.menuComboBox.Size = new System.Drawing.Size(121, 21);
+            this.menuComboBox.Size = new System.Drawing.Size(120, 21);
             this.menuComboBox.TabIndex = 24;
             this.menuComboBox.Text = "Top 5";
             this.menuComboBox.SelectedIndexChanged += new System.EventHandler(this.menuComboBox_SelectedIndexChanged);
@@ -694,7 +694,7 @@
             this.Back_button.Name = "Back_button";
             this.Back_button.Size = new System.Drawing.Size(185, 38);
             this.Back_button.TabIndex = 7;
-            this.Back_button.Text = "Back";
+            this.Back_button.Text = "Terug";
             this.Back_button.UseVisualStyleBackColor = true;
             this.Back_button.Click += new System.EventHandler(this.Back_button_Click);
             // 
@@ -780,12 +780,12 @@
             // 
             // TicketBack
             // 
-            this.TicketBack.Location = new System.Drawing.Point(10, 665);
+            this.TicketBack.Location = new System.Drawing.Point(30, 649);
             this.TicketBack.Margin = new System.Windows.Forms.Padding(6);
             this.TicketBack.Name = "TicketBack";
-            this.TicketBack.Size = new System.Drawing.Size(200, 40);
+            this.TicketBack.Size = new System.Drawing.Size(165, 41);
             this.TicketBack.TabIndex = 1;
-            this.TicketBack.Text = "Back";
+            this.TicketBack.Text = "Terug";
             this.TicketBack.UseVisualStyleBackColor = true;
             this.TicketBack.Click += new System.EventHandler(this.TicketBack_Click);
             // 
@@ -877,11 +877,11 @@
             // 
             // StoelBackButton
             // 
-            this.StoelBackButton.Location = new System.Drawing.Point(42, 649);
+            this.StoelBackButton.Location = new System.Drawing.Point(30, 649);
             this.StoelBackButton.Name = "StoelBackButton";
-            this.StoelBackButton.Size = new System.Drawing.Size(168, 48);
+            this.StoelBackButton.Size = new System.Drawing.Size(165, 41);
             this.StoelBackButton.TabIndex = 3;
-            this.StoelBackButton.Text = "Back";
+            this.StoelBackButton.Text = "Terug";
             this.StoelBackButton.UseVisualStyleBackColor = true;
             this.StoelBackButton.Click += new System.EventHandler(this.StoelBackButton_Click);
             // 
@@ -1012,7 +1012,7 @@
             this.AfrekenTerugKnop.Name = "AfrekenTerugKnop";
             this.AfrekenTerugKnop.Size = new System.Drawing.Size(165, 41);
             this.AfrekenTerugKnop.TabIndex = 6;
-            this.AfrekenTerugKnop.Text = " Back";
+            this.AfrekenTerugKnop.Text = "Terug";
             this.AfrekenTerugKnop.UseVisualStyleBackColor = true;
             this.AfrekenTerugKnop.Click += new System.EventHandler(this.AfrekenTerugKnop_Click);
             // 
@@ -1058,7 +1058,7 @@
             // 
             this.BedanktBeschrijving.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.BedanktBeschrijving.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BedanktBeschrijving.Location = new System.Drawing.Point(29, 148);
+            this.BedanktBeschrijving.Location = new System.Drawing.Point(29, 146);
             this.BedanktBeschrijving.Name = "BedanktBeschrijving";
             this.BedanktBeschrijving.Size = new System.Drawing.Size(241, 97);
             this.BedanktBeschrijving.TabIndex = 2;
@@ -1071,7 +1071,7 @@
             this.BedanktLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BedanktLabel.Location = new System.Drawing.Point(29, 21);
             this.BedanktLabel.Name = "BedanktLabel";
-            this.BedanktLabel.Size = new System.Drawing.Size(432, 102);
+            this.BedanktLabel.Size = new System.Drawing.Size(432, 125);
             this.BedanktLabel.TabIndex = 1;
             this.BedanktLabel.Text = "Bedankt voor uw bestelling!";
             // 
