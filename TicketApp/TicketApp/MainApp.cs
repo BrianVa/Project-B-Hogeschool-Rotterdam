@@ -258,31 +258,24 @@ namespace TicketApp
                     Main_panel.Visible = true;
                     break;
                 case "tijd":
-                    this.menuComboBox.Text = "";
                     TijdPanel.Visible = true;
                     break;
                 case "film":
-                    this.menuComboBox.Text = "";
                     show_film_panel.Visible = true;
                     break;
                 case "stoel":
-                    this.menuComboBox.Text = "";
                     StoelPanel.Visible = true;
                     break;
                 case "afrekenen":
-                    this.menuComboBox.Text = "";
                     AfrekenPanel.Visible = true;
                     break;
                 case "bedankt":
-                    this.menuComboBox.Text = "";
                     BedanktPanel.Visible = true;
                     break;
                 case "bioscoop":
-                    this.menuComboBox.Text = "Nu in de bioscoop";
                     in_de_bios_panel.Visible = true;
                     break;
                 case "genres":
-                    this.menuComboBox.Text = "Genres";
                     genres_panel.Visible = true;
                     break;
                 default:
