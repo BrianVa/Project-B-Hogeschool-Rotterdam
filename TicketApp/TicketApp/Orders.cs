@@ -52,7 +52,7 @@ namespace TicketApp
             }
             else
             {
-                function.Message("Er zijn nog geen orders, ga een kaartje kopen ofzo...zwerver.");
+                function.Message("Er zijn nog geen orders gevonden.");
 
                 int n = OrdersTable.Rows.Add();
                 OrdersTable.Rows[n].Cells[0].Value = "Geen orders gevonden.";
@@ -68,13 +68,18 @@ namespace TicketApp
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "3")
             {
-                Function.Message("Anuleer!");
+                Function.Message("Annuleer!");
             }
             else if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "4")
             {
 
                 Function.Message("Bekijk!");
             }
+        }
+
+        private void Orders_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

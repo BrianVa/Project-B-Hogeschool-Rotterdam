@@ -101,6 +101,7 @@
             this.Controls.Add(this.OrdersTable);
             this.Name = "Orders";
             this.Text = "Orders";
+            this.Load += new System.EventHandler(this.Orders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.OrdersTable)).EndInit();
             this.ResumeLayout(false);
 

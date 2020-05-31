@@ -570,5 +570,10 @@ namespace TicketApp
                 setMoviePage(data);
             }
         }
+
+        private void MainApp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
