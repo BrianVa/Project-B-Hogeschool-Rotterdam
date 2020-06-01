@@ -51,12 +51,19 @@ namespace TicketApp
             featured.Add(data[4]["id"].ToString());
 
 
-            //film naam word bij de labels gezet
+            //film naam word bij de labels gezet 
             label1.Text = data[0]["naam"].ToString();
             label2.Text = data[1]["naam"].ToString();
             label3.Text = data[2]["naam"].ToString();
             label4.Text = data[3]["naam"].ToString();
             label5.Text = data[4]["naam"].ToString();
+
+            //Zorgt ervoor dat de film naam begint met een hoofdletter
+            label1.Text = label1.Text[0].ToString().ToUpper() + label1.Text.Substring(1);   
+            label2.Text = label2.Text[0].ToString().ToUpper() + label2.Text.Substring(1);
+            label3.Text = label3.Text[0].ToString().ToUpper() + label3.Text.Substring(1);
+            label4.Text = label4.Text[0].ToString().ToUpper() + label4.Text.Substring(1);
+            label5.Text = label5.Text[0].ToString().ToUpper() + label5.Text.Substring(1);
 
             set_activepanel("main");
         }
@@ -152,6 +159,10 @@ namespace TicketApp
 
             var Function = new Functions();
             film_name.Text = data[0]["naam"].ToString();
+
+            //Zorgt ervoor dat de film naam begint met een hoofdletter
+            film_name.Text = film_name.Text[0].ToString().ToUpper() + film_name.Text.Substring(1);
+
             film_desc.Text = "Film Beschrijving:\n" + data[0]["beschrijving"].ToString();
             film_speelduur.Text = hours.ToString() + " uur " + " en " + minutes + " minuten";
             film_genre.Text = data[0]["genre"].ToString();
@@ -537,7 +548,14 @@ namespace TicketApp
                 foreach (DataRow row in data)
                 {
                     int n = filmSelectGrid.Rows.Add();
+
                     filmSelectGrid.Rows[n].Cells[0].Value = row["naam"];
+
+                    // Zorgt ervoor dat de filmnaam begint met een hoofdletter
+
+                    string str = filmSelectGrid.Rows[n].Cells[0].Value.ToString();
+                    filmSelectGrid.Rows[n].Cells[0].Value = char.ToUpper(str[0]) + str.Substring(1);
+
                     filmSelectGrid.Rows[n].Cells[1].Value = row["genre"];
                     filmSelectGrid.Rows[n].Cells[2].Value = row["speel_duur"].ToString() + " minuten";
                     filmSelectGrid.Rows[n].Cells[3].Value = row["leeftijd"].ToString();

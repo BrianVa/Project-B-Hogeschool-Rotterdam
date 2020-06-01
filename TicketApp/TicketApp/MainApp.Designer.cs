@@ -70,7 +70,13 @@
             this.BitfilmTekst3 = new System.Windows.Forms.Label();
             this.menuComboBox = new System.Windows.Forms.ComboBox();
             this.in_de_bios_panel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.filmSelectGrid = new System.Windows.Forms.DataGridView();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.show_film_panel = new System.Windows.Forms.Panel();
             this.Kijkwijzer = new System.Windows.Forms.PictureBox();
             this.film_genre = new System.Windows.Forms.Label();
@@ -115,12 +121,6 @@
             this.BedanktLabel = new System.Windows.Forms.Label();
             this.BackToHomeButton = new System.Windows.Forms.Button();
             this.genres_panel = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -594,6 +594,18 @@
             this.in_de_bios_panel.TabStop = true;
             this.in_de_bios_panel.Visible = false;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(72, 125);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(268, 43);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Nu in de bioscoop";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // filmSelectGrid
             // 
             this.filmSelectGrid.AllowUserToAddRows = false;
@@ -612,6 +624,42 @@
             this.filmSelectGrid.Size = new System.Drawing.Size(793, 353);
             this.filmSelectGrid.TabIndex = 19;
             this.filmSelectGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.filmSelectGrid_CellContentClick);
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Titel";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column9.Width = 200;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Genre";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 150;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Speelduur";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 150;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Leeftijd";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 150;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Select";
+            this.Column13.Name = "Column13";
+            this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // show_film_panel
             // 
@@ -1115,54 +1163,6 @@
             this.genres_panel.Size = new System.Drawing.Size(1280, 720);
             this.genres_panel.TabIndex = 22;
             this.genres_panel.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(72, 125);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(268, 43);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Nu in de bioscoop";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Titel";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column9.Width = 200;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Genre";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 150;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Speelduur";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 150;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Leeftijd";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 150;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Select";
-            this.Column13.Name = "Column13";
-            this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // MainApp
             // 
