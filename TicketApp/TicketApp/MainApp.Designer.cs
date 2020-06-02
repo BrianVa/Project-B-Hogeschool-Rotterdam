@@ -64,10 +64,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Main_panel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BitfilmTekst3 = new System.Windows.Forms.Label();
             this.menuComboBox = new System.Windows.Forms.ComboBox();
             this.in_de_bios_panel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.Logo2foto = new System.Windows.Forms.PictureBox();
             this.filmSelectGrid = new System.Windows.Forms.DataGridView();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,8 +120,6 @@
             this.BedanktLabel = new System.Windows.Forms.Label();
             this.BackToHomeButton = new System.Windows.Forms.Button();
             this.genres_panel = new System.Windows.Forms.Panel();
-            this.Logo2foto = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -127,7 +127,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).BeginInit();
             this.Main_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.in_de_bios_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo2foto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmSelectGrid)).BeginInit();
             this.show_film_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kijkwijzer)).BeginInit();
@@ -140,8 +142,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.BedanktPanel.SuspendLayout();
             this.genres_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo2foto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // search_button
@@ -336,7 +336,7 @@
             this.featured_5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_5.Image = ((System.Drawing.Image)(resources.GetObject("featured_5.Image")));
-            this.featured_5.Location = new System.Drawing.Point(1044, 173);
+            this.featured_5.Location = new System.Drawing.Point(1043, 188);
             this.featured_5.Margin = new System.Windows.Forms.Padding(6);
             this.featured_5.Name = "featured_5";
             this.featured_5.Size = new System.Drawing.Size(166, 242);
@@ -351,7 +351,7 @@
             this.featured_4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_4.Image = ((System.Drawing.Image)(resources.GetObject("featured_4.Image")));
-            this.featured_4.Location = new System.Drawing.Point(804, 173);
+            this.featured_4.Location = new System.Drawing.Point(803, 188);
             this.featured_4.Margin = new System.Windows.Forms.Padding(6);
             this.featured_4.Name = "featured_4";
             this.featured_4.Size = new System.Drawing.Size(166, 242);
@@ -366,7 +366,7 @@
             this.featured_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_1.Image = ((System.Drawing.Image)(resources.GetObject("featured_1.Image")));
-            this.featured_1.Location = new System.Drawing.Point(84, 173);
+            this.featured_1.Location = new System.Drawing.Point(83, 188);
             this.featured_1.Margin = new System.Windows.Forms.Padding(6);
             this.featured_1.Name = "featured_1";
             this.featured_1.Size = new System.Drawing.Size(166, 242);
@@ -381,7 +381,7 @@
             this.featured_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_2.Image = ((System.Drawing.Image)(resources.GetObject("featured_2.Image")));
-            this.featured_2.Location = new System.Drawing.Point(324, 173);
+            this.featured_2.Location = new System.Drawing.Point(323, 188);
             this.featured_2.Margin = new System.Windows.Forms.Padding(6);
             this.featured_2.Name = "featured_2";
             this.featured_2.Size = new System.Drawing.Size(166, 242);
@@ -396,7 +396,7 @@
             this.featured_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.featured_3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.featured_3.Image = ((System.Drawing.Image)(resources.GetObject("featured_3.Image")));
-            this.featured_3.Location = new System.Drawing.Point(564, 173);
+            this.featured_3.Location = new System.Drawing.Point(563, 188);
             this.featured_3.Margin = new System.Windows.Forms.Padding(6);
             this.featured_3.Name = "featured_3";
             this.featured_3.Size = new System.Drawing.Size(166, 242);
@@ -413,7 +413,7 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(804, 421);
+            this.label4.Location = new System.Drawing.Point(803, 436);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 30);
@@ -431,7 +431,7 @@
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(84, 421);
+            this.label1.Location = new System.Drawing.Point(83, 436);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 30);
@@ -448,7 +448,7 @@
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(1044, 421);
+            this.label5.Location = new System.Drawing.Point(1043, 436);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 30);
@@ -465,7 +465,7 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(324, 421);
+            this.label2.Location = new System.Drawing.Point(323, 436);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 30);
@@ -482,7 +482,7 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(564, 421);
+            this.label3.Location = new System.Drawing.Point(563, 436);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 30);
@@ -499,7 +499,6 @@
             this.Main_panel.BackColor = System.Drawing.Color.Transparent;
             this.Main_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Main_panel.BackgroundImage")));
             this.Main_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Main_panel.Controls.Add(this.pictureBox1);
             this.Main_panel.Controls.Add(this.featured_3);
             this.Main_panel.Controls.Add(this.featured_2);
             this.Main_panel.Controls.Add(this.label3);
@@ -510,12 +509,23 @@
             this.Main_panel.Controls.Add(this.featured_5);
             this.Main_panel.Controls.Add(this.label1);
             this.Main_panel.Controls.Add(this.label4);
+            this.Main_panel.Controls.Add(this.pictureBox1);
             this.Main_panel.Location = new System.Drawing.Point(0, 24);
             this.Main_panel.Margin = new System.Windows.Forms.Padding(6);
             this.Main_panel.Name = "Main_panel";
             this.Main_panel.Size = new System.Drawing.Size(1280, 720);
             this.Main_panel.TabIndex = 16;
             this.Main_panel.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(477, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(354, 193);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // BitfilmTekst3
             // 
@@ -569,6 +579,17 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Nu in de bioscoop";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Logo2foto
+            // 
+            this.Logo2foto.BackColor = System.Drawing.Color.Transparent;
+            this.Logo2foto.Image = ((System.Drawing.Image)(resources.GetObject("Logo2foto.Image")));
+            this.Logo2foto.Location = new System.Drawing.Point(73, 21);
+            this.Logo2foto.Name = "Logo2foto";
+            this.Logo2foto.Size = new System.Drawing.Size(268, 119);
+            this.Logo2foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo2foto.TabIndex = 25;
+            this.Logo2foto.TabStop = false;
             // 
             // filmSelectGrid
             // 
@@ -1128,27 +1149,6 @@
             this.genres_panel.TabIndex = 22;
             this.genres_panel.Visible = false;
             // 
-            // Logo2foto
-            // 
-            this.Logo2foto.BackColor = System.Drawing.Color.Transparent;
-            this.Logo2foto.Image = ((System.Drawing.Image)(resources.GetObject("Logo2foto.Image")));
-            this.Logo2foto.Location = new System.Drawing.Point(73, 21);
-            this.Logo2foto.Name = "Logo2foto";
-            this.Logo2foto.Size = new System.Drawing.Size(268, 119);
-            this.Logo2foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Logo2foto.TabIndex = 25;
-            this.Logo2foto.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(477, -29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(354, 193);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
             // MainApp
             // 
             this.AcceptButton = this.search_button;
@@ -1161,7 +1161,6 @@
             this.Controls.Add(this.search_button);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.in_de_bios_panel);
             this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.BedanktPanel);
             this.Controls.Add(this.AfrekenPanel);
@@ -1169,6 +1168,7 @@
             this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.genres_panel);
+            this.Controls.Add(this.in_de_bios_panel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -1185,7 +1185,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).EndInit();
             this.Main_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.in_de_bios_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Logo2foto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmSelectGrid)).EndInit();
             this.show_film_panel.ResumeLayout(false);
             this.show_film_panel.PerformLayout();
@@ -1200,8 +1202,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.BedanktPanel.ResumeLayout(false);
             this.genres_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Logo2foto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

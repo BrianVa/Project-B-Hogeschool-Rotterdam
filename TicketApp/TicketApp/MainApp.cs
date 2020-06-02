@@ -59,7 +59,7 @@ namespace TicketApp
             label5.Text = data[4]["naam"].ToString();
 
             //Zorgt ervoor dat de film naam begint met een hoofdletter
-            label1.Text = label1.Text[0].ToString().ToUpper() + label1.Text.Substring(1);   
+            label1.Text = label1.Text[0].ToString().ToUpper() + label1.Text.Substring(1);
             label2.Text = label2.Text[0].ToString().ToUpper() + label2.Text.Substring(1);
             label3.Text = label3.Text[0].ToString().ToUpper() + label3.Text.Substring(1);
             label4.Text = label4.Text[0].ToString().ToUpper() + label4.Text.Substring(1);
