@@ -586,5 +586,10 @@ namespace TicketApp
         {
 
         }
+
+        private void searched_movie_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nee Hossein!");
+        }
     }
 }

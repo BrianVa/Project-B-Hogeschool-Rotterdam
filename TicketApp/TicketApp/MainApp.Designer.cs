@@ -762,6 +762,7 @@
             this.searched_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.searched_movie.TabIndex = 6;
             this.searched_movie.TabStop = false;
+            this.searched_movie.Click += new System.EventHandler(this.searched_movie_Click);
             // 
             // film_speelduur_title
             // 
@@ -1161,14 +1162,14 @@
             this.Controls.Add(this.search_button);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.show_film_panel);
+            this.Controls.Add(this.genres_panel);
+            this.Controls.Add(this.in_de_bios_panel);
             this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.BedanktPanel);
             this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.TijdPanel);
-            this.Controls.Add(this.show_film_panel);
-            this.Controls.Add(this.genres_panel);
-            this.Controls.Add(this.in_de_bios_panel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
