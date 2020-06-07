@@ -85,6 +85,7 @@ namespace TicketApp
                         string query = ("DELETE FROM orders WHERE id = '" + film_id + "'");
                         Function.ExcQuery(query);
                         loadOrders(session);
+                        Function.Message("De reservering is geannuleerd. \n\nHet betaalde bedrag wordt binnen 2 weken op uw rekening teruggestort.");
                     }
                 }
                 else
