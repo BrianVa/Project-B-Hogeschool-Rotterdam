@@ -20,7 +20,7 @@ namespace TicketApp
         public Orders(Session session)
         {
             InitializeComponent();
-            
+            var topLeftHeaderCell = OrdersTable.TopLeftHeaderCell;
             Functions function = new Functions();
             this.session = session;
             loadOrders(session);
