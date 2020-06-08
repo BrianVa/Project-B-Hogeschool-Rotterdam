@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +50,7 @@
             this.medewerkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FilmOverzicht = new System.Windows.Forms.ToolStripMenuItem();
             this.FilmAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.TijdAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.KlantOverzicht = new System.Windows.Forms.ToolStripMenuItem();
             this.toevoegenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,7 +69,6 @@
             this.background2picture = new System.Windows.Forms.PictureBox();
             this.Foreground2picture = new System.Windows.Forms.PictureBox();
             this.Foreground1picture = new System.Windows.Forms.PictureBox();
-            this.BitfilmTekst3 = new System.Windows.Forms.Label();
             this.menuComboBox = new System.Windows.Forms.ComboBox();
             this.in_de_bios_panel = new System.Windows.Forms.Panel();
             this.filmSelectGrid = new System.Windows.Forms.DataGridView();
@@ -121,9 +121,7 @@
             this.BedanktBeschrijving = new System.Windows.Forms.Label();
             this.BedanktLabel = new System.Windows.Forms.Label();
             this.BackToHomeButton = new System.Windows.Forms.Button();
-            this.genres_panel = new System.Windows.Forms.Panel();
             this.UpdaterAchtergrond = new System.Windows.Forms.Timer(this.components);
-            this.TijdAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -149,7 +147,6 @@
             this.AfrekenPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.BedanktPanel.SuspendLayout();
-            this.genres_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // search_button
@@ -272,30 +269,37 @@
             this.FilmAdd,
             this.TijdAdd});
             this.FilmOverzicht.Name = "FilmOverzicht";
-            this.FilmOverzicht.Size = new System.Drawing.Size(180, 22);
+            this.FilmOverzicht.Size = new System.Drawing.Size(154, 22);
             this.FilmOverzicht.Text = "Film Overzicht";
             this.FilmOverzicht.Click += new System.EventHandler(this.FilmOverzicht_Click);
             // 
             // FilmAdd
             // 
             this.FilmAdd.Name = "FilmAdd";
-            this.FilmAdd.Size = new System.Drawing.Size(180, 22);
+            this.FilmAdd.Size = new System.Drawing.Size(157, 22);
             this.FilmAdd.Text = "Film Toevoegen";
             this.FilmAdd.Click += new System.EventHandler(this.FilmAdd_Click);
+            // 
+            // TijdAdd
+            // 
+            this.TijdAdd.Name = "TijdAdd";
+            this.TijdAdd.Size = new System.Drawing.Size(157, 22);
+            this.TijdAdd.Text = "Tijd Toevoegen";
+            this.TijdAdd.Click += new System.EventHandler(this.TijdAdd_Click);
             // 
             // KlantOverzicht
             // 
             this.KlantOverzicht.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toevoegenToolStripMenuItem1});
             this.KlantOverzicht.Name = "KlantOverzicht";
-            this.KlantOverzicht.Size = new System.Drawing.Size(180, 22);
+            this.KlantOverzicht.Size = new System.Drawing.Size(154, 22);
             this.KlantOverzicht.Text = "Klant Overzicht";
             this.KlantOverzicht.Click += new System.EventHandler(this.KlantOverzicht_Click);
             // 
             // toevoegenToolStripMenuItem1
             // 
             this.toevoegenToolStripMenuItem1.Name = "toevoegenToolStripMenuItem1";
-            this.toevoegenToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toevoegenToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.toevoegenToolStripMenuItem1.Text = "Klant Toevoegen";
             this.toevoegenToolStripMenuItem1.Click += new System.EventHandler(this.toevoegenToolStripMenuItem1_Click);
             // 
@@ -530,26 +534,13 @@
             this.Foreground1picture.TabIndex = 20;
             this.Foreground1picture.TabStop = false;
             // 
-            // BitfilmTekst3
-            // 
-            this.BitfilmTekst3.BackColor = System.Drawing.Color.Transparent;
-            this.BitfilmTekst3.Font = new System.Drawing.Font("Cambria", 54F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BitfilmTekst3.Location = new System.Drawing.Point(69, 31);
-            this.BitfilmTekst3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.BitfilmTekst3.Name = "BitfilmTekst3";
-            this.BitfilmTekst3.Size = new System.Drawing.Size(321, 115);
-            this.BitfilmTekst3.TabIndex = 21;
-            this.BitfilmTekst3.Text = "BITFILM";
-            this.BitfilmTekst3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // menuComboBox
             // 
             this.menuComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.menuComboBox.FormattingEnabled = true;
             this.menuComboBox.Items.AddRange(new object[] {
             "Top 5",
-            "Nu in de bioscoop",
-            "Genres"});
+            "Nu in de bioscoop"});
             this.menuComboBox.Location = new System.Drawing.Point(749, 2);
             this.menuComboBox.Name = "menuComboBox";
             this.menuComboBox.Size = new System.Drawing.Size(120, 21);
@@ -592,8 +583,8 @@
             // 
             // Column9
             // 
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle11;
             this.Column9.HeaderText = "Titel";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -602,8 +593,8 @@
             // 
             // Column10
             // 
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle12;
             this.Column10.HeaderText = "Genre";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
@@ -611,8 +602,8 @@
             // 
             // Column11
             // 
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column11.HeaderText = "Speelduur";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -620,8 +611,8 @@
             // 
             // Column12
             // 
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column12.HeaderText = "Leeftijd";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
@@ -629,9 +620,9 @@
             // 
             // Column13
             // 
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column13.HeaderText = "Select";
             this.Column13.Name = "Column13";
             this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -764,6 +755,7 @@
             this.searched_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.searched_movie.TabIndex = 6;
             this.searched_movie.TabStop = false;
+            this.searched_movie.Click += new System.EventHandler(this.searched_movie_Click);
             // 
             // film_speelduur_title
             // 
@@ -1140,29 +1132,11 @@
             this.BackToHomeButton.UseVisualStyleBackColor = true;
             this.BackToHomeButton.Click += new System.EventHandler(this.BackToHomeButton_Click);
             // 
-            // genres_panel
-            // 
-            this.genres_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("genres_panel.BackgroundImage")));
-            this.genres_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.genres_panel.Controls.Add(this.BitfilmTekst3);
-            this.genres_panel.Location = new System.Drawing.Point(0, 24);
-            this.genres_panel.Name = "genres_panel";
-            this.genres_panel.Size = new System.Drawing.Size(1280, 720);
-            this.genres_panel.TabIndex = 22;
-            this.genres_panel.Visible = false;
-            // 
             // UpdaterAchtergrond
             // 
             this.UpdaterAchtergrond.Enabled = true;
             this.UpdaterAchtergrond.Interval = 25;
             this.UpdaterAchtergrond.Tick += new System.EventHandler(this.UpdaterAchtergrond_Tick);
-            // 
-            // TijdAdd
-            // 
-            this.TijdAdd.Name = "TijdAdd";
-            this.TijdAdd.Size = new System.Drawing.Size(180, 22);
-            this.TijdAdd.Text = "Tijd Toevoegen";
-            this.TijdAdd.Click += new System.EventHandler(this.TijdAdd_Click);
             // 
             // MainApp
             // 
@@ -1172,18 +1146,17 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
-            this.Controls.Add(this.in_de_bios_panel);
             this.Controls.Add(this.menuComboBox);
             this.Controls.Add(this.search_button);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.show_film_panel);
+            this.Controls.Add(this.in_de_bios_panel);
             this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.BedanktPanel);
             this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.TijdPanel);
-            this.Controls.Add(this.show_film_panel);
-            this.Controls.Add(this.genres_panel);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -1220,7 +1193,6 @@
             this.AfrekenPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.BedanktPanel.ResumeLayout(false);
-            this.genres_panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1303,10 +1275,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel in_de_bios_panel;
-        private System.Windows.Forms.Label BitfilmTekst3;
         private System.Windows.Forms.ComboBox menuComboBox;
         private System.Windows.Forms.DataGridView filmSelectGrid;
-        private System.Windows.Forms.Panel genres_panel;
         private System.Windows.Forms.PictureBox Foreground1picture;
         private System.Windows.Forms.PictureBox background1picture;
         private System.Windows.Forms.Timer UpdaterAchtergrond;

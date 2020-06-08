@@ -104,7 +104,6 @@ C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\Ticke
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.xml
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.csprojAssemblyReference.cache
-C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.BitFilm.resources
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.login.resources
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.MainApp.resources
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.Orders.resources
@@ -163,3 +162,5 @@ C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\obj\Debug\Ticket
 C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\obj\Debug\TicketApp.pdb
 C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\obj\Debug\TicketApp.Film.resources
 C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\obj\Debug\TicketApp.Klant.resources
+C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.Film.resources
+C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.Klant.resources

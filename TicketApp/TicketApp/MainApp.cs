@@ -170,8 +170,8 @@ namespace TicketApp
             string KijkwijzerFotoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/pictogram/" + data[0]["leeftijd"].ToString() + ".png");
             Kijkwijzer.Image = Image.FromFile(KijkwijzerFotoPath);
 
-            string picture_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[0]["img_url"] + ".jpg");
-            string BG_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/BG/" + data[0]["back_url"] + ".png");
+            string picture_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[0]["img_url"]);
+            string BG_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/BG/" + data[0]["back_url"]);
             searched_movie.Image = Image.FromFile(picture_path);
             show_film_panel.BackgroundImage = Image.FromFile(BG_path);
             TijdPanel.BackgroundImage = Image.FromFile(BG_path);
@@ -260,13 +260,14 @@ namespace TicketApp
             AfrekenPanel.Visible = false;
             BedanktPanel.Visible = false;
             in_de_bios_panel.Visible = false;
-            genres_panel.Visible = false;
+            UpdaterAchtergrond.Enabled = false;
 
             switch (panel)
             {
                 case "main":
                     this.menuComboBox.Text = "Top 5";
                     Main_panel.Visible = true;
+                    UpdaterAchtergrond.Enabled = true;
                     break;
                 case "tijd":
                     TijdPanel.Visible = true;
@@ -285,12 +286,11 @@ namespace TicketApp
                     break;
                 case "bioscoop":
                     in_de_bios_panel.Visible = true;
-                    break;
-                case "genres":
-                    genres_panel.Visible = true;
+                    UpdaterAchtergrond.Enabled = true;
                     break;
                 default:
                     Main_panel.Visible = true;
+                    UpdaterAchtergrond.Enabled = true;
                     break;   
             }
         }
@@ -563,10 +563,6 @@ namespace TicketApp
                 }
                 set_activepanel("bioscoop");
             }
-            else if (menuComboBox.SelectedIndex == 2)
-            {
-                set_activepanel("genres");
-            }
         }
 
         private void filmSelectGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -644,5 +640,4 @@ namespace TicketApp
             SingupForm.Show();
         }
     }
-
 }
