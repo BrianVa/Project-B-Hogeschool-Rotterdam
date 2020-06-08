@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +50,7 @@
             this.medewerkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FilmOverzicht = new System.Windows.Forms.ToolStripMenuItem();
             this.FilmAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.TijdAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.KlantOverzicht = new System.Windows.Forms.ToolStripMenuItem();
             this.toevoegenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,13 +108,23 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.AfrekenPanel = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Afrnaam = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Afrhww = new System.Windows.Forms.TextBox();
+            this.Afrww = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Afrrenk = new System.Windows.Forms.TextBox();
+            this.Afrbank = new System.Windows.Forms.ComboBox();
+            this.Afrdate = new System.Windows.Forms.DateTimePicker();
+            this.Afremail = new System.Windows.Forms.TextBox();
+            this.Afranaam = new System.Windows.Forms.TextBox();
             this.AfrekenTerugKnop = new System.Windows.Forms.Button();
             this.AfrekenKnop = new System.Windows.Forms.Button();
             this.AlgVoorwaardenCheckBox = new System.Windows.Forms.CheckBox();
@@ -123,7 +134,6 @@
             this.BackToHomeButton = new System.Windows.Forms.Button();
             this.genres_panel = new System.Windows.Forms.Panel();
             this.UpdaterAchtergrond = new System.Windows.Forms.Timer(this.components);
-            this.TijdAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -272,32 +282,38 @@
             this.FilmAdd,
             this.TijdAdd});
             this.FilmOverzicht.Name = "FilmOverzicht";
-            this.FilmOverzicht.Size = new System.Drawing.Size(180, 22);
+            this.FilmOverzicht.Size = new System.Drawing.Size(154, 22);
             this.FilmOverzicht.Text = "Film Overzicht";
             this.FilmOverzicht.Click += new System.EventHandler(this.FilmOverzicht_Click);
             // 
             // FilmAdd
             // 
             this.FilmAdd.Name = "FilmAdd";
-            this.FilmAdd.Size = new System.Drawing.Size(180, 22);
+            this.FilmAdd.Size = new System.Drawing.Size(157, 22);
             this.FilmAdd.Text = "Film Toevoegen";
             this.FilmAdd.Click += new System.EventHandler(this.FilmAdd_Click);
+            // 
+            // TijdAdd
+            // 
+            this.TijdAdd.Name = "TijdAdd";
+            this.TijdAdd.Size = new System.Drawing.Size(157, 22);
+            this.TijdAdd.Text = "Tijd Toevoegen";
+            this.TijdAdd.Click += new System.EventHandler(this.TijdAdd_Click);
             // 
             // KlantOverzicht
             // 
             this.KlantOverzicht.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toevoegenToolStripMenuItem1});
             this.KlantOverzicht.Name = "KlantOverzicht";
-            this.KlantOverzicht.Size = new System.Drawing.Size(180, 22);
+            this.KlantOverzicht.Size = new System.Drawing.Size(154, 22);
             this.KlantOverzicht.Text = "Klant Overzicht";
             this.KlantOverzicht.Click += new System.EventHandler(this.KlantOverzicht_Click);
             // 
             // toevoegenToolStripMenuItem1
             // 
             this.toevoegenToolStripMenuItem1.Name = "toevoegenToolStripMenuItem1";
-            this.toevoegenToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toevoegenToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.toevoegenToolStripMenuItem1.Text = "Klant Toevoegen";
-            this.toevoegenToolStripMenuItem1.Click += new System.EventHandler(this.toevoegenToolStripMenuItem1_Click);
             // 
             // infoToolStripMenuItem
             // 
@@ -592,8 +608,8 @@
             // 
             // Column9
             // 
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column9.HeaderText = "Titel";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -602,8 +618,8 @@
             // 
             // Column10
             // 
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column10.HeaderText = "Genre";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
@@ -611,8 +627,8 @@
             // 
             // Column11
             // 
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column11.HeaderText = "Speelduur";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -620,8 +636,8 @@
             // 
             // Column12
             // 
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column12.HeaderText = "Leeftijd";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
@@ -629,9 +645,9 @@
             // 
             // Column13
             // 
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column13.HeaderText = "Select";
             this.Column13.Name = "Column13";
             this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -982,13 +998,23 @@
             // AfrekenPanel
             // 
             this.AfrekenPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AfrekenPanel.BackgroundImage")));
+            this.AfrekenPanel.Controls.Add(this.label13);
+            this.AfrekenPanel.Controls.Add(this.label12);
+            this.AfrekenPanel.Controls.Add(this.label11);
+            this.AfrekenPanel.Controls.Add(this.label10);
+            this.AfrekenPanel.Controls.Add(this.label9);
+            this.AfrekenPanel.Controls.Add(this.label8);
+            this.AfrekenPanel.Controls.Add(this.label7);
+            this.AfrekenPanel.Controls.Add(this.Afrnaam);
+            this.AfrekenPanel.Controls.Add(this.label6);
+            this.AfrekenPanel.Controls.Add(this.Afrhww);
+            this.AfrekenPanel.Controls.Add(this.Afrww);
             this.AfrekenPanel.Controls.Add(this.dataGridView2);
-            this.AfrekenPanel.Controls.Add(this.textBox4);
-            this.AfrekenPanel.Controls.Add(this.comboBox1);
-            this.AfrekenPanel.Controls.Add(this.dateTimePicker1);
-            this.AfrekenPanel.Controls.Add(this.textBox3);
-            this.AfrekenPanel.Controls.Add(this.textBox2);
-            this.AfrekenPanel.Controls.Add(this.textBox1);
+            this.AfrekenPanel.Controls.Add(this.Afrrenk);
+            this.AfrekenPanel.Controls.Add(this.Afrbank);
+            this.AfrekenPanel.Controls.Add(this.Afrdate);
+            this.AfrekenPanel.Controls.Add(this.Afremail);
+            this.AfrekenPanel.Controls.Add(this.Afranaam);
             this.AfrekenPanel.Controls.Add(this.AfrekenTerugKnop);
             this.AfrekenPanel.Controls.Add(this.AfrekenKnop);
             this.AfrekenPanel.Controls.Add(this.AlgVoorwaardenCheckBox);
@@ -998,6 +1024,101 @@
             this.AfrekenPanel.TabIndex = 16;
             this.AfrekenPanel.Visible = false;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(968, 423);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(159, 13);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "Herhaal wachtwoord (Optioneel)";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(968, 379);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(122, 13);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Wachtwoord (Optioneel)";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(967, 333);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(96, 13);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Rekening nummer:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(968, 284);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Bank:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(968, 229);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Geboorte Datum:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(967, 182);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Email:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(968, 132);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Achternaam:";
+            // 
+            // Afrnaam
+            // 
+            this.Afrnaam.Location = new System.Drawing.Point(971, 100);
+            this.Afrnaam.Name = "Afrnaam";
+            this.Afrnaam.Size = new System.Drawing.Size(230, 20);
+            this.Afrnaam.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(968, 84);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Voornaam:";
+            // 
+            // Afrhww
+            // 
+            this.Afrhww.Location = new System.Drawing.Point(969, 439);
+            this.Afrhww.Name = "Afrhww";
+            this.Afrhww.Size = new System.Drawing.Size(230, 20);
+            this.Afrhww.TabIndex = 15;
+            this.Afrhww.UseSystemPasswordChar = true;
+            // 
+            // Afrww
+            // 
+            this.Afrww.Location = new System.Drawing.Point(969, 395);
+            this.Afrww.Name = "Afrww";
+            this.Afrww.Size = new System.Drawing.Size(230, 20);
+            this.Afrww.TabIndex = 14;
+            this.Afrww.UseSystemPasswordChar = true;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1006,60 +1127,50 @@
             this.dataGridView2.Size = new System.Drawing.Size(411, 282);
             this.dataGridView2.TabIndex = 13;
             // 
-            // textBox4
+            // Afrrenk
             // 
-            this.textBox4.Location = new System.Drawing.Point(969, 322);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(231, 20);
-            this.textBox4.TabIndex = 12;
-            this.textBox4.Text = "Rekeningnummer";
+            this.Afrrenk.Location = new System.Drawing.Point(970, 349);
+            this.Afrrenk.Name = "Afrrenk";
+            this.Afrrenk.Size = new System.Drawing.Size(231, 20);
+            this.Afrrenk.TabIndex = 12;
             // 
-            // comboBox1
+            // Afrbank
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Afrbank.FormattingEnabled = true;
+            this.Afrbank.Items.AddRange(new object[] {
             "Rabobank",
             "Abn Amro",
             "ING",
             "SNS",
             "Regiobank",
             "ASN"});
-            this.comboBox1.Location = new System.Drawing.Point(969, 284);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(231, 21);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Text = "<Selecteer uw bank>";
+            this.Afrbank.Location = new System.Drawing.Point(968, 300);
+            this.Afrbank.Name = "Afrbank";
+            this.Afrbank.Size = new System.Drawing.Size(231, 21);
+            this.Afrbank.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // Afrdate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(969, 248);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(231, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.Afrdate.CustomFormat = "dd/MM/yyyy";
+            this.Afrdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Afrdate.Location = new System.Drawing.Point(969, 248);
+            this.Afrdate.Name = "Afrdate";
+            this.Afrdate.Size = new System.Drawing.Size(231, 20);
+            this.Afrdate.TabIndex = 10;
             // 
-            // textBox3
+            // Afremail
             // 
-            this.textBox3.Location = new System.Drawing.Point(969, 210);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(231, 20);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "Email";
+            this.Afremail.Location = new System.Drawing.Point(970, 198);
+            this.Afremail.Name = "Afremail";
+            this.Afremail.Size = new System.Drawing.Size(231, 20);
+            this.Afremail.TabIndex = 9;
             // 
-            // textBox2
+            // Afranaam
             // 
-            this.textBox2.Location = new System.Drawing.Point(970, 169);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 20);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "Achternaam";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(970, 131);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "Voornaam";
+            this.Afranaam.Location = new System.Drawing.Point(971, 152);
+            this.Afranaam.Name = "Afranaam";
+            this.Afranaam.Size = new System.Drawing.Size(230, 20);
+            this.Afranaam.TabIndex = 8;
             // 
             // AfrekenTerugKnop
             // 
@@ -1157,13 +1268,6 @@
             this.UpdaterAchtergrond.Interval = 25;
             this.UpdaterAchtergrond.Tick += new System.EventHandler(this.UpdaterAchtergrond_Tick);
             // 
-            // TijdAdd
-            // 
-            this.TijdAdd.Name = "TijdAdd";
-            this.TijdAdd.Size = new System.Drawing.Size(180, 22);
-            this.TijdAdd.Text = "Tijd Toevoegen";
-            this.TijdAdd.Click += new System.EventHandler(this.TijdAdd_Click);
-            // 
             // MainApp
             // 
             this.AcceptButton = this.search_button;
@@ -1172,15 +1276,15 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
-            this.Controls.Add(this.in_de_bios_panel);
             this.Controls.Add(this.menuComboBox);
             this.Controls.Add(this.search_button);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.AfrekenPanel);
+            this.Controls.Add(this.in_de_bios_panel);
+            this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.BedanktPanel);
-            this.Controls.Add(this.AfrekenPanel);
-            this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.genres_panel);
@@ -1296,12 +1400,11 @@
         private System.Windows.Forms.Label BedanktBeschrijving;
         private System.Windows.Forms.Label BedanktLabel;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Afrrenk;
+        private System.Windows.Forms.ComboBox Afrbank;
+        private System.Windows.Forms.DateTimePicker Afrdate;
+        private System.Windows.Forms.TextBox Afremail;
+        private System.Windows.Forms.TextBox Afranaam;
         private System.Windows.Forms.Panel in_de_bios_panel;
         private System.Windows.Forms.Label BitfilmTekst3;
         private System.Windows.Forms.ComboBox menuComboBox;
@@ -1318,6 +1421,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewButtonColumn Column13;
         private System.Windows.Forms.ToolStripMenuItem TijdAdd;
+        private System.Windows.Forms.TextBox Afrww;
+        private System.Windows.Forms.TextBox Afrhww;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox Afrnaam;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }
 

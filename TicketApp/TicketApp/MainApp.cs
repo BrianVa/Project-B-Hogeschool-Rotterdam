@@ -25,6 +25,7 @@ namespace TicketApp
         private List<string> featured = new List<string>();
         private int selectedFilm;
         private int selectedTime;
+        private int selectedChair;
 
         public MainApp()
         {
@@ -72,14 +73,14 @@ namespace TicketApp
             get
             {
                 return this.login_button.Text;
-            
+
             }
             set
             {
-                this.login_button.Text = value; 
-            
+                this.login_button.Text = value;
+
             }
-        
+
         }
 
         private void search_button_Click(object sender, EventArgs e)
@@ -93,11 +94,12 @@ namespace TicketApp
 
             if (data.Count > 0)
             {
-                //film pagina word opgezet
-                setMoviePage(data);
+                DataRowCollection film = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + data[0]["id"] + "'");
+                setMoviePage(film);
 
             }
-            else {
+            else
+            {
                 Function.Message("Kan film niet vinden!");
             }
         }
@@ -106,12 +108,12 @@ namespace TicketApp
             // deze functie sluit de app af
             Environment.Exit(0);
         }
-        private void info_button_click(object sender, EventArgs e)  
+        private void info_button_click(object sender, EventArgs e)
         {
             var Function = new Functions();
             //deze functie geeft een melding met wat info
             Function.Message("Made by:\n" +
-                "\n"+
+                "\n" +
                 "Brian Vaartjes.\n" +
                 "Glenn Visser.\n" +
                 "Jeroen Struijk.\n" +
@@ -128,7 +130,8 @@ namespace TicketApp
                 Function.Message("U bent uitgelogd!!");
                 session = null;
             }
-            else {
+            else
+            {
                 login loginForm = new login();
                 loginForm.Show();
             }
@@ -137,7 +140,7 @@ namespace TicketApp
         private void aanmeld_button_Click(object sender, EventArgs e)
         {
             var Function = new Functions();
-            
+
             //deze functie roept het aanmeld formulier aan of geeft een melding als een gebruiker is ingelogd
             if (session != null)
             {
@@ -165,7 +168,7 @@ namespace TicketApp
 
             film_desc.Text = "Film Beschrijving:\n" + data[0]["beschrijving"].ToString();
             film_speelduur.Text = hours.ToString() + " uur " + " en " + minutes + " minuten";
-            film_genre.Text = data[0]["genre"].ToString();
+            film_genre.Text = data[0]["GenreNaam"].ToString();
 
             string KijkwijzerFotoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/pictogram/" + data[0]["leeftijd"].ToString() + ".png");
             Kijkwijzer.Image = Image.FromFile(KijkwijzerFotoPath);
@@ -211,7 +214,7 @@ namespace TicketApp
                 if (Function.CheckAge(session, age))
                 {
                     DataRowCollection data = Functions.Select("SELECT * FROM tijden WHERE film_id = '" + selectedFilm + "'");
-                    
+
 
                     FilmTijden.Rows.Clear();
                     foreach (DataRow row in data)
@@ -291,37 +294,37 @@ namespace TicketApp
                     break;
                 default:
                     Main_panel.Visible = true;
-                    break;   
+                    break;
             }
         }
 
         private void featured_1_Click(object sender, EventArgs e)
         {
-            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[0]) + "'");
+            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[0]) + "'");
             setMoviePage(data);
         }
 
         private void featured_2_Click(object sender, EventArgs e)
         {
-            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[1]) + "'");
+            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[0]) + "'");
             setMoviePage(data);
         }
 
         private void featured_3_Click(object sender, EventArgs e)
         {
-            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[2]) + "'");
+            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[0]) + "'");
             setMoviePage(data);
         }
 
         private void featured_4_Click(object sender, EventArgs e)
         {
-            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[3]) + "'");
+            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[0]) + "'");
             setMoviePage(data);
         }
 
         private void featured_5_Click(object sender, EventArgs e)
         {
-            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + Int32.Parse(featured[4]) + "'");
+            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[0]) + "'");
             setMoviePage(data);
         }
 
@@ -338,7 +341,7 @@ namespace TicketApp
 
             foreach (DataRow row in ordered)
             {
-                orders.Add(row["stoel_id"].ToString());        
+                orders.Add(row["stoel_id"].ToString());
             }
 
             StoelSelect.Rows.Clear();
@@ -415,7 +418,7 @@ namespace TicketApp
                 mijnAccountToolStripMenuItem.Visible = true;
                 mijnOrdersToolStripMenuItem.Visible = true;
                 aanmeld_button.Visible = false;
-                if(session.isAdmin)
+                if (session.isAdmin)
                 {
                     medewerkerToolStripMenuItem.Visible = true;
                 }
@@ -452,7 +455,7 @@ namespace TicketApp
             orders.Show();
         }
 
-        
+
         private void algemeneVoorwaardenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var Functions = new Functions();
@@ -472,6 +475,14 @@ namespace TicketApp
 
         private void NaarAfrekenenKnop_Click(object sender, EventArgs e)
         {
+            var Function = new Functions();
+            selectedChair = Int32.Parse(selectedStoelen[0]);
+
+            if (session != null) { 
+            
+            
+            }
+
             set_activepanel("afrekenen");
         }
 
@@ -494,18 +505,91 @@ namespace TicketApp
 
         private void BackToHomeButton_Click(object sender, EventArgs e)
         {
+            var Function = new Functions();
+            if (Afrnaam.Text == "" || Afranaam.Text == "" || Afrdate.Text == "" || Afrbank.Text == "" || Afremail.Text == "" || Afrrenk.Text == "")
+            {
+                Function.Message("Er zijn legen velden!");
+
+            }
+            else
+            {
+
+                if (Afrww.Text != "" || Afrhww.Text != "")
+                {
+                    if (Afrww.Text != Afrhww.Text)
+                    {
+
+                        Function.Message("Wachtwoord en Herhaal Wachtwoord moeten hetzelfde zijn");
+                    }
+                    else
+                    {
+
+                        Function.Message("Bestelling is toegevoegd");
+                        this.Close();
+
+                    }
+                }
+            }
             set_activepanel("main");
         }
 
         private void AfrekenKnop_Click(object sender, EventArgs e)
         {
+            Functions Function = new Functions();
+            if (Afrnaam.Text == "" || Afranaam.Text == "" || Afremail.Text == "" || Afrrenk.Text == "" || Afrbank.Text == "" || Afrdate.Text == "")
+            {
+                Function.Message("Er zijn lege velden");
+
+            }
+            else
+            {
+                int user_id = 0;
+                if (Afrww.Text != "" || Afrhww.Text != "")
+                {
+                    if (Afrww.Text != Afrhww.Text)
+                    {
+                        Function.Message("Wachtwoord en herhaal Wachtwoord moeten hetzelfde zijn");
+
+                    }
+                    else
+                    {
+                        string date = Afrdate.Value.ToString("dd/MM/yyyy");
+                        string hash = Function.ComputeSha256Hash(Afrww.Text.Trim());
+
+                        DataRowCollection data = Functions.Select("SELECT email FROM gebruikers WHERE email= '" + Afremail.Text.Trim() + "'");
+
+                        if (data.Count > 0)
+                        {
+                            Function.Message(Afremail.Text + " word al gebruikt kies a.u.b een ander email adres.");
+
+                        }
+
+                        string user = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id, geboorteDatum) values ('" + Afrnaam.Text.Trim() + "', '" + Afranaam.Text.Trim() + "','" + Afremail.Text.Trim() + "','" + hash + "','" + 2 + "','" + date + "')";
+                        
+                        Function.Message(user);
+                        Function.ExcQuery(user);
+                        DataRowCollection last_user = Functions.Select("select seq from sqlite_sequence where name='gebruikers'");
+                        user_id = Int32.Parse(last_user[0]["seq"].ToString());
+
+                    }
+
+                }
+                if (session != null)
+                {
+                    user_id = session.id;
+                }
+
+                string query = "INSERT INTO orders(user_id, tijd_id,order_date,ticket_id,stoel_id) values ('" + user_id + "','" + selectedTime + "','" + DateTime.Now.ToString("dd/MM/yyyy") + "','" + 1 + "','" + selectedChair + "')";
+                Function.Message(query);
+                Function.ExcQuery(query);
+            }
             set_activepanel("bedankt");
         }
 
         private void StoelSelect_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var Function = new Functions();
-            int amount = 3;
+            int amount = 1;
             var senderGrid = (DataGridView)sender;
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
@@ -516,22 +600,24 @@ namespace TicketApp
                     selectedStoelen.Remove(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
                 }
 
-                else{
+                else
+                {
                     if (selectedStoelen.Count < amount)
                     {
                         selectedStoelen.Add(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
                         NaarAfrekenenKnop.Enabled = false;
                         senderGrid.Rows[e.RowIndex].Cells[2].Value = ((char)0x221A).ToString();
                     }
-                    else {
+                    else
+                    {
 
                         NaarAfrekenenKnop.Enabled = true;
 
                     }
 
                 }
-   
-            }  
+
+            }
         }
 
         private void menuComboBox_SelectedIndexChanged(object sender, EventArgs e)
