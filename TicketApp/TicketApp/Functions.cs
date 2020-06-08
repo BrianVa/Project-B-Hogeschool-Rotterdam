@@ -148,5 +148,12 @@ namespace TicketApp
 
             label.Font = new Font(ModernFont.Families[0], size);
         }
+        private static Random random = new Random();
+        public string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
     }
 }

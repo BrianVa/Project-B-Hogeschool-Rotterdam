@@ -608,5 +608,41 @@ namespace TicketApp
                 background1picture.Location = new Point(LocationOfBackground, 0);
             }
         }
+
+        private void FilmOverzicht_Click(object sender, EventArgs e)
+        {
+            var Function = new Functions();
+
+            Film Film = new Film(session, "Overzicht");
+            Film.Show();
+        }
+
+        private void FilmAdd_Click(object sender, EventArgs e)
+        {
+            var Function = new Functions();
+
+            Film Film = new Film(session, "Add");
+            Film.Show();
+        }
+
+        private void TijdAdd_Click(object sender, EventArgs e)
+        {
+            var Function = new Functions();
+
+            Film Film = new Film(session, "tijd");
+            Film.Show();
+        }
+
+        private void KlantOverzicht_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toevoegenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            signup SingupForm = new signup();
+            SingupForm.Show();
+        }
     }
+
 }

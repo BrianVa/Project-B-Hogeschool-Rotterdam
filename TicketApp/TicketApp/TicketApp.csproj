@@ -65,14 +65,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
-    <Compile Include="BitFilm.cs">
+    <Compile Include="CustomComboBox.cs" />
+    <Compile Include="Film.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BitFilm.Designer.cs">
-      <DependentUpon>BitFilm.cs</DependentUpon>
+    <Compile Include="Film.Designer.cs">
+      <DependentUpon>Film.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
+    <Compile Include="Klant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klant.Designer.cs">
+      <DependentUpon>Klant.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,8 +106,11 @@
     <Compile Include="signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BitFilm.resx">
-      <DependentUpon>BitFilm.cs</DependentUpon>
+    <EmbeddedResource Include="Film.resx">
+      <DependentUpon>Film.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klant.resx">
+      <DependentUpon>Klant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
