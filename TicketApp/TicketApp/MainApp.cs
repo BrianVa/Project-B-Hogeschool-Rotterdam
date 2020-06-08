@@ -261,14 +261,12 @@ namespace TicketApp
             BedanktPanel.Visible = false;
             in_de_bios_panel.Visible = false;
             genres_panel.Visible = false;
-            UpdaterAchtergrond.Enabled = false;
 
             switch (panel)
             {
                 case "main":
                     this.menuComboBox.Text = "Top 5";
                     Main_panel.Visible = true;
-                    UpdaterAchtergrond.Enabled = true;
                     break;
                 case "tijd":
                     TijdPanel.Visible = true;
@@ -287,14 +285,12 @@ namespace TicketApp
                     break;
                 case "bioscoop":
                     in_de_bios_panel.Visible = true;
-                    UpdaterAchtergrond.Enabled = true;
                     break;
                 case "genres":
                     genres_panel.Visible = true;
                     break;
                 default:
                     Main_panel.Visible = true;
-                    UpdaterAchtergrond.Enabled = true;
                     break;   
             }
         }
@@ -611,11 +607,6 @@ namespace TicketApp
                 background2picture.Location = new Point(LocationOfBackground, 0);
                 background1picture.Location = new Point(LocationOfBackground, 0);
             }
-        }
-
-        private void searched_movie_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Nee Hossein!");
         }
     }
 }
