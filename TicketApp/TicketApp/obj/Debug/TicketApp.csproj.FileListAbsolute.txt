@@ -126,7 +126,6 @@ C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\De
 C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.xml
 C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.csprojAssemblyReference.cache
-C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.BitFilm.resources
 C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.login.resources
 C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.MainApp.resources
 C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.Orders.resources
@@ -165,3 +164,5 @@ C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\Ticke
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.Klant.resources
 C:\Users\Glenn\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.Film.resources
 C:\Users\Glenn\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.Klant.resources
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.Film.resources
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.Klant.resources

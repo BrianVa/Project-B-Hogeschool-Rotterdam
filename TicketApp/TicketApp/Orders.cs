@@ -57,7 +57,7 @@ namespace TicketApp
             }
             else
             {
-                function.Message("Er zijn nog geen orders gevonden.");
+                function.Message("Er zijn geen orders gevonden.");
 
                 int n = OrdersTable.Rows.Add();
                 OrdersTable.Rows[n].Cells[0].Value = "Geen orders gevonden.";
@@ -90,7 +90,7 @@ namespace TicketApp
                 }
                 else
                 {
-                    Function.Message("Deze reservering is verlopen.");
+                    Function.Message("Deze reservering kan niet geannuleerd worden. \n\n- Reserveringen moeten minimaal 1 dag van te voren geannuleerd\n  worden.\n- Verlopen reserveringen kunnen niet meer geannuleerd\n  worden.");
                 }
 
             }
