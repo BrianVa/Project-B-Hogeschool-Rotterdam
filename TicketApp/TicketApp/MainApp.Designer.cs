@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,14 +48,10 @@
             this.info_button = new System.Windows.Forms.ToolStripMenuItem();
             this.algemeneVoorwaardenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medewerkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filmToevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aanpassenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verwijderenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.klantToevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FilmOverzicht = new System.Windows.Forms.ToolStripMenuItem();
+            this.FilmAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.KlantOverzicht = new System.Windows.Forms.ToolStripMenuItem();
             this.toevoegenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aanpassenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.verwijderenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.featured_5 = new System.Windows.Forms.PictureBox();
@@ -69,13 +65,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Main_panel = new System.Windows.Forms.Panel();
-            this.Foreground2picture = new System.Windows.Forms.PictureBox();
             this.background2picture = new System.Windows.Forms.PictureBox();
+            this.Foreground2picture = new System.Windows.Forms.PictureBox();
             this.Foreground1picture = new System.Windows.Forms.PictureBox();
             this.BitfilmTekst3 = new System.Windows.Forms.Label();
             this.menuComboBox = new System.Windows.Forms.ComboBox();
             this.in_de_bios_panel = new System.Windows.Forms.Panel();
             this.filmSelectGrid = new System.Windows.Forms.DataGridView();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.background1picture = new System.Windows.Forms.PictureBox();
             this.show_film_panel = new System.Windows.Forms.Panel();
             this.Kijkwijzer = new System.Windows.Forms.PictureBox();
@@ -122,11 +123,7 @@
             this.BackToHomeButton = new System.Windows.Forms.Button();
             this.genres_panel = new System.Windows.Forms.Panel();
             this.UpdaterAchtergrond = new System.Windows.Forms.Timer(this.components);
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.TijdAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -134,9 +131,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).BeginInit();
             this.Main_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Foreground2picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background2picture)).BeginInit();
             this.background2picture.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Foreground2picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foreground1picture)).BeginInit();
             this.in_de_bios_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.filmSelectGrid)).BeginInit();
@@ -263,67 +260,44 @@
             // medewerkerToolStripMenuItem
             // 
             this.medewerkerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filmToevoegenToolStripMenuItem,
-            this.klantToevoegenToolStripMenuItem});
+            this.FilmOverzicht,
+            this.KlantOverzicht});
             this.medewerkerToolStripMenuItem.Name = "medewerkerToolStripMenuItem";
             this.medewerkerToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.medewerkerToolStripMenuItem.Text = "Medewerker";
             // 
-            // filmToevoegenToolStripMenuItem
+            // FilmOverzicht
             // 
-            this.filmToevoegenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toevoegenToolStripMenuItem,
-            this.aanpassenToolStripMenuItem,
-            this.verwijderenToolStripMenuItem});
-            this.filmToevoegenToolStripMenuItem.Name = "filmToevoegenToolStripMenuItem";
-            this.filmToevoegenToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.filmToevoegenToolStripMenuItem.Text = "Film";
+            this.FilmOverzicht.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FilmAdd,
+            this.TijdAdd});
+            this.FilmOverzicht.Name = "FilmOverzicht";
+            this.FilmOverzicht.Size = new System.Drawing.Size(180, 22);
+            this.FilmOverzicht.Text = "Film Overzicht";
+            this.FilmOverzicht.Click += new System.EventHandler(this.FilmOverzicht_Click);
             // 
-            // toevoegenToolStripMenuItem
+            // FilmAdd
             // 
-            this.toevoegenToolStripMenuItem.Name = "toevoegenToolStripMenuItem";
-            this.toevoegenToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.toevoegenToolStripMenuItem.Text = "Toevoegen";
+            this.FilmAdd.Name = "FilmAdd";
+            this.FilmAdd.Size = new System.Drawing.Size(180, 22);
+            this.FilmAdd.Text = "Film Toevoegen";
+            this.FilmAdd.Click += new System.EventHandler(this.FilmAdd_Click);
             // 
-            // aanpassenToolStripMenuItem
+            // KlantOverzicht
             // 
-            this.aanpassenToolStripMenuItem.Name = "aanpassenToolStripMenuItem";
-            this.aanpassenToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.aanpassenToolStripMenuItem.Text = "Aanpassen";
-            // 
-            // verwijderenToolStripMenuItem
-            // 
-            this.verwijderenToolStripMenuItem.Name = "verwijderenToolStripMenuItem";
-            this.verwijderenToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.verwijderenToolStripMenuItem.Text = "Verwijderen";
-            // 
-            // klantToevoegenToolStripMenuItem
-            // 
-            this.klantToevoegenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toevoegenToolStripMenuItem1,
-            this.aanpassenToolStripMenuItem1,
-            this.verwijderenToolStripMenuItem1});
-            this.klantToevoegenToolStripMenuItem.Name = "klantToevoegenToolStripMenuItem";
-            this.klantToevoegenToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.klantToevoegenToolStripMenuItem.Text = "Klant";
+            this.KlantOverzicht.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toevoegenToolStripMenuItem1});
+            this.KlantOverzicht.Name = "KlantOverzicht";
+            this.KlantOverzicht.Size = new System.Drawing.Size(180, 22);
+            this.KlantOverzicht.Text = "Klant Overzicht";
+            this.KlantOverzicht.Click += new System.EventHandler(this.KlantOverzicht_Click);
             // 
             // toevoegenToolStripMenuItem1
             // 
             this.toevoegenToolStripMenuItem1.Name = "toevoegenToolStripMenuItem1";
-            this.toevoegenToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
-            this.toevoegenToolStripMenuItem1.Text = "Toevoegen";
-            // 
-            // aanpassenToolStripMenuItem1
-            // 
-            this.aanpassenToolStripMenuItem1.Name = "aanpassenToolStripMenuItem1";
-            this.aanpassenToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
-            this.aanpassenToolStripMenuItem1.Text = "Aanpassen";
-            // 
-            // verwijderenToolStripMenuItem1
-            // 
-            this.verwijderenToolStripMenuItem1.Name = "verwijderenToolStripMenuItem1";
-            this.verwijderenToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
-            this.verwijderenToolStripMenuItem1.Text = "Verwijderen";
+            this.toevoegenToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toevoegenToolStripMenuItem1.Text = "Klant Toevoegen";
+            this.toevoegenToolStripMenuItem1.Click += new System.EventHandler(this.toevoegenToolStripMenuItem1_Click);
             // 
             // infoToolStripMenuItem
             // 
@@ -527,15 +501,6 @@
             this.Main_panel.TabIndex = 16;
             this.Main_panel.Visible = false;
             // 
-            // Foreground2picture
-            // 
-            this.Foreground2picture.Image = ((System.Drawing.Image)(resources.GetObject("Foreground2picture.Image")));
-            this.Foreground2picture.Location = new System.Drawing.Point(0, 0);
-            this.Foreground2picture.Name = "Foreground2picture";
-            this.Foreground2picture.Size = new System.Drawing.Size(1280, 720);
-            this.Foreground2picture.TabIndex = 17;
-            this.Foreground2picture.TabStop = false;
-            // 
             // background2picture
             // 
             this.background2picture.Controls.Add(this.Foreground2picture);
@@ -545,6 +510,15 @@
             this.background2picture.Size = new System.Drawing.Size(2560, 720);
             this.background2picture.TabIndex = 16;
             this.background2picture.TabStop = false;
+            // 
+            // Foreground2picture
+            // 
+            this.Foreground2picture.Image = ((System.Drawing.Image)(resources.GetObject("Foreground2picture.Image")));
+            this.Foreground2picture.Location = new System.Drawing.Point(0, 0);
+            this.Foreground2picture.Name = "Foreground2picture";
+            this.Foreground2picture.Size = new System.Drawing.Size(1280, 720);
+            this.Foreground2picture.TabIndex = 17;
+            this.Foreground2picture.TabStop = false;
             // 
             // Foreground1picture
             // 
@@ -615,6 +589,53 @@
             this.filmSelectGrid.Size = new System.Drawing.Size(793, 341);
             this.filmSelectGrid.TabIndex = 19;
             this.filmSelectGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.filmSelectGrid_CellContentClick);
+            // 
+            // Column9
+            // 
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle26;
+            this.Column9.HeaderText = "Titel";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column9.Width = 200;
+            // 
+            // Column10
+            // 
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle27;
+            this.Column10.HeaderText = "Genre";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 150;
+            // 
+            // Column11
+            // 
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle28;
+            this.Column11.HeaderText = "Speelduur";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 150;
+            // 
+            // Column12
+            // 
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle29;
+            this.Column12.HeaderText = "Leeftijd";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 150;
+            // 
+            // Column13
+            // 
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle30;
+            this.Column13.HeaderText = "Select";
+            this.Column13.Name = "Column13";
+            this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // background1picture
             // 
@@ -1136,52 +1157,12 @@
             this.UpdaterAchtergrond.Interval = 25;
             this.UpdaterAchtergrond.Tick += new System.EventHandler(this.UpdaterAchtergrond_Tick);
             // 
-            // Column9
+            // TijdAdd
             // 
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column9.HeaderText = "Titel";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column9.Width = 200;
-            // 
-            // Column10
-            // 
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column10.HeaderText = "Genre";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 150;
-            // 
-            // Column11
-            // 
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column11.HeaderText = "Speelduur";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 150;
-            // 
-            // Column12
-            // 
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column12.HeaderText = "Leeftijd";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 150;
-            // 
-            // Column13
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column13.HeaderText = "Select";
-            this.Column13.Name = "Column13";
-            this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.TijdAdd.Name = "TijdAdd";
+            this.TijdAdd.Size = new System.Drawing.Size(180, 22);
+            this.TijdAdd.Text = "Tijd Toevoegen";
+            this.TijdAdd.Click += new System.EventHandler(this.TijdAdd_Click);
             // 
             // MainApp
             // 
@@ -1219,9 +1200,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.featured_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_3)).EndInit();
             this.Main_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Foreground2picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background2picture)).EndInit();
             this.background2picture.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Foreground2picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foreground1picture)).EndInit();
             this.in_de_bios_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.filmSelectGrid)).EndInit();
@@ -1308,14 +1289,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.ToolStripMenuItem medewerkerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filmToevoegenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem klantToevoegenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toevoegenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aanpassenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verwijderenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem FilmOverzicht;
+        private System.Windows.Forms.ToolStripMenuItem KlantOverzicht;
+        private System.Windows.Forms.ToolStripMenuItem FilmAdd;
         private System.Windows.Forms.ToolStripMenuItem toevoegenToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem aanpassenToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem verwijderenToolStripMenuItem1;
         private System.Windows.Forms.Label BedanktBeschrijving;
         private System.Windows.Forms.Label BedanktLabel;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -1340,6 +1317,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewButtonColumn Column13;
+        private System.Windows.Forms.ToolStripMenuItem TijdAdd;
     }
 }
 
