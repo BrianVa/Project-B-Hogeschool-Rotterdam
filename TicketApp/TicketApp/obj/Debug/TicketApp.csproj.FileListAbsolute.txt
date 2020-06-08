@@ -115,3 +115,27 @@ C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\Ticke
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.csproj.CopyComplete
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.exe
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.pdb
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\TicketApp.exe.config
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\TicketApp.exe
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\TicketApp.pdb
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.dll
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.xml
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.BitFilm.resources
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.login.resources
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.MainApp.resources
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.Orders.resources
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.Properties.Resources.resources
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.signup.resources
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.csproj.CopyComplete
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.exe
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.pdb
