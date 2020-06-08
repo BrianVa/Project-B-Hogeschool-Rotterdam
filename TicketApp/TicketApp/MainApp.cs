@@ -586,5 +586,27 @@ namespace TicketApp
         {
 
         }
+
+        private void UpdaterAchtergrond_Tick(object sender, EventArgs e)
+        {
+            int LocationOfBackground = background1picture.Location.X;
+
+            if (LocationOfBackground < -1280)
+            {
+                LocationOfBackground = 0;
+                Foreground2picture.Location = new Point(System.Math.Abs(LocationOfBackground), 0);
+                Foreground1picture.Location = new Point(System.Math.Abs(LocationOfBackground), 0);
+                background2picture.Location = new Point(LocationOfBackground, 0);
+                background1picture.Location = new Point(LocationOfBackground, 0);
+            }
+            else
+            {
+                LocationOfBackground = LocationOfBackground - 1;
+                Foreground2picture.Location = new Point(System.Math.Abs(LocationOfBackground), 0);
+                Foreground1picture.Location = new Point(System.Math.Abs(LocationOfBackground), 0);
+                background2picture.Location = new Point(LocationOfBackground, 0);
+                background1picture.Location = new Point(LocationOfBackground, 0);
+            }
+        }
     }
 }
