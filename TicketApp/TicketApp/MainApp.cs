@@ -170,8 +170,8 @@ namespace TicketApp
             string KijkwijzerFotoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/pictogram/" + data[0]["leeftijd"].ToString() + ".png");
             Kijkwijzer.Image = Image.FromFile(KijkwijzerFotoPath);
 
-            string picture_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[0]["img_url"] + ".jpg");
-            string BG_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/BG/" + data[0]["back_url"] + ".png");
+            string picture_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[0]["img_url"]);
+            string BG_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/BG/" + data[0]["back_url"]);
             searched_movie.Image = Image.FromFile(picture_path);
             show_film_panel.BackgroundImage = Image.FromFile(BG_path);
             TijdPanel.BackgroundImage = Image.FromFile(BG_path);
