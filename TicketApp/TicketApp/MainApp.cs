@@ -639,5 +639,10 @@ namespace TicketApp
             signup SingupForm = new signup();
             SingupForm.Show();
         }
+
+        private void searched_movie_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nee Hossein!");
+        }
     }
 }
