@@ -65,12 +65,20 @@ namespace TicketApp
         {
             System.Windows.Forms.MessageBox.Show(message);
         }
-        public bool CheckAge(Session session, DataRowCollection age) 
+        public bool CheckAge(Session session, DataRowCollection age, string date = "")
         {
-            if (session != null)
+            if (session != null || date.Length > 0)
             {
-                
-                DateTime Birth = Convert.ToDateTime(session.DateOfBirth.ToString());
+                DateTime Birth = DateTime.Now;
+                if (date.Length > 0)
+                {
+                    Birth = Convert.ToDateTime(date);
+                }
+
+                if(session != null){
+                    
+                    Birth = Convert.ToDateTime(session.DateOfBirth.ToString());
+                }
                 DateTime PresentYear = DateTime.Now;
                 TimeSpan ts = PresentYear - Birth;
                 DateTime Age = DateTime.MinValue.AddDays(ts.Days);

@@ -478,6 +478,16 @@ namespace TicketApp
 
             if (session != null)
             {
+                Afrnaam.Text = session.voornaam;
+                Afranaam.Text = session.achternaam;
+                Afremail.Text = session.email;
+                DateTime Birth = Convert.ToDateTime(session.DateOfBirth.ToString());
+                Afrdate.Value = Birth;
+                Afrdate.Enabled = false;
+                Afrww.Visible = false;
+                Afrhww.Visible = false;
+                AfrwwL.Visible = false;
+                AfrhwwL.Visible = false;
 
 
             }
@@ -509,57 +519,64 @@ namespace TicketApp
 
         private void AfrekenKnop_Click(object sender, EventArgs e)
         {
+            Functions Function = new Functions();
+            if (Afrnaam.Text == "" || Afranaam.Text == "" || Afremail.Text == "" || Afrrenk.Text == "" || Afrbank.Text == "" || Afrdate.Text == "")
             {
-                Functions Function = new Functions();
-                if (Afrnaam.Text == "" || Afranaam.Text == "" || Afremail.Text == "" || Afrrenk.Text == "" || Afrbank.Text == "" || Afrdate.Text == "")
-                {
-                    Function.Message("Er zijn lege velden");
+                Function.Message("Er zijn lege velden");
 
-                }
-                else
+            }
+            else
+            {
+                DataRowCollection age = Functions.Select("SELECT leeftijd FROM films WHERE id= '" + selectedFilm + "'");
+                if (Int32.Parse(age[0]["leeftijd"].ToString()) >= 16)
                 {
-                    int user_id = 0;
-                    if (Afrww.Text != "" || Afrhww.Text != "")
+                    string dateofbirth = Afrdate.Text;
+                    if (Function.CheckAge(session, age, dateofbirth))
                     {
-                        if (Afrww.Text != Afrhww.Text)
+                        int user_id = 0;
+                        if (Afrww.Text != "" || Afrhww.Text != "")
                         {
-                            Function.Message("Wachtwoord en herhaal Wachtwoord moeten hetzelfde zijn");
-
-                        }
-                        else
-                        {
-                            string date = Afrdate.Value.ToString("dd/MM/yyyy");
-                            string hash = Function.ComputeSha256Hash(Afrww.Text.Trim());
-
-                            DataRowCollection data = Functions.Select("SELECT email FROM gebruikers WHERE email= '" + Afremail.Text.Trim() + "'");
-
-                            if (data.Count > 0)
+                            if (Afrww.Text != Afrhww.Text)
                             {
-                                Function.Message(Afremail.Text + " word al gebruikt kies a.u.b een ander email adres.");
+                                Function.Message("Wachtwoord en herhaal Wachtwoord moeten hetzelfde zijn");
+
+                            }
+                            else
+                            {
+                                string date = Afrdate.Value.ToString("dd/MM/yyyy");
+                                string hash = Function.ComputeSha256Hash(Afrww.Text.Trim());
+
+                                DataRowCollection data = Functions.Select("SELECT email FROM gebruikers WHERE email= '" + Afremail.Text.Trim() + "'");
+
+                                if (data.Count > 0)
+                                {
+                                    Function.Message(Afremail.Text + " word al gebruikt kies a.u.b een ander email adres.");
+
+                                }
+
+                                string user = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id, geboorteDatum) values ('" + Afrnaam.Text.Trim() + "', '" + Afranaam.Text.Trim() + "','" + Afremail.Text.Trim() + "','" + hash + "','" + 2 + "','" + date + "')";
+
+                                Function.Message(user);
+                                Function.ExcQuery(user);
+                                DataRowCollection last_user = Functions.Select("select seq from sqlite_sequence where name='gebruikers'");
+                                user_id = Int32.Parse(last_user[0]["seq"].ToString());
 
                             }
 
-                            string user = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id, geboorteDatum) values ('" + Afrnaam.Text.Trim() + "', '" + Afranaam.Text.Trim() + "','" + Afremail.Text.Trim() + "','" + hash + "','" + 2 + "','" + date + "')";
-
-                            Function.Message(user);
-                            Function.ExcQuery(user);
-                            DataRowCollection last_user = Functions.Select("select seq from sqlite_sequence where name='gebruikers'");
-                            user_id = Int32.Parse(last_user[0]["seq"].ToString());
-
+                        }
+                        if (session != null)
+                        {
+                            user_id = session.id;
                         }
 
+                        string query = "INSERT INTO orders(user_id, tijd_id,order_date,ticket_id,stoel_id) values ('" + user_id + "','" + selectedTime + "','" + DateTime.Now.ToString("dd/MM/yyyy") + "','" + 1 + "','" + selectedChair + "')";
+                        Function.Message(query);
+                        Function.ExcQuery(query);
+                        set_activepanel("bedankt");
                     }
-                    if (session != null)
-                    {
-                        user_id = session.id;
-                    }
-
-                    string query = "INSERT INTO orders(user_id, tijd_id,order_date,ticket_id,stoel_id) values ('" + user_id + "','" + selectedTime + "','" + DateTime.Now.ToString("dd/MM/yyyy") + "','" + 1 + "','" + selectedChair + "')";
-                    Function.Message(query);
-                    Function.ExcQuery(query);
                 }
-                set_activepanel("bedankt");
-            }
+
+            }                  
         }
 
         private void StoelSelect_CellContentClick(object sender, DataGridViewCellEventArgs e)
