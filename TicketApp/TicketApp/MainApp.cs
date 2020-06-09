@@ -724,7 +724,7 @@ namespace TicketApp
                 e.RowIndex >= 0)
             {
                 int x = e.RowIndex + 1;
-                DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + x + "'");
+                DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + x + "'");
                 setMoviePage(data);
             }
         }

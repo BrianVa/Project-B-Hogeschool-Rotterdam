@@ -55,6 +55,10 @@
             // 
             // OrdersTable
             // 
+            this.OrdersTable.AllowUserToAddRows = false;
+            this.OrdersTable.AllowUserToDeleteRows = false;
+            this.OrdersTable.AllowUserToResizeColumns = false;
+            this.OrdersTable.AllowUserToResizeRows = false;
             this.OrdersTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OrdersTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -69,7 +73,7 @@
             this.OrdersTable.RowHeadersWidth = 82;
             this.OrdersTable.Size = new System.Drawing.Size(1552, 574);
             this.OrdersTable.TabIndex = 0;
-            this.OrdersTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.OrdersTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrdersTable_CellContentClick);
             // 
             // Column1
             // 
@@ -154,6 +158,7 @@
             this.OrdertableAdmin.RowHeadersWidth = 82;
             this.OrdertableAdmin.Size = new System.Drawing.Size(1552, 574);
             this.OrdertableAdmin.TabIndex = 1;
+            this.OrdertableAdmin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrdertableAdmin_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -213,11 +218,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1589, 598);
-            this.Controls.Add(this.AdminOrderPanel);
             this.Controls.Add(this.KlantOrderPanel);
+            this.Controls.Add(this.AdminOrderPanel);
             this.Name = "Orders";
             this.Text = "Orders";
-            this.Load += new System.EventHandler(this.Orders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.OrdersTable)).EndInit();
             this.KlantOrderPanel.ResumeLayout(false);
             this.AdminOrderPanel.ResumeLayout(false);

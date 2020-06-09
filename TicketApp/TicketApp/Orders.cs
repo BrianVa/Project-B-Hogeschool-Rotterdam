@@ -13,9 +13,11 @@ using System.Data.SQLite;
 
 namespace TicketApp
 {
+
     public partial class Orders : Form
     {
         Session session;
+        string type;
 
         public Orders(Session session, string panel)
         {
@@ -23,6 +25,7 @@ namespace TicketApp
             var topLeftHeaderCell = OrdersTable.TopLeftHeaderCell;
             Functions function = new Functions();
             this.session = session;
+            this.type = panel;
             set_activepanel(panel);
 
         }
@@ -49,7 +52,8 @@ namespace TicketApp
             }
         }
 
-        public void loadOrdersAdmin(Session session){
+        public void loadOrdersAdmin(Session session)
+        {
             Functions function = new Functions();
             string query = "SELECT s.naam as stoelnaam, k.naam as ticketnaam, z.naam as zaalnaam, o.user_id as OrderID, * FROM orders o " +
                 "LEFT JOIN gebruikers g ON o.user_id = g.id " +
@@ -72,7 +76,8 @@ namespace TicketApp
                     {
                         name = "Anoniem";
                     }
-                    else {
+                    else
+                    {
                         name = row["voornaam"].ToString() + " " + row["achternaam"].ToString();
 
                     }
@@ -109,7 +114,7 @@ namespace TicketApp
 
             DataRowCollection data = Functions.Select(query);
 
-            
+
             if (data.Count > 0)
             {
                 OrdersTable.Rows.Clear();
@@ -133,19 +138,35 @@ namespace TicketApp
                 int n = OrdersTable.Rows.Add();
                 OrdersTable.Rows[n].Cells[0].Value = "Geen orders gevonden.";
             }
-            
+
 
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void OrdersTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DeleteOrder(sender, e);
+        }
+
+        private void OrdertableAdmin_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DeleteOrder(sender, e);
+        }
+        private void DeleteOrder(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
             var Function = new Functions();
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "6")
+                e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "6" && type == "klant" || senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "7" && type == "admin")
             {
+                int index = 2;
                 DataGridViewRow r = OrdersTable.Rows[e.RowIndex];
-                int result = DateTime.Compare(Convert.ToDateTime(r.Cells[2].Value.ToString()),DateTime.Now);
+                if (type == "admin")
+                {
+                    index = 3;
+                }
+                int result = DateTime.Compare(Convert.ToDateTime(r.Cells[2].Value.ToString()), DateTime.Now);
+
                 if (result > 0)
                 {
                     DialogResult = DialogResult = MessageBox.Show("Weet u zeker dat u deze reservering wilt annuleren?", "Tickets Annuleren", MessageBoxButtons.YesNo);
@@ -159,23 +180,21 @@ namespace TicketApp
                         {
                             loadOrdersAdmin(session);
                         }
-                        else {
+                        else
+                        {
                             loadOrdersKlant(session);
                         }
                         Function.Message("De reservering is geannuleerd. \n\nHet betaalde bedrag wordt binnen 2 weken op uw rekening teruggestort.");
                     }
                 }
-                else
-                {
-                    Function.Message("Deze reservering kan niet geannuleerd worden. \n\n- Reserveringen moeten minimaal 1 dag van te voren geannuleerd\n  worden.\n- Verlopen reserveringen kunnen niet meer geannuleerd\n  worden.");
-                }
-
             }
+            else
+            {
+                Function.Message("Deze reservering kan niet geannuleerd worden. \n\n- Reserveringen moeten minimaal 1 dag van te voren geannuleerd\n  worden.\n- Verlopen reserveringen kunnen niet meer geannuleerd\n  worden.");
+            }
+
         }
 
-        private void Orders_Load(object sender, EventArgs e)
-        {
-
-        }
     }
+
 }
