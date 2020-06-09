@@ -197,7 +197,7 @@ namespace TicketApp
 
         private void TicketBack_Click(object sender, EventArgs e)
         {
-            DataRowCollection data = Functions.Select("SELECT * FROM films WHERE id= '" + selectedFilm + "'");
+            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + selectedFilm + "'");
             setMoviePage(data);
         }
 
@@ -212,11 +212,12 @@ namespace TicketApp
                 if (Function.CheckAge(session, age))
                 {
                     DataRowCollection data = Functions.Select("SELECT * FROM tijden WHERE film_id = '" + selectedFilm + "'");
-                    
-
+                    int c = -1;
                     FilmTijden.Rows.Clear();
                     foreach (DataRow row in data)
                     {
+                        //c++;
+                        //Function.Message(row.Table.Columns.);                     
                         DataRowCollection count = Functions.Select("SELECT COUNT(id) as all_stoelen FROM stoelen WHERE zaal_id = '" + row["zaal_id"] + "'");
                         DataRowCollection orders = Functions.Select("SELECT COUNT(id) as all_orders FROM orders WHERE tijd_id = '" + row["id"] + "'");
                         int n = FilmTijden.Rows.Add();
@@ -555,8 +556,6 @@ namespace TicketApp
                                 }
 
                                 string user = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id, geboorteDatum) values ('" + Afrnaam.Text.Trim() + "', '" + Afranaam.Text.Trim() + "','" + Afremail.Text.Trim() + "','" + hash + "','" + 2 + "','" + date + "')";
-
-                                Function.Message(user);
                                 Function.ExcQuery(user);
                                 DataRowCollection last_user = Functions.Select("select seq from sqlite_sequence where name='gebruikers'");
                                 user_id = Int32.Parse(last_user[0]["seq"].ToString());
@@ -570,7 +569,6 @@ namespace TicketApp
                         }
 
                         string query = "INSERT INTO orders(user_id, tijd_id,order_date,ticket_id,stoel_id) values ('" + user_id + "','" + selectedTime + "','" + DateTime.Now.ToString("dd/MM/yyyy") + "','" + 1 + "','" + selectedChair + "')";
-                        Function.Message(query);
                         Function.ExcQuery(query);
                         set_activepanel("bedankt");
                     }

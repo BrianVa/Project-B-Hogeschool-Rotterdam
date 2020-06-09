@@ -75,10 +75,9 @@
             // 
             // FilmPoster
             // 
-            FilmPoster.Location = new System.Drawing.Point(115, 655);
-            FilmPoster.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            FilmPoster.Location = new System.Drawing.Point(86, 532);
             FilmPoster.Name = "FilmPoster";
-            FilmPoster.Size = new System.Drawing.Size(148, 33);
+            FilmPoster.Size = new System.Drawing.Size(111, 27);
             FilmPoster.TabIndex = 6;
             FilmPoster.Text = "Film Poster";
             FilmPoster.UseVisualStyleBackColor = true;
@@ -104,28 +103,25 @@
             this.FilmAddPanel.Controls.Add(this.FilmGenre);
             this.FilmAddPanel.Controls.Add(this.FilmNaam);
             this.FilmAddPanel.Controls.Add(this.label1);
-            this.FilmAddPanel.Location = new System.Drawing.Point(12, 15);
-            this.FilmAddPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmAddPanel.Location = new System.Drawing.Point(9, 12);
             this.FilmAddPanel.Name = "FilmAddPanel";
-            this.FilmAddPanel.Size = new System.Drawing.Size(1993, 1031);
+            this.FilmAddPanel.Size = new System.Drawing.Size(1495, 838);
             this.FilmAddPanel.TabIndex = 0;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(815, 151);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(611, 123);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 17);
+            this.label9.Size = new System.Drawing.Size(64, 13);
             this.label9.TabIndex = 18;
             this.label9.Text = "Beschrijving";
             // 
             // FilmBack
             // 
-            this.FilmBack.Location = new System.Drawing.Point(115, 737);
-            this.FilmBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmBack.Location = new System.Drawing.Point(86, 599);
             this.FilmBack.Name = "FilmBack";
-            this.FilmBack.Size = new System.Drawing.Size(148, 33);
+            this.FilmBack.Size = new System.Drawing.Size(111, 27);
             this.FilmBack.TabIndex = 17;
             this.FilmBack.Text = "Film Achterground";
             this.FilmBack.UseVisualStyleBackColor = true;
@@ -134,88 +130,79 @@
             // FilmBackLabel
             // 
             this.FilmBackLabel.AutoSize = true;
-            this.FilmBackLabel.Location = new System.Drawing.Point(328, 746);
-            this.FilmBackLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FilmBackLabel.Location = new System.Drawing.Point(246, 606);
             this.FilmBackLabel.Name = "FilmBackLabel";
-            this.FilmBackLabel.Size = new System.Drawing.Size(43, 17);
+            this.FilmBackLabel.Size = new System.Drawing.Size(33, 13);
             this.FilmBackLabel.TabIndex = 16;
             this.FilmBackLabel.Text = "Geen";
             // 
             // FilmPosterLabel
             // 
             this.FilmPosterLabel.AutoSize = true;
-            this.FilmPosterLabel.Location = new System.Drawing.Point(328, 663);
-            this.FilmPosterLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FilmPosterLabel.Location = new System.Drawing.Point(246, 539);
             this.FilmPosterLabel.Name = "FilmPosterLabel";
-            this.FilmPosterLabel.Size = new System.Drawing.Size(43, 17);
+            this.FilmPosterLabel.Size = new System.Drawing.Size(33, 13);
             this.FilmPosterLabel.TabIndex = 15;
             this.FilmPosterLabel.Text = "Geen";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(111, 533);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(83, 433);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 17);
+            this.label6.Size = new System.Drawing.Size(113, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "Trailer (Youtube Code)";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(111, 437);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(83, 355);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 17);
+            this.label5.Size = new System.Drawing.Size(118, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "Speel duur (in minuten):";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(111, 335);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(83, 272);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 17);
+            this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Leeftijd:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(111, 223);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(83, 181);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Genre:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(111, 151);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(83, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 17);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Naam:";
             // 
             // FilmDisc
             // 
-            this.FilmDisc.Location = new System.Drawing.Point(819, 171);
-            this.FilmDisc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmDisc.Location = new System.Drawing.Point(614, 139);
             this.FilmDisc.Name = "FilmDisc";
-            this.FilmDisc.Size = new System.Drawing.Size(520, 291);
+            this.FilmDisc.Size = new System.Drawing.Size(391, 237);
             this.FilmDisc.TabIndex = 9;
             this.FilmDisc.Text = "";
             // 
             // FilmAddButton
             // 
-            this.FilmAddButton.Location = new System.Drawing.Point(1704, 906);
-            this.FilmAddButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmAddButton.Location = new System.Drawing.Point(1231, 756);
             this.FilmAddButton.Name = "FilmAddButton";
-            this.FilmAddButton.Size = new System.Drawing.Size(255, 78);
+            this.FilmAddButton.Size = new System.Drawing.Size(191, 63);
             this.FilmAddButton.TabIndex = 8;
             this.FilmAddButton.Text = "Toevoegen";
             this.FilmAddButton.UseVisualStyleBackColor = true;
@@ -223,66 +210,59 @@
             // 
             // FilmTime
             // 
-            this.FilmTime.Location = new System.Drawing.Point(115, 457);
-            this.FilmTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmTime.Location = new System.Drawing.Point(86, 371);
             this.FilmTime.Name = "FilmTime";
-            this.FilmTime.Size = new System.Drawing.Size(332, 22);
+            this.FilmTime.Size = new System.Drawing.Size(250, 20);
             this.FilmTime.TabIndex = 5;
             // 
             // FilmTrailer
             // 
-            this.FilmTrailer.Location = new System.Drawing.Point(115, 553);
-            this.FilmTrailer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmTrailer.Location = new System.Drawing.Point(86, 449);
             this.FilmTrailer.Name = "FilmTrailer";
-            this.FilmTrailer.Size = new System.Drawing.Size(332, 22);
+            this.FilmTrailer.Size = new System.Drawing.Size(250, 20);
             this.FilmTrailer.TabIndex = 4;
             // 
             // FilmAge
             // 
             this.FilmAge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FilmAge.FormattingEnabled = true;
-            this.FilmAge.Location = new System.Drawing.Point(115, 354);
-            this.FilmAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmAge.Location = new System.Drawing.Point(86, 288);
             this.FilmAge.Name = "FilmAge";
-            this.FilmAge.Size = new System.Drawing.Size(332, 24);
+            this.FilmAge.Size = new System.Drawing.Size(250, 21);
             this.FilmAge.TabIndex = 3;
             // 
             // FilmGenre
             // 
             this.FilmGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FilmGenre.FormattingEnabled = true;
-            this.FilmGenre.Location = new System.Drawing.Point(115, 242);
-            this.FilmGenre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmGenre.Location = new System.Drawing.Point(86, 197);
             this.FilmGenre.Name = "FilmGenre";
-            this.FilmGenre.Size = new System.Drawing.Size(332, 24);
+            this.FilmGenre.Size = new System.Drawing.Size(250, 21);
             this.FilmGenre.TabIndex = 2;
             // 
             // FilmNaam
             // 
-            this.FilmNaam.Location = new System.Drawing.Point(115, 171);
-            this.FilmNaam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmNaam.Location = new System.Drawing.Point(86, 139);
             this.FilmNaam.Name = "FilmNaam";
-            this.FilmNaam.Size = new System.Drawing.Size(332, 22);
+            this.FilmNaam.Size = new System.Drawing.Size(250, 20);
             this.FilmNaam.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.label1.Location = new System.Drawing.Point(855, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(641, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 46);
+            this.label1.Size = new System.Drawing.Size(245, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Film Toevoegen";
             // 
             // FilmOverzichtPanel
             // 
             this.FilmOverzichtPanel.Controls.Add(this.FilmOverzichtTabel);
-            this.FilmOverzichtPanel.Location = new System.Drawing.Point(16, 10);
-            this.FilmOverzichtPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmOverzichtPanel.Location = new System.Drawing.Point(12, 8);
             this.FilmOverzichtPanel.Name = "FilmOverzichtPanel";
-            this.FilmOverzichtPanel.Size = new System.Drawing.Size(1979, 1017);
+            this.FilmOverzichtPanel.Size = new System.Drawing.Size(1484, 826);
             this.FilmOverzichtPanel.TabIndex = 19;
             // 
             // FilmOverzichtTabel
@@ -296,11 +276,10 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.FilmOverzichtTabel.Location = new System.Drawing.Point(8, 16);
-            this.FilmOverzichtTabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmOverzichtTabel.Location = new System.Drawing.Point(6, 13);
             this.FilmOverzichtTabel.Name = "FilmOverzichtTabel";
             this.FilmOverzichtTabel.RowHeadersWidth = 51;
-            this.FilmOverzichtTabel.Size = new System.Drawing.Size(1967, 997);
+            this.FilmOverzichtTabel.Size = new System.Drawing.Size(1475, 810);
             this.FilmOverzichtTabel.TabIndex = 0;
             this.FilmOverzichtTabel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilmOverzichtTabel_CellContentClick);
             // 
@@ -371,18 +350,16 @@
             this.TijdAddPanel.Controls.Add(this.ZaalAdd);
             this.TijdAddPanel.Controls.Add(this.FilmDate);
             this.TijdAddPanel.Controls.Add(this.FilmPlayTime);
-            this.TijdAddPanel.Location = new System.Drawing.Point(7, 10);
-            this.TijdAddPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TijdAddPanel.Location = new System.Drawing.Point(5, 8);
             this.TijdAddPanel.Name = "TijdAddPanel";
-            this.TijdAddPanel.Size = new System.Drawing.Size(1988, 1033);
+            this.TijdAddPanel.Size = new System.Drawing.Size(1491, 839);
             this.TijdAddPanel.TabIndex = 20;
             // 
             // AddTime
             // 
-            this.AddTime.Location = new System.Drawing.Point(1748, 950);
-            this.AddTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddTime.Location = new System.Drawing.Point(1264, 775);
             this.AddTime.Name = "AddTime";
-            this.AddTime.Size = new System.Drawing.Size(216, 63);
+            this.AddTime.Size = new System.Drawing.Size(162, 51);
             this.AddTime.TabIndex = 8;
             this.AddTime.Text = "Toevoegen";
             this.AddTime.UseVisualStyleBackColor = true;
@@ -391,40 +368,36 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1212, 62);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(909, 50);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 17);
+            this.label11.Size = new System.Drawing.Size(28, 13);
             this.label11.TabIndex = 7;
             this.label11.Text = "Film:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(820, 62);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(615, 50);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 17);
+            this.label10.Size = new System.Drawing.Size(31, 13);
             this.label10.TabIndex = 6;
             this.label10.Text = "Zaal:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(476, 62);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(357, 50);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 17);
+            this.label8.Size = new System.Drawing.Size(89, 13);
             this.label8.TabIndex = 5;
             this.label8.Text = "Film Speel Datum";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(57, 62);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(43, 50);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 17);
+            this.label7.Size = new System.Drawing.Size(78, 13);
             this.label7.TabIndex = 4;
             this.label7.Text = "Film Speel Tijd:";
             // 
@@ -432,49 +405,44 @@
             // 
             this.MovieAdd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.MovieAdd.FormattingEnabled = true;
-            this.MovieAdd.Location = new System.Drawing.Point(1216, 81);
-            this.MovieAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MovieAdd.Location = new System.Drawing.Point(912, 66);
             this.MovieAdd.Name = "MovieAdd";
-            this.MovieAdd.Size = new System.Drawing.Size(305, 24);
+            this.MovieAdd.Size = new System.Drawing.Size(230, 21);
             this.MovieAdd.TabIndex = 3;
             // 
             // ZaalAdd
             // 
             this.ZaalAdd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ZaalAdd.FormattingEnabled = true;
-            this.ZaalAdd.Location = new System.Drawing.Point(824, 81);
-            this.ZaalAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ZaalAdd.Location = new System.Drawing.Point(618, 66);
             this.ZaalAdd.Name = "ZaalAdd";
-            this.ZaalAdd.Size = new System.Drawing.Size(305, 24);
+            this.ZaalAdd.Size = new System.Drawing.Size(230, 21);
             this.ZaalAdd.TabIndex = 2;
             // 
             // FilmDate
             // 
             this.FilmDate.CustomFormat = "dd/MM/yyyy";
             this.FilmDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FilmDate.Location = new System.Drawing.Point(480, 82);
-            this.FilmDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmDate.Location = new System.Drawing.Point(360, 67);
             this.FilmDate.Name = "FilmDate";
-            this.FilmDate.Size = new System.Drawing.Size(265, 22);
+            this.FilmDate.Size = new System.Drawing.Size(200, 20);
             this.FilmDate.TabIndex = 1;
             // 
             // FilmPlayTime
             // 
-            this.FilmPlayTime.Location = new System.Drawing.Point(61, 81);
-            this.FilmPlayTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilmPlayTime.Location = new System.Drawing.Point(46, 66);
             this.FilmPlayTime.Name = "FilmPlayTime";
-            this.FilmPlayTime.Size = new System.Drawing.Size(315, 22);
+            this.FilmPlayTime.Size = new System.Drawing.Size(237, 20);
             this.FilmPlayTime.TabIndex = 0;
             // 
             // Film
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1041);
-            this.Controls.Add(this.FilmAddPanel);
+            this.ClientSize = new System.Drawing.Size(1443, 846);
             this.Controls.Add(this.TijdAddPanel);
             this.Controls.Add(this.FilmOverzichtPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.FilmAddPanel);
             this.Name = "Film";
             this.Text = "Film";
             this.FilmAddPanel.ResumeLayout(false);
