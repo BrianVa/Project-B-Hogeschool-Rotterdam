@@ -81,8 +81,7 @@ namespace TicketApp
                 }
                 DateTime PresentYear = DateTime.Now;
                 TimeSpan ts = PresentYear - Birth;
-                DateTime Age = DateTime.MinValue.AddDays(ts.Days);
-   
+                DateTime Age = DateTime.MinValue.AddDays(ts.Days);   
 
                 if (Age.Year -1 < Int32.Parse(age[0]["leeftijd"].ToString()))                   
                 {

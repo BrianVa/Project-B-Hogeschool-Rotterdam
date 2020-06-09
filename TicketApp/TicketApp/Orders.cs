@@ -51,7 +51,7 @@ namespace TicketApp
 
         public void loadOrdersAdmin(Session session){
             Functions function = new Functions();
-            string query = "SELECT s.naam as stoelnaam, k.naam as ticketnaam, z.naam as zaalnaam, * FROM orders o " +
+            string query = "SELECT s.naam as stoelnaam, k.naam as ticketnaam, z.naam as zaalnaam, o.user_id as OrderID, * FROM orders o " +
                 "LEFT JOIN gebruikers g ON o.user_id = g.id " +
                 "LEFT JOIN tijden t ON o.tijd_id = t.id " +
                 "LEFT JOIN Films f ON t.film_id = f.id " +
@@ -68,7 +68,7 @@ namespace TicketApp
 
                 foreach (DataRow row in data)
                 {
-                    if (row["id"].ToString() == "0")
+                    if (row["OrderID"].ToString() == "0")
                     {
                         name = "Anoniem";
                     }

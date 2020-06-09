@@ -135,6 +135,10 @@
             // 
             // OrdertableAdmin
             // 
+            this.OrdertableAdmin.AllowUserToAddRows = false;
+            this.OrdertableAdmin.AllowUserToDeleteRows = false;
+            this.OrdertableAdmin.AllowUserToResizeColumns = false;
+            this.OrdertableAdmin.AllowUserToResizeRows = false;
             this.OrdertableAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OrdertableAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,

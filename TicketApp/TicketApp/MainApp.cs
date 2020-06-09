@@ -354,7 +354,7 @@ namespace TicketApp
         private void StoelSelectButton_Click(int selectedTime)
         {
             var orders = new List<string>();
-
+            selectedStoelen.Clear();
             string taken = "";
             var Function = new Functions();
             DataRowCollection zaal = Functions.Select("SELECT zaal_id FROM tijden WHERE id= '" + selectedTime + "'");
@@ -504,7 +504,7 @@ namespace TicketApp
         {
             var Function = new Functions();
             selectedChair = Int32.Parse(selectedStoelen[0]);
-
+            Afrdate.MaxDate = DateTime.Now;
             if (session != null)
             {
                 Afrnaam.Text = session.voornaam;
@@ -583,58 +583,67 @@ namespace TicketApp
             }
             else
             {
+                bool val = false;
                 DataRowCollection age = Functions.Select("SELECT leeftijd FROM films WHERE id= '" + selectedFilm + "'");
+                string dateofbirth = Afrdate.Text;
+
                 if (Int32.Parse(age[0]["leeftijd"].ToString()) >= 16)
                 {
-                    string dateofbirth = Afrdate.Text;
                     if (Function.CheckAge(session, age, dateofbirth))
                     {
-                        int user_id = 0;
-                        if (Afrww.Text != "" || Afrhww.Text != "")
-                        {
-
-                            if (Afrww.Text.Trim() != Afrhww.Text.Trim())
-                            {
-                                Function.Message("Wachtwoord en herhaal wachtwoord moeten hetzelfde zijn.");
-                            }
-                            else if (Afrww.Text.Length < 6 || Afrww.Text.Length > 24)
-                            {
-                                Function.Message("Wachtwoord moet minimaal 6 characters lang zijn en maximaal 24.");
-                            }
-                            else
-                            {
-
-                                string date = Afrdate.Value.ToString("dd/MM/yyyy");
-                                string hash = Function.ComputeSha256Hash(Afrww.Text.Trim());
-
-                                DataRowCollection data = Functions.Select("SELECT email FROM gebruikers WHERE email= '" + Afremail.Text.Trim() + "'");
-
-                                if (data.Count > 0)
-                                {
-                                    Function.Message(Afremail.Text + " word al gebruikt kies a.u.b een ander email adres.");
-
-                                }
-
-                                string user = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id, geboorteDatum) values ('" + Afrnaam.Text.Trim() + "', '" + Afranaam.Text.Trim() + "','" + Afremail.Text.Trim() + "','" + hash + "','" + 2 + "','" + date + "')";
-                                Function.ExcQuery(user);
-                                DataRowCollection last_user = Functions.Select("select seq from sqlite_sequence where name='gebruikers'");
-                                user_id = Int32.Parse(last_user[0]["seq"].ToString());
-
-
-                            }
-
-                        }
-
-                        if (session != null)
-                        {
-                            user_id = session.id;
-                        }
-                        string query = "INSERT INTO orders(user_id, tijd_id,order_date,ticket_id,stoel_id) values ('" + user_id + "','" + selectedTime + "','" + DateTime.Now.ToString("dd/MM/yyyy") + "','" + 1 + "','" + selectedChair + "')";
-                        Function.ExcQuery(query);
-                        set_activepanel("bedankt");
-
-                        
+                        val = true;
                     }
+                }
+                else {
+                    val = true;
+                }
+
+
+                if (val)
+                {
+                    int user_id = 0;
+                    if (Afrww.Text != "" || Afrhww.Text != "")
+                    {
+
+                        if (Afrww.Text.Trim() != Afrhww.Text.Trim())
+                        {
+                            Function.Message("Wachtwoord en herhaal wachtwoord moeten hetzelfde zijn.");
+                        }
+                        else if (Afrww.Text.Length < 6 || Afrww.Text.Length > 24)
+                        {
+                            Function.Message("Wachtwoord moet minimaal 6 characters lang zijn en maximaal 24.");
+                        }
+                        else
+                        {
+
+                            string date = Afrdate.Value.ToString("dd/MM/yyyy");
+                            string hash = Function.ComputeSha256Hash(Afrww.Text.Trim());
+
+                            DataRowCollection data = Functions.Select("SELECT email FROM gebruikers WHERE email= '" + Afremail.Text.Trim() + "'");
+
+                            if (data.Count > 0)
+                            {
+                                Function.Message(Afremail.Text + " word al gebruikt kies a.u.b een ander email adres.");
+
+                            }
+
+                            string user = "INSERT INTO gebruikers(Voornaam, Achternaam, Email, password, Role_id, geboorteDatum) values ('" + Afrnaam.Text.Trim() + "', '" + Afranaam.Text.Trim() + "','" + Afremail.Text.Trim() + "','" + hash + "','" + 2 + "','" + date + "')";
+                            Function.ExcQuery(user);
+                            DataRowCollection last_user = Functions.Select("select seq from sqlite_sequence where name='gebruikers'");
+                            user_id = Int32.Parse(last_user[0]["seq"].ToString());
+
+                        }
+
+                    }
+
+                    if (session != null)
+                    {
+                        user_id = session.id;
+                    }
+                    string query = "INSERT INTO orders(user_id, tijd_id,order_date,ticket_id,stoel_id) values ('" + user_id + "','" + selectedTime + "','" + DateTime.Now.ToString("dd/MM/yyyy") + "','" + 1 + "','" + selectedChair + "')";
+                    Function.ExcQuery(query);
+                    set_activepanel("bedankt");
+
                 }
 
             }                  
@@ -685,7 +694,7 @@ namespace TicketApp
             else if (menuComboBox.SelectedIndex == 1)
             {
                 var Function = new Functions();
-                DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT '20'");
+                DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id LIMIT '20'");
                 filmSelectGrid.Rows.Clear();
                 foreach (DataRow row in data)
                 {
@@ -698,7 +707,7 @@ namespace TicketApp
                     string str = filmSelectGrid.Rows[n].Cells[0].Value.ToString();
                     filmSelectGrid.Rows[n].Cells[0].Value = char.ToUpper(str[0]) + str.Substring(1);
 
-                    filmSelectGrid.Rows[n].Cells[1].Value = row["genre"];
+                    filmSelectGrid.Rows[n].Cells[1].Value = row["GenreNaam"];
                     filmSelectGrid.Rows[n].Cells[2].Value = row["speel_duur"].ToString() + " minuten";
                     filmSelectGrid.Rows[n].Cells[3].Value = row["leeftijd"].ToString();
                     filmSelectGrid.Rows[n].Cells[4].Value = "Filmpagina";
