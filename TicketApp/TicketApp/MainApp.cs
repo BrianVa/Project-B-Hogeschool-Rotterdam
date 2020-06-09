@@ -441,6 +441,7 @@ namespace TicketApp
                 e.RowIndex >= 0)
             {
                 DataGridViewRow row = FilmTijden.Rows[e.RowIndex];
+
                 selectedTime = Int32.Parse(row.Cells[0].Value.ToString());
                 StoelSelectButton_Click(selectedTime);
             }
@@ -555,7 +556,6 @@ namespace TicketApp
             }
             else
             {
-                bool val = false;
                 DataRowCollection age = Functions.Select("SELECT leeftijd FROM films WHERE id= '" + selectedFilm + "'");
                 if (Int32.Parse(age[0]["leeftijd"].ToString()) >= 16)
                 {
@@ -576,6 +576,7 @@ namespace TicketApp
                             }
                             else
                             {
+
                                 string date = Afrdate.Value.ToString("dd/MM/yyyy");
                                 string hash = Function.ComputeSha256Hash(Afrww.Text.Trim());
 
@@ -591,23 +592,20 @@ namespace TicketApp
                                 Function.ExcQuery(user);
                                 DataRowCollection last_user = Functions.Select("select seq from sqlite_sequence where name='gebruikers'");
                                 user_id = Int32.Parse(last_user[0]["seq"].ToString());
-                                val = true;
 
 
                             }
 
                         }
+
                         if (session != null)
                         {
                             user_id = session.id;
                         }
-
                         string query = "INSERT INTO orders(user_id, tijd_id,order_date,ticket_id,stoel_id) values ('" + user_id + "','" + selectedTime + "','" + DateTime.Now.ToString("dd/MM/yyyy") + "','" + 1 + "','" + selectedChair + "')";
                         Function.ExcQuery(query);
-                        if (val)
-                        {
-                            set_activepanel("bedankt");
-                        }
+                        set_activepanel("bedankt");
+
                         
                     }
                 }
@@ -748,7 +746,10 @@ namespace TicketApp
 
         private void KlantOverzicht_Click(object sender, EventArgs e)
         {
+            var Function = new Functions();
 
+            Klant klant = new Klant(session);
+            klant.Show();
         }
 
         private void toevoegenToolStripMenuItem1_Click(object sender, EventArgs e)

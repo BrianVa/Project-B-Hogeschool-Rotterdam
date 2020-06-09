@@ -61,17 +61,25 @@ namespace TicketApp
 
             DataRowCollection data = Functions.Select(query);
 
-
+            string name = "";
             if (data.Count > 0)
             {
                 OrdertableAdmin.Rows.Clear();
 
                 foreach (DataRow row in data)
                 {
+                    if (row["id"].ToString() == "0")
+                    {
+                        name = "Anoniem";
+                    }
+                    else {
+                        name = row["voornaam"].ToString() + " " + row["achternaam"].ToString();
+
+                    }
                     int n = OrdertableAdmin.Rows.Add();
                     OrdertableAdmin.Rows[n].Cells[0].Value = row["id"].ToString();
                     OrdertableAdmin.Rows[n].Cells[1].Value = row["naam"].ToString();
-                    OrdertableAdmin.Rows[n].Cells[2].Value = row["voornaam"].ToString() + " " + row["achternaam"].ToString();
+                    OrdertableAdmin.Rows[n].Cells[2].Value = name;
                     OrdertableAdmin.Rows[n].Cells[3].Value = row["order_date"].ToString();
                     OrdertableAdmin.Rows[n].Cells[4].Value = row["tijd"].ToString();
                     OrdertableAdmin.Rows[n].Cells[5].Value = row["zaalnaam"].ToString();
