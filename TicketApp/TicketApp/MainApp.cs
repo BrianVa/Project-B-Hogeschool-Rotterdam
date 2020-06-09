@@ -521,10 +521,21 @@ namespace TicketApp
         private void AfrekenKnop_Click(object sender, EventArgs e)
         {
             Functions Function = new Functions();
-            if (Afrnaam.Text == "" || Afranaam.Text == "" || Afremail.Text == "" || Afrrenk.Text == "" || Afrbank.Text == "" || Afrdate.Text == "")
+            if (Afremail.Text.Trim() == "" || Afrnaam.Text.Trim() == "" || Afranaam.Text.Trim() == "")
             {
                 Function.Message("Er zijn lege velden");
-
+            }
+            else if (!Afremail.Text.Trim().Contains("@") || !Afremail.Text.Trim().Contains("."))
+            {
+                Function.Message(Afremail.Text.Trim() + " is geen gelding emailadres!");
+            }
+            else if (Afrnaam.Text.Trim().Length < 3 || Afranaam.Text.Trim().Length < 3)
+            {
+                Function.Message("Voornaam en achternaam moeten minimaal 3 characters lang zijn.");
+            }
+            else if (Afrnaam.Text.Trim().Length > 25 || Afranaam.Text.Trim().Length > 25)
+            {
+                Function.Message("Voornaam en achternaam mogen niet langer zijn dan 25 characters");
             }
             else
             {
@@ -537,10 +548,14 @@ namespace TicketApp
                         int user_id = 0;
                         if (Afrww.Text != "" || Afrhww.Text != "")
                         {
-                            if (Afrww.Text != Afrhww.Text)
-                            {
-                                Function.Message("Wachtwoord en herhaal Wachtwoord moeten hetzelfde zijn");
 
+                            if (Afrww.Text.Trim() != Afrhww.Text.Trim())
+                            {
+                                Function.Message("Wachtwoord en herhaal wachtwoord moeten hetzelfde zijn.");
+                            }
+                            else if (Afrww.Text.Length < 6 || Afrww.Text.Length > 24)
+                            {
+                                Function.Message("Wachtwoord moet minimaal 6 characters lang zijn en maximaal 24.");
                             }
                             else
                             {
