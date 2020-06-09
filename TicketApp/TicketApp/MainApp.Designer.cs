@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -139,6 +139,7 @@
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
+            this.ordersOverzichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -275,7 +276,8 @@
             // 
             this.medewerkerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FilmOverzicht,
-            this.KlantOverzicht});
+            this.KlantOverzicht,
+            this.ordersOverzichtToolStripMenuItem});
             this.medewerkerToolStripMenuItem.Name = "medewerkerToolStripMenuItem";
             this.medewerkerToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.medewerkerToolStripMenuItem.Text = "Medewerker";
@@ -600,8 +602,8 @@
             // 
             // Column9
             // 
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle16;
             this.Column9.HeaderText = "Titel";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -610,8 +612,8 @@
             // 
             // Column10
             // 
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle17;
             this.Column10.HeaderText = "Genre";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
@@ -619,8 +621,8 @@
             // 
             // Column11
             // 
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle18;
             this.Column11.HeaderText = "Speelduur";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -628,8 +630,8 @@
             // 
             // Column12
             // 
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle19;
             this.Column12.HeaderText = "Leeftijd";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
@@ -637,9 +639,9 @@
             // 
             // Column13
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle20;
             this.Column13.HeaderText = "Select";
             this.Column13.Name = "Column13";
             this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1173,7 +1175,6 @@
             this.Afrnaam.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Afrnaam.Size = new System.Drawing.Size(230, 20);
             this.Afrnaam.TabIndex = 7;
-            this.Afrnaam.TextChanged += new System.EventHandler(this.Afrnaam_TextChanged);
             // 
             // AfrekenTerugKnop
             // 
@@ -1305,6 +1306,13 @@
             this.label6.Size = new System.Drawing.Size(205, 26);
             this.label6.TabIndex = 25;
             this.label6.Text = "Overzicht Bestelling";
+            // 
+            // ordersOverzichtToolStripMenuItem
+            // 
+            this.ordersOverzichtToolStripMenuItem.Name = "ordersOverzichtToolStripMenuItem";
+            this.ordersOverzichtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ordersOverzichtToolStripMenuItem.Text = "Orders Overzicht";
+            this.ordersOverzichtToolStripMenuItem.Click += new System.EventHandler(this.ordersOverzichtToolStripMenuItem_Click);
             // 
             // MainApp
             // 
@@ -1473,6 +1481,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem ordersOverzichtToolStripMenuItem;
     }
 }
 

@@ -450,7 +450,7 @@ namespace TicketApp
         {
             var Function = new Functions();
 
-            Orders orders = new Orders(session);
+            Orders orders = new Orders(session, "klant");
             orders.Show();
         }
 
@@ -555,6 +555,7 @@ namespace TicketApp
             }
             else
             {
+                bool val = false;
                 DataRowCollection age = Functions.Select("SELECT leeftijd FROM films WHERE id= '" + selectedFilm + "'");
                 if (Int32.Parse(age[0]["leeftijd"].ToString()) >= 16)
                 {
@@ -590,6 +591,8 @@ namespace TicketApp
                                 Function.ExcQuery(user);
                                 DataRowCollection last_user = Functions.Select("select seq from sqlite_sequence where name='gebruikers'");
                                 user_id = Int32.Parse(last_user[0]["seq"].ToString());
+                                val = true;
+
 
                             }
 
@@ -601,7 +604,11 @@ namespace TicketApp
 
                         string query = "INSERT INTO orders(user_id, tijd_id,order_date,ticket_id,stoel_id) values ('" + user_id + "','" + selectedTime + "','" + DateTime.Now.ToString("dd/MM/yyyy") + "','" + 1 + "','" + selectedChair + "')";
                         Function.ExcQuery(query);
-                        set_activepanel("bedankt");
+                        if (val)
+                        {
+                            set_activepanel("bedankt");
+                        }
+                        
                     }
                 }
 
@@ -754,10 +761,13 @@ namespace TicketApp
         {
             MessageBox.Show("Nee Hossein!");
         }
-
-        private void Afrnaam_TextChanged(object sender, EventArgs e)
+        
+        private void ordersOverzichtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            var Function = new Functions();
+
+            Orders orders = new Orders(session, "admin");
+            orders.Show();
         }
     }
 }

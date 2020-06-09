@@ -17,26 +17,89 @@ namespace TicketApp
     {
         Session session;
 
-        public Orders(Session session)
+        public Orders(Session session, string panel)
         {
             InitializeComponent();
             var topLeftHeaderCell = OrdersTable.TopLeftHeaderCell;
             Functions function = new Functions();
             this.session = session;
-            loadOrders(session);
+            set_activepanel(panel);
 
         }
 
-        public void loadOrders(Session session)
+        private void set_activepanel(string panel)
         {
-            Functions function = new Functions();
 
-            DataRowCollection data = Functions.Select("SELECT s.naam as stoelnaam, k.naam as ticketnaam, z.naam as zaalnaam, * FROM orders o " +
+            AdminOrderPanel.Visible = false;
+            KlantOrderPanel.Enabled = false;
+
+            switch (panel)
+            {
+                case "admin":
+                    loadOrdersAdmin(session);
+                    AdminOrderPanel.Visible = true;
+                    break;
+                case "klant":
+                    loadOrdersKlant(session);
+                    KlantOrderPanel.Visible = true;
+                    break;
+                default:
+                    KlantOrderPanel.Visible = true;
+                    break;
+            }
+        }
+
+        public void loadOrdersAdmin(Session session){
+            Functions function = new Functions();
+            string query = "SELECT s.naam as stoelnaam, k.naam as ticketnaam, z.naam as zaalnaam, * FROM orders o " +
+                "LEFT JOIN gebruikers g ON o.user_id = g.id " +
                 "LEFT JOIN tijden t ON o.tijd_id = t.id " +
                 "LEFT JOIN Films f ON t.film_id = f.id " +
                 "LEFT JOIN Tickets k ON o.ticket_id = k.id " +
                 "LEFT JOIN zalen z ON t.zaal_id = z.id " +
-                "LEFT JOIN stoelen s ON o.stoel_id = s.id WHERE user_id = '"+session.id+"'");
+                "LEFT JOIN stoelen s ON o.stoel_id = s.id";
+
+            DataRowCollection data = Functions.Select(query);
+
+
+            if (data.Count > 0)
+            {
+                OrdertableAdmin.Rows.Clear();
+
+                foreach (DataRow row in data)
+                {
+                    int n = OrdertableAdmin.Rows.Add();
+                    OrdertableAdmin.Rows[n].Cells[0].Value = row["id"].ToString();
+                    OrdertableAdmin.Rows[n].Cells[1].Value = row["naam"].ToString();
+                    OrdertableAdmin.Rows[n].Cells[2].Value = row["voornaam"].ToString() + " " + row["achternaam"].ToString();
+                    OrdertableAdmin.Rows[n].Cells[3].Value = row["order_date"].ToString();
+                    OrdertableAdmin.Rows[n].Cells[4].Value = row["tijd"].ToString();
+                    OrdertableAdmin.Rows[n].Cells[5].Value = row["zaalnaam"].ToString();
+                    OrdertableAdmin.Rows[n].Cells[6].Value = row["stoelnaam"].ToString();
+                    OrdertableAdmin.Rows[n].Cells[7].Value = "Annuleer";
+                }
+            }
+            else
+            {
+                function.Message("Er zijn geen orders gevonden.");
+
+                int n = OrdersTable.Rows.Add();
+                OrdersTable.Rows[n].Cells[0].Value = "Geen orders gevonden.";
+            }
+
+        }
+
+        public void loadOrdersKlant(Session session)
+        {
+            Functions function = new Functions();
+            string query = "SELECT s.naam as stoelnaam, k.naam as ticketnaam, z.naam as zaalnaam, * FROM orders o " +
+                "LEFT JOIN tijden t ON o.tijd_id = t.id " +
+                "LEFT JOIN Films f ON t.film_id = f.id " +
+                "LEFT JOIN Tickets k ON o.ticket_id = k.id " +
+                "LEFT JOIN zalen z ON t.zaal_id = z.id " +
+                "LEFT JOIN stoelen s ON o.stoel_id = s.id WHERE user_id = '" + session.id + "'";
+
+            DataRowCollection data = Functions.Select(query);
 
             
             if (data.Count > 0)
@@ -84,7 +147,13 @@ namespace TicketApp
                         int film_id = Int32.Parse(row.Cells[0].Value.ToString());
                         string query = ("DELETE FROM orders WHERE id = '" + film_id + "'");
                         Function.ExcQuery(query);
-                        loadOrders(session);
+                        if (session.isAdmin)
+                        {
+                            loadOrdersAdmin(session);
+                        }
+                        else {
+                            loadOrdersKlant(session);
+                        }
                         Function.Message("De reservering is geannuleerd. \n\nHet betaalde bedrag wordt binnen 2 weken op uw rekening teruggestort.");
                     }
                 }
