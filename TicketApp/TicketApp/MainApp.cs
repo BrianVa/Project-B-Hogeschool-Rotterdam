@@ -227,7 +227,16 @@ namespace TicketApp
 
                         FilmTijden.Rows[n].Cells[3].Value = Int32.Parse(count[0]["all_stoelen"].ToString()) - Int32.Parse(orders[0]["all_orders"].ToString());
 
-                        FilmTijden.Rows[n].Cells[4].Value = "Tickets";
+                        
+
+                        if(Int32.Parse(count[0]["all_stoelen"].ToString()) - Int32.Parse(orders[0]["all_orders"].ToString()) == 0)
+                        {
+                            FilmTijden.Rows[n].Cells[4].Value = "Uitverkocht";
+                        }
+                        else
+                        {
+                            FilmTijden.Rows[n].Cells[4].Value = "Tickets";
+                        }
                     }
 
                     set_activepanel("tijd");
@@ -240,12 +249,27 @@ namespace TicketApp
                 FilmTijden.Rows.Clear();
                 foreach (DataRow row in data)
                 {
+                    //c++;
+                    //Function.Message(row.Table.Columns.);                     
+                    DataRowCollection count = Functions.Select("SELECT COUNT(id) as all_stoelen FROM stoelen WHERE zaal_id = '" + row["zaal_id"] + "'");
+                    DataRowCollection orders = Functions.Select("SELECT COUNT(id) as all_orders FROM orders WHERE tijd_id = '" + row["id"] + "'");
                     int n = FilmTijden.Rows.Add();
                     FilmTijden.Rows[n].Cells[0].Value = row["id"].ToString();
                     FilmTijden.Rows[n].Cells[1].Value = "datum";
                     FilmTijden.Rows[n].Cells[2].Value = row["tijd"].ToString();
-                    FilmTijden.Rows[n].Cells[3].Value = row["zaal_id"].ToString();
-                    FilmTijden.Rows[n].Cells[4].Value = "Tickets";
+
+                    FilmTijden.Rows[n].Cells[3].Value = Int32.Parse(count[0]["all_stoelen"].ToString()) - Int32.Parse(orders[0]["all_orders"].ToString());
+
+
+
+                    if (Int32.Parse(count[0]["all_stoelen"].ToString()) - Int32.Parse(orders[0]["all_orders"].ToString()) <= 0)
+                    {
+                        FilmTijden.Rows[n].Cells[4].Value = "Uitverkocht";
+                    }
+                    else
+                    {
+                        FilmTijden.Rows[n].Cells[4].Value = "Tickets";
+                    }
                 }
 
                 set_activepanel("tijd");
@@ -441,9 +465,12 @@ namespace TicketApp
                 e.RowIndex >= 0)
             {
                 DataGridViewRow row = FilmTijden.Rows[e.RowIndex];
-
-                selectedTime = Int32.Parse(row.Cells[0].Value.ToString());
-                StoelSelectButton_Click(selectedTime);
+                if(row.Cells[4].Value.ToString() != "Uitverkocht")
+                {
+                    selectedTime = Int32.Parse(row.Cells[0].Value.ToString());
+                    StoelSelectButton_Click(selectedTime);
+                }
+                
             }
         }
 
