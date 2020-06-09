@@ -493,6 +493,22 @@ namespace TicketApp
 
             }
 
+
+            DataRowCollection filmnaam = Functions.Select("SELECT naam FROM films WHERE id = '" + selectedFilm + "'");
+            DataRowCollection zaal = Functions.Select("SELECT naam,tijd FROM tijden t LEFT JOIN zalen z ON t.zaal_id = z.id WHERE t.id = '" + selectedTime + "'");
+            DataRowCollection stoel = Functions.Select("SELECT naam FROM stoelen WHERE id = '" + selectedChair + "'");
+            DataRowCollection price = Functions.Select("SELECT price FROM tickets WHERE id = '" + 1 + "'");
+            int c = -1;
+            Betaaloverzicht.Rows.Clear();
+
+            int n = Betaaloverzicht.Rows.Add();
+            Betaaloverzicht.Rows[n].Cells[0].Value = filmnaam[0]["naam"].ToString();         
+            Betaaloverzicht.Rows[n].Cells[1].Value = zaal[0]["naam"].ToString();         
+            Betaaloverzicht.Rows[n].Cells[2].Value = stoel[0]["naam"].ToString();         
+            Betaaloverzicht.Rows[n].Cells[3].Value = "datum";         
+            Betaaloverzicht.Rows[n].Cells[4].Value = zaal[0]["tijd"].ToString();         
+            Betaaloverzicht.Rows[n].Cells[5].Value = "€ " + price[0]["price"].ToString() + ",-";         
+
             set_activepanel("afrekenen");
         }
 

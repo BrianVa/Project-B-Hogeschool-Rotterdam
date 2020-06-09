@@ -117,7 +117,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Afrhww = new System.Windows.Forms.TextBox();
             this.Afrww = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Betaaloverzicht = new System.Windows.Forms.DataGridView();
             this.Afrrenk = new System.Windows.Forms.TextBox();
             this.Afrbank = new System.Windows.Forms.ComboBox();
             this.Afrdate = new System.Windows.Forms.DateTimePicker();
@@ -132,6 +132,13 @@
             this.BedanktLabel = new System.Windows.Forms.Label();
             this.BackToHomeButton = new System.Windows.Forms.Button();
             this.UpdaterAchtergrond = new System.Windows.Forms.Timer(this.components);
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -155,7 +162,7 @@
             this.StoelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).BeginInit();
             this.AfrekenPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Betaaloverzicht)).BeginInit();
             this.BedanktPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -984,6 +991,7 @@
             // AfrekenPanel
             // 
             this.AfrekenPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AfrekenPanel.BackgroundImage")));
+            this.AfrekenPanel.Controls.Add(this.label6);
             this.AfrekenPanel.Controls.Add(this.AfrhwwL);
             this.AfrekenPanel.Controls.Add(this.AfrwwL);
             this.AfrekenPanel.Controls.Add(this.label12);
@@ -994,7 +1002,7 @@
             this.AfrekenPanel.Controls.Add(this.label7);
             this.AfrekenPanel.Controls.Add(this.Afrhww);
             this.AfrekenPanel.Controls.Add(this.Afrww);
-            this.AfrekenPanel.Controls.Add(this.dataGridView2);
+            this.AfrekenPanel.Controls.Add(this.Betaaloverzicht);
             this.AfrekenPanel.Controls.Add(this.Afrrenk);
             this.AfrekenPanel.Controls.Add(this.Afrbank);
             this.AfrekenPanel.Controls.Add(this.Afrdate);
@@ -1098,13 +1106,20 @@
             this.Afrww.TabIndex = 14;
             this.Afrww.UseSystemPasswordChar = true;
             // 
-            // dataGridView2
+            // Betaaloverzicht
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(60, 118);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(411, 282);
-            this.dataGridView2.TabIndex = 13;
+            this.Betaaloverzicht.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Betaaloverzicht.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column14,
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column18,
+            this.Column19});
+            this.Betaaloverzicht.Location = new System.Drawing.Point(60, 118);
+            this.Betaaloverzicht.Name = "Betaaloverzicht";
+            this.Betaaloverzicht.Size = new System.Drawing.Size(645, 282);
+            this.Betaaloverzicht.TabIndex = 13;
             // 
             // Afrrenk
             // 
@@ -1245,6 +1260,52 @@
             this.UpdaterAchtergrond.Interval = 25;
             this.UpdaterAchtergrond.Tick += new System.EventHandler(this.UpdaterAchtergrond_Tick);
             // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Film";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Zaal";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "Stoel";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "Datum";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "Tijd";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "Prijs";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label6.Location = new System.Drawing.Point(286, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(205, 26);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Overzicht Bestelling";
+            // 
             // MainApp
             // 
             this.AcceptButton = this.search_button;
@@ -1253,10 +1314,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
+            this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.Main_panel);
-            this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.menuComboBox);
             this.Controls.Add(this.search_button);
             this.Controls.Add(this.SearchBox);
@@ -1298,7 +1359,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.StoelSelect)).EndInit();
             this.AfrekenPanel.ResumeLayout(false);
             this.AfrekenPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Betaaloverzicht)).EndInit();
             this.BedanktPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1369,7 +1430,7 @@
         private System.Windows.Forms.ToolStripMenuItem toevoegenToolStripMenuItem1;
         private System.Windows.Forms.Label BedanktBeschrijving;
         private System.Windows.Forms.Label BedanktLabel;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView Betaaloverzicht;
         private System.Windows.Forms.TextBox Afrrenk;
         private System.Windows.Forms.ComboBox Afrbank;
         private System.Windows.Forms.DateTimePicker Afrdate;
@@ -1405,6 +1466,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.Label label6;
     }
 }
 
