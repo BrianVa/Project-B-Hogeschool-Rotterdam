@@ -329,25 +329,25 @@ namespace TicketApp
 
         private void featured_2_Click(object sender, EventArgs e)
         {
-            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[0]) + "'");
+            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[1]) + "'");
             setMoviePage(data);
         }
 
         private void featured_3_Click(object sender, EventArgs e)
         {
-            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[0]) + "'");
+            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[2]) + "'");
             setMoviePage(data);
         }
 
         private void featured_4_Click(object sender, EventArgs e)
         {
-            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[0]) + "'");
+            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[3]) + "'");
             setMoviePage(data);
         }
 
         private void featured_5_Click(object sender, EventArgs e)
         {
-            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[0]) + "'");
+            DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + Int32.Parse(featured[4]) + "'");
             setMoviePage(data);
         }
 
