@@ -46,7 +46,7 @@
             this.KlantOverzicht.AllowUserToDeleteRows = false;
             this.KlantOverzicht.AllowUserToResizeColumns = false;
             this.KlantOverzicht.AllowUserToResizeRows = false;
-            this.KlantOverzicht.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.KlantOverzicht.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.KlantOverzicht.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -58,6 +58,7 @@
             this.Column7});
             this.KlantOverzicht.Location = new System.Drawing.Point(12, 12);
             this.KlantOverzicht.Name = "KlantOverzicht";
+            this.KlantOverzicht.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.KlantOverzicht.Size = new System.Drawing.Size(1458, 824);
             this.KlantOverzicht.TabIndex = 0;
             this.KlantOverzicht.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KlantOverzicht_CellContentClick);
@@ -120,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 848);
+            this.ClientSize = new System.Drawing.Size(1482, 845);
             this.Controls.Add(this.KlantOverzicht);
             this.Name = "Klant";
             this.Text = "Klant";

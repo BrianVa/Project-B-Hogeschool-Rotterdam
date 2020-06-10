@@ -267,7 +267,11 @@
             // 
             // FilmOverzichtTabel
             // 
-            this.FilmOverzichtTabel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FilmOverzichtTabel.AllowUserToAddRows = false;
+            this.FilmOverzichtTabel.AllowUserToDeleteRows = false;
+            this.FilmOverzichtTabel.AllowUserToResizeColumns = false;
+            this.FilmOverzichtTabel.AllowUserToResizeRows = false;
+            this.FilmOverzichtTabel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.FilmOverzichtTabel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -279,6 +283,7 @@
             this.FilmOverzichtTabel.Location = new System.Drawing.Point(6, 13);
             this.FilmOverzichtTabel.Name = "FilmOverzichtTabel";
             this.FilmOverzichtTabel.RowHeadersWidth = 51;
+            this.FilmOverzichtTabel.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.FilmOverzichtTabel.Size = new System.Drawing.Size(1475, 810);
             this.FilmOverzichtTabel.TabIndex = 0;
             this.FilmOverzichtTabel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilmOverzichtTabel_CellContentClick);
@@ -439,9 +444,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 846);
-            this.Controls.Add(this.TijdAddPanel);
+            this.ClientSize = new System.Drawing.Size(1443, 845);
             this.Controls.Add(this.FilmOverzichtPanel);
+            this.Controls.Add(this.TijdAddPanel);
             this.Controls.Add(this.FilmAddPanel);
             this.Name = "Film";
             this.Text = "Film";
