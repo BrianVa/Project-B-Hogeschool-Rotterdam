@@ -170,3 +170,7 @@ C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\bin\Debug\Ticket
 C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\bin\Debug\TicketApp.application
 C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\obj\Debug\TicketApp.exe.manifest
 C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\obj\Debug\TicketApp.application
+C:\Users\Glenn\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\TicketApp.exe.manifest
+C:\Users\Glenn\Documents\GitHub\ProjectB\TicketApp\TicketApp\bin\Debug\TicketApp.application
+C:\Users\Glenn\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.exe.manifest
+C:\Users\Glenn\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.application
