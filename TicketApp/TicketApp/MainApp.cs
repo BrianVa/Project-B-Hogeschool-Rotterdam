@@ -777,14 +777,6 @@ namespace TicketApp
         {
             MessageBox.Show("Nee Hossein!");
         }
-        
-        private void ordersOverzichtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var Function = new Functions();
-
-            Orders orders = new Orders(session, "admin");
-            orders.Show();
-        }
 
         private void doctentInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -831,6 +823,9 @@ namespace TicketApp
 
         private void orderOverzichtToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var Function = new Functions();
+            Orders orders = new Orders(session, "admin");
+            orders.Show();
 
         }
     }
