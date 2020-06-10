@@ -384,6 +384,7 @@ namespace TicketApp
                 }
                 StoelSelect.Rows[n].Cells[2].Value = taken;
             }
+            selectedStoelen.Clear();
             set_activepanel("stoel");
         }
         private void setfeaturedFilms(int amount)
@@ -557,6 +558,7 @@ namespace TicketApp
 
         private void AfrekenTerugKnop_Click(object sender, EventArgs e)
         {
+            selectedStoelen.Clear();
             set_activepanel("stoel");
         }
 
@@ -667,14 +669,24 @@ namespace TicketApp
                         senderGrid.Rows[e.RowIndex].Cells[2].Value = "Beschikbaar";
                         selectedStoelen.Remove(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
                     }
+                    else {
+                        Function.Message("Deze stoel is al bezet");
+                    }
                 }
                 else
                 {
                     if (selectedStoelen.Count < amount)
                     {
-                        selectedStoelen.Add(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
-                        NaarAfrekenenKnop.Enabled = false;
-                        senderGrid.Rows[e.RowIndex].Cells[2].Value = ((char)0x221A).ToString();
+                        if (senderGrid.Rows[e.RowIndex].Cells[2].Value.ToString() != "Bezet")
+                        {
+                            selectedStoelen.Add(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+                            NaarAfrekenenKnop.Enabled = false;
+                            senderGrid.Rows[e.RowIndex].Cells[2].Value = ((char)0x221A).ToString();
+                        }
+                        else {
+
+                            Function.Message("Deze stoel is al bezet");
+                        }
                     }
                     else
                     {

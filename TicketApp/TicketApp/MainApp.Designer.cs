@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -613,8 +613,8 @@
             // 
             // Column9
             // 
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column9.HeaderText = "Titel";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -623,8 +623,8 @@
             // 
             // Column10
             // 
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column10.HeaderText = "Genre";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
@@ -632,8 +632,8 @@
             // 
             // Column11
             // 
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column11.HeaderText = "Speelduur";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -641,8 +641,8 @@
             // 
             // Column12
             // 
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column12.HeaderText = "Leeftijd";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
@@ -650,9 +650,9 @@
             // 
             // Column13
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column13.HeaderText = "Select";
             this.Column13.Name = "Column13";
             this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1340,10 +1340,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
+            this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.BedanktPanel);
             this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.in_de_bios_panel);
-            this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.Main_panel);
