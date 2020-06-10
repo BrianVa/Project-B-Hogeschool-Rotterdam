@@ -33,23 +33,29 @@ namespace TicketApp
             InitializeComponent();
 
             var Function = new Functions();
-
             this.mijnAccountToolStripMenuItem.Visible = false;
             this.medewerkerToolStripMenuItem1.Visible = false;
 
             DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
+            int c = 0;
+            foreach (DataRow row in data)
+            {
+                featured.Add(data[c]["id"].ToString());
+                c++;
 
-            //nieuwe functie voor feature films
-            //setfeaturedFilms(5);
+            }
 
-            //id's van films in list geplaatst
+            string featured_1_image = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[0]["img_url"]);
+            string featured_2_image = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[1]["img_url"]);
+            string featured_3_image = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[2]["img_url"]);
+            string featured_4_image = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[3]["img_url"]);
+            string featured_5_image = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pics/films/" + data[4]["img_url"]);
 
-            //id worden niet goed op volgorde gezet !
-            featured.Add(data[0]["id"].ToString());
-            featured.Add(data[1]["id"].ToString());
-            featured.Add(data[2]["id"].ToString());
-            featured.Add(data[3]["id"].ToString());
-            featured.Add(data[4]["id"].ToString());
+            featured_1.Image = Image.FromFile(featured_1_image);
+            featured_2.Image = Image.FromFile(featured_2_image);
+            featured_3.Image = Image.FromFile(featured_3_image);
+            featured_4.Image = Image.FromFile(featured_4_image);
+            featured_5.Image = Image.FromFile(featured_5_image);
 
 
             //film naam word bij de labels gezet 
