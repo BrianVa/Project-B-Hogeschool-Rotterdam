@@ -69,7 +69,7 @@ namespace TicketApp
                     this.Close();
 
                     Function.Message("Welcome " + data[0]["voornaam"].ToString() + " " + data[0]["achternaam"].ToString() + "\n"
-                        + "U bent ingelogd!" + " \n" + " \n" + " Uw Role is: " + data[0]["name"]);
+                        + "U bent ingelogd!");
                     MainApp.session = session;
                     main = new MainApp();
                     main.loginText = "Logout";

@@ -165,7 +165,7 @@ namespace TicketApp
                 string back = set_img("back", BgImgPath);
                 Function.Message("De Film: " + FilmNaam.Text + " is toegevoegd!");
                 string query = "INSERT INTO films(naam, beschrijving, leeftijd, genre, tags, img_url, back_url, speel_duur, youtube_code) " +
-                    "values ('" + FilmNaam.Text.Trim() + "', '" + FilmDisc.Text.Trim() + "', '" + FilmAge.Text.Trim() + "','" + (FilmGenre.SelectedItem as CustomComboBox).Value.ToString() + "','" + "tags" + "','" + poster + "','" + back + "','" + FilmTime.Text.Trim() + "','" + FilmTrailer.Text.Trim() + "')";
+                    "values ('" + FilmNaam.Text.Trim() + "', '" + FilmDisc.Text.Trim() + "', '" + FilmAge.Text.Trim() + "','" + Int32.Parse((FilmGenre.SelectedItem as CustomComboBox).Value.ToString()) + 1 + "','" + "tags" + "','" + poster + "','" + back + "','" + FilmTime.Text.Trim() + "','" + FilmTrailer.Text.Trim() + "')";
                 Function.ExcQuery(query);
                 this.Close();
             }
@@ -324,8 +324,7 @@ namespace TicketApp
             else
             {
                 string date = FilmDate.Value.ToString("dd/MM/yyyy");
-                string query = "INSERT INTO tijden(tijd, film_id, zaal_id, speel_date) values ('" + FilmPlayTime.Text.Trim() + "','" + (ZaalAdd.SelectedItem as CustomComboBox).Value.ToString() + "','" + (MovieAdd.SelectedItem as CustomComboBox).Value.ToString() + "','" + date + "')";
-                Function.Message(query);
+                string query = "INSERT INTO tijden(tijd, film_id, zaal_id, speel_date) values ('" + FilmPlayTime.Text.Trim() + "','" + (MovieAdd.SelectedItem as CustomComboBox).Value.ToString() + "','" + (ZaalAdd.SelectedItem as CustomComboBox).Value.ToString() + "','" + date + "')";
                 Function.ExcQuery(query);
                 Function.Message("Tijd is toegevoegd");
                 this.Close();
