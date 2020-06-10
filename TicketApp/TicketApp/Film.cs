@@ -309,16 +309,22 @@ namespace TicketApp
 
         private void AddTime_Click(object sender, EventArgs e)
         {
+            int n;
+            bool isNumeric = int.TryParse(FilmPlayTime.Text, out n);
             Functions Function = new Functions();
             if (FilmPlayTime.Text.Trim() == "" || MovieAdd.Text.Trim() == "" || ZaalAdd.Text.Trim() == "")
             {
                 Function.Message("Er zijn lege velden!");
 
             }
+            else if (!isNumeric) {
+                Function.Message("Er mogen alleen numers worden ingevuld bij Tijd Bijv. 1200 voor 12 uur");
+
+            }
             else
             {
                 string date = FilmDate.Value.ToString("dd/MM/yyyy");
-                string query = "INSERT INTO tijden(tijd, film_id, zaal_id, date) values ('" + FilmPlayTime.Text.Trim() + "','" + (ZaalAdd.SelectedItem as CustomComboBox).Value.ToString() + "','" + (MovieAdd.SelectedItem as CustomComboBox).Value.ToString() + "','" + date + "')";
+                string query = "INSERT INTO tijden(tijd, film_id, zaal_id, speel_date) values ('" + FilmPlayTime.Text.Trim() + "','" + (ZaalAdd.SelectedItem as CustomComboBox).Value.ToString() + "','" + (MovieAdd.SelectedItem as CustomComboBox).Value.ToString() + "','" + date + "')";
                 Function.Message(query);
                 Function.ExcQuery(query);
                 Function.Message("Tijd is toegevoegd");

@@ -222,8 +222,8 @@ namespace TicketApp
                         DataRowCollection orders = Functions.Select("SELECT COUNT(id) as all_orders FROM orders WHERE tijd_id = '" + row["id"] + "'");
                         int n = FilmTijden.Rows.Add();
                         FilmTijden.Rows[n].Cells[0].Value = row["id"].ToString();
-                        FilmTijden.Rows[n].Cells[1].Value = "datum";
-                        FilmTijden.Rows[n].Cells[2].Value = row["tijd"].ToString();
+                        FilmTijden.Rows[n].Cells[1].Value = row["speel_date"].ToString();
+                        FilmTijden.Rows[n].Cells[2].Value = row["tijd"].ToString().Insert(2, ":");
 
                         FilmTijden.Rows[n].Cells[3].Value = Int32.Parse(count[0]["all_stoelen"].ToString()) - Int32.Parse(orders[0]["all_orders"].ToString());
 
@@ -255,8 +255,8 @@ namespace TicketApp
                     DataRowCollection orders = Functions.Select("SELECT COUNT(id) as all_orders FROM orders WHERE tijd_id = '" + row["id"] + "'");
                     int n = FilmTijden.Rows.Add();
                     FilmTijden.Rows[n].Cells[0].Value = row["id"].ToString();
-                    FilmTijden.Rows[n].Cells[1].Value = "datum";
-                    FilmTijden.Rows[n].Cells[2].Value = row["tijd"].ToString();
+                    FilmTijden.Rows[n].Cells[1].Value = row["speel_date"].ToString();
+                    FilmTijden.Rows[n].Cells[2].Value = row["tijd"].ToString().Insert(2, ":");
 
                     FilmTijden.Rows[n].Cells[3].Value = Int32.Parse(count[0]["all_stoelen"].ToString()) - Int32.Parse(orders[0]["all_orders"].ToString());
 
@@ -508,8 +508,11 @@ namespace TicketApp
             if (session != null)
             {
                 Afrnaam.Text = session.voornaam;
+                Afrnaam.Enabled = false;
                 Afranaam.Text = session.achternaam;
+                Afranaam.Enabled = false;
                 Afremail.Text = session.email;
+                Afremail.Enabled = false;
                 DateTime Birth = Convert.ToDateTime(session.DateOfBirth.ToString());
                 Afrdate.Value = Birth;
                 Afrdate.Enabled = false;
@@ -523,7 +526,7 @@ namespace TicketApp
 
 
             DataRowCollection filmnaam = Functions.Select("SELECT naam FROM films WHERE id = '" + selectedFilm + "'");
-            DataRowCollection zaal = Functions.Select("SELECT naam,tijd FROM tijden t LEFT JOIN zalen z ON t.zaal_id = z.id WHERE t.id = '" + selectedTime + "'");
+            DataRowCollection zaal = Functions.Select("SELECT naam,tijd,speel_date FROM tijden t LEFT JOIN zalen z ON t.zaal_id = z.id WHERE t.id = '" + selectedTime + "'");
             DataRowCollection stoel = Functions.Select("SELECT naam FROM stoelen WHERE id = '" + selectedChair + "'");
             DataRowCollection price = Functions.Select("SELECT price FROM tickets WHERE id = '" + 1 + "'");
             int c = -1;
@@ -533,8 +536,8 @@ namespace TicketApp
             Betaaloverzicht.Rows[n].Cells[0].Value = filmnaam[0]["naam"].ToString();         
             Betaaloverzicht.Rows[n].Cells[1].Value = zaal[0]["naam"].ToString();         
             Betaaloverzicht.Rows[n].Cells[2].Value = stoel[0]["naam"].ToString();         
-            Betaaloverzicht.Rows[n].Cells[3].Value = "datum";         
-            Betaaloverzicht.Rows[n].Cells[4].Value = zaal[0]["tijd"].ToString();         
+            Betaaloverzicht.Rows[n].Cells[3].Value = zaal[0]["speel_date"].ToString();         
+            Betaaloverzicht.Rows[n].Cells[4].Value = zaal[0]["tijd"].ToString().Insert(2, ":");         
             Betaaloverzicht.Rows[n].Cells[5].Value = "€ " + price[0]["price"].ToString() + ",-";         
 
             set_activepanel("afrekenen");

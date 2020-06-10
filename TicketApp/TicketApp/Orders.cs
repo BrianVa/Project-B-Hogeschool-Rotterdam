@@ -34,7 +34,7 @@ namespace TicketApp
         {
 
             AdminOrderPanel.Visible = false;
-            KlantOrderPanel.Enabled = false;
+            KlantOrderPanel.Visible = false;
 
             switch (panel)
             {
@@ -85,8 +85,8 @@ namespace TicketApp
                     OrdertableAdmin.Rows[n].Cells[0].Value = row["id"].ToString();
                     OrdertableAdmin.Rows[n].Cells[1].Value = row["naam"].ToString();
                     OrdertableAdmin.Rows[n].Cells[2].Value = name;
-                    OrdertableAdmin.Rows[n].Cells[3].Value = row["order_date"].ToString();
-                    OrdertableAdmin.Rows[n].Cells[4].Value = row["tijd"].ToString();
+                    OrdertableAdmin.Rows[n].Cells[3].Value = row["speel_date"].ToString();
+                    OrdertableAdmin.Rows[n].Cells[4].Value = row["tijd"].ToString().Insert(2, ":");
                     OrdertableAdmin.Rows[n].Cells[5].Value = row["zaalnaam"].ToString();
                     OrdertableAdmin.Rows[n].Cells[6].Value = row["stoelnaam"].ToString();
                     OrdertableAdmin.Rows[n].Cells[7].Value = "Annuleer";
@@ -124,8 +124,8 @@ namespace TicketApp
                     int n = OrdersTable.Rows.Add();
                     OrdersTable.Rows[n].Cells[0].Value = row["id"].ToString();
                     OrdersTable.Rows[n].Cells[1].Value = row["naam"].ToString();
-                    OrdersTable.Rows[n].Cells[2].Value = row["order_date"].ToString();
-                    OrdersTable.Rows[n].Cells[3].Value = row["tijd"].ToString();
+                    OrdersTable.Rows[n].Cells[2].Value = row["speel_date"].ToString();
+                    OrdersTable.Rows[n].Cells[3].Value = row["tijd"].ToString().Insert(2, ":");
                     OrdersTable.Rows[n].Cells[4].Value = row["zaalnaam"].ToString();
                     OrdersTable.Rows[n].Cells[5].Value = row["stoelnaam"].ToString();
                     OrdersTable.Rows[n].Cells[6].Value = "Annuleer";
@@ -154,25 +154,46 @@ namespace TicketApp
         {
             var senderGrid = (DataGridView)sender;
             var Function = new Functions();
+            int index = 0;
+            DataGridViewRow r = null;
+            DataGridViewRow row = null;
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "6" && type == "klant" || senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "7" && type == "admin")
             {
-                int index = 2;
-                DataGridViewRow r = OrdersTable.Rows[e.RowIndex];
+                Function.Message("hello");
                 if (type == "admin")
                 {
                     index = 3;
+                    r = OrdertableAdmin.Rows[e.RowIndex];
                 }
-                int result = DateTime.Compare(Convert.ToDateTime(r.Cells[2].Value.ToString()), DateTime.Now);
+                else
+                {
+                    index = 2;
+                    r = OrdersTable.Rows[e.RowIndex];
+
+                }
+
+                int result = DateTime.Compare(Convert.ToDateTime(r.Cells[index].Value.ToString()), DateTime.Now);
 
                 if (result > 0)
                 {
                     DialogResult = DialogResult = MessageBox.Show("Weet u zeker dat u deze reservering wilt annuleren?", "Tickets Annuleren", MessageBoxButtons.YesNo);
                     if (DialogResult == DialogResult.Yes)
                     {
-                        DataGridViewRow row = OrdersTable.Rows[e.RowIndex];
+                        
+                        if (type == "admin")
+                        {
+                            row = OrdertableAdmin.Rows[e.RowIndex];
+                        }
+                        else
+                        {
+                            row = OrdersTable.Rows[e.RowIndex];
+
+                        }
+                        
+
                         int film_id = Int32.Parse(row.Cells[0].Value.ToString());
                         string query = ("DELETE FROM orders WHERE id = '" + film_id + "'");
                         Function.ExcQuery(query);
@@ -187,12 +208,11 @@ namespace TicketApp
                         Function.Message("De reservering is geannuleerd. \n\nHet betaalde bedrag wordt binnen 2 weken op uw rekening teruggestort.");
                     }
                 }
+                else
+                {
+                    Function.Message("Deze reservering kan niet geannuleerd worden. \n\n- Reserveringen moeten minimaal 1 dag van te voren geannuleerd\n  worden.\n- Verlopen reserveringen kunnen niet meer geannuleerd\n  worden.");
+                }
             }
-            else
-            {
-                Function.Message("Deze reservering kan niet geannuleerd worden. \n\n- Reserveringen moeten minimaal 1 dag van te voren geannuleerd\n  worden.\n- Verlopen reserveringen kunnen niet meer geannuleerd\n  worden.");
-            }
-
         }
 
     }
