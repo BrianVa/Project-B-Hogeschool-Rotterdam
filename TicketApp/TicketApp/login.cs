@@ -68,7 +68,7 @@ namespace TicketApp
                     }
                     this.Close();
 
-                    Function.Message("Welcome " + data[0]["voornaam"].ToString() + " " + data[0]["achternaam"].ToString() + "\n"
+                    Function.Message("Welkom " + data[0]["voornaam"].ToString() + "\n"
                         + "U bent ingelogd!");
                     MainApp.session = session;
                     main = new MainApp();

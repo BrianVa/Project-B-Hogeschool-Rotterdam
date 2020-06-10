@@ -162,7 +162,6 @@ namespace TicketApp
                 e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "6" && type == "klant" || senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0 && senderGrid.Columns[e.ColumnIndex].Index.ToString() == "7" && type == "admin")
             {
-                Function.Message("hello");
                 if (type == "admin")
                 {
                     index = 3;

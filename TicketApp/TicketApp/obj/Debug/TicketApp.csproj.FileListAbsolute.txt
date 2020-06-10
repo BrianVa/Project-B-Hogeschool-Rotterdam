@@ -178,3 +178,7 @@ C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\Ticke
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\TicketApp.application
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.exe.manifest
 C:\Users\Jeroen\Documents\Processing folder\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.application
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\TicketApp.exe.manifest
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\bin\Debug\TicketApp.application
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.exe.manifest
+C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.application
