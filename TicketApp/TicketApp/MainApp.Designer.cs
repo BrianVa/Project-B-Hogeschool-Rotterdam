@@ -210,7 +210,7 @@
             // exit_button
             // 
             this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(180, 22);
+            this.exit_button.Size = new System.Drawing.Size(93, 22);
             this.exit_button.Text = "Exit";
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
@@ -985,7 +985,6 @@
             // 
             // NaarAfrekenenKnop
             // 
-            this.NaarAfrekenenKnop.Enabled = false;
             this.NaarAfrekenenKnop.Location = new System.Drawing.Point(1078, 649);
             this.NaarAfrekenenKnop.Name = "NaarAfrekenenKnop";
             this.NaarAfrekenenKnop.Size = new System.Drawing.Size(184, 48);
@@ -1381,11 +1380,11 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
-            this.Controls.Add(this.show_film_panel);
+            this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.TijdPanel);
+            this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.BedanktPanel);
-            this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.in_de_bios_panel);
             this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.menuComboBox);

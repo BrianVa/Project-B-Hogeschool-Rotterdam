@@ -503,43 +503,51 @@ namespace TicketApp
         private void NaarAfrekenenKnop_Click(object sender, EventArgs e)
         {
             var Function = new Functions();
-            selectedChair = Int32.Parse(selectedStoelen[0]);
-            Afrdate.MaxDate = DateTime.Now;
-            if (session != null)
+            if (selectedStoelen.Count == 0)
             {
-                Afrnaam.Text = session.voornaam;
-                Afrnaam.Enabled = false;
-                Afranaam.Text = session.achternaam;
-                Afranaam.Enabled = false;
-                Afremail.Text = session.email;
-                Afremail.Enabled = false;
-                DateTime Birth = Convert.ToDateTime(session.DateOfBirth.ToString());
-                Afrdate.Value = Birth;
-                Afrdate.Enabled = false;
-                Afrww.Visible = false;
-                Afrhww.Visible = false;
-                AfrwwL.Visible = false;
-                AfrhwwL.Visible = false;
-
-
+                Function.Message("Er is geen stoel geselecteerd");
             }
+            else {
+                selectedChair = Int32.Parse(selectedStoelen[0]);
 
 
-            DataRowCollection filmnaam = Functions.Select("SELECT naam FROM films WHERE id = '" + selectedFilm + "'");
-            DataRowCollection zaal = Functions.Select("SELECT naam,tijd,speel_date FROM tijden t LEFT JOIN zalen z ON t.zaal_id = z.id WHERE t.id = '" + selectedTime + "'");
-            DataRowCollection stoel = Functions.Select("SELECT naam FROM stoelen WHERE id = '" + selectedChair + "'");
-            DataRowCollection price = Functions.Select("SELECT price FROM tickets WHERE id = '" + 1 + "'");
-            Betaaloverzicht.Rows.Clear();
+                Afrdate.MaxDate = DateTime.Now;
+                if (session != null)
+                {
+                    Afrnaam.Text = session.voornaam;
+                    Afrnaam.Enabled = false;
+                    Afranaam.Text = session.achternaam;
+                    Afranaam.Enabled = false;
+                    Afremail.Text = session.email;
+                    Afremail.Enabled = false;
+                    DateTime Birth = Convert.ToDateTime(session.DateOfBirth.ToString());
+                    Afrdate.Value = Birth;
+                    Afrdate.Enabled = false;
+                    Afrww.Visible = false;
+                    Afrhww.Visible = false;
+                    AfrwwL.Visible = false;
+                    AfrhwwL.Visible = false;
 
-            int n = Betaaloverzicht.Rows.Add();
-            Betaaloverzicht.Rows[n].Cells[0].Value = filmnaam[0]["naam"].ToString();         
-            Betaaloverzicht.Rows[n].Cells[1].Value = zaal[0]["naam"].ToString();         
-            Betaaloverzicht.Rows[n].Cells[2].Value = stoel[0]["naam"].ToString();         
-            Betaaloverzicht.Rows[n].Cells[3].Value = zaal[0]["speel_date"].ToString();         
-            Betaaloverzicht.Rows[n].Cells[4].Value = zaal[0]["tijd"].ToString().Insert(2, ":");         
-            Betaaloverzicht.Rows[n].Cells[5].Value = "€ " + price[0]["price"].ToString() + ",-";         
 
-            set_activepanel("afrekenen");
+                }
+
+                DataRowCollection filmnaam = Functions.Select("SELECT naam FROM films WHERE id = '" + selectedFilm + "'");
+                DataRowCollection zaal = Functions.Select("SELECT naam,tijd,speel_date FROM tijden t LEFT JOIN zalen z ON t.zaal_id = z.id WHERE t.id = '" + selectedTime + "'");
+                DataRowCollection stoel = Functions.Select("SELECT naam FROM stoelen WHERE id = '" + selectedChair + "'");
+                DataRowCollection price = Functions.Select("SELECT price FROM tickets WHERE id = '" + 1 + "'");
+                Betaaloverzicht.Rows.Clear();
+
+                int n = Betaaloverzicht.Rows.Add();
+                Betaaloverzicht.Rows[n].Cells[0].Value = filmnaam[0]["naam"].ToString();
+                Betaaloverzicht.Rows[n].Cells[1].Value = zaal[0]["naam"].ToString();
+                Betaaloverzicht.Rows[n].Cells[2].Value = stoel[0]["naam"].ToString();
+                Betaaloverzicht.Rows[n].Cells[3].Value = zaal[0]["speel_date"].ToString();
+                Betaaloverzicht.Rows[n].Cells[4].Value = zaal[0]["tijd"].ToString().Insert(2, ":");
+                Betaaloverzicht.Rows[n].Cells[5].Value = "€ " + price[0]["price"].ToString() + ",-";
+                set_activepanel("afrekenen");
+
+
+            }   
         }
 
         private void AlgVoorwaardenCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -678,7 +686,6 @@ namespace TicketApp
                         if (senderGrid.Rows[e.RowIndex].Cells[2].Value.ToString() != "Bezet")
                         {
                             selectedStoelen.Add(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
-                            NaarAfrekenenKnop.Enabled = false;
                             senderGrid.Rows[e.RowIndex].Cells[2].Value = ((char)0x221A).ToString();
                         }
                         else {
@@ -686,15 +693,7 @@ namespace TicketApp
                             Function.Message("Deze stoel is al bezet");
                         }
                     }
-                    else
-                    {
-
-                        NaarAfrekenenKnop.Enabled = true;
-
-                    }
-
                 }
-
             }
         }
 
