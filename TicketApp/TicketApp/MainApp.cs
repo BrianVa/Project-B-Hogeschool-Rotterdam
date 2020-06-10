@@ -35,7 +35,7 @@ namespace TicketApp
             var Function = new Functions();
 
             this.mijnAccountToolStripMenuItem.Visible = false;
-            this.medewerkerToolStripMenuItem.Visible = false;
+            this.medewerkerToolStripMenuItem1.Visible = false;
 
             DataRowCollection data = Functions.Select("SELECT * FROM Films LIMIT 5");
 
@@ -443,7 +443,7 @@ namespace TicketApp
                 aanmeld_button.Visible = false;
                 if(session.isAdmin)
                 {
-                    medewerkerToolStripMenuItem.Visible = true;
+                    medewerkerToolStripMenuItem1.Visible = true;
                 }
                 login_button.Text = "Logout";
             }
@@ -451,7 +451,7 @@ namespace TicketApp
             {
                 mijnAccountToolStripMenuItem.Visible = false;
                 mijnOrdersToolStripMenuItem.Visible = false;
-                medewerkerToolStripMenuItem.Visible = false;
+                medewerkerToolStripMenuItem1.Visible = false;
                 aanmeld_button.Visible = true;
                 login_button.Text = "Login";
             }
@@ -529,7 +529,6 @@ namespace TicketApp
             DataRowCollection zaal = Functions.Select("SELECT naam,tijd,speel_date FROM tijden t LEFT JOIN zalen z ON t.zaal_id = z.id WHERE t.id = '" + selectedTime + "'");
             DataRowCollection stoel = Functions.Select("SELECT naam FROM stoelen WHERE id = '" + selectedChair + "'");
             DataRowCollection price = Functions.Select("SELECT price FROM tickets WHERE id = '" + 1 + "'");
-            int c = -1;
             Betaaloverzicht.Rows.Clear();
 
             int n = Betaaloverzicht.Rows.Add();
@@ -769,45 +768,6 @@ namespace TicketApp
                 background1picture.Location = new Point(LocationOfBackground, 0);
             }
         }
-
-        private void FilmOverzicht_Click(object sender, EventArgs e)
-        {
-            var Function = new Functions();
-
-            Film Film = new Film(session, "Overzicht");
-            Film.Show();
-        }
-
-        private void FilmAdd_Click(object sender, EventArgs e)
-        {
-            var Function = new Functions();
-
-            Film Film = new Film(session, "Add");
-            Film.Show();
-        }
-
-        private void TijdAdd_Click(object sender, EventArgs e)
-        {
-            var Function = new Functions();
-
-            Film Film = new Film(session, "tijd");
-            Film.Show();
-        }
-
-        private void KlantOverzicht_Click(object sender, EventArgs e)
-        {
-            var Function = new Functions();
-
-            Klant klant = new Klant(session);
-            klant.Show();
-        }
-
-        private void toevoegenToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            signup SingupForm = new signup();
-            SingupForm.Show();
-        }
-
         private void searched_movie_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Nee Hossein!");
@@ -828,6 +788,43 @@ namespace TicketApp
         }
 
         private void medewerkerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filmOverzichtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Function = new Functions();
+
+            Film Film = new Film(session, "Overzicht");
+            Film.Show();
+        }
+
+        private void filmToevoegenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Function = new Functions();
+
+            Film Film = new Film(session, "Add");
+            Film.Show();
+        }
+
+        private void tijdToevoegenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Function = new Functions();
+
+            Film Film = new Film(session, "tijd");
+            Film.Show();
+        }
+
+        private void klantOverzichtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Function = new Functions();
+
+            Klant klant = new Klant(session);
+            klant.Show();
+        }
+
+        private void orderOverzichtToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,16 +45,15 @@
             this.mijnAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mijnOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medewerkerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.filmOverzichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filmToevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tijdToevoegenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.klantOverzichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderOverzichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.about_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.info_button = new System.Windows.Forms.ToolStripMenuItem();
             this.algemeneVoorwaardenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doctentInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.medewerkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FilmOverzicht = new System.Windows.Forms.ToolStripMenuItem();
-            this.FilmAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.TijdAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.KlantOverzicht = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordersOverzichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.featured_5 = new System.Windows.Forms.PictureBox();
@@ -193,8 +192,7 @@
             this.loggen_menu,
             this.about_menu,
             this.algemeneVoorwaardenToolStripMenuItem,
-            this.doctentInfoToolStripMenuItem,
-            this.medewerkerToolStripMenuItem});
+            this.doctentInfoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1279, 24);
@@ -212,7 +210,7 @@
             // exit_button
             // 
             this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(93, 22);
+            this.exit_button.Size = new System.Drawing.Size(180, 22);
             this.exit_button.Text = "Exit";
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
@@ -259,10 +257,52 @@
             // 
             // medewerkerToolStripMenuItem1
             // 
+            this.medewerkerToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filmOverzichtToolStripMenuItem,
+            this.klantOverzichtToolStripMenuItem,
+            this.orderOverzichtToolStripMenuItem});
             this.medewerkerToolStripMenuItem1.Name = "medewerkerToolStripMenuItem1";
             this.medewerkerToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.medewerkerToolStripMenuItem1.Text = "Medewerker";
             this.medewerkerToolStripMenuItem1.Click += new System.EventHandler(this.medewerkerToolStripMenuItem1_Click);
+            // 
+            // filmOverzichtToolStripMenuItem
+            // 
+            this.filmOverzichtToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filmToevoegenToolStripMenuItem,
+            this.tijdToevoegenToolStripMenuItem});
+            this.filmOverzichtToolStripMenuItem.Name = "filmOverzichtToolStripMenuItem";
+            this.filmOverzichtToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.filmOverzichtToolStripMenuItem.Text = "Film Overzicht";
+            this.filmOverzichtToolStripMenuItem.Click += new System.EventHandler(this.filmOverzichtToolStripMenuItem_Click);
+            // 
+            // filmToevoegenToolStripMenuItem
+            // 
+            this.filmToevoegenToolStripMenuItem.Name = "filmToevoegenToolStripMenuItem";
+            this.filmToevoegenToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.filmToevoegenToolStripMenuItem.Text = "Film Toevoegen";
+            this.filmToevoegenToolStripMenuItem.Click += new System.EventHandler(this.filmToevoegenToolStripMenuItem_Click);
+            // 
+            // tijdToevoegenToolStripMenuItem
+            // 
+            this.tijdToevoegenToolStripMenuItem.Name = "tijdToevoegenToolStripMenuItem";
+            this.tijdToevoegenToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.tijdToevoegenToolStripMenuItem.Text = "Tijd Toevoegen";
+            this.tijdToevoegenToolStripMenuItem.Click += new System.EventHandler(this.tijdToevoegenToolStripMenuItem_Click);
+            // 
+            // klantOverzichtToolStripMenuItem
+            // 
+            this.klantOverzichtToolStripMenuItem.Name = "klantOverzichtToolStripMenuItem";
+            this.klantOverzichtToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.klantOverzichtToolStripMenuItem.Text = "Klant Overzicht";
+            this.klantOverzichtToolStripMenuItem.Click += new System.EventHandler(this.klantOverzichtToolStripMenuItem_Click);
+            // 
+            // orderOverzichtToolStripMenuItem
+            // 
+            this.orderOverzichtToolStripMenuItem.Name = "orderOverzichtToolStripMenuItem";
+            this.orderOverzichtToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.orderOverzichtToolStripMenuItem.Text = "Order Overzicht";
+            this.orderOverzichtToolStripMenuItem.Click += new System.EventHandler(this.orderOverzichtToolStripMenuItem_Click);
             // 
             // about_menu
             // 
@@ -292,54 +332,6 @@
             this.doctentInfoToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.doctentInfoToolStripMenuItem.Text = "Docent Info";
             this.doctentInfoToolStripMenuItem.Click += new System.EventHandler(this.doctentInfoToolStripMenuItem_Click);
-            // 
-            // medewerkerToolStripMenuItem
-            // 
-            this.medewerkerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FilmOverzicht,
-            this.KlantOverzicht,
-            this.ordersOverzichtToolStripMenuItem});
-            this.medewerkerToolStripMenuItem.Name = "medewerkerToolStripMenuItem";
-            this.medewerkerToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.medewerkerToolStripMenuItem.Text = "Medewerker";
-            // 
-            // FilmOverzicht
-            // 
-            this.FilmOverzicht.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FilmAdd,
-            this.TijdAdd});
-            this.FilmOverzicht.Name = "FilmOverzicht";
-            this.FilmOverzicht.Size = new System.Drawing.Size(162, 22);
-            this.FilmOverzicht.Text = "Film Overzicht";
-            this.FilmOverzicht.Click += new System.EventHandler(this.FilmOverzicht_Click);
-            // 
-            // FilmAdd
-            // 
-            this.FilmAdd.Name = "FilmAdd";
-            this.FilmAdd.Size = new System.Drawing.Size(157, 22);
-            this.FilmAdd.Text = "Film Toevoegen";
-            this.FilmAdd.Click += new System.EventHandler(this.FilmAdd_Click);
-            // 
-            // TijdAdd
-            // 
-            this.TijdAdd.Name = "TijdAdd";
-            this.TijdAdd.Size = new System.Drawing.Size(157, 22);
-            this.TijdAdd.Text = "Tijd Toevoegen";
-            this.TijdAdd.Click += new System.EventHandler(this.TijdAdd_Click);
-            // 
-            // KlantOverzicht
-            // 
-            this.KlantOverzicht.Name = "KlantOverzicht";
-            this.KlantOverzicht.Size = new System.Drawing.Size(162, 22);
-            this.KlantOverzicht.Text = "Klant Overzicht";
-            this.KlantOverzicht.Click += new System.EventHandler(this.KlantOverzicht_Click);
-            // 
-            // ordersOverzichtToolStripMenuItem
-            // 
-            this.ordersOverzichtToolStripMenuItem.Name = "ordersOverzichtToolStripMenuItem";
-            this.ordersOverzichtToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.ordersOverzichtToolStripMenuItem.Text = "Orders Overzicht";
-            this.ordersOverzichtToolStripMenuItem.Click += new System.EventHandler(this.ordersOverzichtToolStripMenuItem_Click);
             // 
             // infoToolStripMenuItem
             // 
@@ -625,8 +617,8 @@
             // 
             // Column9
             // 
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column9.HeaderText = "Titel";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -635,8 +627,8 @@
             // 
             // Column10
             // 
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column10.HeaderText = "Genre";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
@@ -644,8 +636,8 @@
             // 
             // Column11
             // 
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column11.HeaderText = "Speelduur";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -653,8 +645,8 @@
             // 
             // Column12
             // 
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column12.HeaderText = "Leeftijd";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
@@ -662,9 +654,9 @@
             // 
             // Column13
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column13.HeaderText = "Select";
             this.Column13.Name = "Column13";
             this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1499,10 +1491,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
-        private System.Windows.Forms.ToolStripMenuItem medewerkerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem FilmOverzicht;
-        private System.Windows.Forms.ToolStripMenuItem KlantOverzicht;
-        private System.Windows.Forms.ToolStripMenuItem FilmAdd;
         private System.Windows.Forms.Label BedanktBeschrijving;
         private System.Windows.Forms.Label BedanktLabel;
         private System.Windows.Forms.DataGridView Betaaloverzicht;
@@ -1525,7 +1513,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewButtonColumn Column13;
-        private System.Windows.Forms.ToolStripMenuItem TijdAdd;
         private System.Windows.Forms.TextBox Afrhww;
         private System.Windows.Forms.TextBox Afrww;
         private System.Windows.Forms.Label AfrhwwL;
@@ -1543,7 +1530,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ToolStripMenuItem ordersOverzichtToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -1554,6 +1540,11 @@
         private System.Windows.Forms.ToolStripMenuItem doctentInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medewerkerToolStripMenuItem1;
         private System.Windows.Forms.Label BgLabel;
+        private System.Windows.Forms.ToolStripMenuItem filmOverzichtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filmToevoegenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tijdToevoegenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem klantOverzichtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orderOverzichtToolStripMenuItem;
     }
 }
 
