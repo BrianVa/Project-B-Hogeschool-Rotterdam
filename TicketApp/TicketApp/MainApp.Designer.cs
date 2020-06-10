@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,16 +44,17 @@
             this.aanmeld_button = new System.Windows.Forms.ToolStripMenuItem();
             this.mijnAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mijnOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medewerkerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.about_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.info_button = new System.Windows.Forms.ToolStripMenuItem();
             this.algemeneVoorwaardenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.doctentInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medewerkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FilmOverzicht = new System.Windows.Forms.ToolStripMenuItem();
             this.FilmAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.TijdAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.KlantOverzicht = new System.Windows.Forms.ToolStripMenuItem();
             this.ordersOverzichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.doctentInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.featured_5 = new System.Windows.Forms.PictureBox();
@@ -142,7 +143,6 @@
             this.BedanktLabel = new System.Windows.Forms.Label();
             this.BackToHomeButton = new System.Windows.Forms.Button();
             this.UpdaterAchtergrond = new System.Windows.Forms.Timer(this.components);
-            this.medewerkerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -231,30 +231,37 @@
             // login_button
             // 
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(180, 22);
+            this.login_button.Size = new System.Drawing.Size(146, 22);
             this.login_button.Text = "Login";
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // aanmeld_button
             // 
             this.aanmeld_button.Name = "aanmeld_button";
-            this.aanmeld_button.Size = new System.Drawing.Size(180, 22);
+            this.aanmeld_button.Size = new System.Drawing.Size(146, 22);
             this.aanmeld_button.Text = "Aanmelden";
             this.aanmeld_button.Click += new System.EventHandler(this.aanmeld_button_Click);
             // 
             // mijnAccountToolStripMenuItem
             // 
             this.mijnAccountToolStripMenuItem.Name = "mijnAccountToolStripMenuItem";
-            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mijnAccountToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.mijnAccountToolStripMenuItem.Text = "Mijn Account";
             this.mijnAccountToolStripMenuItem.Click += new System.EventHandler(this.mijnAccountToolStripMenuItem_Click);
             // 
             // mijnOrdersToolStripMenuItem
             // 
             this.mijnOrdersToolStripMenuItem.Name = "mijnOrdersToolStripMenuItem";
-            this.mijnOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mijnOrdersToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.mijnOrdersToolStripMenuItem.Text = "Mijn Orders";
             this.mijnOrdersToolStripMenuItem.Click += new System.EventHandler(this.mijnOrdersToolStripMenuItem_Click);
+            // 
+            // medewerkerToolStripMenuItem1
+            // 
+            this.medewerkerToolStripMenuItem1.Name = "medewerkerToolStripMenuItem1";
+            this.medewerkerToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
+            this.medewerkerToolStripMenuItem1.Text = "Medewerker";
+            this.medewerkerToolStripMenuItem1.Click += new System.EventHandler(this.medewerkerToolStripMenuItem1_Click);
             // 
             // about_menu
             // 
@@ -278,6 +285,13 @@
             this.algemeneVoorwaardenToolStripMenuItem.Text = "Algemene Voorwaarden";
             this.algemeneVoorwaardenToolStripMenuItem.Click += new System.EventHandler(this.algemeneVoorwaardenToolStripMenuItem_Click);
             // 
+            // doctentInfoToolStripMenuItem
+            // 
+            this.doctentInfoToolStripMenuItem.Name = "doctentInfoToolStripMenuItem";
+            this.doctentInfoToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.doctentInfoToolStripMenuItem.Text = "Docent Info";
+            this.doctentInfoToolStripMenuItem.Click += new System.EventHandler(this.doctentInfoToolStripMenuItem_Click);
+            // 
             // medewerkerToolStripMenuItem
             // 
             this.medewerkerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -294,7 +308,7 @@
             this.FilmAdd,
             this.TijdAdd});
             this.FilmOverzicht.Name = "FilmOverzicht";
-            this.FilmOverzicht.Size = new System.Drawing.Size(180, 22);
+            this.FilmOverzicht.Size = new System.Drawing.Size(162, 22);
             this.FilmOverzicht.Text = "Film Overzicht";
             this.FilmOverzicht.Click += new System.EventHandler(this.FilmOverzicht_Click);
             // 
@@ -315,23 +329,16 @@
             // KlantOverzicht
             // 
             this.KlantOverzicht.Name = "KlantOverzicht";
-            this.KlantOverzicht.Size = new System.Drawing.Size(180, 22);
+            this.KlantOverzicht.Size = new System.Drawing.Size(162, 22);
             this.KlantOverzicht.Text = "Klant Overzicht";
             this.KlantOverzicht.Click += new System.EventHandler(this.KlantOverzicht_Click);
             // 
             // ordersOverzichtToolStripMenuItem
             // 
             this.ordersOverzichtToolStripMenuItem.Name = "ordersOverzichtToolStripMenuItem";
-            this.ordersOverzichtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ordersOverzichtToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.ordersOverzichtToolStripMenuItem.Text = "Orders Overzicht";
             this.ordersOverzichtToolStripMenuItem.Click += new System.EventHandler(this.ordersOverzichtToolStripMenuItem_Click);
-            // 
-            // doctentInfoToolStripMenuItem
-            // 
-            this.doctentInfoToolStripMenuItem.Name = "doctentInfoToolStripMenuItem";
-            this.doctentInfoToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-            this.doctentInfoToolStripMenuItem.Text = "Docent Info";
-            this.doctentInfoToolStripMenuItem.Click += new System.EventHandler(this.doctentInfoToolStripMenuItem_Click);
             // 
             // infoToolStripMenuItem
             // 
@@ -617,8 +624,8 @@
             // 
             // Column9
             // 
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column9.HeaderText = "Titel";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -627,8 +634,8 @@
             // 
             // Column10
             // 
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column10.HeaderText = "Genre";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
@@ -636,8 +643,8 @@
             // 
             // Column11
             // 
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column11.HeaderText = "Speelduur";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -645,8 +652,8 @@
             // 
             // Column12
             // 
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column12.HeaderText = "Leeftijd";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
@@ -654,9 +661,9 @@
             // 
             // Column13
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column13.HeaderText = "Select";
             this.Column13.Name = "Column13";
             this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1063,17 +1070,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label6.Location = new System.Drawing.Point(286, 89);
+            this.label6.Font = new System.Drawing.Font("Yu Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(55, 43);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(205, 26);
+            this.label6.Size = new System.Drawing.Size(207, 27);
             this.label6.TabIndex = 25;
             this.label6.Text = "Overzicht Bestelling";
             // 
             // AfrhwwL
             // 
             this.AfrhwwL.AutoSize = true;
-            this.AfrhwwL.Location = new System.Drawing.Point(968, 423);
+            this.AfrhwwL.Location = new System.Drawing.Point(57, 561);
             this.AfrhwwL.Name = "AfrhwwL";
             this.AfrhwwL.Size = new System.Drawing.Size(159, 13);
             this.AfrhwwL.TabIndex = 24;
@@ -1082,7 +1089,7 @@
             // AfrwwL
             // 
             this.AfrwwL.AutoSize = true;
-            this.AfrwwL.Location = new System.Drawing.Point(968, 379);
+            this.AfrwwL.Location = new System.Drawing.Point(57, 492);
             this.AfrwwL.Name = "AfrwwL";
             this.AfrwwL.Size = new System.Drawing.Size(122, 13);
             this.AfrwwL.TabIndex = 23;
@@ -1091,7 +1098,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(968, 327);
+            this.label12.Location = new System.Drawing.Point(338, 423);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(93, 13);
             this.label12.TabIndex = 22;
@@ -1100,7 +1107,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(968, 283);
+            this.label11.Location = new System.Drawing.Point(338, 343);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 21;
@@ -1109,7 +1116,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(968, 232);
+            this.label10.Location = new System.Drawing.Point(338, 267);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(88, 13);
             this.label10.TabIndex = 20;
@@ -1118,7 +1125,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(968, 182);
+            this.label9.Location = new System.Drawing.Point(56, 423);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 19;
@@ -1127,7 +1134,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(968, 136);
+            this.label8.Location = new System.Drawing.Point(56, 343);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 13);
             this.label8.TabIndex = 18;
@@ -1136,7 +1143,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(968, 89);
+            this.label7.Location = new System.Drawing.Point(56, 267);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 17;
@@ -1144,7 +1151,7 @@
             // 
             // Afrhww
             // 
-            this.Afrhww.Location = new System.Drawing.Point(969, 439);
+            this.Afrhww.Location = new System.Drawing.Point(56, 595);
             this.Afrhww.Name = "Afrhww";
             this.Afrhww.Size = new System.Drawing.Size(231, 20);
             this.Afrhww.TabIndex = 15;
@@ -1152,7 +1159,7 @@
             // 
             // Afrww
             // 
-            this.Afrww.Location = new System.Drawing.Point(969, 395);
+            this.Afrww.Location = new System.Drawing.Point(55, 519);
             this.Afrww.Name = "Afrww";
             this.Afrww.Size = new System.Drawing.Size(231, 20);
             this.Afrww.TabIndex = 14;
@@ -1172,10 +1179,10 @@
             this.Column17,
             this.Column18,
             this.Column19});
-            this.Betaaloverzicht.Location = new System.Drawing.Point(60, 118);
+            this.Betaaloverzicht.Location = new System.Drawing.Point(55, 83);
             this.Betaaloverzicht.Name = "Betaaloverzicht";
             this.Betaaloverzicht.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.Betaaloverzicht.Size = new System.Drawing.Size(645, 282);
+            this.Betaaloverzicht.Size = new System.Drawing.Size(645, 135);
             this.Betaaloverzicht.TabIndex = 13;
             // 
             // Column14
@@ -1216,7 +1223,7 @@
             // 
             // Afrrenk
             // 
-            this.Afrrenk.Location = new System.Drawing.Point(969, 343);
+            this.Afrrenk.Location = new System.Drawing.Point(337, 449);
             this.Afrrenk.Name = "Afrrenk";
             this.Afrrenk.Size = new System.Drawing.Size(231, 20);
             this.Afrrenk.TabIndex = 12;
@@ -1232,7 +1239,7 @@
             "SNS",
             "Regiobank",
             "ASN"});
-            this.Afrbank.Location = new System.Drawing.Point(969, 299);
+            this.Afrbank.Location = new System.Drawing.Point(337, 372);
             this.Afrbank.Name = "Afrbank";
             this.Afrbank.Size = new System.Drawing.Size(231, 21);
             this.Afrbank.TabIndex = 11;
@@ -1241,28 +1248,28 @@
             // 
             this.Afrdate.CustomFormat = "dd/MM/yyyy";
             this.Afrdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Afrdate.Location = new System.Drawing.Point(971, 248);
+            this.Afrdate.Location = new System.Drawing.Point(337, 289);
             this.Afrdate.Name = "Afrdate";
             this.Afrdate.Size = new System.Drawing.Size(231, 20);
             this.Afrdate.TabIndex = 10;
             // 
             // Afremail
             // 
-            this.Afremail.Location = new System.Drawing.Point(971, 198);
+            this.Afremail.Location = new System.Drawing.Point(56, 449);
             this.Afremail.Name = "Afremail";
             this.Afremail.Size = new System.Drawing.Size(231, 20);
             this.Afremail.TabIndex = 9;
             // 
             // Afranaam
             // 
-            this.Afranaam.Location = new System.Drawing.Point(971, 152);
+            this.Afranaam.Location = new System.Drawing.Point(56, 372);
             this.Afranaam.Name = "Afranaam";
             this.Afranaam.Size = new System.Drawing.Size(230, 20);
             this.Afranaam.TabIndex = 8;
             // 
             // Afrnaam
             // 
-            this.Afrnaam.Location = new System.Drawing.Point(971, 105);
+            this.Afrnaam.Location = new System.Drawing.Point(55, 289);
             this.Afrnaam.Name = "Afrnaam";
             this.Afrnaam.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Afrnaam.Size = new System.Drawing.Size(230, 20);
@@ -1320,9 +1327,9 @@
             // 
             this.BedanktBeschrijving.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.BedanktBeschrijving.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BedanktBeschrijving.Location = new System.Drawing.Point(29, 146);
+            this.BedanktBeschrijving.Location = new System.Drawing.Point(409, 357);
             this.BedanktBeschrijving.Name = "BedanktBeschrijving";
-            this.BedanktBeschrijving.Size = new System.Drawing.Size(241, 97);
+            this.BedanktBeschrijving.Size = new System.Drawing.Size(460, 36);
             this.BedanktBeschrijving.TabIndex = 2;
             this.BedanktBeschrijving.Text = "Uw tickets zijn toegevoegd aan uw orders.";
             // 
@@ -1330,10 +1337,10 @@
             // 
             this.BedanktLabel.BackColor = System.Drawing.Color.White;
             this.BedanktLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.BedanktLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BedanktLabel.Location = new System.Drawing.Point(29, 21);
+            this.BedanktLabel.Font = new System.Drawing.Font("Yu Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BedanktLabel.Location = new System.Drawing.Point(311, 272);
             this.BedanktLabel.Name = "BedanktLabel";
-            this.BedanktLabel.Size = new System.Drawing.Size(432, 125);
+            this.BedanktLabel.Size = new System.Drawing.Size(692, 69);
             this.BedanktLabel.TabIndex = 1;
             this.BedanktLabel.Text = "Bedankt voor uw bestelling!";
             // 
@@ -1353,13 +1360,6 @@
             this.UpdaterAchtergrond.Interval = 25;
             this.UpdaterAchtergrond.Tick += new System.EventHandler(this.UpdaterAchtergrond_Tick);
             // 
-            // medewerkerToolStripMenuItem1
-            // 
-            this.medewerkerToolStripMenuItem1.Name = "medewerkerToolStripMenuItem1";
-            this.medewerkerToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.medewerkerToolStripMenuItem1.Text = "Medewerker";
-            this.medewerkerToolStripMenuItem1.Click += new System.EventHandler(this.medewerkerToolStripMenuItem1_Click);
-            // 
             // MainApp
             // 
             this.AcceptButton = this.search_button;
@@ -1368,10 +1368,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
+            this.Controls.Add(this.AfrekenPanel);
+            this.Controls.Add(this.BedanktPanel);
             this.Controls.Add(this.StoelPanel);
             this.Controls.Add(this.TijdPanel);
-            this.Controls.Add(this.BedanktPanel);
-            this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.in_de_bios_panel);
             this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.Main_panel);
