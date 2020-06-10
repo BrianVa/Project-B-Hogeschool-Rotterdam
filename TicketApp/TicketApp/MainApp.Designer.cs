@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -143,6 +143,7 @@
             this.BedanktLabel = new System.Windows.Forms.Label();
             this.BackToHomeButton = new System.Windows.Forms.Button();
             this.UpdaterAchtergrond = new System.Windows.Forms.Timer(this.components);
+            this.BgLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -624,8 +625,8 @@
             // 
             // Column9
             // 
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle16;
             this.Column9.HeaderText = "Titel";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -634,8 +635,8 @@
             // 
             // Column10
             // 
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle17;
             this.Column10.HeaderText = "Genre";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
@@ -643,8 +644,8 @@
             // 
             // Column11
             // 
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle18;
             this.Column11.HeaderText = "Speelduur";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -652,8 +653,8 @@
             // 
             // Column12
             // 
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle19;
             this.Column12.HeaderText = "Leeftijd";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
@@ -661,9 +662,9 @@
             // 
             // Column13
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle20;
             this.Column13.HeaderText = "Select";
             this.Column13.Name = "Column13";
             this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -700,6 +701,7 @@
             this.show_film_panel.Controls.Add(this.film_genre_title);
             this.show_film_panel.Controls.Add(this.film_name);
             this.show_film_panel.Controls.Add(this.TrailerVideo);
+            this.show_film_panel.Controls.Add(this.BgLabel);
             this.show_film_panel.Location = new System.Drawing.Point(0, 24);
             this.show_film_panel.Margin = new System.Windows.Forms.Padding(6);
             this.show_film_panel.Name = "show_film_panel";
@@ -711,7 +713,7 @@
             // 
             this.Kijkwijzer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Kijkwijzer.Image = ((System.Drawing.Image)(resources.GetObject("Kijkwijzer.Image")));
-            this.Kijkwijzer.Location = new System.Drawing.Point(447, 561);
+            this.Kijkwijzer.Location = new System.Drawing.Point(447, 565);
             this.Kijkwijzer.Margin = new System.Windows.Forms.Padding(6);
             this.Kijkwijzer.Name = "Kijkwijzer";
             this.Kijkwijzer.Size = new System.Drawing.Size(100, 100);
@@ -723,9 +725,10 @@
             // 
             this.film_genre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_genre.AutoSize = true;
+            this.film_genre.BackColor = System.Drawing.Color.White;
             this.film_genre.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.film_genre.ForeColor = System.Drawing.Color.White;
-            this.film_genre.Location = new System.Drawing.Point(615, 465);
+            this.film_genre.ForeColor = System.Drawing.Color.Black;
+            this.film_genre.Location = new System.Drawing.Point(620, 470);
             this.film_genre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_genre.Name = "film_genre";
             this.film_genre.Size = new System.Drawing.Size(150, 47);
@@ -736,9 +739,10 @@
             // 
             this.film_speelduur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_speelduur.AutoSize = true;
+            this.film_speelduur.BackColor = System.Drawing.Color.White;
             this.film_speelduur.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.film_speelduur.ForeColor = System.Drawing.Color.White;
-            this.film_speelduur.Location = new System.Drawing.Point(588, 505);
+            this.film_speelduur.ForeColor = System.Drawing.Color.Black;
+            this.film_speelduur.Location = new System.Drawing.Point(588, 510);
             this.film_speelduur.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_speelduur.Name = "film_speelduur";
             this.film_speelduur.Size = new System.Drawing.Size(128, 47);
@@ -747,10 +751,10 @@
             // 
             // film_desc
             // 
-            this.film_desc.BackColor = System.Drawing.Color.DarkGray;
+            this.film_desc.BackColor = System.Drawing.Color.White;
             this.film_desc.Cursor = System.Windows.Forms.Cursors.Default;
             this.film_desc.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.film_desc.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.film_desc.ForeColor = System.Drawing.Color.Black;
             this.film_desc.Location = new System.Drawing.Point(224, 64);
             this.film_desc.Margin = new System.Windows.Forms.Padding(6);
             this.film_desc.MaxLength = 380;
@@ -802,9 +806,10 @@
             // 
             this.film_speelduur_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_speelduur_title.AutoSize = true;
+            this.film_speelduur_title.BackColor = System.Drawing.Color.White;
             this.film_speelduur_title.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.film_speelduur_title.ForeColor = System.Drawing.Color.White;
-            this.film_speelduur_title.Location = new System.Drawing.Point(447, 505);
+            this.film_speelduur_title.ForeColor = System.Drawing.Color.Black;
+            this.film_speelduur_title.Location = new System.Drawing.Point(452, 510);
             this.film_speelduur_title.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_speelduur_title.Name = "film_speelduur_title";
             this.film_speelduur_title.Size = new System.Drawing.Size(128, 47);
@@ -815,9 +820,10 @@
             // 
             this.film_genre_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.film_genre_title.AutoSize = true;
+            this.film_genre_title.BackColor = System.Drawing.Color.White;
             this.film_genre_title.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.film_genre_title.ForeColor = System.Drawing.Color.White;
-            this.film_genre_title.Location = new System.Drawing.Point(447, 465);
+            this.film_genre_title.ForeColor = System.Drawing.Color.Black;
+            this.film_genre_title.Location = new System.Drawing.Point(452, 470);
             this.film_genre_title.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_genre_title.Name = "film_genre_title";
             this.film_genre_title.Size = new System.Drawing.Size(150, 47);
@@ -827,12 +833,14 @@
             // film_name
             // 
             this.film_name.AutoSize = true;
+            this.film_name.BackColor = System.Drawing.Color.White;
+            this.film_name.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.film_name.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.film_name.ForeColor = System.Drawing.Color.White;
-            this.film_name.Location = new System.Drawing.Point(216, 15);
+            this.film_name.ForeColor = System.Drawing.Color.Black;
+            this.film_name.Location = new System.Drawing.Point(224, 13);
             this.film_name.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_name.Name = "film_name";
-            this.film_name.Size = new System.Drawing.Size(210, 47);
+            this.film_name.Size = new System.Drawing.Size(212, 49);
             this.film_name.TabIndex = 0;
             this.film_name.Text = "Film name";
             // 
@@ -898,7 +906,7 @@
             this.FilmTijden.Name = "FilmTijden";
             this.FilmTijden.RowHeadersWidth = 82;
             this.FilmTijden.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.FilmTijden.Size = new System.Drawing.Size(827, 260);
+            this.FilmTijden.Size = new System.Drawing.Size(827, 535);
             this.FilmTijden.TabIndex = 0;
             this.FilmTijden.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilmTijden_CellContentClick);
             // 
@@ -1360,6 +1368,15 @@
             this.UpdaterAchtergrond.Interval = 25;
             this.UpdaterAchtergrond.Tick += new System.EventHandler(this.UpdaterAchtergrond_Tick);
             // 
+            // BgLabel
+            // 
+            this.BgLabel.BackColor = System.Drawing.Color.White;
+            this.BgLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BgLabel.Location = new System.Drawing.Point(447, 465);
+            this.BgLabel.Name = "BgLabel";
+            this.BgLabel.Size = new System.Drawing.Size(556, 98);
+            this.BgLabel.TabIndex = 14;
+            // 
             // MainApp
             // 
             this.AcceptButton = this.search_button;
@@ -1368,12 +1385,12 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
+            this.Controls.Add(this.show_film_panel);
+            this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.BedanktPanel);
             this.Controls.Add(this.StoelPanel);
-            this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.in_de_bios_panel);
-            this.Controls.Add(this.show_film_panel);
             this.Controls.Add(this.Main_panel);
             this.Controls.Add(this.menuComboBox);
             this.Controls.Add(this.search_button);
@@ -1532,6 +1549,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem doctentInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medewerkerToolStripMenuItem1;
+        private System.Windows.Forms.Label BgLabel;
     }
 }
 
