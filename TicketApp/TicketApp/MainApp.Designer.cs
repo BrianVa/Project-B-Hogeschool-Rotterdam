@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +52,6 @@
             this.FilmAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.TijdAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.KlantOverzicht = new System.Windows.Forms.ToolStripMenuItem();
-            this.toevoegenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ordersOverzichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SearchBox = new System.Windows.Forms.TextBox();
@@ -95,6 +94,12 @@
             this.TijdPanel = new System.Windows.Forms.Panel();
             this.TicketBack = new System.Windows.Forms.Button();
             this.FilmTijden = new System.Windows.Forms.DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.StoelPanel = new System.Windows.Forms.Panel();
             this.NaarAfrekenenKnop = new System.Windows.Forms.Button();
             this.StoelBackButton = new System.Windows.Forms.Button();
@@ -135,12 +140,8 @@
             this.BedanktLabel = new System.Windows.Forms.Label();
             this.BackToHomeButton = new System.Windows.Forms.Button();
             this.UpdaterAchtergrond = new System.Windows.Forms.Timer(this.components);
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.doctentInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -166,6 +167,7 @@
             this.AfrekenPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Betaaloverzicht)).BeginInit();
             this.BedanktPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // search_button
@@ -189,7 +191,8 @@
             this.loggen_menu,
             this.about_menu,
             this.algemeneVoorwaardenToolStripMenuItem,
-            this.medewerkerToolStripMenuItem});
+            this.medewerkerToolStripMenuItem,
+            this.doctentInfoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1279, 24);
@@ -289,7 +292,7 @@
             this.FilmAdd,
             this.TijdAdd});
             this.FilmOverzicht.Name = "FilmOverzicht";
-            this.FilmOverzicht.Size = new System.Drawing.Size(162, 22);
+            this.FilmOverzicht.Size = new System.Drawing.Size(180, 22);
             this.FilmOverzicht.Text = "Film Overzicht";
             this.FilmOverzicht.Click += new System.EventHandler(this.FilmOverzicht_Click);
             // 
@@ -309,24 +312,15 @@
             // 
             // KlantOverzicht
             // 
-            this.KlantOverzicht.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toevoegenToolStripMenuItem1});
             this.KlantOverzicht.Name = "KlantOverzicht";
-            this.KlantOverzicht.Size = new System.Drawing.Size(162, 22);
+            this.KlantOverzicht.Size = new System.Drawing.Size(180, 22);
             this.KlantOverzicht.Text = "Klant Overzicht";
             this.KlantOverzicht.Click += new System.EventHandler(this.KlantOverzicht_Click);
-            // 
-            // toevoegenToolStripMenuItem1
-            // 
-            this.toevoegenToolStripMenuItem1.Name = "toevoegenToolStripMenuItem1";
-            this.toevoegenToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
-            this.toevoegenToolStripMenuItem1.Text = "Klant Toevoegen";
-            this.toevoegenToolStripMenuItem1.Click += new System.EventHandler(this.toevoegenToolStripMenuItem1_Click);
             // 
             // ordersOverzichtToolStripMenuItem
             // 
             this.ordersOverzichtToolStripMenuItem.Name = "ordersOverzichtToolStripMenuItem";
-            this.ordersOverzichtToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.ordersOverzichtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ordersOverzichtToolStripMenuItem.Text = "Orders Overzicht";
             this.ordersOverzichtToolStripMenuItem.Click += new System.EventHandler(this.ordersOverzichtToolStripMenuItem_Click);
             // 
@@ -614,8 +608,8 @@
             // 
             // Column9
             // 
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle11;
             this.Column9.HeaderText = "Titel";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -624,8 +618,8 @@
             // 
             // Column10
             // 
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle12;
             this.Column10.HeaderText = "Genre";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
@@ -633,8 +627,8 @@
             // 
             // Column11
             // 
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column11.HeaderText = "Speelduur";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -642,8 +636,8 @@
             // 
             // Column12
             // 
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column12.HeaderText = "Leeftijd";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
@@ -651,9 +645,9 @@
             // 
             // Column13
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column13.HeaderText = "Select";
             this.Column13.Name = "Column13";
             this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -892,10 +886,57 @@
             this.FilmTijden.TabIndex = 0;
             this.FilmTijden.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FilmTijden_CellContentClick);
             // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "id";
+            this.Column7.Name = "Column7";
+            this.Column7.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Datum";
+            this.Column1.MinimumWidth = 10;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 152;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tijd";
+            this.Column2.MinimumWidth = 10;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 152;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Aantal beschikbare stoelen";
+            this.Column4.MinimumWidth = 10;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // Column20
+            // 
+            this.Column20.HeaderText = "Prijs Per Ticket";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Select";
+            this.Column3.MinimumWidth = 10;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // StoelPanel
             // 
             this.StoelPanel.BackColor = System.Drawing.Color.Transparent;
             this.StoelPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoelPanel.BackgroundImage")));
+            this.StoelPanel.Controls.Add(this.pictureBox1);
             this.StoelPanel.Controls.Add(this.NaarAfrekenenKnop);
             this.StoelPanel.Controls.Add(this.StoelBackButton);
             this.StoelPanel.Controls.Add(this.StoelSelect);
@@ -1294,51 +1335,21 @@
             this.UpdaterAchtergrond.Interval = 25;
             this.UpdaterAchtergrond.Tick += new System.EventHandler(this.UpdaterAchtergrond_Tick);
             // 
-            // Column7
+            // pictureBox1
             // 
-            this.Column7.HeaderText = "id";
-            this.Column7.Name = "Column7";
-            this.Column7.Visible = false;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(803, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(397, 253);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
-            // Column1
+            // doctentInfoToolStripMenuItem
             // 
-            this.Column1.HeaderText = "Datum";
-            this.Column1.MinimumWidth = 10;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 152;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tijd";
-            this.Column2.MinimumWidth = 10;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 152;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Aantal beschikbare stoelen";
-            this.Column4.MinimumWidth = 10;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 200;
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "Prijs Per Ticket";
-            this.Column20.Name = "Column20";
-            this.Column20.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Select";
-            this.Column3.MinimumWidth = 10;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.doctentInfoToolStripMenuItem.Name = "doctentInfoToolStripMenuItem";
+            this.doctentInfoToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.doctentInfoToolStripMenuItem.Text = "Doctent Info";
+            this.doctentInfoToolStripMenuItem.Click += new System.EventHandler(this.doctentInfoToolStripMenuItem_Click);
             // 
             // MainApp
             // 
@@ -1348,8 +1359,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1279, 743);
-            this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.StoelPanel);
+            this.Controls.Add(this.TijdPanel);
             this.Controls.Add(this.BedanktPanel);
             this.Controls.Add(this.AfrekenPanel);
             this.Controls.Add(this.in_de_bios_panel);
@@ -1395,6 +1406,7 @@
             this.AfrekenPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Betaaloverzicht)).EndInit();
             this.BedanktPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1461,7 +1473,6 @@
         private System.Windows.Forms.ToolStripMenuItem FilmOverzicht;
         private System.Windows.Forms.ToolStripMenuItem KlantOverzicht;
         private System.Windows.Forms.ToolStripMenuItem FilmAdd;
-        private System.Windows.Forms.ToolStripMenuItem toevoegenToolStripMenuItem1;
         private System.Windows.Forms.Label BedanktBeschrijving;
         private System.Windows.Forms.Label BedanktLabel;
         private System.Windows.Forms.DataGridView Betaaloverzicht;
@@ -1509,6 +1520,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.DataGridViewButtonColumn Column3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem doctentInfoToolStripMenuItem;
     }
 }
 

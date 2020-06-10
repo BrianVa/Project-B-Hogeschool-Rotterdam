@@ -212,12 +212,9 @@ namespace TicketApp
                 if (Function.CheckAge(session, age))
                 {
                     DataRowCollection data = Functions.Select("SELECT * FROM tijden WHERE film_id = '" + selectedFilm + "'");
-                    int c = -1;
                     FilmTijden.Rows.Clear();
                     foreach (DataRow row in data)
-                    {
-                        //c++;
-                        //Function.Message(row.Table.Columns.);                     
+                    {                
                         DataRowCollection count = Functions.Select("SELECT COUNT(id) as all_stoelen FROM stoelen WHERE zaal_id = '" + row["zaal_id"] + "'");
                         DataRowCollection orders = Functions.Select("SELECT COUNT(id) as all_orders FROM orders WHERE tijd_id = '" + row["id"] + "'");
                         DataRowCollection price = Functions.Select("SELECT price FROM Tickets WHERE id = '" + 1 + "'");
@@ -251,26 +248,26 @@ namespace TicketApp
                 FilmTijden.Rows.Clear();
                 foreach (DataRow row in data)
                 {
-                    //c++;
-                    //Function.Message(row.Table.Columns.);                     
                     DataRowCollection count = Functions.Select("SELECT COUNT(id) as all_stoelen FROM stoelen WHERE zaal_id = '" + row["zaal_id"] + "'");
                     DataRowCollection orders = Functions.Select("SELECT COUNT(id) as all_orders FROM orders WHERE tijd_id = '" + row["id"] + "'");
+                    DataRowCollection price = Functions.Select("SELECT price FROM Tickets WHERE id = '" + 1 + "'");
                     int n = FilmTijden.Rows.Add();
                     FilmTijden.Rows[n].Cells[0].Value = row["id"].ToString();
                     FilmTijden.Rows[n].Cells[1].Value = row["speel_date"].ToString();
                     FilmTijden.Rows[n].Cells[2].Value = row["tijd"].ToString().Insert(2, ":");
 
                     FilmTijden.Rows[n].Cells[3].Value = Int32.Parse(count[0]["all_stoelen"].ToString()) - Int32.Parse(orders[0]["all_orders"].ToString());
+                    FilmTijden.Rows[n].Cells[4].Value = "€ " + price[0]["price"].ToString() + ",-";
 
 
 
                     if (Int32.Parse(count[0]["all_stoelen"].ToString()) - Int32.Parse(orders[0]["all_orders"].ToString()) <= 0)
                     {
-                        FilmTijden.Rows[n].Cells[4].Value = "Uitverkocht";
+                        FilmTijden.Rows[n].Cells[5].Value = "Uitverkocht";
                     }
                     else
                     {
-                        FilmTijden.Rows[n].Cells[4].Value = "Tickets";
+                        FilmTijden.Rows[n].Cells[5].Value = "Tickets";
                     }
                 }
 
@@ -822,6 +819,12 @@ namespace TicketApp
 
             Orders orders = new Orders(session, "admin");
             orders.Show();
+        }
+
+        private void doctentInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Function = new Functions();
+            Function.Message("Hierbij 2 admin test accounts:" + "\n" + "\n"+ "Hossein@test.nl" + "\n" + "test1234" + "\n" + "\n" + "dvr@test.nl" + "\n" + "test1234");
         }
     }
 }

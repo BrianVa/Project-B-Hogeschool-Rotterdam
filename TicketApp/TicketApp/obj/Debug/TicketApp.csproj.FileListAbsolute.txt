@@ -166,3 +166,7 @@ C:\Users\Glenn\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp
 C:\Users\Glenn\Documents\GitHub\ProjectB\TicketApp\TicketApp\obj\Debug\TicketApp.Klant.resources
 C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.Film.resources
 C:\Users\Admin\Desktop\Project-B-Hogeschool-Rotterdam\TicketApp\TicketApp\obj\Debug\TicketApp.Klant.resources
+C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\bin\Debug\TicketApp.exe.manifest
+C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\bin\Debug\TicketApp.application
+C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\obj\Debug\TicketApp.exe.manifest
+C:\Users\Brian V\Documents\GitHub\Project B\TicketApp\TicketApp\obj\Debug\TicketApp.application
