@@ -718,17 +718,18 @@ namespace TicketApp
                 {
                     int n = filmSelectGrid.Rows.Add();
 
-                    filmSelectGrid.Rows[n].Cells[0].Value = row["naam"];
+                    filmSelectGrid.Rows[n].Cells[0].Value = row["id"].ToString();
+                    filmSelectGrid.Rows[n].Cells[1].Value = row["naam"].ToString();
 
                     // Zorgt ervoor dat de filmnaam begint met een hoofdletter
 
-                    string str = filmSelectGrid.Rows[n].Cells[0].Value.ToString();
-                    filmSelectGrid.Rows[n].Cells[0].Value = char.ToUpper(str[0]) + str.Substring(1);
+                    string str = filmSelectGrid.Rows[n].Cells[1].Value.ToString();
+                    filmSelectGrid.Rows[n].Cells[1].Value = char.ToUpper(str[0]) + str.Substring(1);
 
-                    filmSelectGrid.Rows[n].Cells[1].Value = row["GenreNaam"];
-                    filmSelectGrid.Rows[n].Cells[2].Value = row["speel_duur"].ToString() + " minuten";
-                    filmSelectGrid.Rows[n].Cells[3].Value = row["leeftijd"].ToString();
-                    filmSelectGrid.Rows[n].Cells[4].Value = "Filmpagina";
+                    filmSelectGrid.Rows[n].Cells[2].Value = row["GenreNaam"].ToString();
+                    filmSelectGrid.Rows[n].Cells[3].Value = row["speel_duur"].ToString() + " minuten";
+                    filmSelectGrid.Rows[n].Cells[4].Value = row["leeftijd"].ToString();
+                    filmSelectGrid.Rows[n].Cells[5].Value = "Filmpagina";
                 }
                 set_activepanel("bioscoop");
             }
@@ -741,7 +742,7 @@ namespace TicketApp
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                int x = e.RowIndex + 1;
+                int x = Int32.Parse(senderGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
                 DataRowCollection data = Functions.Select("SELECT g.naam as GenreNaam, f.naam as FilmNaam, * FROM films f LEFT JOIN Genres g ON f.genre = g.id WHERE f.id= '" + x + "'");
                 setMoviePage(data);
             }
