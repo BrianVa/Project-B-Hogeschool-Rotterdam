@@ -166,8 +166,7 @@ namespace TicketApp
                 Function.Message("De Film: " + FilmNaam.Text + " is toegevoegd!");
                 string query = "INSERT INTO films(naam, beschrijving, leeftijd, genre, tags, img_url, back_url, speel_duur, youtube_code) " +
                     "values ('" + FilmNaam.Text.Trim() + "', '" + FilmDisc.Text.Trim() + "', '" + FilmAge.Text.Trim() + "','" + Int32.Parse((FilmGenre.SelectedItem as CustomComboBox).Value.ToString()) + "','" + "tags" + "','" + poster + "','" + back + "','" + FilmTime.Text.Trim() + "','" + FilmTrailer.Text.Trim() + "')";
-                Function.Message(query);
-                //Function.ExcQuery(query);
+                Function.ExcQuery(query);
                 this.Close();
             }
 
