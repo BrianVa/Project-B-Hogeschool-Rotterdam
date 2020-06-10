@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.search_button = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,6 +92,7 @@
             this.film_genre_title = new System.Windows.Forms.Label();
             this.film_name = new System.Windows.Forms.Label();
             this.TrailerVideo = new System.Windows.Forms.WebBrowser();
+            this.BgLabel = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TijdPanel = new System.Windows.Forms.Panel();
             this.TicketBack = new System.Windows.Forms.Button();
@@ -143,7 +144,6 @@
             this.BedanktLabel = new System.Windows.Forms.Label();
             this.BackToHomeButton = new System.Windows.Forms.Button();
             this.UpdaterAchtergrond = new System.Windows.Forms.Timer(this.components);
-            this.BgLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.featured_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.featured_4)).BeginInit();
@@ -625,8 +625,8 @@
             // 
             // Column9
             // 
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column9.HeaderText = "Titel";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -635,8 +635,8 @@
             // 
             // Column10
             // 
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column10.HeaderText = "Genre";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
@@ -644,8 +644,8 @@
             // 
             // Column11
             // 
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column11.HeaderText = "Speelduur";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
@@ -653,8 +653,8 @@
             // 
             // Column12
             // 
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle9;
             this.Column12.HeaderText = "Leeftijd";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
@@ -662,9 +662,9 @@
             // 
             // Column13
             // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column13.HeaderText = "Select";
             this.Column13.Name = "Column13";
             this.Column13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -713,10 +713,10 @@
             // 
             this.Kijkwijzer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Kijkwijzer.Image = ((System.Drawing.Image)(resources.GetObject("Kijkwijzer.Image")));
-            this.Kijkwijzer.Location = new System.Drawing.Point(447, 565);
+            this.Kijkwijzer.Location = new System.Drawing.Point(463, 492);
             this.Kijkwijzer.Margin = new System.Windows.Forms.Padding(6);
             this.Kijkwijzer.Name = "Kijkwijzer";
-            this.Kijkwijzer.Size = new System.Drawing.Size(100, 100);
+            this.Kijkwijzer.Size = new System.Drawing.Size(150, 150);
             this.Kijkwijzer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Kijkwijzer.TabIndex = 13;
             this.Kijkwijzer.TabStop = false;
@@ -728,7 +728,7 @@
             this.film_genre.BackColor = System.Drawing.Color.White;
             this.film_genre.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_genre.ForeColor = System.Drawing.Color.Black;
-            this.film_genre.Location = new System.Drawing.Point(620, 470);
+            this.film_genre.Location = new System.Drawing.Point(157, 329);
             this.film_genre.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_genre.Name = "film_genre";
             this.film_genre.Size = new System.Drawing.Size(150, 47);
@@ -742,7 +742,7 @@
             this.film_speelduur.BackColor = System.Drawing.Color.White;
             this.film_speelduur.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_speelduur.ForeColor = System.Drawing.Color.Black;
-            this.film_speelduur.Location = new System.Drawing.Point(588, 510);
+            this.film_speelduur.Location = new System.Drawing.Point(157, 372);
             this.film_speelduur.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_speelduur.Name = "film_speelduur";
             this.film_speelduur.Size = new System.Drawing.Size(128, 47);
@@ -809,7 +809,7 @@
             this.film_speelduur_title.BackColor = System.Drawing.Color.White;
             this.film_speelduur_title.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_speelduur_title.ForeColor = System.Drawing.Color.Black;
-            this.film_speelduur_title.Location = new System.Drawing.Point(452, 510);
+            this.film_speelduur_title.Location = new System.Drawing.Point(17, 372);
             this.film_speelduur_title.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_speelduur_title.Name = "film_speelduur_title";
             this.film_speelduur_title.Size = new System.Drawing.Size(128, 47);
@@ -823,7 +823,7 @@
             this.film_genre_title.BackColor = System.Drawing.Color.White;
             this.film_genre_title.Font = new System.Drawing.Font("Franklin Gothic Medium", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.film_genre_title.ForeColor = System.Drawing.Color.Black;
-            this.film_genre_title.Location = new System.Drawing.Point(452, 470);
+            this.film_genre_title.Location = new System.Drawing.Point(19, 329);
             this.film_genre_title.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.film_genre_title.Name = "film_genre_title";
             this.film_genre_title.Size = new System.Drawing.Size(150, 47);
@@ -855,6 +855,15 @@
             this.TrailerVideo.Size = new System.Drawing.Size(426, 240);
             this.TrailerVideo.TabIndex = 12;
             // 
+            // BgLabel
+            // 
+            this.BgLabel.BackColor = System.Drawing.Color.White;
+            this.BgLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BgLabel.Location = new System.Drawing.Point(15, 325);
+            this.BgLabel.Name = "BgLabel";
+            this.BgLabel.Size = new System.Drawing.Size(556, 98);
+            this.BgLabel.TabIndex = 14;
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
@@ -865,6 +874,7 @@
             // 
             this.TijdPanel.BackColor = System.Drawing.Color.Transparent;
             this.TijdPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TijdPanel.BackgroundImage")));
+            this.TijdPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TijdPanel.Controls.Add(this.TicketBack);
             this.TijdPanel.Controls.Add(this.FilmTijden);
             this.TijdPanel.Location = new System.Drawing.Point(0, 24);
@@ -960,6 +970,7 @@
             // 
             this.StoelPanel.BackColor = System.Drawing.Color.Transparent;
             this.StoelPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoelPanel.BackgroundImage")));
+            this.StoelPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.StoelPanel.Controls.Add(this.pictureBox1);
             this.StoelPanel.Controls.Add(this.NaarAfrekenenKnop);
             this.StoelPanel.Controls.Add(this.StoelBackButton);
@@ -1048,6 +1059,7 @@
             // AfrekenPanel
             // 
             this.AfrekenPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AfrekenPanel.BackgroundImage")));
+            this.AfrekenPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AfrekenPanel.Controls.Add(this.label6);
             this.AfrekenPanel.Controls.Add(this.AfrhwwL);
             this.AfrekenPanel.Controls.Add(this.AfrwwL);
@@ -1322,6 +1334,7 @@
             // BedanktPanel
             // 
             this.BedanktPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BedanktPanel.BackgroundImage")));
+            this.BedanktPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BedanktPanel.Controls.Add(this.BedanktBeschrijving);
             this.BedanktPanel.Controls.Add(this.BedanktLabel);
             this.BedanktPanel.Controls.Add(this.BackToHomeButton);
@@ -1367,15 +1380,6 @@
             this.UpdaterAchtergrond.Enabled = true;
             this.UpdaterAchtergrond.Interval = 25;
             this.UpdaterAchtergrond.Tick += new System.EventHandler(this.UpdaterAchtergrond_Tick);
-            // 
-            // BgLabel
-            // 
-            this.BgLabel.BackColor = System.Drawing.Color.White;
-            this.BgLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.BgLabel.Location = new System.Drawing.Point(447, 465);
-            this.BgLabel.Name = "BgLabel";
-            this.BgLabel.Size = new System.Drawing.Size(556, 98);
-            this.BgLabel.TabIndex = 14;
             // 
             // MainApp
             // 
